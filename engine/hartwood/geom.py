@@ -185,6 +185,8 @@ class Part:
         self.cuts = [(mirror_x(p), c) for p, c in self.cuts]
         self.engrave = [mirror_x(p) for p in self.engrave]
         self.score = [mirror_x(s) for s in self.score]
+        if 'tabs' in self.__dict__:
+            self.__dict__['tabs'] = [mirror_x(t) for t in self.__dict__['tabs']]
         self.mat = self.mat @ rot_y(180)
         return self
 
@@ -383,6 +385,9 @@ class Kit:
     price: float = 0.0
     tagline: str = ''
     extras: dict = field(default_factory=dict)    # loose hardware: {'rubber bands': 10, ...}
+    # sub-assemblies built on their own, then mounted as one unit:
+    # {'name', 'members': set(part names), 'step': mount step, 'insert': dir, 'explode': mm}
+    subassemblies: list = field(default_factory=list)
 
     def add(self, *parts):
         for p in parts:

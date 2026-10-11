@@ -108,39 +108,79 @@ def check_floating(kit, spacing=1.0):
 
 
 # ----------------------------------------------------------------------------- 3 assembly paths
+def _sweep_hits(pts, d, D, obstacle, step_mm):
+    offs = np.arange(0.0, D + 1e-9, step_mm)
+    for k0 in range(0, len(offs), 40):
+        ch = offs[k0:k0 + 40]
+        P = (pts[None, :, :] - ch[:, None, None] * d[None, None, :]).reshape(-1, 3)
+        hit = obstacle.contains(P)
+        if hit.any():
+            hk = hit.reshape(len(ch), -1).any(1)
+            return float(ch[np.argmax(hk)])
+    return None
+
+
 def check_assembly_paths(kit, spacing=1.5, step_mm=0.75):
+    """Each solid slides from its exploded position to its final position along its insertion
+    direction without passing through anything already placed. Sub-assemblies are first checked on
+    their own, then swept as one rigid unit at their mount step."""
     sol, boxes = _prep(kit)
-    order = sorted(range(len(sol)), key=lambda i: (sol[i].step, i))
-    placed = []
+    idx = {s.name: i for i, s in enumerate(sol)}
+    member_of = {}
+    for sa in kit.subassemblies:          # inner sub-assemblies are listed after the outer ones
+        for n in sa['members']:
+            member_of[n] = sa['name']
+    # events: (step, order, kind, payload)
+    events = []
+    for i, s in enumerate(sol):
+        events.append((s.step, 0, i, 'part', i))
+    for j, sa in enumerate(kit.subassemblies):
+        events.append((sa['step'], 1, j, 'mount', sa))
+    events.sort(key=lambda e: (e[0], e[1], e[2]))
+    placed_world = []                 # parts in the main assembly
+    placed_sub = {sa['name']: [] for sa in kit.subassemblies}
     problems = []
-    for i in order:
+
+    def blocked_by(i, d, D, others):
         s = sol[i]
-        d = np.asarray(s.insert, float)
-        d = d / np.linalg.norm(d)
-        D = float(getattr(s, 'explode', 40.0))
         pts = _samples(s, spacing)
         if not len(pts):
-            placed.append(i); continue
-        offs = np.arange(0.0, D + 1e-9, step_mm)  # distance back along -d from the final position
+            return None
         lo, hi = boxes[i]
-        sw_lo = np.minimum(lo, lo - d * D)
-        sw_hi = np.maximum(hi, hi - d * D)
-        for j in placed:
-            o = sol[j]
+        sw_lo, sw_hi = np.minimum(lo, lo - d * D), np.maximum(hi, hi - d * D)
+        for j in others:
             if not _overlap((sw_lo, sw_hi), boxes[j]):
                 continue
-            # vectorise over offsets in chunks
-            for k0 in range(0, len(offs), 40):
-                ch = offs[k0:k0 + 40]
-                P = (pts[None, :, :] - ch[:, None, None] * d[None, None, :]).reshape(-1, 3)
-                hit = o.contains(P)
-                if hit.any():
-                    hk = hit.reshape(len(ch), -1).any(1)
-                    first = float(ch[np.argmax(hk)])
-                    problems.append({'part': s.name, 'step': s.step, 'blocked_by': o.name,
-                                     'mm_from_final': round(first, 2)})
+            mm = _sweep_hits(pts, d, D, sol[j], step_mm)
+            if mm is not None:
+                return sol[j].name, mm
+        return None
+
+    for _step, _o, _k, kind, payload in events:
+        if kind == 'part':
+            i = payload
+            s = sol[i]
+            d = np.asarray(s.insert, float); d = d / np.linalg.norm(d)
+            D = float(getattr(s, 'explode', 40.0))
+            grp = member_of.get(s.name)
+            others = placed_sub[grp] if grp else placed_world
+            hit = blocked_by(i, d, D, others)
+            if hit:
+                problems.append({'part': s.name, 'step': s.step, 'blocked_by': hit[0], 'mm_from_final': round(hit[1], 2)})
+            (placed_sub[grp] if grp else placed_world).append(i)
+        else:
+            sa = payload
+            d = np.asarray(sa['insert'], float); d = d / np.linalg.norm(d)
+            D = float(sa.get('explode', 60.0))
+            members = placed_sub[sa['name']]
+            target = placed_sub[sa['into']] if sa.get('into') else placed_world
+            for i in members:
+                hit = blocked_by(i, d, D, target)
+                if hit:
+                    problems.append({'part': f"{sa['name']} (mount) / {sol[i].name}", 'step': sa['step'],
+                                     'blocked_by': hit[0], 'mm_from_final': round(hit[1], 2)})
                     break
-        placed.append(i)
+            target.extend(members)
     return {'name': 'Assembly path check', 'pass': not problems, 'count': len(problems), 'details': problems,
             'summary': 'every part slides into place without hitting a placed part' if not problems else
             f'{len(problems)} blocked insertions'}

@@ -126,9 +126,11 @@ def edge_tabs(x0, x1, y_edge, depth, n=2, width=None, direction=1, inset=None):
     return tabs
 
 
-def cross_halflap(A: Part, B: Part, a_from_start=True, fit='press'):
+def cross_halflap(A: Part, B: Part, a_from_start=True, fit='press', a_open=None):
     """Two crossing plates, each slotted halfway. A's slot opens toward the start of the overlap
     (along the intersection line direction n_A x n_B), B's toward the end. Swap with a_from_start=False.
+    a_open: optional world vector; A's slot then opens toward that side (overrides a_from_start).
+    Stores A.lap_insert: the direction A travels to slide on (B placed first).
     """
     nA = A.mat[:3, 2]; nB = B.mat[:3, 2]
     d = np.cross(nA, nB)
@@ -136,6 +138,8 @@ def cross_halflap(A: Part, B: Part, a_from_start=True, fit='press'):
     if s < 1e-6:
         raise ValueError('cross_halflap: plates are parallel')
     d /= s
+    if a_open is not None:
+        a_from_start = float(np.dot(d, a_open)) < 0
     # a point on both mid-planes
     pA, pB = A.mat[:3, 3], B.mat[:3, 3]
     Mx = np.array([nA, nB, d])
@@ -198,6 +202,8 @@ def cross_halflap(A: Part, B: Part, a_from_start=True, fit='press'):
         half = (w / 2) * np.array([-ldir[1], ldir[0]])
         slot = Polygon([c0 + half, c1 + half, c1 - half, c0 - half])
         P.cuts.append((slot, fit))
+    # direction A must travel to slide on (open end of its slot first); callers may use it as A.insert
+    A.__dict__['lap_insert'] = tuple(-d if a_from_start else d)
     return tm
 
 

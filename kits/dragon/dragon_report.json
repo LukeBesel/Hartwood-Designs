@@ -1,0 +1,259 @@
+{
+ "kit": "dragon",
+ "name": "Emberwing",
+ "nest_problems": [],
+ "pieces": 152,
+ "unique_codes": 105,
+ "hardware": [
+  {
+   "name": "jaw dowel",
+   "kind": "rod",
+   "note": "3/16 in dowel, 21 mm"
+  },
+  {
+   "name": "chest hinge dowel",
+   "kind": "rod",
+   "note": "3/16 in dowel, 46 mm"
+  }
+ ],
+ "extras": {
+  "3/16 in birch dowel, 21 mm (jaw)": 1,
+  "3/16 in birch dowel, 56 mm (chest hinge)": 1,
+  "sandpaper 240 grit": 1
+ },
+ "sheets": [
+  {
+   "sheet": "A",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 38,
+   "spares": 0,
+   "used_pct": 68.6,
+   "bridges": 87,
+   "cut_mm": 6041.7,
+   "score_mm": 2754.6,
+   "fill_area_mm2": 458.3,
+   "pierces": 303,
+   "cut_s": 209.0,
+   "score_s": 16.7,
+   "fill_s": 43.4,
+   "travel_s": 22.0,
+   "total_s": 291.2,
+   "total_min": 4.85
+  },
+  {
+   "sheet": "B",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 61,
+   "spares": 4,
+   "used_pct": 52.4,
+   "bridges": 158,
+   "cut_mm": 8585.1,
+   "score_mm": 2081.5,
+   "fill_area_mm2": 694.7,
+   "pierces": 662,
+   "cut_s": 297.6,
+   "score_s": 28.6,
+   "fill_s": 62.6,
+   "travel_s": 26.8,
+   "total_s": 415.6,
+   "total_min": 6.93
+  },
+  {
+   "sheet": "C",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 24,
+   "spares": 2,
+   "used_pct": 50.5,
+   "bridges": 68,
+   "cut_mm": 5801.5,
+   "score_mm": 3784.1,
+   "fill_area_mm2": 373.2,
+   "pierces": 702,
+   "cut_s": 199.5,
+   "score_s": 41.6,
+   "fill_s": 30.4,
+   "travel_s": 27.0,
+   "total_s": 298.5,
+   "total_min": 4.98
+  },
+  {
+   "sheet": "D",
+   "color": "red",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 5,
+   "spares": 0,
+   "used_pct": 11.9,
+   "bridges": 14,
+   "cut_mm": 1476.0,
+   "score_mm": 0,
+   "fill_area_mm2": 213.4,
+   "pierces": 30,
+   "cut_s": 50.7,
+   "score_s": 0.0,
+   "fill_s": 16.0,
+   "travel_s": 3.1,
+   "total_s": 69.8,
+   "total_min": 1.16
+  },
+  {
+   "sheet": "E",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 4,
+   "spares": 0,
+   "used_pct": 37.7,
+   "bridges": 15,
+   "cut_mm": 2428.8,
+   "score_mm": 5784.5,
+   "fill_area_mm2": 218.9,
+   "pierces": 462,
+   "cut_s": 82.9,
+   "score_s": 40.4,
+   "fill_s": 14.2,
+   "travel_s": 22.0,
+   "total_s": 159.5,
+   "total_min": 2.66
+  },
+  {
+   "sheet": "F",
+   "color": "gold",
+   "tile": "quarter",
+   "fraction": 0.25,
+   "parts": 17,
+   "spares": 0,
+   "used_pct": 11.1,
+   "bridges": 34,
+   "cut_mm": 1021.5,
+   "score_mm": 321.0,
+   "fill_area_mm2": 155.5,
+   "pierces": 61,
+   "cut_s": 36.6,
+   "score_s": 1.6,
+   "fill_s": 14.3,
+   "travel_s": 3.4,
+   "total_s": 55.9,
+   "total_min": 0.93
+  },
+  {
+   "sheet": "G",
+   "color": "purple",
+   "tile": "half",
+   "fraction": 0.5,
+   "parts": 2,
+   "spares": 0,
+   "used_pct": 53.6,
+   "bridges": 10,
+   "cut_mm": 930.6,
+   "score_mm": 520.1,
+   "fill_area_mm2": 51.5,
+   "pierces": 22,
+   "cut_s": 31.5,
+   "score_s": 2.3,
+   "fill_s": 3.7,
+   "travel_s": 3.7,
+   "total_s": 41.2,
+   "total_min": 0.69
+  },
+  {
+   "sheet": "H",
+   "color": "green",
+   "tile": "quarter",
+   "fraction": 0.25,
+   "parts": 1,
+   "spares": 0,
+   "used_pct": 3.6,
+   "bridges": 3,
+   "cut_mm": 191.8,
+   "score_mm": 0,
+   "fill_area_mm2": 46.2,
+   "pierces": 5,
+   "cut_s": 6.6,
+   "score_s": 0.0,
+   "fill_s": 3.0,
+   "travel_s": 0.4,
+   "total_s": 10.0,
+   "total_min": 0.17
+  }
+ ],
+ "jobs": [
+  {
+   "job": "dragon_job1_A-B",
+   "sheets": [
+    "A",
+    "B"
+   ],
+   "laser_min": 11.78,
+   "kits_per_sheet": [
+    1,
+    1
+   ]
+  },
+  {
+   "job": "dragon_job2_C-D",
+   "sheets": [
+    "C",
+    "D"
+   ],
+   "laser_min": 6.14,
+   "kits_per_sheet": [
+    1,
+    1
+   ]
+  },
+  {
+   "job": "dragon_job3_E-F_x4",
+   "sheets": [
+    "E",
+    "F_x4"
+   ],
+   "laser_min": 6.77,
+   "kits_per_sheet": [
+    1,
+    4
+   ]
+  },
+  {
+   "job": "dragon_job4_G_x2-H_x4",
+   "sheets": [
+    "G_x2",
+    "H_x4"
+   ],
+   "laser_min": 2.63,
+   "kits_per_sheet": [
+    2,
+    4
+   ]
+  }
+ ],
+ "n_sheets": 8,
+ "sheet_equivalents": 6.0,
+ "sheets_by_color": {
+  "gold": 1,
+  "green": 1,
+  "natural": 4,
+  "purple": 1,
+  "red": 1
+ },
+ "laser_minutes": 22.4,
+ "swap_minutes": 2.2,
+ "cut_minutes_per_kit": 24.6,
+ "wood_cost_usd": 12.6,
+ "mechanism_parts": [
+  "A16",
+  "A19",
+  "A20",
+  "A24",
+  "B28",
+  "D3",
+  "F7"
+ ],
+ "build_seconds": 41.9
+}

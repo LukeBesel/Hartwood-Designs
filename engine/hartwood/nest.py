@@ -111,7 +111,7 @@ def is_long_thin(g):
     mrr = g.minimum_rotated_rectangle
     xs, ys = mrr.exterior.coords.xy
     sides = sorted(math.dist((xs[i], ys[i]), (xs[i + 1], ys[i + 1])) for i in range(4))
-    return sides[-1] / max(sides[0], 0.1) > 4.0
+    return sides[-1] / max(sides[0], 0.1) > 4.0 and sides[0] < 20.0
 
 
 def _try_place(sheet, g, angles):
