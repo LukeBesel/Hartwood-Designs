@@ -60,6 +60,7 @@ def build(kit, outdir, run_checks=True, check_spacing=1.0, log=print):
     t0 = time.time()
     os.makedirs(outdir, exist_ok=True)
     report = {'kit': kit.slug, 'name': kit.name}
+    kit.compact_steps()
     if run_checks:
         res = CK.run_all(kit, spacing=check_spacing)
         report['checks'] = res

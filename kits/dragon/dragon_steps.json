@@ -461,7 +461,7 @@
    "mounts": []
   },
   {
-   "n": 9,
+   "n": 8,
    "title": "Give her golden eyes",
    "tip": "Each eye sits in its socket and is held by one square peg.",
    "icons": [
@@ -497,7 +497,7 @@
    "mounts": []
   },
   {
-   "n": 10,
+   "n": 9,
    "title": "Attach the wings",
    "tip": "Slide each purple wing forward through the shoulder bar. Then add the bones and the gold thumb claw with their pegs.",
    "icons": [
@@ -596,7 +596,7 @@
    ]
   },
   {
-   "n": 11,
+   "n": 10,
    "title": "Lay the ground plate",
    "tip": "This is the rocky ground under the tower.",
    "icons": [],
@@ -615,7 +615,7 @@
    "mounts": []
   },
   {
-   "n": 12,
+   "n": 11,
    "title": "Build the tower walls",
    "tip": "Front and back first, then the sides.",
    "icons": [
@@ -657,7 +657,7 @@
    "mounts": []
   },
   {
-   "n": 13,
+   "n": 12,
    "title": "Put the top on the tower",
    "tip": "Tabs from all four walls lock it in.",
    "icons": [
@@ -678,7 +678,7 @@
    "mounts": []
   },
   {
-   "n": 14,
+   "n": 13,
    "title": "Stand the battlements",
    "tip": "Broken ones are on purpose: this tower is a ruin.",
    "icons": [
@@ -741,7 +741,7 @@
    "mounts": []
   },
   {
-   "n": 15,
+   "n": 14,
    "title": "Set Emberwing on her tower",
    "tip": "Hind feet tabs go into the top. Front claws slide down over the two front stones.",
    "icons": [
@@ -813,7 +813,7 @@
    ]
   },
   {
-   "n": 16,
+   "n": 15,
    "title": "Add the door, the ivy and the torch",
    "tip": "Little square pegs hold each piece.",
    "icons": [
@@ -911,7 +911,7 @@
    "mounts": []
   },
   {
-   "n": 17,
+   "n": 16,
    "title": "Scatter the fallen stones",
    "tip": "Each pile sits on one peg. Big stone at the bottom.",
    "icons": [
@@ -1016,7 +1016,7 @@
    "mounts": []
   },
   {
-   "n": 18,
+   "n": 17,
    "title": "Raise the banner",
    "tip": "The pole goes into the tower top. The flag hooks on.",
    "icons": [
@@ -1051,7 +1051,7 @@
    "mounts": []
   },
   {
-   "n": 19,
+   "n": 18,
    "title": "Build the treasure chest",
    "tip": "Gold bands go on last.",
    "icons": [
@@ -1128,7 +1128,7 @@
    "mounts": []
   },
   {
-   "n": 20,
+   "n": 19,
    "title": "Hinge the lid",
    "tip": "Push the long dowel through both sides. The lid should swing open.",
    "icons": [
@@ -1181,7 +1181,7 @@
    ]
   },
   {
-   "n": 21,
+   "n": 20,
    "title": "Push the hinge dowel through",
    "tip": "Wax it first. Then try the lid.",
    "icons": [
@@ -1201,7 +1201,7 @@
    "mounts": []
   },
   {
-   "n": 22,
+   "n": 21,
    "title": "Pile up the gold",
    "tip": "Stack the coins on the little pegs.",
    "icons": [
@@ -1264,7 +1264,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 3,
-   "step": 10,
+   "step": 9,
    "mechanism": false
   },
   {
@@ -1273,7 +1273,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 10,
+   "step": 9,
    "mechanism": false
   },
   {
@@ -1291,7 +1291,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 2,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -1300,7 +1300,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 2,
-   "step": 19,
+   "step": 18,
    "mechanism": false
   },
   {
@@ -1309,7 +1309,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -1318,7 +1318,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 13,
+   "step": 12,
    "mechanism": false
   },
   {
@@ -1336,7 +1336,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -1354,7 +1354,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 20,
+   "step": 19,
    "mechanism": true
   },
   {
@@ -1363,7 +1363,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 4,
-   "step": 9,
+   "step": 8,
    "mechanism": false
   },
   {
@@ -1381,7 +1381,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 11,
+   "step": 10,
    "mechanism": false
   },
   {
@@ -1399,7 +1399,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 22,
+   "step": 21,
    "mechanism": false
   },
   {
@@ -1408,7 +1408,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 20,
+   "step": 19,
    "mechanism": true
   },
   {
@@ -1417,7 +1417,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1426,7 +1426,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 19,
+   "step": 18,
    "mechanism": false
   },
   {
@@ -1444,7 +1444,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 18,
+   "step": 17,
    "mechanism": false
   },
   {
@@ -1453,7 +1453,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 6,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1462,7 +1462,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1480,7 +1480,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1489,7 +1489,7 @@
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1525,7 +1525,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1534,7 +1534,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 14,
+   "step": 13,
    "mechanism": false
   },
   {
@@ -1552,7 +1552,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1597,7 +1597,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 22,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -1606,7 +1606,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -1642,7 +1642,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 10,
+   "step": 9,
    "mechanism": false
   },
   {
@@ -1651,7 +1651,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -1669,7 +1669,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 2,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -1705,7 +1705,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 10,
+   "step": 9,
    "mechanism": false
   },
   {
@@ -1714,7 +1714,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -1732,7 +1732,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1741,7 +1741,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1768,7 +1768,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -1777,7 +1777,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1786,7 +1786,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1795,7 +1795,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 19,
+   "step": 18,
    "mechanism": false
   },
   {
@@ -1822,7 +1822,7 @@
    "sheet": "B",
    "color": "natural",
    "qty": 2,
-   "step": 10,
+   "step": 9,
    "mechanism": false
   },
   {
@@ -1840,7 +1840,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 12,
+   "step": 11,
    "mechanism": false
   },
   {
@@ -1858,7 +1858,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 14,
+   "step": 13,
    "mechanism": false
   },
   {
@@ -1867,7 +1867,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 2,
-   "step": 14,
+   "step": 13,
    "mechanism": false
   },
   {
@@ -1876,7 +1876,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 14,
+   "step": 13,
    "mechanism": false
   },
   {
@@ -1885,7 +1885,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 19,
+   "step": 18,
    "mechanism": false
   },
   {
@@ -1894,7 +1894,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 3,
-   "step": 14,
+   "step": 13,
    "mechanism": false
   },
   {
@@ -1903,7 +1903,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 14,
+   "step": 13,
    "mechanism": false
   },
   {
@@ -1912,7 +1912,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 19,
+   "step": 18,
    "mechanism": false
   },
   {
@@ -1921,7 +1921,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1957,7 +1957,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 17,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -2002,7 +2002,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 14,
+   "step": 13,
    "mechanism": false
   },
   {
@@ -2011,7 +2011,7 @@
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 19,
+   "step": 18,
    "mechanism": false
   },
   {
@@ -2038,7 +2038,7 @@
    "sheet": "D",
    "color": "red",
    "qty": 1,
-   "step": 18,
+   "step": 17,
    "mechanism": false
   },
   {
@@ -2056,7 +2056,7 @@
    "sheet": "D",
    "color": "red",
    "qty": 1,
-   "step": 19,
+   "step": 18,
    "mechanism": false
   },
   {
@@ -2065,7 +2065,7 @@
    "sheet": "D",
    "color": "red",
    "qty": 1,
-   "step": 19,
+   "step": 18,
    "mechanism": false
   },
   {
@@ -2074,7 +2074,7 @@
    "sheet": "E",
    "color": "natural",
    "qty": 1,
-   "step": 12,
+   "step": 11,
    "mechanism": false
   },
   {
@@ -2083,7 +2083,7 @@
    "sheet": "E",
    "color": "natural",
    "qty": 1,
-   "step": 12,
+   "step": 11,
    "mechanism": false
   },
   {
@@ -2092,7 +2092,7 @@
    "sheet": "E",
    "color": "natural",
    "qty": 1,
-   "step": 12,
+   "step": 11,
    "mechanism": false
   },
   {
@@ -2110,7 +2110,7 @@
    "sheet": "F",
    "color": "gold",
    "qty": 1,
-   "step": 9,
+   "step": 8,
    "mechanism": false
   },
   {
@@ -2119,7 +2119,7 @@
    "sheet": "F",
    "color": "gold",
    "qty": 1,
-   "step": 22,
+   "step": 21,
    "mechanism": false
   },
   {
@@ -2128,7 +2128,7 @@
    "sheet": "F",
    "color": "gold",
    "qty": 3,
-   "step": 22,
+   "step": 21,
    "mechanism": false
   },
   {
@@ -2137,7 +2137,7 @@
    "sheet": "F",
    "color": "gold",
    "qty": 1,
-   "step": 9,
+   "step": 8,
    "mechanism": false
   },
   {
@@ -2146,7 +2146,7 @@
    "sheet": "F",
    "color": "gold",
    "qty": 2,
-   "step": 10,
+   "step": 9,
    "mechanism": false
   },
   {
@@ -2155,7 +2155,7 @@
    "sheet": "F",
    "color": "gold",
    "qty": 3,
-   "step": 22,
+   "step": 21,
    "mechanism": false
   },
   {
@@ -2164,7 +2164,7 @@
    "sheet": "F",
    "color": "gold",
    "qty": 2,
-   "step": 20,
+   "step": 19,
    "mechanism": true
   },
   {
@@ -2173,7 +2173,7 @@
    "sheet": "F",
    "color": "gold",
    "qty": 3,
-   "step": 22,
+   "step": 21,
    "mechanism": false
   },
   {
@@ -2182,7 +2182,7 @@
    "sheet": "F",
    "color": "gold",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
@@ -2191,7 +2191,7 @@
    "sheet": "G",
    "color": "purple",
    "qty": 2,
-   "step": 10,
+   "step": 9,
    "mechanism": false
   },
   {
@@ -2200,7 +2200,7 @@
    "sheet": "H",
    "color": "green",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   }
  ]

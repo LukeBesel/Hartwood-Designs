@@ -1,0 +1,1919 @@
+[
+ {
+  "out": "kits/floral/booklet/raw/step_01.png",
+  "labels": [
+   {
+    "code": "A3",
+    "kind": "part",
+    "name": "foot_peg0",
+    "qty": 4,
+    "pts": [
+     [
+      682,
+      323
+     ],
+     [
+      1302,
+      498
+     ],
+     [
+      240,
+      661
+     ],
+     [
+      978,
+      956
+     ]
+    ]
+   },
+   {
+    "code": "B3",
+    "kind": "part",
+    "name": "foot0_0",
+    "qty": 3,
+    "pts": [
+     [
+      684,
+      365
+     ],
+     [
+      1295,
+      543
+     ],
+     [
+      249,
+      709
+     ]
+    ]
+   },
+   {
+    "code": "A7",
+    "kind": "part",
+    "name": "foot0_1",
+    "qty": 4,
+    "pts": [
+     [
+      683,
+      348
+     ],
+     [
+      1298,
+      525
+     ],
+     [
+      246,
+      690
+     ],
+     [
+      976,
+      986
+     ]
+    ]
+   },
+   {
+    "code": "B18",
+    "kind": "part",
+    "name": "foot0_2",
+    "qty": 1,
+    "pts": [
+     [
+      682,
+      331
+     ]
+    ]
+   },
+   {
+    "code": "A6",
+    "kind": "part",
+    "name": "foot0_3",
+    "qty": 4,
+    "pts": [
+     [
+      682,
+      314
+     ],
+     [
+      1304,
+      488
+     ],
+     [
+      238,
+      651
+     ],
+     [
+      978,
+      945
+     ]
+    ]
+   },
+   {
+    "code": "B13",
+    "kind": "part",
+    "name": "foot0_4",
+    "qty": 4,
+    "pts": [
+     [
+      681,
+      296
+     ],
+     [
+      1306,
+      470
+     ],
+     [
+      235,
+      631
+     ],
+     [
+      980,
+      923
+     ]
+    ]
+   },
+   {
+    "code": "C1",
+    "kind": "part",
+    "name": "foot1_2",
+    "qty": 3,
+    "pts": [
+     [
+      1301,
+      507
+     ],
+     [
+      242,
+      671
+     ],
+     [
+      977,
+      966
+     ]
+    ]
+   },
+   {
+    "code": "C6",
+    "kind": "part",
+    "name": "foot3_0",
+    "qty": 1,
+    "pts": [
+     [
+      974,
+      1007
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 2300
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_02.png",
+  "labels": [
+   {
+    "code": "A5",
+    "kind": "part",
+    "name": "base",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      457
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 445
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_03.png",
+  "labels": [
+   {
+    "code": "A13",
+    "kind": "part",
+    "name": "cradle_fb0",
+    "qty": 2,
+    "pts": [
+     [
+      870,
+      414
+     ],
+     [
+      723,
+      551
+     ]
+    ]
+   },
+   {
+    "code": "A15",
+    "kind": "part",
+    "name": "cradle_side0",
+    "qty": 2,
+    "pts": [
+     [
+      643,
+      430
+     ],
+     [
+      969,
+      532
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 351
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_04.png",
+  "labels": [
+   {
+    "code": "winding key shaft",
+    "kind": "face",
+    "name": "winding key shaft",
+    "qty": 1,
+    "pts": [
+     [
+      888,
+      594
+     ]
+    ]
+   },
+   {
+    "code": "music movement",
+    "kind": "face",
+    "name": "music movement",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      473
+     ]
+    ]
+   },
+   {
+    "code": "movement shaft",
+    "kind": "face",
+    "name": "movement shaft",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      393
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 392
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_05.png",
+  "labels": [
+   {
+    "code": "A17",
+    "kind": "part",
+    "name": "coupler_peg0",
+    "qty": 1,
+    "pts": [
+     [
+      865,
+      486
+     ]
+    ]
+   },
+   {
+    "code": "A18",
+    "kind": "part",
+    "name": "coupler_peg1",
+    "qty": 1,
+    "pts": [
+     [
+      737,
+      447
+     ]
+    ]
+   },
+   {
+    "code": "A10",
+    "kind": "part",
+    "name": "coupler0",
+    "qty": 2,
+    "pts": [
+     [
+      800,
+      506
+     ],
+     [
+      800,
+      479
+     ]
+    ]
+   },
+   {
+    "code": "A11",
+    "kind": "part",
+    "name": "coupler2",
+    "qty": 2,
+    "pts": [
+     [
+      800,
+      452
+     ],
+     [
+      800,
+      425
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 477
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_06.png",
+  "labels": [
+   {
+    "code": "B17",
+    "kind": "part",
+    "name": "wall_front",
+    "qty": 1,
+    "pts": [
+     [
+      631,
+      641
+     ]
+    ]
+   },
+   {
+    "code": "B15",
+    "kind": "part",
+    "name": "wall_back",
+    "qty": 1,
+    "pts": [
+     [
+      938,
+      355
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 493
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_07.png",
+  "labels": [
+   {
+    "code": "D14",
+    "kind": "part",
+    "name": "wall_left",
+    "qty": 2,
+    "pts": [
+     [
+      576,
+      414
+     ],
+     [
+      1049,
+      561
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 456
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_08.png",
+  "labels": [
+   {
+    "code": "D7",
+    "kind": "part",
+    "name": "window_frame",
+    "qty": 1,
+    "pts": [
+     [
+      578,
+      777
+     ]
+    ]
+   },
+   {
+    "code": "A1",
+    "kind": "part",
+    "name": "window_frame_peg0",
+    "qty": 10,
+    "pts": [
+     [
+      481,
+      728
+     ],
+     [
+      697,
+      812
+     ],
+     [
+      515,
+      446
+     ],
+     [
+      554,
+      484
+     ],
+     [
+      487,
+      537
+     ],
+     [
+      1125,
+      643
+     ],
+     [
+      1092,
+      747
+     ],
+     [
+      1143,
+      678
+     ],
+     [
+      865,
+      357
+     ],
+     [
+      1073,
+      415
+     ]
+    ]
+   },
+   {
+    "code": "F1",
+    "kind": "part",
+    "name": "wall_left_flower",
+    "qty": 2,
+    "pts": [
+     [
+      505,
+      442
+     ],
+     [
+      1139,
+      647
+     ]
+    ]
+   },
+   {
+    "code": "E5",
+    "kind": "part",
+    "name": "wall_left_leaves",
+    "qty": 2,
+    "pts": [
+     [
+      512,
+      507
+     ],
+     [
+      1130,
+      717
+     ]
+    ]
+   },
+   {
+    "code": "D15",
+    "kind": "part",
+    "name": "back_plaque",
+    "qty": 1,
+    "pts": [
+     [
+      972,
+      380
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 579
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_09.png",
+  "labels": [
+   {
+    "code": "B16",
+    "kind": "part",
+    "name": "top",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      325
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 531
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_10.png",
+  "labels": [
+   {
+    "code": "A19",
+    "kind": "part",
+    "name": "hub_peg0",
+    "qty": 1,
+    "pts": [
+     [
+      781,
+      340
+     ]
+    ]
+   },
+   {
+    "code": "A12",
+    "kind": "part",
+    "name": "hub_peg1",
+    "qty": 1,
+    "pts": [
+     [
+      818,
+      310
+     ]
+    ]
+   },
+   {
+    "code": "A9",
+    "kind": "part",
+    "name": "hub0",
+    "qty": 2,
+    "pts": [
+     [
+      800,
+      338
+     ],
+     [
+      800,
+      324
+     ]
+    ]
+   },
+   {
+    "code": "D8",
+    "kind": "part",
+    "name": "turntable",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      310
+     ]
+    ]
+   },
+   {
+    "code": "drive dowel",
+    "kind": "face",
+    "name": "drive dowel",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      418
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 546
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_11.png",
+  "labels": [
+   {
+    "code": "B1",
+    "kind": "part",
+    "name": "fence0",
+    "qty": 8,
+    "pts": [
+     [
+      960,
+      438
+     ],
+     [
+      765,
+      466
+     ],
+     [
+      596,
+      413
+     ],
+     [
+      562,
+      323
+     ],
+     [
+      662,
+      251
+     ],
+     [
+      829,
+      231
+     ],
+     [
+      983,
+      270
+     ],
+     [
+      1044,
+      353
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 596
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_12.png",
+  "labels": [
+   {
+    "code": "A14",
+    "kind": "part",
+    "name": "vase_key0",
+    "qty": 2,
+    "pts": [
+     [
+      751,
+      527
+     ],
+     [
+      846,
+      438
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 502
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_13.png",
+  "labels": [
+   {
+    "code": "C11",
+    "kind": "part",
+    "name": "ring00",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      606
+     ]
+    ]
+   },
+   {
+    "code": "G9",
+    "kind": "part",
+    "name": "ring01",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      593
+     ]
+    ]
+   },
+   {
+    "code": "B5",
+    "kind": "part",
+    "name": "ring02",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      580
+     ]
+    ]
+   },
+   {
+    "code": "D6",
+    "kind": "part",
+    "name": "ring03",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      566
+     ]
+    ]
+   },
+   {
+    "code": "B8",
+    "kind": "part",
+    "name": "ring04",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      553
+     ]
+    ]
+   },
+   {
+    "code": "G7",
+    "kind": "part",
+    "name": "ring05",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      539
+     ]
+    ]
+   },
+   {
+    "code": "B9",
+    "kind": "part",
+    "name": "ring06",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      526
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 737
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_14.png",
+  "labels": [
+   {
+    "code": "D9",
+    "kind": "part",
+    "name": "ring07",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      556
+     ]
+    ]
+   },
+   {
+    "code": "B12",
+    "kind": "part",
+    "name": "ring08",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      542
+     ]
+    ]
+   },
+   {
+    "code": "G6",
+    "kind": "part",
+    "name": "ring09",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      527
+     ]
+    ]
+   },
+   {
+    "code": "B10",
+    "kind": "part",
+    "name": "ring10",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      513
+     ]
+    ]
+   },
+   {
+    "code": "D5",
+    "kind": "part",
+    "name": "ring11",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      498
+     ]
+    ]
+   },
+   {
+    "code": "B6",
+    "kind": "part",
+    "name": "ring12",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      483
+     ]
+    ]
+   },
+   {
+    "code": "G8",
+    "kind": "part",
+    "name": "ring13",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      468
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 842
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_15.png",
+  "labels": [
+   {
+    "code": "B7",
+    "kind": "part",
+    "name": "ring14",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      527
+     ]
+    ]
+   },
+   {
+    "code": "D1",
+    "kind": "part",
+    "name": "ring15",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      511
+     ]
+    ]
+   },
+   {
+    "code": "C8",
+    "kind": "part",
+    "name": "ring16",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      495
+     ]
+    ]
+   },
+   {
+    "code": "G5",
+    "kind": "part",
+    "name": "ring17",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      479
+     ]
+    ]
+   },
+   {
+    "code": "C10",
+    "kind": "part",
+    "name": "ring18",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      463
+     ]
+    ]
+   },
+   {
+    "code": "B11",
+    "kind": "part",
+    "name": "guide",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      447
+     ]
+    ]
+   },
+   {
+    "code": "C3",
+    "kind": "part",
+    "name": "ring20",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      430
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 942
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_16.png",
+  "labels": [
+   {
+    "code": "G2",
+    "kind": "part",
+    "name": "ring21",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      531
+     ]
+    ]
+   },
+   {
+    "code": "C4",
+    "kind": "part",
+    "name": "ring22",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      515
+     ]
+    ]
+   },
+   {
+    "code": "D4",
+    "kind": "part",
+    "name": "ring23",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      498
+     ]
+    ]
+   },
+   {
+    "code": "C12",
+    "kind": "part",
+    "name": "ring24",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      482
+     ]
+    ]
+   },
+   {
+    "code": "G4",
+    "kind": "part",
+    "name": "ring25",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      465
+     ]
+    ]
+   },
+   {
+    "code": "C9",
+    "kind": "part",
+    "name": "ring26",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      448
+     ]
+    ]
+   },
+   {
+    "code": "E12",
+    "kind": "part",
+    "name": "frog",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      431
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1051
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_17.png",
+  "labels": [
+   {
+    "code": "E15",
+    "kind": "part",
+    "name": "rose_stem",
+    "qty": 1,
+    "pts": [
+     [
+      875,
+      448
+     ]
+    ]
+   },
+   {
+    "code": "E9",
+    "kind": "part",
+    "name": "rose_leaf0",
+    "qty": 1,
+    "pts": [
+     [
+      917,
+      546
+     ]
+    ]
+   },
+   {
+    "code": "E10",
+    "kind": "part",
+    "name": "rose_head0",
+    "qty": 1,
+    "pts": [
+     [
+      987,
+      344
+     ]
+    ]
+   },
+   {
+    "code": "D2",
+    "kind": "part",
+    "name": "rose_head1",
+    "qty": 1,
+    "pts": [
+     [
+      994,
+      331
+     ]
+    ]
+   },
+   {
+    "code": "C2",
+    "kind": "part",
+    "name": "rose_head2",
+    "qty": 1,
+    "pts": [
+     [
+      994,
+      312
+     ]
+    ]
+   },
+   {
+    "code": "D10",
+    "kind": "part",
+    "name": "rose_head3",
+    "qty": 1,
+    "pts": [
+     [
+      1009,
+      307
+     ]
+    ]
+   },
+   {
+    "code": "B2",
+    "kind": "part",
+    "name": "rose_head4",
+    "qty": 1,
+    "pts": [
+     [
+      1012,
+      290
+     ]
+    ]
+   },
+   {
+    "code": "D11",
+    "kind": "part",
+    "name": "rose_head5",
+    "qty": 1,
+    "pts": [
+     [
+      1024,
+      283
+     ]
+    ]
+   },
+   {
+    "code": "D16",
+    "kind": "part",
+    "name": "rose_head6",
+    "qty": 1,
+    "pts": [
+     [
+      1031,
+      270
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.24999999999999997,
+   0.25881904510252074,
+   0.9330127018922194
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 683
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_18.png",
+  "labels": [
+   {
+    "code": "E4",
+    "kind": "part",
+    "name": "daisy_stem",
+    "qty": 1,
+    "pts": [
+     [
+      733,
+      439
+     ]
+    ]
+   },
+   {
+    "code": "E7",
+    "kind": "part",
+    "name": "daisy_leaf0",
+    "qty": 1,
+    "pts": [
+     [
+      682,
+      553
+     ]
+    ]
+   },
+   {
+    "code": "B4",
+    "kind": "part",
+    "name": "daisy_head0",
+    "qty": 1,
+    "pts": [
+     [
+      559,
+      369
+     ]
+    ]
+   },
+   {
+    "code": "C5",
+    "kind": "part",
+    "name": "daisy_head1",
+    "qty": 1,
+    "pts": [
+     [
+      547,
+      361
+     ]
+    ]
+   },
+   {
+    "code": "F6",
+    "kind": "part",
+    "name": "daisy_head2",
+    "qty": 1,
+    "pts": [
+     [
+      534,
+      353
+     ]
+    ]
+   },
+   {
+    "code": "F5",
+    "kind": "part",
+    "name": "daisy_head3",
+    "qty": 1,
+    "pts": [
+     [
+      521,
+      344
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.9330127018922194,
+   0.25881904510252074,
+   0.24999999999999997
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 945
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_19.png",
+  "labels": [
+   {
+    "code": "E13",
+    "kind": "part",
+    "name": "lavender1_stem",
+    "qty": 1,
+    "pts": [
+     [
+      764,
+      470
+     ]
+    ]
+   },
+   {
+    "code": "H10",
+    "kind": "part",
+    "name": "lavender1_head0",
+    "qty": 1,
+    "pts": [
+     [
+      707,
+      327
+     ]
+    ]
+   },
+   {
+    "code": "H8",
+    "kind": "part",
+    "name": "lavender1_head1",
+    "qty": 1,
+    "pts": [
+     [
+      704,
+      315
+     ]
+    ]
+   },
+   {
+    "code": "H2",
+    "kind": "part",
+    "name": "lavender1_head2",
+    "qty": 1,
+    "pts": [
+     [
+      700,
+      303
+     ]
+    ]
+   },
+   {
+    "code": "H6",
+    "kind": "part",
+    "name": "lavender1_head3",
+    "qty": 1,
+    "pts": [
+     [
+      696,
+      291
+     ]
+    ]
+   },
+   {
+    "code": "H4",
+    "kind": "part",
+    "name": "lavender1_head4",
+    "qty": 1,
+    "pts": [
+     [
+      692,
+      279
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.4531538935183249,
+   0.42261826174069944,
+   0.7848855672213958
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1074
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_20.png",
+  "labels": [
+   {
+    "code": "E14",
+    "kind": "part",
+    "name": "tulip_stem",
+    "qty": 1,
+    "pts": [
+     [
+      721,
+      459
+     ]
+    ]
+   },
+   {
+    "code": "E7",
+    "kind": "part",
+    "name": "tulip_leaf0",
+    "qty": 1,
+    "pts": [
+     [
+      657,
+      514
+     ]
+    ]
+   },
+   {
+    "code": "H3",
+    "kind": "part",
+    "name": "tulip_head0",
+    "qty": 1,
+    "pts": [
+     [
+      593,
+      340
+     ]
+    ]
+   },
+   {
+    "code": "D13",
+    "kind": "part",
+    "name": "tulip_head1",
+    "qty": 1,
+    "pts": [
+     [
+      618,
+      310
+     ]
+    ]
+   },
+   {
+    "code": "H9",
+    "kind": "part",
+    "name": "tulip_head2",
+    "qty": 1,
+    "pts": [
+     [
+      585,
+      314
+     ]
+    ]
+   },
+   {
+    "code": "F4",
+    "kind": "part",
+    "name": "tulip_head3",
+    "qty": 1,
+    "pts": [
+     [
+      587,
+      297
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.21201214989665462,
+   0.573576436351046,
+   0.7912401152362238
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1212
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_21.png",
+  "labels": [
+   {
+    "code": "E1",
+    "kind": "part",
+    "name": "sunflower_stem",
+    "qty": 1,
+    "pts": [
+     [
+      702,
+      470
+     ]
+    ]
+   },
+   {
+    "code": "E6",
+    "kind": "part",
+    "name": "sunflower_leaf0",
+    "qty": 1,
+    "pts": [
+     [
+      652,
+      521
+     ]
+    ]
+   },
+   {
+    "code": "F2",
+    "kind": "part",
+    "name": "sunflower_head0",
+    "qty": 1,
+    "pts": [
+     [
+      519,
+      430
+     ]
+    ]
+   },
+   {
+    "code": "F3",
+    "kind": "part",
+    "name": "sunflower_head1",
+    "qty": 1,
+    "pts": [
+     [
+      506,
+      427
+     ]
+    ]
+   },
+   {
+    "code": "A16",
+    "kind": "part",
+    "name": "sunflower_head2",
+    "qty": 1,
+    "pts": [
+     [
+      494,
+      423
+     ]
+    ]
+   },
+   {
+    "code": "A4",
+    "kind": "part",
+    "name": "sunflower_head3",
+    "qty": 1,
+    "pts": [
+     [
+      481,
+      420
+     ]
+    ]
+   }
+  ],
+  "view": [
+   -0.28678821817552336,
+   0.8191520442889918,
+   0.496731764892154
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1317
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_22.png",
+  "labels": [
+   {
+    "code": "E11",
+    "kind": "part",
+    "name": "lavender2_stem",
+    "qty": 1,
+    "pts": [
+     [
+      866,
+      466
+     ]
+    ]
+   },
+   {
+    "code": "H10",
+    "kind": "part",
+    "name": "lavender2_head0",
+    "qty": 1,
+    "pts": [
+     [
+      900,
+      308
+     ]
+    ]
+   },
+   {
+    "code": "H8",
+    "kind": "part",
+    "name": "lavender2_head1",
+    "qty": 1,
+    "pts": [
+     [
+      902,
+      295
+     ]
+    ]
+   },
+   {
+    "code": "H2",
+    "kind": "part",
+    "name": "lavender2_head2",
+    "qty": 1,
+    "pts": [
+     [
+      904,
+      281
+     ]
+    ]
+   },
+   {
+    "code": "H6",
+    "kind": "part",
+    "name": "lavender2_head3",
+    "qty": 1,
+    "pts": [
+     [
+      907,
+      267
+     ]
+    ]
+   },
+   {
+    "code": "H4",
+    "kind": "part",
+    "name": "lavender2_head4",
+    "qty": 1,
+    "pts": [
+     [
+      909,
+      253
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5,
+   0.7071067811865475,
+   0.5000000000000001
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1204
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_23.png",
+  "labels": [
+   {
+    "code": "E2",
+    "kind": "part",
+    "name": "rosebud_stem",
+    "qty": 1,
+    "pts": [
+     [
+      890,
+      489
+     ]
+    ]
+   },
+   {
+    "code": "E6",
+    "kind": "part",
+    "name": "rosebud_leaf0",
+    "qty": 1,
+    "pts": [
+     [
+      933,
+      580
+     ]
+    ]
+   },
+   {
+    "code": "E8",
+    "kind": "part",
+    "name": "rosebud_head0",
+    "qty": 1,
+    "pts": [
+     [
+      1052,
+      450
+     ]
+    ]
+   },
+   {
+    "code": "C7",
+    "kind": "part",
+    "name": "rosebud_head1",
+    "qty": 1,
+    "pts": [
+     [
+      1064,
+      442
+     ]
+    ]
+   },
+   {
+    "code": "D3",
+    "kind": "part",
+    "name": "rosebud_head2",
+    "qty": 1,
+    "pts": [
+     [
+      1072,
+      428
+     ]
+    ]
+   },
+   {
+    "code": "B14",
+    "kind": "part",
+    "name": "rosebud_head3",
+    "qty": 1,
+    "pts": [
+     [
+      1090,
+      427
+     ]
+    ]
+   },
+   {
+    "code": "D12",
+    "kind": "part",
+    "name": "rosebud_head4",
+    "qty": 1,
+    "pts": [
+     [
+      1101,
+      416
+     ]
+    ]
+   },
+   {
+    "code": "D16",
+    "kind": "part",
+    "name": "rosebud_head5",
+    "qty": 1,
+    "pts": [
+     [
+      1116,
+      410
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.6830127018922194,
+   0.7071067811865475,
+   0.18301270189221933
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1443
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_24.png",
+  "labels": [
+   {
+    "code": "E3",
+    "kind": "part",
+    "name": "cornflower_stem",
+    "qty": 1,
+    "pts": [
+     [
+      895,
+      463
+     ]
+    ]
+   },
+   {
+    "code": "E6",
+    "kind": "part",
+    "name": "cornflower_leaf0",
+    "qty": 1,
+    "pts": [
+     [
+      948,
+      522
+     ]
+    ]
+   },
+   {
+    "code": "G3",
+    "kind": "part",
+    "name": "cornflower_head0",
+    "qty": 1,
+    "pts": [
+     [
+      1027,
+      344
+     ]
+    ]
+   },
+   {
+    "code": "G10",
+    "kind": "part",
+    "name": "cornflower_head1",
+    "qty": 1,
+    "pts": [
+     [
+      1035,
+      335
+     ]
+    ]
+   },
+   {
+    "code": "H1",
+    "kind": "part",
+    "name": "cornflower_head2",
+    "qty": 1,
+    "pts": [
+     [
+      1044,
+      326
+     ]
+    ]
+   },
+   {
+    "code": "H7",
+    "kind": "part",
+    "name": "cornflower_head3",
+    "qty": 1,
+    "pts": [
+     [
+      1053,
+      317
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.6408563820557884,
+   0.42261826174069944,
+   0.6408563820557885
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1302
+ },
+ {
+  "out": "kits/floral/booklet/raw/step_25.png",
+  "labels": [
+   {
+    "code": "A8",
+    "kind": "part",
+    "name": "butterfly0_body",
+    "qty": 1,
+    "pts": [
+     [
+      881,
+      769
+     ]
+    ]
+   },
+   {
+    "code": "H5",
+    "kind": "part",
+    "name": "butterfly0_wings",
+    "qty": 1,
+    "pts": [
+     [
+      888,
+      783
+     ]
+    ]
+   },
+   {
+    "code": "A2",
+    "kind": "part",
+    "name": "butterfly1_body",
+    "qty": 1,
+    "pts": [
+     [
+      763,
+      513
+     ]
+    ]
+   },
+   {
+    "code": "G1",
+    "kind": "part",
+    "name": "butterfly1_wings",
+    "qty": 1,
+    "pts": [
+     [
+      757,
+      500
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1284
+ }
+]

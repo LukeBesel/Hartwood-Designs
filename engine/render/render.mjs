@@ -33,7 +33,7 @@ for (const job of jobs) {
   const out = path.resolve(ROOT, job.out);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, Buffer.from(r.png.split(',')[1], 'base64'));
-  meta.push({ out: job.out, labels: r.labels, ms: Date.now() - t });
+  meta.push({ out: job.out, labels: r.labels, view: r.view, width: job.width, height: job.height, ms: Date.now() - t });
   process.stdout.write(`rendered ${job.out} (${Date.now() - t} ms)\n`);
 }
 if (process.argv[3]) fs.writeFileSync(process.argv[3], JSON.stringify(meta, null, 1));

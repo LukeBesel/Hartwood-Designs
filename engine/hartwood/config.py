@@ -63,3 +63,6 @@ SHEET_COST = {               # USD per 12 x 12 in x 3 mm sheet
     'natural': 1.60,
     'colored': 3.10,
 }
+
+# --- links (TODO_LUCAS: set your real domain, then rerun engine/booklet.py so the QR codes point to it) ---
+SITE_URL = 'https://TODO-LUCAS-domain.example'

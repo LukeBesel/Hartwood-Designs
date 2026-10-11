@@ -405,6 +405,23 @@ class Kit:
     def solids(self):
         return list(self.parts) + list(self.hardware)
 
+    def compact_steps(self):
+        """Renumber steps 1..N, dropping steps that have no parts and no sub-assembly mount."""
+        used = sorted({s.step for s in self.solids()} | {sa['step'] for sa in self.subassemblies})
+        remap = {old: i + 1 for i, old in enumerate(used)}
+        for s in self.solids():
+            s.step = remap[s.step]
+        for sa in self.subassemblies:
+            sa['step'] = remap[sa['step']]
+        steps = {}
+        for old, new in remap.items():
+            st = self.steps.get(old)
+            if st is not None:
+                st.n = new
+                steps[new] = st
+        self.steps = steps
+        return remap
+
     def by_name(self, name):
         for s in self.solids():
             if s.name == name:

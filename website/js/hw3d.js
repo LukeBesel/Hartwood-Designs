@@ -249,3 +249,93 @@ export function worldCenter(item) {
   const b = new THREE.Box3().expandByObject(item.node);
   return b.getCenter(new THREE.Vector3());
 }
+
+// ------------------------------------------------------------------ steps (shared by the booklet renderer and the app)
+// steps = the kit's <kit>_steps.json. A sub-assembly is built on the table (only its parts show) and later
+// mounted as one unit at its mount step.
+export function stepContext(kit, steps, n) {
+  const st = steps.steps.find(s => s.n === n) || { n, mounts: [] };
+  const subs = steps.steps.flatMap(s => (s.mounts || []).map(m => ({ ...m, step: s.n })));
+  const byName = Object.fromEntries(subs.map(m => [m.name, m]));
+  // all parts of a sub-assembly, including those of sub-assemblies mounted into it
+  const allOf = m => { const out = new Set(m.members); subs.filter(c => c.into === m.name).forEach(c => allOf(c).forEach(x => out.add(x))); return out; };
+  const all = new Map(subs.map(m => [m, allOf(m)]));
+  // chain of sub-assemblies for a part name, innermost first
+  const direct = nm => subs.filter(m => m.members.includes(nm)).sort((a, b) => a.members.length - b.members.length)[0];
+  const chain = nm => { const c = []; let m = direct(nm); while (m) { c.push(m); m = m.into ? byName[m.into] : null; } return c; };
+  const newItems = kit.items.filter(it => it.step === n);
+  const pending = subs.filter(m => m.step > n);
+  const cand = pending.filter(m => newItems.length && newItems.every(it => all.get(m).has(it.ex.name)))
+    .sort((a, b) => all.get(a).size - all.get(b).size)[0] || null;
+  const only = cand ? all.get(cand) : null;
+  // hidden: a part inside a sub-assembly that is not mounted yet (below the one being built)
+  const hidden = new Set();
+  kit.items.forEach(it => {
+    for (const m of chain(it.ex.name)) {
+      if (m === cand) break;
+      if (m.step > n) { hidden.add(it.ex.name); break; }
+    }
+  });
+  const mounts = st.mounts || [];
+  const mountOf = new Map();
+  mounts.forEach(m => { const mm = byName[m.name]; const set = all.get(mm); kit.items.forEach(it => { if (set.has(it.ex.name)) mountOf.set(it, m); }); });
+  const mountItems = [...mountOf.keys()];
+  return { st, n, newItems, mountItems, mounts, mountOf, only, hidden };
+}
+
+export function applyStep(kit, ctx, t = 0, { res = null, outlinePx = 3.5, colorBuilt = false, edgesBuilt = true } = {}) {
+  const n = ctx.n;
+  kit.items.forEach(it => {
+    setOutline(it, false); setExplode(it, 0);
+    const nm = it.ex.name;
+    const vis = it.step === n || (it.step < n && (!ctx.only || ctx.only.has(nm)) && !ctx.hidden.has(nm));
+    if (!vis) { setLook(it, 'hidden'); return; }
+    if (it.step === n) { setLook(it, 'color'); setOutline(it, true, ORANGE, outlinePx, res); }
+    else if (ctx.mountItems.includes(it)) { setLook(it, 'color'); setOutline(it, true, ORANGE, Math.max(1.5, outlinePx * 0.5), res); }
+    else { setLook(it, colorBuilt ? 'color' : 'gray'); if (edgesBuilt) setOutline(it, true, 0x8f877c, 1.2, res); }
+  });
+  ctx.newItems.forEach(it => setExplode(it, t));
+  ctx.mountItems.forEach(it => {
+    if (it.step === n) return;
+    const m = ctx.mountOf.get(it);
+    it.node.position.copy(it.final).addScaledVector(new THREE.Vector3(...m.insert).normalize(), -m.explode * t);
+  });
+}
+
+// mean insertion direction of what moves in this step
+export function stepDirection(ctx) {
+  const d = new THREE.Vector3();
+  ctx.newItems.forEach(it => d.add(it.insert));
+  ctx.mounts.forEach(m => d.add(new THREE.Vector3(...m.insert).normalize().multiplyScalar(Math.max(1, ctx.newItems.length))));
+  return d.lengthSq() > 1e-9 ? d.normalize() : new THREE.Vector3(0, -1, 0);
+}
+
+// camera direction that shows the insertion: across the motion, from the side the parts come from,
+// close to the kit's usual view so pages feel consistent
+export function autoView(ctx, base = [0.75, 0.45, 1.0]) {
+  const D = stepDirection(ctx), B = new THREE.Vector3(...base).normalize();
+  let best = null, bs = -1e9;
+  for (let az = 0; az < 360; az += 15) for (const el of [15, 25, 35, 45, 55]) {
+    const a = THREE.MathUtils.degToRad(az), e = THREE.MathUtils.degToRad(el);
+    const v = new THREE.Vector3(Math.cos(e) * Math.sin(a), Math.sin(e), Math.cos(e) * Math.cos(a));
+    // best when the camera sits about 55 degrees off the direction the parts come from
+    const c = v.dot(D.clone().negate());
+    const s = -1.6 * Math.abs(c - 0.55) + 1.0 * v.dot(B) + 0.1 * Math.sin(e);
+    if (s > bs) { bs = s; best = v; }
+  }
+  return [best.x, best.y, best.z];
+}
+
+// framing box: the whole visible model, or a close-up around the new parts when they are small
+export function stepFitBox(kit, ctx, explodedBox) {
+  const full = visibleBox(kit.items);
+  const nb = new THREE.Box3();
+  const movers = ctx.newItems.concat(ctx.mountItems).filter(it => it.node.visible);
+  movers.forEach(it => nb.expandByObject(it.node));
+  if (explodedBox) nb.union(explodedBox);
+  if (nb.isEmpty()) return full;
+  const fs = full.getSize(new THREE.Vector3()).length(), ns = nb.getSize(new THREE.Vector3()).length();
+  if (ns > 0.5 * fs) return full.union(nb);
+  const pad = Math.max(ns * 0.45, 0.025);
+  return nb.clone().expandByScalar(pad).intersect(full.clone().union(nb));
+}

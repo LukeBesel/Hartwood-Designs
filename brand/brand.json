@@ -1,0 +1,44 @@
+{
+ "palette": {
+  "walnut": {
+   "hex": "#3A2A1F",
+   "use": "text, outlines"
+  },
+  "oak": {
+   "hex": "#B9895B",
+   "use": "secondary wood tone, borders"
+  },
+  "maple": {
+   "hex": "#EBD5B0",
+   "use": "wood light, cards"
+  },
+  "birch": {
+   "hex": "#F6EEE1",
+   "use": "surfaces, page bands"
+  },
+  "paper": {
+   "hex": "#FCF8F1",
+   "use": "page background"
+  },
+  "lagoon": {
+   "hex": "#0F8B7F",
+   "use": "the one bright accent: buttons, links, highlights"
+  },
+  "lagoon_dark": {
+   "hex": "#0B6158",
+   "use": "accent text on light backgrounds (AA contrast)"
+  },
+  "lagoon_light": {
+   "hex": "#D7EFEB",
+   "use": "accent tint backgrounds"
+  },
+  "blaze": {
+   "hex": "#FF6A13",
+   "use": "safety orange: only for the blaster tip and safety notes"
+  }
+ },
+ "fonts": {
+  "display": "Fraunces (SIL OFL), weights 600 to 800",
+  "body": "Inter (SIL OFL), weights 400 to 700"
+ }
+}

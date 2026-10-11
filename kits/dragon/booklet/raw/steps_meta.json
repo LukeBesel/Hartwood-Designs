@@ -1,0 +1,1778 @@
+[
+ {
+  "out": "kits/dragon/booklet/raw/step_01.png",
+  "labels": [
+   {
+    "code": "D1",
+    "kind": "part",
+    "name": "slice_c0",
+    "qty": 1,
+    "pts": [
+     [
+      889,
+      524
+     ]
+    ]
+   },
+   {
+    "code": "C20",
+    "kind": "part",
+    "name": "key_hips",
+    "qty": 1,
+    "pts": [
+     [
+      717,
+      537
+     ]
+    ]
+   },
+   {
+    "code": "C6",
+    "kind": "part",
+    "name": "key_back",
+    "qty": 1,
+    "pts": [
+     [
+      787,
+      553
+     ]
+    ]
+   },
+   {
+    "code": "B9",
+    "kind": "part",
+    "name": "key_chest",
+    "qty": 1,
+    "pts": [
+     [
+      865,
+      572
+     ]
+    ]
+   },
+   {
+    "code": "B23",
+    "kind": "part",
+    "name": "key_neck_low",
+    "qty": 1,
+    "pts": [
+     [
+      902,
+      505
+     ]
+    ]
+   },
+   {
+    "code": "B14",
+    "kind": "part",
+    "name": "key_neck_high",
+    "qty": 1,
+    "pts": [
+     [
+      939,
+      439
+     ]
+    ]
+   },
+   {
+    "code": "B6",
+    "kind": "part",
+    "name": "key_skull",
+    "qty": 1,
+    "pts": [
+     [
+      976,
+      395
+     ]
+    ]
+   },
+   {
+    "code": "A22",
+    "kind": "part",
+    "name": "key_tail_base",
+    "qty": 1,
+    "pts": [
+     [
+      641,
+      518
+     ]
+    ]
+   },
+   {
+    "code": "A11",
+    "kind": "part",
+    "name": "wing_bar",
+    "qty": 1,
+    "pts": [
+     [
+      805,
+      545
+     ]
+    ]
+   },
+   {
+    "code": "B28",
+    "kind": "part",
+    "name": "jaw_l",
+    "qty": 1,
+    "pts": [
+     [
+      1173,
+      415
+     ]
+    ]
+   },
+   {
+    "code": "D3",
+    "kind": "part",
+    "name": "jaw_c",
+    "qty": 1,
+    "pts": [
+     [
+      1069,
+      478
+     ]
+    ]
+   },
+   {
+    "code": "A16",
+    "kind": "part",
+    "name": "jaw_r",
+    "qty": 1,
+    "pts": [
+     [
+      1062,
+      482
+     ]
+    ]
+   },
+   {
+    "code": "A20",
+    "kind": "part",
+    "name": "jaw_key",
+    "qty": 1,
+    "pts": [
+     [
+      1049,
+      465
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5792279653395691,
+   0.573576436351046,
+   0.5792279653395692
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 2301
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_02.png",
+  "labels": [
+   {
+    "code": "B18",
+    "kind": "part",
+    "name": "slice_r1",
+    "qty": 1,
+    "pts": [
+     [
+      743,
+      591
+     ]
+    ]
+   },
+   {
+    "code": "C2",
+    "kind": "part",
+    "name": "slice_r2",
+    "qty": 1,
+    "pts": [
+     [
+      733,
+      531
+     ]
+    ]
+   },
+   {
+    "code": "E4",
+    "kind": "part",
+    "name": "slice_r3",
+    "qty": 1,
+    "pts": [
+     [
+      720,
+      502
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5792279653395691,
+   0.573576436351046,
+   0.5792279653395692
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 433
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_03.png",
+  "labels": [
+   {
+    "code": "C4",
+    "kind": "part",
+    "name": "slice_r4",
+    "qty": 1,
+    "pts": [
+     [
+      691,
+      585
+     ]
+    ]
+   },
+   {
+    "code": "B7",
+    "kind": "part",
+    "name": "slice_r5",
+    "qty": 1,
+    "pts": [
+     [
+      717,
+      632
+     ]
+    ]
+   },
+   {
+    "code": "B10",
+    "kind": "part",
+    "name": "slice_r6",
+    "qty": 1,
+    "pts": [
+     [
+      825,
+      713
+     ]
+    ]
+   },
+   {
+    "code": "C3",
+    "kind": "part",
+    "name": "slice_r6_1",
+    "qty": 1,
+    "pts": [
+     [
+      662,
+      617
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5792279653395691,
+   0.573576436351046,
+   0.5792279653395692
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 475
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_04.png",
+  "labels": [
+   {
+    "code": "B22",
+    "kind": "part",
+    "name": "key_aux2",
+    "qty": 1,
+    "pts": [
+     [
+      812,
+      615
+     ]
+    ]
+   },
+   {
+    "code": "B36",
+    "kind": "part",
+    "name": "key_aux3",
+    "qty": 1,
+    "pts": [
+     [
+      704,
+      560
+     ]
+    ]
+   },
+   {
+    "code": "A7",
+    "kind": "part",
+    "name": "slice_r7",
+    "qty": 1,
+    "pts": [
+     [
+      828,
+      690
+     ]
+    ]
+   },
+   {
+    "code": "B29",
+    "kind": "part",
+    "name": "slice_r7_1",
+    "qty": 1,
+    "pts": [
+     [
+      657,
+      605
+     ]
+    ]
+   },
+   {
+    "code": "B17",
+    "kind": "part",
+    "name": "slice_r8",
+    "qty": 1,
+    "pts": [
+     [
+      826,
+      708
+     ]
+    ]
+   },
+   {
+    "code": "A18",
+    "kind": "part",
+    "name": "slice_r8_1",
+    "qty": 1,
+    "pts": [
+     [
+      650,
+      619
+     ]
+    ]
+   },
+   {
+    "code": "C19",
+    "kind": "part",
+    "name": "slice_r9",
+    "qty": 1,
+    "pts": [
+     [
+      646,
+      628
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5792279653395691,
+   0.573576436351046,
+   0.5792279653395692
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 482
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_05.png",
+  "labels": [
+   {
+    "code": "C5",
+    "kind": "part",
+    "name": "slice_l1",
+    "qty": 1,
+    "pts": [
+     [
+      859,
+      601
+     ]
+    ]
+   },
+   {
+    "code": "B11",
+    "kind": "part",
+    "name": "slice_l2",
+    "qty": 1,
+    "pts": [
+     [
+      869,
+      549
+     ]
+    ]
+   },
+   {
+    "code": "C10",
+    "kind": "part",
+    "name": "slice_l3",
+    "qty": 1,
+    "pts": [
+     [
+      883,
+      524
+     ]
+    ]
+   },
+   {
+    "code": "jaw dowel",
+    "kind": "face",
+    "name": "jaw dowel",
+    "qty": 1,
+    "pts": [
+     [
+      515,
+      470
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5000000000000001,
+   0.7071067811865475,
+   -0.5
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 644
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_06.png",
+  "labels": [
+   {
+    "code": "B32",
+    "kind": "part",
+    "name": "slice_l4",
+    "qty": 1,
+    "pts": [
+     [
+      911,
+      591
+     ]
+    ]
+   },
+   {
+    "code": "B19",
+    "kind": "part",
+    "name": "slice_l5",
+    "qty": 1,
+    "pts": [
+     [
+      885,
+      641
+     ]
+    ]
+   },
+   {
+    "code": "B26",
+    "kind": "part",
+    "name": "slice_l6",
+    "qty": 1,
+    "pts": [
+     [
+      775,
+      739
+     ]
+    ]
+   },
+   {
+    "code": "C9",
+    "kind": "part",
+    "name": "slice_l6_1",
+    "qty": 1,
+    "pts": [
+     [
+      941,
+      618
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5000000000000001,
+   0.7071067811865475,
+   -0.5
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 602
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_07.png",
+  "labels": [
+   {
+    "code": "B35",
+    "kind": "part",
+    "name": "key_aux1",
+    "qty": 1,
+    "pts": [
+     [
+      793,
+      636
+     ]
+    ]
+   },
+   {
+    "code": "B3",
+    "kind": "part",
+    "name": "slice_l7",
+    "qty": 1,
+    "pts": [
+     [
+      777,
+      712
+     ]
+    ]
+   },
+   {
+    "code": "A3",
+    "kind": "part",
+    "name": "slice_l7_1",
+    "qty": 1,
+    "pts": [
+     [
+      952,
+      598
+     ]
+    ]
+   },
+   {
+    "code": "B21",
+    "kind": "part",
+    "name": "slice_l8",
+    "qty": 1,
+    "pts": [
+     [
+      780,
+      730
+     ]
+    ]
+   },
+   {
+    "code": "B16",
+    "kind": "part",
+    "name": "slice_l8_1",
+    "qty": 1,
+    "pts": [
+     [
+      959,
+      611
+     ]
+    ]
+   },
+   {
+    "code": "B1",
+    "kind": "part",
+    "name": "slice_l9",
+    "qty": 1,
+    "pts": [
+     [
+      963,
+      622
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5000000000000001,
+   0.7071067811865475,
+   -0.5
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 700
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_08.png",
+  "labels": [
+   {
+    "code": "F1",
+    "kind": "part",
+    "name": "eye_r",
+    "qty": 1,
+    "pts": [
+     [
+      693,
+      680
+     ]
+    ]
+   },
+   {
+    "code": "A2",
+    "kind": "part",
+    "name": "eye_r_peg",
+    "qty": 2,
+    "pts": [
+     [
+      692,
+      667
+     ],
+     [
+      912,
+      451
+     ]
+    ]
+   },
+   {
+    "code": "F4",
+    "kind": "part",
+    "name": "eye_l",
+    "qty": 1,
+    "pts": [
+     [
+      927,
+      448
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 884
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_09.png",
+  "labels": [
+   {
+    "code": "G1",
+    "kind": "part",
+    "name": "wing_r",
+    "qty": 2,
+    "pts": [
+     [
+      651,
+      463
+     ],
+     [
+      583,
+      392
+     ]
+    ]
+   },
+   {
+    "code": "B24",
+    "kind": "part",
+    "name": "wing_r_bones",
+    "qty": 1,
+    "pts": [
+     [
+      766,
+      501
+     ]
+    ]
+   },
+   {
+    "code": "F5",
+    "kind": "part",
+    "name": "wing_r_thumb",
+    "qty": 2,
+    "pts": [
+     [
+      963,
+      450
+     ],
+     [
+      825,
+      297
+     ]
+    ]
+   },
+   {
+    "code": "B30",
+    "kind": "part",
+    "name": "wing_r_peg0",
+    "qty": 1,
+    "pts": [
+     [
+      873,
+      591
+     ]
+    ]
+   },
+   {
+    "code": "B8",
+    "kind": "part",
+    "name": "wing_r_peg1",
+    "qty": 2,
+    "pts": [
+     [
+      945,
+      447
+     ],
+     [
+      812,
+      305
+     ]
+    ]
+   },
+   {
+    "code": "A10",
+    "kind": "part",
+    "name": "wing_l_bones",
+    "qty": 1,
+    "pts": [
+     [
+      678,
+      360
+     ]
+    ]
+   },
+   {
+    "code": "A1",
+    "kind": "part",
+    "name": "wing_l_peg0",
+    "qty": 1,
+    "pts": [
+     [
+      816,
+      483
+     ]
+    ]
+   }
+  ],
+  "view": [
+   -0.24999999999999994,
+   0.25881904510252074,
+   0.9330127018922194
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 641
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_10.png",
+  "labels": [
+   {
+    "code": "A21",
+    "kind": "part",
+    "name": "ground",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      575
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 343
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_11.png",
+  "labels": [
+   {
+    "code": "E3",
+    "kind": "part",
+    "name": "wall_front",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      590
+     ]
+    ]
+   },
+   {
+    "code": "E2",
+    "kind": "part",
+    "name": "wall_back",
+    "qty": 1,
+    "pts": [
+     [
+      965,
+      424
+     ]
+    ]
+   },
+   {
+    "code": "C1",
+    "kind": "part",
+    "name": "wall_right",
+    "qty": 1,
+    "pts": [
+     [
+      1176,
+      591
+     ]
+    ]
+   },
+   {
+    "code": "E1",
+    "kind": "part",
+    "name": "wall_left",
+    "qty": 1,
+    "pts": [
+     [
+      631,
+      423
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 345
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_12.png",
+  "labels": [
+   {
+    "code": "A15",
+    "kind": "part",
+    "name": "tower_top",
+    "qty": 1,
+    "pts": [
+     [
+      891,
+      370
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 389
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_13.png",
+  "labels": [
+   {
+    "code": "C12",
+    "kind": "part",
+    "name": "merlon_claw_r",
+    "qty": 2,
+    "pts": [
+     [
+      1094,
+      501
+     ],
+     [
+      1163,
+      421
+     ]
+    ]
+   },
+   {
+    "code": "C15",
+    "kind": "part",
+    "name": "merlon0",
+    "qty": 3,
+    "pts": [
+     [
+      598,
+      391
+     ],
+     [
+      899,
+      482
+     ],
+     [
+      599,
+      343
+     ]
+    ]
+   },
+   {
+    "code": "C11",
+    "kind": "part",
+    "name": "merlon1",
+    "qty": 1,
+    "pts": [
+     [
+      735,
+      446
+     ]
+    ]
+   },
+   {
+    "code": "B13",
+    "kind": "part",
+    "name": "merlon3",
+    "qty": 1,
+    "pts": [
+     [
+      764,
+      266
+     ]
+    ]
+   },
+   {
+    "code": "C13",
+    "kind": "part",
+    "name": "merlon4",
+    "qty": 1,
+    "pts": [
+     [
+      959,
+      318
+     ]
+    ]
+   },
+   {
+    "code": "C16",
+    "kind": "part",
+    "name": "merlon5",
+    "qty": 1,
+    "pts": [
+     [
+      1115,
+      370
+     ]
+    ]
+   },
+   {
+    "code": "C7",
+    "kind": "part",
+    "name": "merlon7",
+    "qty": 1,
+    "pts": [
+     [
+      687,
+      288
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 438
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_14.png",
+  "labels": [],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 819
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_15.png",
+  "labels": [
+   {
+    "code": "B25",
+    "kind": "part",
+    "name": "door_arch",
+    "qty": 1,
+    "pts": [
+     [
+      701,
+      829
+     ]
+    ]
+   },
+   {
+    "code": "A2",
+    "kind": "part",
+    "name": "door_arch_peg0",
+    "qty": 2,
+    "pts": [
+     [
+      675,
+      834
+     ],
+     [
+      740,
+      880
+     ]
+    ]
+   },
+   {
+    "code": "H1",
+    "kind": "part",
+    "name": "ivy_front",
+    "qty": 1,
+    "pts": [
+     [
+      786,
+      883
+     ]
+    ]
+   },
+   {
+    "code": "B2",
+    "kind": "part",
+    "name": "ivy_front_peg0",
+    "qty": 20,
+    "pts": [
+     [
+      784,
+      894
+     ],
+     [
+      798,
+      858
+     ],
+     [
+      632,
+      762
+     ],
+     [
+      630,
+      725
+     ],
+     [
+      606,
+      780
+     ],
+     [
+      621,
+      790
+     ],
+     [
+      658,
+      732
+     ],
+     [
+      673,
+      742
+     ],
+     [
+      914,
+      924
+     ],
+     [
+      930,
+      913
+     ],
+     [
+      982,
+      845
+     ],
+     [
+      997,
+      834
+     ],
+     [
+      940,
+      827
+     ],
+     [
+      957,
+      815
+     ],
+     [
+      710,
+      672
+     ],
+     [
+      695,
+      681
+     ],
+     [
+      644,
+      681
+     ],
+     [
+      628,
+      690
+     ],
+     [
+      686,
+      608
+     ],
+     [
+      671,
+      617
+     ]
+    ]
+   },
+   {
+    "code": "B20",
+    "kind": "part",
+    "name": "torch",
+    "qty": 1,
+    "pts": [
+     [
+      626,
+      760
+     ]
+    ]
+   },
+   {
+    "code": "F9",
+    "kind": "part",
+    "name": "torch_flame",
+    "qty": 1,
+    "pts": [
+     [
+      624,
+      723
+     ]
+    ]
+   },
+   {
+    "code": "A17",
+    "kind": "part",
+    "name": "front_stone0",
+    "qty": 1,
+    "pts": [
+     [
+      608,
+      788
+     ]
+    ]
+   },
+   {
+    "code": "B31",
+    "kind": "part",
+    "name": "front_stone1",
+    "qty": 1,
+    "pts": [
+     [
+      660,
+      740
+     ]
+    ]
+   },
+   {
+    "code": "A12",
+    "kind": "part",
+    "name": "wall_right_stone0",
+    "qty": 2,
+    "pts": [
+     [
+      927,
+      922
+     ],
+     [
+      699,
+      674
+     ]
+    ]
+   },
+   {
+    "code": "B37",
+    "kind": "part",
+    "name": "wall_right_stone1",
+    "qty": 1,
+    "pts": [
+     [
+      995,
+      843
+     ]
+    ]
+   },
+   {
+    "code": "B27",
+    "kind": "part",
+    "name": "wall_right_stone2",
+    "qty": 2,
+    "pts": [
+     [
+      954,
+      824
+     ],
+     [
+      674,
+      610
+     ]
+    ]
+   },
+   {
+    "code": "A14",
+    "kind": "part",
+    "name": "wall_left_stone1",
+    "qty": 1,
+    "pts": [
+     [
+      632,
+      682
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5792279653395691,
+   0.573576436351046,
+   0.5792279653395692
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 923
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_16.png",
+  "labels": [
+   {
+    "code": "A5",
+    "kind": "part",
+    "name": "rubble_peg0",
+    "qty": 4,
+    "pts": [
+     [
+      582,
+      747
+     ],
+     [
+      613,
+      816
+     ],
+     [
+      1023,
+      827
+     ],
+     [
+      638,
+      660
+     ]
+    ]
+   },
+   {
+    "code": "C18",
+    "kind": "part",
+    "name": "rubble0_0",
+    "qty": 1,
+    "pts": [
+     [
+      583,
+      749
+     ]
+    ]
+   },
+   {
+    "code": "B34",
+    "kind": "part",
+    "name": "rubble0_1",
+    "qty": 1,
+    "pts": [
+     [
+      582,
+      744
+     ]
+    ]
+   },
+   {
+    "code": "A9",
+    "kind": "part",
+    "name": "rubble0_2",
+    "qty": 1,
+    "pts": [
+     [
+      581,
+      739
+     ]
+    ]
+   },
+   {
+    "code": "C22",
+    "kind": "part",
+    "name": "rubble1_0",
+    "qty": 1,
+    "pts": [
+     [
+      613,
+      820
+     ]
+    ]
+   },
+   {
+    "code": "B38",
+    "kind": "part",
+    "name": "rubble1_1",
+    "qty": 1,
+    "pts": [
+     [
+      611,
+      812
+     ]
+    ]
+   },
+   {
+    "code": "A6",
+    "kind": "part",
+    "name": "rubble1_2",
+    "qty": 1,
+    "pts": [
+     [
+      612,
+      808
+     ]
+    ]
+   },
+   {
+    "code": "B4",
+    "kind": "part",
+    "name": "rubble2_0",
+    "qty": 1,
+    "pts": [
+     [
+      1022,
+      830
+     ]
+    ]
+   },
+   {
+    "code": "B12",
+    "kind": "part",
+    "name": "rubble2_1",
+    "qty": 1,
+    "pts": [
+     [
+      1023,
+      825
+     ]
+    ]
+   },
+   {
+    "code": "A8",
+    "kind": "part",
+    "name": "rubble2_2",
+    "qty": 1,
+    "pts": [
+     [
+      1024,
+      818
+     ]
+    ]
+   },
+   {
+    "code": "B15",
+    "kind": "part",
+    "name": "rubble3_0",
+    "qty": 1,
+    "pts": [
+     [
+      640,
+      662
+     ]
+    ]
+   },
+   {
+    "code": "B33",
+    "kind": "part",
+    "name": "rubble3_1",
+    "qty": 1,
+    "pts": [
+     [
+      637,
+      657
+     ]
+    ]
+   },
+   {
+    "code": "A25",
+    "kind": "part",
+    "name": "rubble3_2",
+    "qty": 1,
+    "pts": [
+     [
+      636,
+      652
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 931
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_17.png",
+  "labels": [
+   {
+    "code": "A4",
+    "kind": "part",
+    "name": "banner_pole",
+    "qty": 1,
+    "pts": [
+     [
+      769,
+      539
+     ]
+    ]
+   },
+   {
+    "code": "D2",
+    "kind": "part",
+    "name": "banner",
+    "qty": 1,
+    "pts": [
+     [
+      812,
+      649
+     ]
+    ]
+   },
+   {
+    "code": "A1",
+    "kind": "part",
+    "name": "banner_peg0",
+    "qty": 2,
+    "pts": [
+     [
+      844,
+      622
+     ],
+     [
+      845,
+      582
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.49673176489215415,
+   0.8191520442889918,
+   -0.28678821817552297
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1134
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_18.png",
+  "labels": [
+   {
+    "code": "A26",
+    "kind": "part",
+    "name": "chest_bottom",
+    "qty": 1,
+    "pts": [
+     [
+      770,
+      711
+     ]
+    ]
+   },
+   {
+    "code": "A13",
+    "kind": "part",
+    "name": "chest_peg0",
+    "qty": 2,
+    "pts": [
+     [
+      715,
+      757
+     ],
+     [
+      828,
+      797
+     ]
+    ]
+   },
+   {
+    "code": "C17",
+    "kind": "part",
+    "name": "chest_front",
+    "qty": 1,
+    "pts": [
+     [
+      707,
+      662
+     ]
+    ]
+   },
+   {
+    "code": "C8",
+    "kind": "part",
+    "name": "chest_back",
+    "qty": 1,
+    "pts": [
+     [
+      829,
+      627
+     ]
+    ]
+   },
+   {
+    "code": "B5",
+    "kind": "part",
+    "name": "chest_right",
+    "qty": 1,
+    "pts": [
+     [
+      861,
+      639
+     ]
+    ]
+   },
+   {
+    "code": "C14",
+    "kind": "part",
+    "name": "chest_left",
+    "qty": 1,
+    "pts": [
+     [
+      685,
+      590
+     ]
+    ]
+   },
+   {
+    "code": "D5",
+    "kind": "part",
+    "name": "gem0",
+    "qty": 1,
+    "pts": [
+     [
+      570,
+      825
+     ]
+    ]
+   },
+   {
+    "code": "B2",
+    "kind": "part",
+    "name": "gem0_peg",
+    "qty": 2,
+    "pts": [
+     [
+      584,
+      820
+     ],
+     [
+      679,
+      859
+     ]
+    ]
+   },
+   {
+    "code": "D4",
+    "kind": "part",
+    "name": "gem1",
+    "qty": 1,
+    "pts": [
+     [
+      665,
+      864
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.6830127018922193,
+   0.25881904510252074,
+   0.6830127018922194
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1084
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_19.png",
+  "labels": [
+   {
+    "code": "A24",
+    "kind": "part",
+    "name": "lid_top",
+    "qty": 1,
+    "pts": [
+     [
+      802,
+      543
+     ]
+    ]
+   },
+   {
+    "code": "F7",
+    "kind": "part",
+    "name": "lid_ear_r",
+    "qty": 2,
+    "pts": [
+     [
+      750,
+      864
+     ],
+     [
+      626,
+      815
+     ]
+    ]
+   },
+   {
+    "code": "A19",
+    "kind": "part",
+    "name": "lid_front",
+    "qty": 1,
+    "pts": [
+     [
+      649,
+      811
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.6830127018922193,
+   0.25881904510252074,
+   0.6830127018922194
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1030
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_20.png",
+  "labels": [
+   {
+    "code": "chest hinge dowel",
+    "kind": "face",
+    "name": "chest hinge dowel",
+    "qty": 1,
+    "pts": [
+     [
+      800,
+      575
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.5792279653395691,
+   0.573576436351046,
+   0.5792279653395692
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 914
+ },
+ {
+  "out": "kits/dragon/booklet/raw/step_21.png",
+  "labels": [
+   {
+    "code": "A23",
+    "kind": "part",
+    "name": "coin_peg0",
+    "qty": 1,
+    "pts": [
+     [
+      641,
+      638
+     ]
+    ]
+   },
+   {
+    "code": "F8",
+    "kind": "part",
+    "name": "coin0_0",
+    "qty": 3,
+    "pts": [
+     [
+      642,
+      650
+     ],
+     [
+      975,
+      747
+     ],
+     [
+      614,
+      591
+     ]
+    ]
+   },
+   {
+    "code": "F3",
+    "kind": "part",
+    "name": "coin0_1",
+    "qty": 3,
+    "pts": [
+     [
+      646,
+      637
+     ],
+     [
+      981,
+      734
+     ],
+     [
+      618,
+      578
+     ]
+    ]
+   },
+   {
+    "code": "F6",
+    "kind": "part",
+    "name": "coin0_2",
+    "qty": 3,
+    "pts": [
+     [
+      643,
+      623
+     ],
+     [
+      979,
+      718
+     ],
+     [
+      615,
+      564
+     ]
+    ]
+   },
+   {
+    "code": "F2",
+    "kind": "part",
+    "name": "coin0_3",
+    "qty": 1,
+    "pts": [
+     [
+      643,
+      614
+     ]
+    ]
+   },
+   {
+    "code": "A5",
+    "kind": "part",
+    "name": "coin_peg1",
+    "qty": 2,
+    "pts": [
+     [
+      975,
+      740
+     ],
+     [
+      614,
+      585
+     ]
+    ]
+   }
+  ],
+  "view": [
+   0.40957602214449584,
+   0.573576436351046,
+   0.7094064799162225
+  ],
+  "width": 1600,
+  "height": 1150,
+  "ms": 1086
+ }
+]
