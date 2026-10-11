@@ -1,6 +1,270 @@
 {
  "kit": "blaster",
  "name": "Star Slinger",
+ "checks": [
+  {
+   "name": "Collision check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "summary": "zero overlaps"
+  },
+  {
+   "name": "Nothing-floats check",
+   "pass": true,
+   "count": 0,
+   "details": {
+    "floating": [],
+    "components": 1,
+    "component_sizes": [
+     157
+    ],
+    "small_components": []
+   },
+   "summary": "every part touches another; model is one piece"
+  },
+  {
+   "name": "Assembly path check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "summary": "every part slides into place without hitting a placed part"
+  },
+  {
+   "name": "Minimum feature check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "fragile": [
+    {
+     "part": "nose_cap_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_r_peg2",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_r_peg3",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_front_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_front_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_nose_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_nose_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "engine_panel_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "engine_panel_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "cockpit_side_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "stripe_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "stripe_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "intake_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_l_peg2",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_l_peg3",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_front_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_front_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_nose_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_nose_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "engine_panel_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "engine_panel_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "cockpit_side_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "stripe_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "stripe_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "intake_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "panel_r0_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "panel_r1_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "panel_l0_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "panel_l1_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "reactor_r0_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "reactor_r1_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "reactor_l0_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "reactor_l1_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "grip_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "grip_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "grip_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "grip_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "wing_stripe_r_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "wing_stripe_l_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "target_ring0_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "safety_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    }
+   ],
+   "summary": "no feature thinner than 2.5 mm"
+  }
+ ],
  "nest_problems": [],
  "pieces": 153,
  "unique_codes": 91,
@@ -164,5 +428,6 @@
   "C3",
   "D19"
  ],
- "build_seconds": 17.0
+ "build_seconds": 19.1,
+ "all_checks_pass": true
 }

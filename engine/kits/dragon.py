@@ -751,6 +751,7 @@ def _tower(k, nxt, slice_parts, world_shape):
     pole = Part('banner_pole', unary_union([rect(-2.5, TOP - T, 2.5, TOP + 74), circle(0, TOP + 76, 3.5)]), color='natural',
                 mat=frame((62, 0, -32), X, Y), step=s_ban, insert=DOWN, explode=40)
     pierce(top, pole, rect(-2.5, TOP - T, 2.5, TOP), fit='press')
+    pole.code_on_part = False
     k.add(pole)
     flag_shape = Polygon([(2.5, TOP + 44), (42, TOP + 50), (34, TOP + 59), (42, TOP + 68), (2.5, TOP + 72)])
     flag = Part('banner', opening(flag_shape.buffer(0), 1.3), color='red', mat=frame((62, 0, -32 - T), X, Y),

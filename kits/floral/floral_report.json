@@ -1,6 +1,55 @@
 {
  "kit": "floral",
  "name": "Blossom Waltz",
+ "checks": [
+  {
+   "name": "Collision check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "summary": "zero overlaps"
+  },
+  {
+   "name": "Nothing-floats check",
+   "pass": true,
+   "count": 0,
+   "details": {
+    "floating": [],
+    "components": 1,
+    "component_sizes": [
+     160
+    ],
+    "small_components": []
+   },
+   "summary": "every part touches another; model is one piece"
+  },
+  {
+   "name": "Assembly path check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "summary": "every part slides into place without hitting a placed part"
+  },
+  {
+   "name": "Minimum feature check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "fragile": [
+    {
+     "part": "vase_key0",
+     "why": "long and thin (87 x 5.0 mm)",
+     "spares": 0
+    },
+    {
+     "part": "vase_key1",
+     "why": "long and thin (87 x 5.0 mm)",
+     "spares": 0
+    }
+   ],
+   "summary": "no feature thinner than 2.5 mm"
+  }
+ ],
  "nest_problems": [],
  "pieces": 156,
  "unique_codes": 106,
@@ -124,13 +173,13 @@
    "bridges": 52,
    "cut_mm": 3628.4,
    "score_mm": 562.9,
-   "fill_area_mm2": 160.0,
+   "fill_area_mm2": 160.9,
    "pierces": 177,
    "cut_s": 124.3,
    "score_s": 7.3,
    "fill_s": 14.3,
-   "travel_s": 8.6,
-   "total_s": 154.6,
+   "travel_s": 8.7,
+   "total_s": 154.7,
    "total_min": 2.58
   },
   {
@@ -225,7 +274,7 @@
     "E_x2",
     "F_x4"
    ],
-   "laser_min": 9.86,
+   "laser_min": 9.85,
    "kits_per_sheet": [
     2,
     4
@@ -269,5 +318,6 @@
   "A9",
   "D8"
  ],
- "build_seconds": 24.5
+ "build_seconds": 31.2,
+ "all_checks_pass": true
 }

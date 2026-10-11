@@ -281,6 +281,8 @@ def build():
                    step=s_nose, insert=(-1, 0, 0), explode=25, spares=1)
     pierce(plug, cap_peg, fit='press'); pierce(cap, cap_peg, fit='snug')
     hooks += [plug, cap, cap_peg]
+    for q in hooks + wheel + anchor:
+        q.code_on_part = False          # show faces: the code sits on the sheet next to the part
 
     # ------------------------------------------------------------ outer skins with pegs
     s_skin_r = nxt('Add the right hull skins', tip='Square pegs lock each skin to the wall.', icons=['press'])

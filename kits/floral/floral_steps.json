@@ -141,7 +141,8 @@
      "color": "white"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 2,
@@ -161,7 +162,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 3,
@@ -188,7 +190,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 4,
@@ -216,7 +219,8 @@
      "kind": "rod",
      "note": "part of the movement"
     }
-   ]
+   ],
+   "mounts": []
   },
   {
    "n": 5,
@@ -258,7 +262,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 6,
@@ -285,7 +290,8 @@
      "color": "white"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 7,
@@ -305,7 +311,8 @@
      "color": "pink"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 8,
@@ -339,7 +346,7 @@
      "color": "pink"
     },
     {
-     "code": "E1",
+     "code": "E5",
      "qty": 2,
      "sheet": "E",
      "name": "wall_left_leaves",
@@ -353,7 +360,8 @@
      "color": "yellow"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 9,
@@ -373,7 +381,8 @@
      "color": "white"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 10,
@@ -421,7 +430,8 @@
      "kind": "rod",
      "note": "3/16 in birch dowel cut to length"
     }
-   ]
+   ],
+   "mounts": []
   },
   {
    "n": 11,
@@ -442,7 +452,8 @@
      "color": "white"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 12,
@@ -462,7 +473,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 13,
@@ -524,7 +536,8 @@
      "color": "teal"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 14,
@@ -586,7 +599,8 @@
      "color": "teal"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 15,
@@ -648,7 +662,8 @@
      "color": "teal"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 16,
@@ -689,7 +704,7 @@
      "color": "pink"
     },
     {
-     "code": "E11",
+     "code": "E12",
      "qty": 1,
      "sheet": "E",
      "name": "frog",
@@ -710,7 +725,8 @@
      "color": "teal"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 17,
@@ -765,14 +781,14 @@
      "color": "pink"
     },
     {
-     "code": "E7",
+     "code": "E9",
      "qty": 1,
      "sheet": "E",
      "name": "rose_leaf0",
      "color": "green"
     },
     {
-     "code": "E8",
+     "code": "E10",
      "qty": 1,
      "sheet": "E",
      "name": "rose_head0",
@@ -786,7 +802,8 @@
      "color": "green"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 18,
@@ -813,14 +830,14 @@
      "color": "white"
     },
     {
-     "code": "E3",
+     "code": "E4",
      "qty": 1,
      "sheet": "E",
      "name": "daisy_stem",
      "color": "green"
     },
     {
-     "code": "E4",
+     "code": "E7",
      "qty": 1,
      "sheet": "E",
      "name": "daisy_leaf0",
@@ -841,7 +858,8 @@
      "color": "yellow"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 19,
@@ -896,7 +914,8 @@
      "color": "purple"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 20,
@@ -916,14 +935,14 @@
      "color": "pink"
     },
     {
-     "code": "E4",
+     "code": "E7",
      "qty": 1,
      "sheet": "E",
      "name": "tulip_leaf0",
      "color": "green"
     },
     {
-     "code": "E10",
+     "code": "E14",
      "qty": 1,
      "sheet": "E",
      "name": "tulip_stem",
@@ -951,7 +970,8 @@
      "color": "purple"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 21,
@@ -978,17 +998,17 @@
      "color": "natural"
     },
     {
-     "code": "E2",
-     "qty": 1,
-     "sheet": "E",
-     "name": "sunflower_leaf0",
-     "color": "green"
-    },
-    {
-     "code": "E12",
+     "code": "E1",
      "qty": 1,
      "sheet": "E",
      "name": "sunflower_stem",
+     "color": "green"
+    },
+    {
+     "code": "E6",
+     "qty": 1,
+     "sheet": "E",
+     "name": "sunflower_leaf0",
      "color": "green"
     },
     {
@@ -1006,7 +1026,8 @@
      "color": "yellow"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 22,
@@ -1019,7 +1040,7 @@
    "view": null,
    "parts": [
     {
-     "code": "E9",
+     "code": "E11",
      "qty": 1,
      "sheet": "E",
      "name": "lavender2_stem",
@@ -1061,7 +1082,8 @@
      "color": "purple"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 23,
@@ -1112,13 +1134,6 @@
      "code": "E2",
      "qty": 1,
      "sheet": "E",
-     "name": "rosebud_leaf0",
-     "color": "green"
-    },
-    {
-     "code": "E5",
-     "qty": 1,
-     "sheet": "E",
      "name": "rosebud_stem",
      "color": "green"
     },
@@ -1126,11 +1141,19 @@
      "code": "E6",
      "qty": 1,
      "sheet": "E",
+     "name": "rosebud_leaf0",
+     "color": "green"
+    },
+    {
+     "code": "E8",
+     "qty": 1,
+     "sheet": "E",
      "name": "rosebud_head0",
      "color": "green"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 24,
@@ -1143,17 +1166,17 @@
    "view": null,
    "parts": [
     {
-     "code": "E2",
-     "qty": 1,
-     "sheet": "E",
-     "name": "cornflower_leaf0",
-     "color": "green"
-    },
-    {
-     "code": "E14",
+     "code": "E3",
      "qty": 1,
      "sheet": "E",
      "name": "cornflower_stem",
+     "color": "green"
+    },
+    {
+     "code": "E6",
+     "qty": 1,
+     "sheet": "E",
+     "name": "cornflower_leaf0",
      "color": "green"
     },
     {
@@ -1185,7 +1208,8 @@
      "color": "purple"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 25,
@@ -1226,7 +1250,8 @@
      "color": "purple"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   }
  ],
  "parts": [
@@ -1817,38 +1842,38 @@
   },
   {
    "code": "E1",
-   "name": "wall_left_leaves",
-   "sheet": "E",
-   "color": "green",
-   "qty": 2,
-   "step": 8,
-   "mechanism": false
-  },
-  {
-   "code": "E10",
-   "name": "tulip_stem",
-   "sheet": "E",
-   "color": "green",
-   "qty": 1,
-   "step": 20,
-   "mechanism": false
-  },
-  {
-   "code": "E11",
-   "name": "frog",
-   "sheet": "E",
-   "color": "green",
-   "qty": 1,
-   "step": 16,
-   "mechanism": false
-  },
-  {
-   "code": "E12",
    "name": "sunflower_stem",
    "sheet": "E",
    "color": "green",
    "qty": 1,
    "step": 21,
+   "mechanism": false
+  },
+  {
+   "code": "E10",
+   "name": "rose_head0",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "E11",
+   "name": "lavender2_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 22,
+   "mechanism": false
+  },
+  {
+   "code": "E12",
+   "name": "frog",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 16,
    "mechanism": false
   },
   {
@@ -1862,11 +1887,11 @@
   },
   {
    "code": "E14",
-   "name": "cornflower_stem",
+   "name": "tulip_stem",
    "sheet": "E",
    "color": "green",
    "qty": 1,
-   "step": 24,
+   "step": 20,
    "mechanism": false
   },
   {
@@ -1880,33 +1905,6 @@
   },
   {
    "code": "E2",
-   "name": "sunflower_leaf0",
-   "sheet": "E",
-   "color": "green",
-   "qty": 3,
-   "step": 21,
-   "mechanism": false
-  },
-  {
-   "code": "E3",
-   "name": "daisy_stem",
-   "sheet": "E",
-   "color": "green",
-   "qty": 1,
-   "step": 18,
-   "mechanism": false
-  },
-  {
-   "code": "E4",
-   "name": "daisy_leaf0",
-   "sheet": "E",
-   "color": "green",
-   "qty": 2,
-   "step": 18,
-   "mechanism": false
-  },
-  {
-   "code": "E5",
    "name": "rosebud_stem",
    "sheet": "E",
    "color": "green",
@@ -1915,7 +1913,52 @@
    "mechanism": false
   },
   {
+   "code": "E3",
+   "name": "cornflower_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 24,
+   "mechanism": false
+  },
+  {
+   "code": "E4",
+   "name": "daisy_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "E5",
+   "name": "wall_left_leaves",
+   "sheet": "E",
+   "color": "green",
+   "qty": 2,
+   "step": 8,
+   "mechanism": false
+  },
+  {
    "code": "E6",
+   "name": "sunflower_leaf0",
+   "sheet": "E",
+   "color": "green",
+   "qty": 3,
+   "step": 21,
+   "mechanism": false
+  },
+  {
+   "code": "E7",
+   "name": "daisy_leaf0",
+   "sheet": "E",
+   "color": "green",
+   "qty": 2,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "E8",
    "name": "rosebud_head0",
    "sheet": "E",
    "color": "green",
@@ -1924,30 +1967,12 @@
    "mechanism": false
   },
   {
-   "code": "E7",
+   "code": "E9",
    "name": "rose_leaf0",
    "sheet": "E",
    "color": "green",
    "qty": 1,
    "step": 17,
-   "mechanism": false
-  },
-  {
-   "code": "E8",
-   "name": "rose_head0",
-   "sheet": "E",
-   "color": "green",
-   "qty": 1,
-   "step": 17,
-   "mechanism": false
-  },
-  {
-   "code": "E9",
-   "name": "lavender2_stem",
-   "sheet": "E",
-   "color": "green",
-   "qty": 1,
-   "step": 22,
    "mechanism": false
   },
   {

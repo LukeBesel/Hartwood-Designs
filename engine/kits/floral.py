@@ -403,7 +403,7 @@ def build():
         wing.insert = tuple(-dline)
         k.add(wing)
     # show faces: codes go on the sheet beside the part, not on the part
-    hidden = ('foot', 'base', 'cradle', 'coupler', 'hub', 'vase_key', 'ring', 'guide', '_peg')
+    hidden = ('foot', 'base', 'cradle', 'hub', 'vase_key', 'ring', 'guide', '_peg')  # coupler shows in the window
     for p in k.parts:
         if not any(h in p.name for h in hidden):
             p.code_on_part = False

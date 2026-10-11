@@ -1,0 +1,53 @@
+[
+ {
+  "kit": "blaster",
+  "name": "Star Slinger",
+  "pieces": 153,
+  "steps": 17,
+  "sheet_equivalents": 3.0,
+  "cut_minutes": 17.6,
+  "wood_cost": 6.3,
+  "price": 49.99,
+  "all_checks_pass": true,
+  "checks": {
+   "Collision check": true,
+   "Nothing-floats check": true,
+   "Assembly path check": true,
+   "Minimum feature check": true
+  }
+ },
+ {
+  "kit": "dragon",
+  "name": "Emberwing",
+  "pieces": 152,
+  "steps": 21,
+  "sheet_equivalents": 6.0,
+  "cut_minutes": 24.6,
+  "wood_cost": 12.6,
+  "price": 54.99,
+  "all_checks_pass": true,
+  "checks": {
+   "Collision check": true,
+   "Nothing-floats check": true,
+   "Assembly path check": true,
+   "Minimum feature check": true
+  }
+ },
+ {
+  "kit": "floral",
+  "name": "Blossom Waltz",
+  "pieces": 156,
+  "steps": 25,
+  "sheet_equivalents": 4.5,
+  "cut_minutes": 20.7,
+  "wood_cost": 13.2,
+  "price": 49.99,
+  "all_checks_pass": true,
+  "checks": {
+   "Collision check": true,
+   "Nothing-floats check": true,
+   "Assembly path check": true,
+   "Minimum feature check": true
+  }
+ }
+]

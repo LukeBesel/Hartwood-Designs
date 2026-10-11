@@ -1,6 +1,65 @@
 {
  "kit": "dragon",
  "name": "Emberwing",
+ "checks": [
+  {
+   "name": "Collision check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "summary": "zero overlaps"
+  },
+  {
+   "name": "Nothing-floats check",
+   "pass": true,
+   "count": 0,
+   "details": {
+    "floating": [],
+    "components": 1,
+    "component_sizes": [
+     154
+    ],
+    "small_components": []
+   },
+   "summary": "every part touches another; model is one piece"
+  },
+  {
+   "name": "Assembly path check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "summary": "every part slides into place without hitting a placed part"
+  },
+  {
+   "name": "Minimum feature check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "fragile": [
+    {
+     "part": "wing_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 0
+    },
+    {
+     "part": "wing_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 0
+    },
+    {
+     "part": "banner_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "banner_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    }
+   ],
+   "summary": "no feature thinner than 2.5 mm"
+  }
+ ],
  "nest_problems": [],
  "pieces": 152,
  "unique_codes": 105,
@@ -255,5 +314,6 @@
   "D3",
   "F7"
  ],
- "build_seconds": 41.9
+ "build_seconds": 50.7,
+ "all_checks_pass": true
 }

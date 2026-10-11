@@ -175,7 +175,8 @@
      "color": "red"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 2,
@@ -209,7 +210,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 3,
@@ -250,7 +252,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 4,
@@ -312,7 +315,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 5,
@@ -353,7 +357,8 @@
      "kind": "rod",
      "note": "3/16 in dowel, 21 mm"
     }
-   ]
+   ],
+   "mounts": []
   },
   {
    "n": 6,
@@ -395,7 +400,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 7,
@@ -451,7 +457,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 9,
@@ -486,7 +493,8 @@
      "color": "gold"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 10,
@@ -549,7 +557,43 @@
      "color": "purple"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": [
+    {
+     "name": "wing_r",
+     "into": "dragon",
+     "insert": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "explode": 30.0,
+     "members": [
+      "wing_r",
+      "wing_r_bones",
+      "wing_r_peg0",
+      "wing_r_peg1",
+      "wing_r_thumb"
+     ]
+    },
+    {
+     "name": "wing_l",
+     "into": "dragon",
+     "insert": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "explode": 30.0,
+     "members": [
+      "wing_l",
+      "wing_l_bones",
+      "wing_l_peg0",
+      "wing_l_peg1",
+      "wing_l_thumb"
+     ]
+    }
+   ]
   },
   {
    "n": 11,
@@ -567,7 +611,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 12,
@@ -608,7 +653,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 13,
@@ -628,7 +674,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 14,
@@ -690,7 +737,80 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 15,
+   "title": "Set Emberwing on her tower",
+   "tip": "Hind feet tabs go into the top. Front claws slide down over the two front stones.",
+   "icons": [
+    "press",
+    "careful"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [],
+   "hardware": [],
+   "mounts": [
+    {
+     "name": "dragon",
+     "into": null,
+     "insert": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "explode": 60.0,
+     "members": [
+      "eye_l",
+      "eye_l_peg",
+      "eye_r",
+      "eye_r_peg",
+      "jaw dowel",
+      "jaw_c",
+      "jaw_key",
+      "jaw_l",
+      "jaw_r",
+      "key_aux1",
+      "key_aux2",
+      "key_aux3",
+      "key_back",
+      "key_chest",
+      "key_hips",
+      "key_neck_high",
+      "key_neck_low",
+      "key_skull",
+      "key_tail_base",
+      "slice_c0",
+      "slice_l1",
+      "slice_l2",
+      "slice_l3",
+      "slice_l4",
+      "slice_l5",
+      "slice_l6",
+      "slice_l6_1",
+      "slice_l7",
+      "slice_l7_1",
+      "slice_l8",
+      "slice_l8_1",
+      "slice_l9",
+      "slice_r1",
+      "slice_r2",
+      "slice_r3",
+      "slice_r4",
+      "slice_r5",
+      "slice_r6",
+      "slice_r6_1",
+      "slice_r7",
+      "slice_r7_1",
+      "slice_r8",
+      "slice_r8_1",
+      "slice_r9",
+      "wing_bar"
+     ]
+    }
+   ]
   },
   {
    "n": 16,
@@ -787,7 +907,8 @@
      "color": "green"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 17,
@@ -891,7 +1012,8 @@
      "color": "natural"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 18,
@@ -925,7 +1047,8 @@
      "color": "red"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 19,
@@ -1001,7 +1124,8 @@
      "color": "red"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   },
   {
    "n": 20,
@@ -1036,7 +1160,25 @@
      "color": "gold"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": [
+    {
+     "name": "lid",
+     "into": null,
+     "insert": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "explode": 40.0,
+     "members": [
+      "lid_ear_l",
+      "lid_ear_r",
+      "lid_front",
+      "lid_top"
+     ]
+    }
+   ]
   },
   {
    "n": 21,
@@ -1055,7 +1197,8 @@
      "kind": "rod",
      "note": "3/16 in dowel, 46 mm"
     }
-   ]
+   ],
+   "mounts": []
   },
   {
    "n": 22,
@@ -1110,7 +1253,8 @@
      "color": "gold"
     }
    ],
-   "hardware": []
+   "hardware": [],
+   "mounts": []
   }
  ],
  "parts": [

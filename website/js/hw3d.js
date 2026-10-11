@@ -191,10 +191,11 @@ export function visibleBox(items) {
   return b;
 }
 
-export function frameCamera(camera, box, dir, { margin = 1.12, aspect = 1 } = {}) {
+export function frameCamera(camera, box, dir, { margin = 1.12, aspect = 1, upHint = null } = {}) {
   const c = box.getCenter(new THREE.Vector3());
   const d = new THREE.Vector3(...dir).normalize();
-  const up = Math.abs(d.y) > 0.98 ? new THREE.Vector3(0, 0, -1) : new THREE.Vector3(0, 1, 0);
+  const up = upHint ? upHint.clone().addScaledVector(d, -upHint.dot(d)).normalize()
+    : Math.abs(d.y) > 0.98 ? new THREE.Vector3(0, 0, -1) : new THREE.Vector3(0, 1, 0);
   const size = box.getSize(new THREE.Vector3()).length();
   camera.up.copy(up);
   if (camera.isOrthographicCamera) {

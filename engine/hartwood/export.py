@@ -20,6 +20,7 @@ from .geom import T, Block, Part, Rod
 
 DECAL_Z = 0.06      # engraving decals float this far above the face (mm)
 SCORE_W = 0.35      # rendered width of a score line (mm)
+MESH_TOL = 0.05     # outline simplification for the display mesh (mm)
 
 
 # ----------------------------------------------------------------------------- triangulation
@@ -37,13 +38,22 @@ def tri_polygon(g):
 
 
 class MeshBuilder:
+    """Indexed triangles; identical (position, normal, uv) corners share one vertex."""
     def __init__(self):
         self.pos, self.nrm, self.uv, self.idx = [], [], [], []
+        self._seen = {}
+
+    def _v(self, p, n, uv):
+        key = (round(p[0], 4), round(p[1], 4), round(p[2], 4), round(n[0], 3), round(n[1], 3), round(n[2], 3),
+               round(uv[0], 4), round(uv[1], 4))
+        i = self._seen.get(key)
+        if i is None:
+            i = self._seen[key] = len(self.pos)
+            self.pos.append(p); self.nrm.append(n); self.uv.append(uv)
+        return i
 
     def add_tri(self, a, b, c, n, uva, uvb, uvc):
-        base = len(self.pos)
-        self.pos += [a, b, c]; self.nrm += [n, n, n]; self.uv += [uva, uvb, uvc]
-        self.idx += [base, base + 1, base + 2]
+        self.idx += [self._v(a, n, uva), self._v(b, n, uvb), self._v(c, n, uvc)]
 
     def empty(self):
         return not self.idx
@@ -60,7 +70,7 @@ def _ccw(tri):
 
 def part_meshes(part: Part, grain_angle=0.0, code_geom=None):
     """Return dict of MeshBuilders: 'face', 'edge', 'engrave' in part-local coordinates."""
-    g = part.outline()
+    g = part.outline().simplify(MESH_TOL)          # display mesh only; cut files use the exact outline
     ca, sa = math.cos(math.radians(grain_angle)), math.sin(math.radians(grain_angle))
 
     def uvf(x, y):
@@ -88,11 +98,11 @@ def part_meshes(part: Part, grain_angle=0.0, code_geom=None):
                 edge.add_tri((x0, y0, -h), (x1, y1, -h), (x1, y1, h), n, (u0, 0), (u1, 0), (u1, 0.06))
                 edge.add_tri((x0, y0, -h), (x1, y1, h), (x0, y0, h), n, (u0, 0), (u1, 0.06), (u0, 0.06))
                 s += L
-    decals = list(part.engrave) + [sc.buffer(SCORE_W / 2, cap_style='round') for sc in part.score]
+    decals = list(part.engrave) + [sc.buffer(SCORE_W / 2, quad_segs=2) for sc in part.score]
     if code_geom is not None:
         decals.append(code_geom)
     if decals:
-        dg = unary_union(decals).intersection(g)
+        dg = unary_union(decals).intersection(g).simplify(MESH_TOL / 2)
         z = h + DECAL_Z
         for tri in tri_polygon(dg):
             if not _ccw(tri):
@@ -187,7 +197,8 @@ class GLB:
         return {'attributes': {'POSITION': self._acc(pos, 'VEC3', 5126, 34962, True),
                                'NORMAL': self._acc(nrm, 'VEC3', 5126, 34962),
                                'TEXCOORD_0': self._acc(uv, 'VEC2', 5126, 34962)},
-                'indices': self._acc(idx, 'SCALAR', 5125, 34963), 'material': mat}
+                'indices': (self._acc(idx.astype(np.uint16), 'SCALAR', 5123, 34963) if len(pos) < 65536 else
+                            self._acc(idx, 'SCALAR', 5125, 34963)), 'material': mat}
 
     def mesh(self, name, prims):
         self.gltf['meshes'].append({'name': name, 'primitives': prims})
@@ -247,7 +258,8 @@ def export_glb(kit, sheets, path):
         mi = glb.mesh(p.name, prims)
         ext = {'kind': 'part', 'code': p.code, 'name': p.name, 'color': p.color, 'step': p.step,
                'insert': [round(float(v), 4) for v in np.asarray(p.insert) / np.linalg.norm(p.insert)],
-               'explode': p.explode, 'sheet': p.sheet, 'mechanism': p.mechanism, 'group': p.group}
+               'explode': p.explode, 'sheet': p.sheet, 'mechanism': p.mechanism, 'group': p.group,
+               'sheet_angle': float(pl.angle) if pl else 0.0}
         root_children.append(glb.node(p.code or p.name, mi, p.mat, ext))
     for h in kit.hardware:
         if isinstance(h, Rod):

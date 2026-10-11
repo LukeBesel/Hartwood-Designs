@@ -31,7 +31,7 @@ window.renderJob = async (job) => {
   k.items.forEach(it => {
     H.setOutline(it, false); H.setExplode(it, 0);
     if (mode === 'hero') { H.setLook(it, 'color'); }
-    else if (mode === 'part') { H.setLook(it, only.has(it.code) ? 'color' : 'hidden'); }
+    else if (mode === 'part') { H.setLook(it, only.has(it.code) && (!job.single || it === k.items.find(i => only.has(i.code))) ? 'color' : 'hidden'); }
     else if (mode === 'step') {
       if (it.step < n) { H.setLook(it, job.color_built ? 'color' : 'gray'); if (job.edges_built !== false) H.setOutline(it, true, 0x8f877c, 1.2, res); }
       else if (it.step === n) { H.setLook(it, 'color'); H.setOutline(it, true, H.ORANGE, job.outline_px || 3.5, res); newItems.push(it); }
@@ -65,11 +65,31 @@ window.renderJob = async (job) => {
   const fitBox = job.fit_exploded ? box2 : box.union(box2);
   const aspect = W / Hh;
   const cam = job.ortho ? new THREE.OrthographicCamera() : new THREE.PerspectiveCamera(job.fov || 30, aspect);
-  H.frameCamera(cam, fitBox, job.view || [1, 0.8, 1.2], { margin: job.margin || 1.1, aspect });
+  let view = job.view || [1, 0.8, 1.2], upHint = null;
+  if (view === 'face') {
+    // look at the laser face of the first listed part, tilted a little so its thickness shows
+    const it = k.items.find(i => only && only.has(i.code));
+    const q = new THREE.Quaternion(); it.node.getWorldQuaternion(q);
+    const nrm = new THREE.Vector3(0, 0, 1).applyQuaternion(q).normalize();
+    const side = Math.abs(nrm.y) > 0.9 ? new THREE.Vector3(0, 0, 1) : new THREE.Vector3(0, 1, 0);
+    const right = new THREE.Vector3().crossVectors(side, nrm).normalize();
+    const v = nrm.clone().addScaledVector(side, 0.32).addScaledVector(right, 0.22);
+    view = [v.x, v.y, v.z];
+    const a = THREE.MathUtils.degToRad(it.ex.sheet_angle || 0);   // show the part as it lies on its sheet
+    upHint = new THREE.Vector3(Math.sin(a), Math.cos(a), 0).applyQuaternion(q);
+  }
+  H.frameCamera(cam, fitBox, view, { margin: job.margin || 1.1, aspect, upHint });
   if (job.zoom && cam.isPerspectiveCamera) { const c = fitBox.getCenter(new THREE.Vector3()); cam.position.lerp(c, 1 - 1 / job.zoom); }
   if (job.zoom && cam.isOrthographicCamera) { cam.zoom = job.zoom; cam.updateProjectionMatrix(); }
   if (job.target) { const t = new THREE.Vector3(...job.target).multiplyScalar(0.001); const off = cam.position.clone().sub(fitBox.getCenter(new THREE.Vector3())); cam.position.copy(t).add(off); cam.lookAt(t); }
   H.addLights(scene, fitBox);
+  if (mode === 'part') {
+    // headlight: the shown face is always lit, whatever its orientation in the model
+    const hl = new THREE.DirectionalLight(0xffffff, 1.6);
+    hl.position.copy(cam.position).add(cam.up.clone().multiplyScalar(fitBox.getSize(new THREE.Vector3()).length()));
+    hl.target.position.copy(fitBox.getCenter(new THREE.Vector3()));
+    scene.add(hl); scene.add(hl.target);
+  }
   if (job.ground !== false && mode !== 'part') H.addGround(scene, fitBox, job.shadow || 0.25);
   renderer.setClearColor(0x000000, 0);
   if (job.background) { renderer.setClearColor(new THREE.Color(job.background), 1); }
