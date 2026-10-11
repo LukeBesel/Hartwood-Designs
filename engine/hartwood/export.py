@@ -273,7 +273,13 @@ def steps_json(kit, sheets, hardware_codes=None):
         e['qty'] += 1
         e['step'] = min(e['step'], p.step)
     steps = []
-    for n in sorted({s.step for s in kit.solids()}):
+    mounts = {}
+    for sa in kit.subassemblies:
+        mounts.setdefault(sa['step'], []).append({'name': sa['name'], 'into': sa.get('into'),
+                                                  'insert': [float(v) for v in sa['insert']],
+                                                  'explode': float(sa.get('explode', 60.0)),
+                                                  'members': sorted(sa['members'])})
+    for n in sorted({s.step for s in kit.solids()} | set(mounts)):
         st = kit.steps.get(n)
         new = {}
         for p in kit.parts:
@@ -286,7 +292,7 @@ def steps_json(kit, sheets, hardware_codes=None):
                       'icons': st.icons if st else [], 'test': st.test if st else '',
                       'view': list(st.view) if st and st.view else None,
                       'parts': sorted(new.values(), key=lambda e: (e['sheet'], int(''.join(ch for ch in e['code'] if ch.isdigit()) or 0))),
-                      'hardware': hw})
+                      'hardware': hw, 'mounts': mounts.get(n, [])})
     sheet_info = [{'letter': sh.letter, 'color': sh.color, 'label': C.MATERIALS[sh.color]['label'],
                    'parts': len([pl for pl in sh.placed if not pl.spare]),
                    'spares': len([pl for pl in sh.placed if pl.spare])} for sh in sheets]

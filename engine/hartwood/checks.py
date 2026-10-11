@@ -209,6 +209,9 @@ def check_features(kit):
     issues, fragile = [], []
     for p in kit.parts:
         g = p.outline()
+        if g.is_empty or g.area < 1.0:
+            issues.append({'part': p.name, 'width': 0.0, 'length': 0.0, 'at': [0, 0], 'why': 'empty outline'})
+            continue
         for t in thin_regions(g):
             issues.append({'part': p.name, **t})
         mrr = g.minimum_rotated_rectangle

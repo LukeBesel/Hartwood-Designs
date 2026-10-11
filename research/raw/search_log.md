@@ -168,3 +168,6 @@ Network note: this build container cannot open web pages directly (egress policy
   - Puikos 12-pack 12x12x1/8 acrylic-coated basswood, "non-toxic, odorless acrylic coating". https://faptflorida.org/store/index.php/Plywood-Sheets-12x12x1-8-Inch-Acrylic-Coated-Basswood-For-663976
   - TwoTrees 3 mm basswood ply: Black, White, Red, Blue, Yellow, Green, Pink, Gold; 300 x 300 mm 10-pack EUR34.95; US listing $39 (12 x 8 in 10-pack). https://eu.twotrees3d.com/products/twotrees-3mm-basswood-plywood ; https://www.twotrees3dofficial.com/products/twotrees-tyvok-3mm-basswood-plywood
   - Natural 12 x 12 x 1/8 basswood: xTool 18-pack; many Amazon packs. https://www.amazon.com/Basswood-Unfinished-Engraving-Painting-Decorations/dp/B0BMLVQ22Q
+
+## S19 Toy gun marking rule (15 CFR 1150)
+- 15 CFR 1150.3(a): blaze orange (FED-STD-595a color 12199) solid plug, permanently affixed, recessed no more than 6 mm from the muzzle end. (b): blaze orange marking on the barrel exterior covering the circumference from the muzzle end, at least 6 mm deep, for ejecting toy guns among others. (c)-(e): transparent, or bright colored, or white plus bright colors. No size exemption. https://www.govinfo.gov/content/pkg/CFR-2013-title15-vol3/pdf/CFR-2013-title15-vol3-part1150.pdf ; https://www.tarifflens.ai/rulings/452587 ; https://open-gov.usebase.io/rulings/452497

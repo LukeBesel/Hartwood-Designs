@@ -23,3 +23,15 @@ Labels: **Verified** = backed by a source in `research/sources.md`. **Estimate**
 - D013: Colors limited to supplier-confirmed names: Natural, Sunset Orange, Haze Blue, Pink, Yellow, Green, Purple, Red, Gold, White. Black is not used (dark sheets hurt readability, a review complaint).
 - D014: Planning speeds (Estimate until measured): cut 30 mm/s, score 300 mm/s, fill engrave 400 mm/s at 0.1 mm interval.
 - D015: Added a third layer besides red cut and blue fill: black 0.1 mm "score" lines for surface detail (scales, veins, panel lines). Reason: a vector score is about 10x faster than fill-engraving the same art.
+
+## Kit engine
+- D016: Colored parts are nested on half or quarter tiles when they fill less than half a sheet. One 12 x 12 colored sheet then serves 2 or 4 kits and snaps apart on bridged lines. Wood cost per kit counts only its fraction. Reason: each kit uses only a little of each color; full sheets wasted 60 to 80 percent.
+- D017: Show-face parts (skins, petals, decor) carry their code on the sheet next to the part, not on the part. Inner parts carry the code on the part. Reason: review rule H4 (codes on the sheet help) without marking the visible faces.
+- D018: Oblique half-lap slots are cut (T + T|cos a|) / sin a wide. Reason: the plain T-wide slot binds when the parts cross at an angle (found by the collision check on the floral leaves).
+- D019: A sub-assembly (chest lid, wings, the whole ship) is checked on its own first, then mounted as one rigid unit. Reason: matches how people build (build the lid, then drop it on), and lets the path check accept steps that a part-by-part check would block.
+
+## Kits
+- D020: Blaster mechanism = 8-tooth star wheel driven by the band tension, held by a two-pallet escapement that is one piece with the trigger. One full pull releases one band. Holds 7 bands. Reason: fewest moving parts (2 rotating stacks, 1 return band) that give one shot per pull; no spring steel.
+- D021: Blaster look = starship (wings, canopy, thruster, tail fin) in natural, Haze Blue and orange. No real-gun details (no magazine shape, no rails, no stock). Reason: the spec, Etsy's weapons policy (S15) and 15 CFR 1150.3(d)-style bright colors.
+- D022: Blaster blaze orange: the nose box is orange around its full circumference for 32 mm, and an orange plug plus cap close the muzzle end flush. Reason: covers both 15 CFR 1150.3(a) (plug, recess at most 6 mm) and (b) (marking at least 6 mm deep around the circumference).
+- D023: Blaster ships with a display stand, swinging target and a safety plaque ("AIM AT TARGETS / NEVER AT FACES"). Reason: it is shelf decor first; the plaque repeats the safety rule every time someone picks it up.

@@ -1,0 +1,168 @@
+{
+ "kit": "blaster",
+ "name": "Star Slinger",
+ "nest_problems": [],
+ "pieces": 153,
+ "unique_codes": 91,
+ "hardware": [
+  {
+   "name": "target hinge dowel",
+   "kind": "rod",
+   "note": "3/16 in dowel, 63 mm"
+  },
+  {
+   "name": "wheel axle",
+   "kind": "rod",
+   "note": "3/16 in dowel, 15.6 mm"
+  },
+  {
+   "name": "trigger pivot",
+   "kind": "rod",
+   "note": "3/16 in dowel, 15.6 mm"
+  },
+  {
+   "name": "return band post",
+   "kind": "rod",
+   "note": "3/16 in dowel, 15.6 mm; the #16 band runs from here to the hook on the trigger"
+  }
+ ],
+ "extras": {
+  "#64 rubber bands (3.5 x 1/4 in), ammo": 12,
+  "#16 rubber band, trigger return": 2,
+  "3/16 in birch dowel, 15.6 mm": 3,
+  "wax stick": 1,
+  "sandpaper 240 grit": 1,
+  "paper targets (printed)": 3,
+  "3/16 in birch dowel, 63 mm (target hinge)": 1
+ },
+ "sheets": [
+  {
+   "sheet": "A",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 78,
+   "spares": 8,
+   "used_pct": 61.7,
+   "bridges": 143,
+   "cut_mm": 7571.7,
+   "score_mm": 2190.7,
+   "fill_area_mm2": 1004.2,
+   "pierces": 260,
+   "cut_s": 263.5,
+   "score_s": 9.2,
+   "fill_s": 92.0,
+   "travel_s": 19.4,
+   "total_s": 384.1,
+   "total_min": 6.4
+  },
+  {
+   "sheet": "B",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 9,
+   "spares": 47,
+   "used_pct": 40.6,
+   "bridges": 82,
+   "cut_mm": 4666.6,
+   "score_mm": 1024.9,
+   "fill_area_mm2": 514.5,
+   "pierces": 150,
+   "cut_s": 161.7,
+   "score_s": 4.8,
+   "fill_s": 38.2,
+   "travel_s": 13.6,
+   "total_s": 218.3,
+   "total_min": 3.64
+  },
+  {
+   "sheet": "C",
+   "color": "orange",
+   "tile": "half",
+   "fraction": 0.5,
+   "parts": 38,
+   "spares": 2,
+   "used_pct": 36.6,
+   "bridges": 87,
+   "cut_mm": 4339.3,
+   "score_mm": 0,
+   "fill_area_mm2": 656.5,
+   "pierces": 126,
+   "cut_s": 150.9,
+   "score_s": 0.0,
+   "fill_s": 57.4,
+   "travel_s": 9.1,
+   "total_s": 217.5,
+   "total_min": 3.62
+  },
+  {
+   "sheet": "D",
+   "color": "teal",
+   "tile": "half",
+   "fraction": 0.5,
+   "parts": 28,
+   "spares": 0,
+   "used_pct": 42.1,
+   "bridges": 66,
+   "cut_mm": 3847.4,
+   "score_mm": 466.5,
+   "fill_area_mm2": 250.3,
+   "pierces": 145,
+   "cut_s": 133.3,
+   "score_s": 3.8,
+   "fill_s": 23.4,
+   "travel_s": 10.4,
+   "total_s": 170.9,
+   "total_min": 2.85
+  }
+ ],
+ "jobs": [
+  {
+   "job": "blaster_job1_A-B",
+   "sheets": [
+    "A",
+    "B"
+   ],
+   "laser_min": 10.04,
+   "kits_per_sheet": [
+    1,
+    1
+   ]
+  },
+  {
+   "job": "blaster_job2_C_x2-D_x2",
+   "sheets": [
+    "C_x2",
+    "D_x2"
+   ],
+   "laser_min": 13.27,
+   "kits_per_sheet": [
+    2,
+    2
+   ]
+  }
+ ],
+ "n_sheets": 4,
+ "sheet_equivalents": 3.0,
+ "sheets_by_color": {
+  "natural": 2,
+  "orange": 1,
+  "teal": 1
+ },
+ "laser_minutes": 16.5,
+ "swap_minutes": 1.1,
+ "cut_minutes_per_kit": 17.6,
+ "wood_cost_usd": 6.3,
+ "mechanism_parts": [
+  "A2",
+  "A7",
+  "B1",
+  "B2",
+  "B3",
+  "C21",
+  "C3",
+  "D19"
+ ],
+ "build_seconds": 17.0
+}

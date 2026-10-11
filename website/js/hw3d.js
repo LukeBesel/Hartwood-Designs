@@ -212,9 +212,17 @@ export function frameCamera(camera, box, dir, { margin = 1.12, aspect = 1 } = {}
     Object.assign(camera, { left: -hw, right: hw, top: hh, bottom: -hh, near: 0.0001, far: size * 6 });
     camera.updateProjectionMatrix();
   } else {
-    const fov = THREE.MathUtils.degToRad(camera.fov);
-    const radius = box.getBoundingSphere(new THREE.Sphere()).radius;
-    const dist = radius * margin / Math.sin(Math.min(fov, fov * aspect) / 2);
+    // fit the 8 box corners: each needs |x| <= (dist - z) tan(h/2) and |y| <= (dist - z) tan(v/2)
+    const tv = Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2), th = tv * aspect;
+    const right = new THREE.Vector3().crossVectors(up, d).normalize();
+    const upv = new THREE.Vector3().crossVectors(d, right).normalize();
+    let dist = 0;
+    for (let i = 0; i < 8; i++) {
+      const p = new THREE.Vector3(i & 1 ? box.max.x : box.min.x, i & 2 ? box.max.y : box.min.y, i & 4 ? box.max.z : box.min.z).sub(c);
+      const x = Math.abs(p.dot(right)) * margin, y = Math.abs(p.dot(upv)) * margin, z = p.dot(d);
+      dist = Math.max(dist, z + x / th, z + y / tv);
+    }
+    dist = Math.max(dist, size * 0.3);
     camera.position.copy(c).addScaledVector(d, dist); camera.lookAt(c);
     camera.near = dist / 100; camera.far = dist * 10; camera.updateProjectionMatrix();
   }
