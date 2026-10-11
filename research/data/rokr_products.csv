@@ -1,0 +1,52 @@
+id,brand,line,product,sku,category,pieces,difficulty,build_hours,assembled_size,price_official_usd,price_amazon_usd,price_walmart_usd,notes,source_ids
+R01,ROKR,ROKR,Locomotive,LK701,Mechanical vehicle,349,5.5 of 6 stars,6,,,,,"Amazon listing 'Currently unavailable', no price shown",S02;S11
+R02,ROKR,ROKR,Mechanical Typewriter,LK703B,Mechanical,320,6 of 6 stars,12,,,98.99,,"Amazon title says 324 pcs; $98.99 seen on Amazon search page",S02;S11
+R03,ROKR,ROKR,3D Pinball Machine,EG01,Mechanical game,482,Advanced,12,,158.99,,,Official regular $199.99,S10
+R04,ROKR,ROKR,Dream Coffee Factory,EAB02,Music box,593,5 stars,10,,69.99,,,,S02;S04
+R05,ROKR,ROKR,Steam Engine,LKA01,Mechanical vehicle,469,5 of 5 stars,7,1:28 scale,55.99,,,Official regular $59.99,S02;S08
+R06,ROKR,ROKR,Space Shuttle,LKA02,Mechanical vehicle,446,5 stars,6,1:420 scale,,,,Motorized lift and LEDs,S02;S11
+R07,ROKR,ROKR,Vitascope Movie Projector,LK601,Mechanical,183,,5 to 6,9 x 5 x 10 in,49.99,,,Official regular $59.99,S02;S10
+R08,ROKR,ROKR,Marble Night City,LGA01,Marble run,294,,7,13 x 8 x 9 in (Amazon),,,56.99,10 marbles,S02;S03
+R09,ROKR,ROKR,Hip-Hop Street,MR03S,Marble run,134,3 stars,1.5 to 2,,,,,Beginner marble run,S02
+R10,ROKR,ROKR,Marble Parkour,LG501,Marble run,254,,6,,39.99,19.99,,Official regular $49.99; Amazon $19.99 was a Jul 2025 deal,S03;S09
+R11,ROKR,ROKR,Marble Explorer (Swingback Wall),LG503,Marble run,,,,,39.99,,,Official regular $49.99,S03
+R12,ROKR,ROKR,Marble Spaceport,LGC01,Marble run,472,Advanced,5.5,,,,,,S10
+R13,ROKR,ROKR,Gear Ball Challenge,EGC01,Marble run game,653,4 of 5 stars,5,,49.99,,,,S10
+R14,ROKR,ROKR,Fortune Quest,EGM01,Mechanical game,907,,,,109.99,,,,S10
+R15,ROKR,ROKR,Dream Gift Factory,EAB01,Music box,449,,12 (reviewer),,69.99,,,Lights and motor,S04;S12
+R16,ROKR,ROKR,Swing Ride,EA02,Music box,289,4 of 5 stars,6,,49.99,,,List $64.99,S04;S10
+R17,ROKR,ROKR,Tilt-A-Whirl,EA04,Music box,280,,,,54.99,,,Robotime store shows $59.99,S04
+R18,ROKR,ROKR,Secret Garden,AMK52,Music box,315,,,,36.99,,,,S04
+R19,ROKR,ROKR,Starry Night Orrery,AMK51,Music box,84,,,,32.99,,32.99,Walmart was $55.98,S04;S11
+R20,ROKR,ROKR,Magic Piano,AMK81,Music box,223,Advanced,4.5,,41.99,,39.99,Official list $52.99; Walmart 4.7 of 5 from 18 reviews,S04;S11
+R21,ROKR,ROKR,Magic Cello,AMK63,Music box,199,4 of 5 stars,4.5,1:5 scale,36.99,,36.99,Robotime store $39.99,S10;S11
+R22,ROKR,ROKR,Airplane Control Tower,AMK41,Music box,255,,3,,29.99,,29.99,Walmart was $39.00,S10
+R23,ROKR,ROKR,Romantic Carousel,AMK62,Music box,336,,4.5,,36.99,,,,S10
+R24,ROKR,ROKR,Owl Clock,LK503,Clock,161,Advanced,4,8.1 x 5 x 10.4 in,49.99,,49.99,Official regular $59.99,S05;S11
+R25,ROKR,ROKR,Pendulum Clock,LK501,Clock,166,,6,,42.49,,,Official regular $59.99; runs 3 to 4 h per wind,S05;S13
+R26,ROKR,ROKR,Zodiac Wall Clock,LC601,Clock,168,,3.5,13.2 x 11.6 x 2.2 in,56.99,,,Official regular $64.99,S05
+R27,ROKR,ROKR,Cuckoo Clock,,Clock,435,Advanced,6 to 8,,69.99,,69.99,Walmart was $89.00,S05;S10;S11
+R28,ROKR,ROKR,Romantic Note Wall Clock,LC701,Clock,231,Advanced,5.5,298 x 107 x 644 mm,,,,,S10
+R29,ROKR,ROKR,M416 Carbine,LQB02,Rubber band gun,410,4 of 5 stars,6,,59.99,,,rokronline shows $65.99; 40 bands included; real firearm name,S06
+R30,ROKR,ROKR,Thompson Submachine Gun,LQB01,Rubber band gun,275,,2,,46.99,,,UK reseller GBP39.95; real firearm name,S06
+R31,ROKR,ROKR,AK-47 Assault Rifle,LQ901,Rubber band gun,315,,,,42.99,,,Real firearm name,S06
+R32,ROKR,ROKR,Rotating-Barrel Machine Gun,LQA01,Rubber band gun,412,,,,59.99,,,,S06
+R33,ROKR,ROKR,Mini Gun,LQ502,Rubber band gun,,,,,26.99,,,Loads 8 bands manually,S06
+R34,ROKR,ROKR,Toy Shotgun,,Rubber band gun,170,,,,,,,Amazon listing; 14+,S14
+R35,ROKR,Rowood,Wooden Flower Bouquet,TW01H,Flower,581,3 of 5 stars,3,13 x 26 x 44 cm,39.99,,39.99,Robotime store $41.99; about 100 pcs per flower,S07;S11
+R36,ROKR,ROKR,Vintage Car,MC801,Vehicle,,,,,26.99,,,Robotime sale $25.49,S08
+R37,ROKR,ROKR,Prime Steam Express,MC501,Vehicle,308,,,1:80 scale,24.99,,,,S08;S10
+R38,ROKR,ROKR,Army Jeep,MC701,Vehicle,,,,,24.99,,,,S08
+R39,ROKR,ROKR,Treasure Box,LK502,Puzzle box,158,,,,32.99,,,List $36.99; same site also says 123 pcs,S09
+R40,ROKR,ROKR,Classic Printing Press,LK602,Mechanical,303,4 of 5 stars,5,,,,,,S10
+R41,ROKR,ROKR,Rhinoceros Beetle,MI01,Creature,156,3 of 5 stars,3,,,,,,S10
+R42,ROKR,ROKR,Globe,,Mechanical,567,,,,,,,From Robotime blog,S10
+R43,ROKR,Rowood,Catapult,,Launcher,142,,,,,,,Working rubber band launcher; 14+,S14
+R44,ROKR,ROKR,Chocolate Factory,,Marble run,420,,,,,,,Walmart listing with LED sign,S11
+R45,ROKR,ROKR,Magic Harp,,Music box,,,,,,,41.99,,S11
+R46,ROKR,ROKR,Symphony of Gorgeous Dreams,AMK63M,Music box,,,,,,,44.99,,S11
+R47,ROKR,ROKR,Penholder Calendar,LC501,Desk item,,,,,13.99,,,,S05
+R48,ROKR,Rowood,Electric Guitar,,Music themed,,,,6.7 x 4.1 x 8.7 in,,,,Retailer $18.99 (reg $21.99),S09
+R49,ROKR,Rowood,London Tower Bridge,,Architecture,113,,,,,,,German retailer $16.99,S09
+R50,ROKR,Rolife,Ferris Wheel,TGN01,Amusement,,,,,29.99,,,,S09
+R51,ROKR,Robotime,Red Boats (Wood Bloom Craft),,Art scene,219,,,,,,,JB Hi-Fi AUD 39.99 with LED,S09
