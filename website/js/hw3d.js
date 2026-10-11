@@ -118,17 +118,20 @@ export async function loadKit(url) {
 
 // ------------------------------------------------------------------ styling
 export function edgeLines(item, color, widthPx, res) {
-  const pos = [];
-  item.meshes.filter(m => m.userData.kind === 'edge' || item.ex.kind !== 'part').forEach(m => {
-    const eg = new THREE.EdgesGeometry(m.geometry, 28);
-    const a = eg.attributes.position.array;
-    for (let i = 0; i < a.length; i++) pos.push(a[i]);
-    eg.dispose();
-  });
-  const g = new LineSegmentsGeometry(); g.setPositions(pos);
+  // the edge geometry is built once per part and reused; only the material changes
+  if (!item._edgeGeo) {
+    const pos = [];
+    item.meshes.filter(m => m.userData.kind === 'edge' || item.ex.kind !== 'part').forEach(m => {
+      const eg = new THREE.EdgesGeometry(m.geometry, 28);
+      const a = eg.attributes.position.array;
+      for (let i = 0; i < a.length; i++) pos.push(a[i]);
+      eg.dispose();
+    });
+    item._edgeGeo = new LineSegmentsGeometry(); item._edgeGeo.setPositions(pos);
+  }
   const mat = new LineMaterial({ color, linewidth: widthPx, worldUnits: false });
   if (res) mat.resolution.copy(res);
-  const l = new LineSegments2(g, mat); l.computeLineDistances?.(); l.renderOrder = 2;
+  const l = new LineSegments2(item._edgeGeo, mat); l.renderOrder = 2;
   return l;
 }
 
@@ -143,7 +146,7 @@ export function setLook(item, look, opts = {}) {
 }
 
 export function setOutline(item, on, color = ORANGE, widthPx = 3, res = null) {
-  if (item.outline) { item.node.remove(item.outline); item.outline.geometry.dispose(); item.outline = null; }
+  if (item.outline) { item.node.remove(item.outline); item.outline.material.dispose(); item.outline = null; }
   if (on) { item.outline = edgeLines(item, color, widthPx, res); item.node.add(item.outline); }
 }
 
@@ -294,12 +297,25 @@ export function applyStep(kit, ctx, t = 0, { res = null, outlinePx = 3.5, colorB
     else if (ctx.mountItems.includes(it)) { setLook(it, 'color'); setOutline(it, true, ORANGE, Math.max(1.5, outlinePx * 0.5), res); }
     else { setLook(it, colorBuilt ? 'color' : 'gray'); if (edgesBuilt) setOutline(it, true, 0x8f877c, 1.2, res); }
   });
+  moveStep(ctx, t);
+}
+
+// only move the parts of this step (t = 0 in place, 1 = fully out); cheap enough for every animation frame
+export function moveStep(ctx, t) {
   ctx.newItems.forEach(it => setExplode(it, t));
   ctx.mountItems.forEach(it => {
-    if (it.step === n) return;
+    if (it.step === ctx.n) return;
     const m = ctx.mountOf.get(it);
     it.node.position.copy(it.final).addScaledVector(new THREE.Vector3(...m.insert).normalize(), -m.explode * t);
   });
+}
+
+// outline style of one item in a step (used to restore it after a highlight)
+export function restyleItem(ctx, it, res, { outlinePx = 3.5 } = {}) {
+  if (!it.node.visible) return;
+  if (it.step === ctx.n) setOutline(it, true, ORANGE, outlinePx, res);
+  else if (ctx.mountItems.includes(it)) setOutline(it, true, ORANGE, Math.max(1.5, outlinePx * 0.5), res);
+  else setOutline(it, true, 0x8f877c, 1.2, res);
 }
 
 // mean insertion direction of what moves in this step

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Build in 3D | Hartwood Designs</title>
+<meta name="description" content="Step-by-step 3D instructions for Hartwood Designs wooden model kits. Works offline.">
+<meta name="theme-color" content="#0F8B7F">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-192.png">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/build/app.css">
+<script type="importmap">{"imports":{"three":"/vendor/three/three.module.min.js","three/addons/":"/vendor/three/addons/"}}</script>
+</head>
+<body class="app">
+<header class="bar">
+  <a class="home" href="/" aria-label="Hartwood Designs home"><img src="/favicon.svg" alt="" width="32" height="32"></a>
+  <div class="kitname"><span id="kitName">Build in 3D</span><span id="stepCount" class="count"></span></div>
+  <button class="icon-btn" id="menuBtn" aria-label="All steps" aria-expanded="false" aria-controls="stepList">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+  </button>
+  <div class="progress" aria-hidden="true"><div id="progressFill"></div></div>
+</header>
+
+<main class="stage" id="stage">
+  <canvas id="c" aria-label="3D model of this step. Drag to turn, pinch to zoom, tap a part to see its code."></canvas>
+  <div class="hud">
+    <button class="chip" id="playBtn" aria-pressed="true" aria-label="Pause the animation">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path id="playIcon" d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/></svg><span>Pause</span></button>
+    <button class="chip" id="viewBtn" aria-label="Reset the view">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v5h5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>View</span></button>
+    <button class="chip" id="colorBtn" aria-pressed="false" aria-label="Show built parts in color">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg><span>Color</span></button>
+  </div>
+  <div class="partinfo" id="partInfo" role="status" hidden></div>
+  <div class="loading" id="loading"><div class="spinner"></div><span id="loadingText">Loading the model...</span></div>
+  <div class="offline" id="offlineBadge" hidden>Saved for offline use</div>
+</main>
+
+<section class="panel" id="panel" aria-live="polite">
+  <div class="steprow">
+    <span class="num" id="stepNum">1</span>
+    <h1 id="stepTitle">Loading...</h1>
+  </div>
+  <div class="tipline"><div class="icons" id="stepIcons"></div><p id="stepTip"></p></div>
+  <div class="test" id="stepTest" hidden><strong>Test it now</strong><span></span></div>
+  <h2 class="trayhead">Parts for this step <span id="trayCount"></span></h2>
+  <div class="tray" id="tray" role="list"></div>
+  <nav class="nav" aria-label="Step navigation">
+    <button class="btn" id="prevBtn" aria-label="Previous step">Back</button>
+    <button class="btn btn-primary" id="nextBtn" aria-label="Next step">Done, next</button>
+  </nav>
+</section>
+
+<aside class="steplist" id="stepList" hidden>
+  <div class="steplist-head"><h2>All steps</h2><button class="icon-btn" id="closeList" aria-label="Close the step list">&times;</button></div>
+  <ol id="stepItems"></ol>
+  <p class="small"><button class="linkish" id="resetProgress">Clear my progress</button></p>
+</aside>
+
+<section class="picker" id="picker" hidden>
+  <h1>Build in 3D</h1>
+  <p>Pick your kit. Your place is saved on this phone, and it works without internet after the first visit.</p>
+  <div class="kits" id="kitCards"></div>
+</section>
+
+<script type="module" src="/build/app.js"></script>
+</body>
+</html>
