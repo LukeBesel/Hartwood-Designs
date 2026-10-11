@@ -40,22 +40,44 @@ class Placed:
         return affinity.translate(affinity.rotate(g, self.angle, origin=(0, 0)), self.dx, self.dy)
 
 
+TILES = {   # name: (width, height, fraction of a 12 x 12 sheet)
+    'full': (C.SHEET_W, C.SHEET_H, 1.0),
+    'half': (C.SHEET_W, C.SHEET_H / 2, 0.5),
+    'quarter': (C.SHEET_W / 2, C.SHEET_H / 2, 0.25),
+}
+
+
 @dataclass
 class Sheet:
     color: str
+    tile: str = 'full'
     letter: str = ''
     placed: list = field(default_factory=list)
     occ: np.ndarray = None
     label_geom: object = None
 
+    @property
+    def W(self):
+        return TILES[self.tile][0]
+
+    @property
+    def H(self):
+        return TILES[self.tile][1]
+
+    @property
+    def fraction(self):
+        return TILES[self.tile][2]
+
     def __post_init__(self):
-        n = int(round(C.SHEET_H / RES))
-        m = int(round(C.SHEET_W / RES))
+        n = int(round(self.H / RES))
+        m = int(round(self.W / RES))
         self.occ = np.zeros((n, m), dtype=np.float32)
-        k = int(math.ceil(C.SHEET_MARGIN / RES))
+        # parts are dilated by PART_GAP when placed, so the margin band only needs the rest
+        k = int(math.ceil((C.SHEET_MARGIN - C.PART_GAP) / RES))
         self.occ[:k, :] = 1; self.occ[-k:, :] = 1; self.occ[:, :k] = 1; self.occ[:, -k:] = 1
         # keep a strip at the top-left for the sheet label
-        self.occ[-k - 7:, k:k + 70] = 1
+        kk = int(math.ceil(C.SHEET_MARGIN / RES))
+        self.occ[-kk - 6:, kk:kk + (70 if self.tile == 'full' else 34)] = 1
 
 
 def rasterize(g, res=RES, dilate=0.0):
@@ -127,39 +149,96 @@ def _mark(sheet, gr_placed):
     sheet.occ[rr0:rr1, cc0:cc1] = np.maximum(sheet.occ[rr0:rr1, cc0:cc1], K[rr0 - r0:rr1 - r0, cc0 - c0:cc1 - c0])
 
 
-def nest(parts, max_sheets=60):
-    """Place every part (plus spares). Returns list of Sheet."""
+def _place_into(sheet, p):
+    g = p.outline()
+    best = _try_place(sheet, g, candidate_angles(g, grain_lock=is_long_thin(g)))
+    if not best:
+        return False
+    _, ang, dx, dy, *_ = best
+    pl = Placed(p, ang, dx, dy)
+    sheet.placed.append(pl)
+    _mark(sheet, pl.xf(g))
+    return True
+
+
+def _nest_once(plist, tile):
+    sheets = []
+    for p in plist:
+        if not any(_place_into(sh, p) for sh in sheets):
+            sh = Sheet(plist[0].color, tile)
+            if not _place_into(sh, p):
+                return None
+            sheets.append(sh)
+    return sheets
+
+
+def _bbox(p):
+    b = p.outline().bounds
+    return b[2] - b[0], b[3] - b[1]
+
+
+ORDERS = [
+    lambda p: -p.outline().area,
+    lambda p: -max(_bbox(p)),
+    lambda p: -_bbox(p)[1] * 1000 - _bbox(p)[0],
+    lambda p: -p.outline().length,
+]
+
+
+def _nest_group(plist, tile):
+    """Nest all parts of one color into as few sheets of this tile size as possible (tries several
+    part orders, keeps the best). None if a part does not fit."""
+    best = None
+    for key in ORDERS:
+        order = sorted(plist, key=lambda p: (key(p), p.name))
+        res = _nest_once(order, tile)
+        if res is None:
+            continue
+        top = max(max(pl.xf(pl.part.outline()).bounds[3] for pl in sh.placed) for sh in res)
+        score = (len(res), top)
+        if best is None or score < best[0]:
+            best = (score, res)
+        if len(res) == 1 and tile != 'full':
+            break
+    return None if best is None else best[1]
+
+
+def nest(parts, max_sheets=60, allow_tiles=True):
+    """Place every part (plus spares). One color per sheet. Small color groups go on half or quarter
+    tiles (2 or 4 kits share one physical sheet; the packer snaps it apart). Returns list of Sheet."""
     sheets = []
     order = sorted(parts, key=lambda p: (-p.outline().area, p.name))
     by_color = {}
     for p in order:
         by_color.setdefault(p.color, []).append(p)
     for color, plist in by_color.items():
-        for p in plist:
-            g = p.outline()
-            angles = candidate_angles(g, grain_lock=is_long_thin(g))
-            placed = False
-            for sh in [s for s in sheets if s.color == color]:
-                best = _try_place(sh, g, angles)
-                if best:
-                    _, ang, dx, dy, *_ = best
-                    pl = Placed(p, ang, dx, dy)
-                    sh.placed.append(pl)
-                    _mark(sh, pl.xf(g))
-                    placed = True
-                    break
-            if not placed:
-                sh = Sheet(color)
-                best = _try_place(sh, g, angles)
-                if not best:
-                    raise ValueError(f'part {p.name} does not fit on a sheet')
-                _, ang, dx, dy, *_ = best
-                pl = Placed(p, ang, dx, dy)
-                sh.placed.append(pl)
-                _mark(sh, pl.xf(g))
-                sheets.append(sh)
-                if len(sheets) > max_sheets:
-                    raise RuntimeError('too many sheets')
+        area = sum(p.outline().area for p in plist)
+        result = None
+        if allow_tiles:
+            for tile in ('quarter', 'half'):
+                w, h, _ = TILES[tile]
+                inner = (w - 2 * C.SHEET_MARGIN) * (h - 2 * C.SHEET_MARGIN - 6)
+                if area < 0.80 * inner:
+                    result = _nest_group(plist, tile)
+                    if result and len(result) == 1:
+                        break
+                    result = None
+        if result is None:
+            result = _nest_group(plist, 'full')
+            if result is None:
+                raise ValueError(f'a {color} part does not fit on a sheet')
+            # the last full sheet may shrink to a tile
+            if allow_tiles and len(result) > 1:
+                last = result[-1]
+                lp = [pl.part for pl in last.placed]
+                for tile in ('quarter', 'half'):
+                    alt = _nest_group(lp, tile)
+                    if alt and len(alt) == 1:
+                        result[-1] = alt[0]
+                        break
+        sheets.extend(result)
+        if len(sheets) > max_sheets:
+            raise RuntimeError('too many sheets')
     # spares into leftover space only (never open a new sheet for spares)
     for p in order:
         for _ in range(getattr(p, 'spares', 0)):
@@ -179,13 +258,13 @@ def nest(parts, max_sheets=60):
 def verify(sheets):
     """Exact-geometry verification. Returns list of problems (empty = good)."""
     probs = []
-    lo, hi = C.SHEET_MARGIN, C.SHEET_W - C.SHEET_MARGIN
     for sh in sheets:
+        lo, hi = C.SHEET_MARGIN, sh.W - C.SHEET_MARGIN
         geoms = [pl.xf(pl.part.outline()) for pl in sh.placed]
         tree = shapely.STRtree(geoms)
         for i, g in enumerate(geoms):
             minx, miny, maxx, maxy = g.bounds
-            if minx < lo - 1e-6 or miny < lo - 1e-6 or maxx > hi + 1e-6 or maxy > C.SHEET_H - C.SHEET_MARGIN + 1e-6:
+            if minx < lo - 1e-6 or miny < lo - 1e-6 or maxx > hi + 1e-6 or maxy > sh.H - C.SHEET_MARGIN + 1e-6:
                 probs.append(f'{sh.letter}: {sh.placed[i].part.name} outside margin')
             for j in tree.query(g.buffer(C.PART_GAP - 0.05)):
                 if j <= i:
@@ -220,15 +299,20 @@ def assign_codes(sheets, kit_name='', code_h=2.4):
         # code geometry
         occupied = unary_union([pl.xf(pl.part.outline()).buffer(0.8) for pl in sh.placed])
         for pl in sh.placed:
+            pl._sheet_wh = (sh.W, sh.H)
             pl.code_geom, pl.code_on_part = _place_code(pl, code_h, occupied)
             if pl.code_geom is not None and not pl.code_on_part:
                 occupied = occupied.union(pl.code_geom.envelope.buffer(0.6))
         # sheet label in the reserved top-left strip
-        lab = f'HARTWOOD  {kit_name.upper()}  SHEET {sh.letter}  {C.MATERIALS[sh.color]["label"].upper()}'
-        g, w = text_outline(lab, 3.0, x=C.SHEET_MARGIN + 1, y=C.SHEET_H - C.SHEET_MARGIN - 5.0)
-        if w > 160:
-            g, w = text_outline(f'HARTWOOD {kit_name.upper()} {sh.letter}', 3.0, x=C.SHEET_MARGIN + 1,
-                                y=C.SHEET_H - C.SHEET_MARGIN - 5.0)
+        if sh.tile == 'full':
+            lab = f'HARTWOOD  {kit_name.upper()}  SHEET {sh.letter}  {C.MATERIALS[sh.color]["label"].upper()}'
+            g, w = text_outline(lab, 3.0, x=C.SHEET_MARGIN + 1, y=sh.H - C.SHEET_MARGIN - 5.0)
+            if w > 160:
+                g, w = text_outline(f'HARTWOOD {kit_name.upper()} {sh.letter}', 3.0, x=C.SHEET_MARGIN + 1,
+                                    y=sh.H - C.SHEET_MARGIN - 5.0)
+        else:
+            g, w = text_outline(f'{kit_name.upper()[:10]} {sh.letter}', 2.6, x=C.SHEET_MARGIN + 1,
+                                y=sh.H - C.SHEET_MARGIN - 4.2)
         sh.label_geom = g
     return sheets
 
@@ -269,7 +353,10 @@ def _place_code(pl, h, occupied):
     allowed = outline.buffer(-0.9, join_style='mitre')
     if avoid:
         allowed = allowed.difference(unary_union(avoid))
-    if getattr(part, 'code_on_part', True) and not allowed.is_empty:
+    beside = _place_beside(pl, tg, w, h, pad, outline, occupied) if not getattr(part, 'code_on_part', True) else None
+    if beside is not None:
+        return beside, False
+    if not allowed.is_empty:
         # try horizontal text, then text along the part's long axis
         mrr = outline.minimum_rotated_rectangle
         xs, ys = mrr.exterior.coords.xy
@@ -283,10 +370,16 @@ def _place_code(pl, h, occupied):
             if spot:
                 g = affinity.translate(tg, spot[0] + pad, spot[1] + pad)
                 return affinity.rotate(g, ang, origin=c), True
-    # beside the part on the sheet skeleton
+    g = _place_beside(pl, tg, w, h, pad, outline, occupied)
+    return (g, False) if g is not None else (None, False)
+
+
+def _place_beside(pl, tg, w, h, pad, outline, occupied):
+    """Code text on the sheet skeleton next to the part, or None."""
     minx, miny, maxx, maxy = outline.bounds
     tb = shapely.box(-pad, -pad, w + pad, h + pad)
-    lo, hi = 1.0, C.SHEET_W - 1.0
+    sw, shh = getattr(pl, '_sheet_wh', (C.SHEET_W, C.SHEET_H))
+    lo = 2.0
     cands = [(maxx + 1.0, (miny + maxy) / 2 - h / 2), (minx - w - 1.0, (miny + maxy) / 2 - h / 2),
              ((minx + maxx) / 2 - w / 2, maxy + 1.0), ((minx + maxx) / 2 - w / 2, miny - h - 1.0)]
     for r in np.arange(1.0, 10, 0.75):
@@ -297,9 +390,9 @@ def _place_code(pl, h, occupied):
     for xx, yy in cands:
         cand = affinity.translate(tb, xx, yy)
         b = cand.bounds
-        if b[0] < lo or b[1] < lo or b[2] > hi or b[3] > hi:
+        if b[0] < lo or b[1] < lo or b[2] > sw - 2.0 or b[3] > shh - 2.0:
             continue
         if cand.intersects(occupied):
             continue
-        return affinity.translate(tg, xx, yy), False
-    return None, False
+        return affinity.translate(tg, xx, yy)
+    return None

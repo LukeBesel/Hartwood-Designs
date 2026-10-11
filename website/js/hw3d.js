@@ -57,7 +57,7 @@ function styledMaterial(orig) {
   if (name === 'face_natural') {
     m = new THREE.MeshStandardMaterial({ map: woodTexture(base, 3), roughness: 0.78, metalness: 0 });
   } else if (name.startsWith('face_')) {
-    m = new THREE.MeshStandardMaterial({ map: woodTexture(base, 5, true), roughness: 0.62, metalness: 0 });
+    m = new THREE.MeshStandardMaterial({ map: woodTexture(base, 5, true), roughness: 0.55, metalness: 0 });
   } else if (name.startsWith('edge_')) {
     m = new THREE.MeshStandardMaterial({ color: base, roughness: 1.0, metalness: 0 });
   } else if (name.startsWith('engrave_')) {
@@ -156,7 +156,7 @@ export function setExplode(item, t) {
 export function makeRenderer(canvas, { alpha = true, preserve = false, shadows = true } = {}) {
   const r = new THREE.WebGLRenderer({ canvas, antialias: true, alpha, preserveDrawingBuffer: preserve });
   r.outputColorSpace = THREE.SRGBColorSpace;
-  r.toneMapping = THREE.NeutralToneMapping; r.toneMappingExposure = 1.0;
+  r.toneMapping = THREE.NeutralToneMapping; r.toneMappingExposure = 1.12;
   r.shadowMap.enabled = shadows; r.shadowMap.type = THREE.PCFSoftShadowMap;
   return r;
 }
@@ -164,7 +164,7 @@ export function makeRenderer(canvas, { alpha = true, preserve = false, shadows =
 export function addLights(scene, box) {
   const size = box.getSize(new THREE.Vector3()).length() || 1;
   const c = box.getCenter(new THREE.Vector3());
-  scene.add(new THREE.HemisphereLight(0xfff6e8, 0x8a7a66, 1.15));
+  scene.add(new THREE.HemisphereLight(0xfffaf0, 0xb8a990, 1.35));
   const key = new THREE.DirectionalLight(0xffffff, 2.1);
   key.position.set(c.x + size * 0.6, c.y + size * 1.1, c.z + size * 0.8);
   key.target.position.copy(c);

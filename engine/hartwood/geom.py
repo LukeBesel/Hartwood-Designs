@@ -145,6 +145,7 @@ class Part:
     mechanism: bool = False                # part of a working mechanism -> needs physical test
     note: str = ''
     spares: int = 0                        # extra copies to cut into free sheet space
+    code_on_part: bool = True              # False = show face; engrave the code on the sheet beside it
     code: str = ''                         # assigned by nesting, e.g. 'B12'
     sheet: str = ''
     kind: str = 'part'

@@ -317,6 +317,37 @@ def write_lbrn(sps, path, offsets=None):
     open(path, 'w').write('\n'.join(L) + '\n')
 
 
+TILE_OFFSETS = {'quarter': [(0, 0), (150, 0), (0, 150), (150, 150)], 'half': [(0, 0), (0, 150)]}
+
+
+def tile_batch(sp, tile):
+    """Compose copies of one tile into a full 12 x 12 sheet with bridged separation cuts.
+    Returns a new SheetPaths (2 halves or 4 quarters = parts for 2 or 4 kits)."""
+    offs = TILE_OFFSETS[tile]
+    out = SheetPaths(sp.letter + '_x' + str(len(offs)), sp.color)
+    for ox, oy in offs:
+        sh = lambda c: np.asarray(c) + np.array([ox, oy])
+        out.cuts.extend((sh(c), cl, inner) for c, cl, inner in sp.cuts)
+        out.scores.extend(sh(s_) for s_ in sp.scores)
+        out.fills.extend(affinity.translate(f, ox, oy) for f in sp.fills)
+    lines = [LineString([(0, 150), (300, 150)])]
+    if tile == 'quarter':
+        lines.append(LineString([(150, 0), (150, 300)]))
+    for ln in lines:
+        L = ln.length
+        pos = list(np.linspace(L / 12, L - L / 12, 6))
+        breaks = sorted(pos)
+        s0 = 0.0
+        for b in breaks:
+            seg = [ln.interpolate(s0).coords[0], ln.interpolate(b - 0.6).coords[0]]
+            out.cuts.append((np.array(seg), False, False))
+            s0 = b + 0.6
+        out.cuts.append((np.array([ln.interpolate(s0).coords[0], ln.interpolate(L).coords[0]]), False, False))
+    order_paths(out)
+    out.stats = cut_time(out)
+    return out
+
+
 def write_bed_svg(sps, path, gap=5.0):
     """Two sheets side by side for one laser job on the 710 x 360 mm bed."""
     W = len(sps) * C.SHEET_W + (len(sps) - 1) * gap

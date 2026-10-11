@@ -142,13 +142,28 @@ def cross_halflap(A: Part, B: Part, a_from_start=True, fit='press'):
     rhs = np.array([nA @ pA, nB @ pB, d @ pA])
     p0 = np.linalg.solve(Mx, rhs)
     ts = np.linspace(-600, 600, 12001)
-    pts = p0 + np.outer(ts, d)
+    cos_a = abs(float(nA @ nB))
+    # strip of the other slab as seen in each plate's plane. For an oblique crossing the slab
+    # projects wider than T: w = (T + T * |cos a|) / sin a  (a = angle between the plates)
+    w = (T + T * cos_a) / s
 
     def inside(P: Part):
-        loc = apply(np.linalg.inv(P.mat), pts)
+        """True where the strip (width w around the line, in P's plane) touches P's shape."""
+        uP = np.cross(P.mat[:3, 2], d)
+        uP /= np.linalg.norm(uP)
+        inv = np.linalg.inv(P.mat)
+        acc = np.zeros(len(ts), bool)
+        for o in np.linspace(-w / 2, w / 2, 7):
+            pts = p0 + np.outer(ts, d) + uP * o
+            loc = apply(inv, pts)
+            acc |= shapely.contains_xy(P.shape, loc[:, 0], loc[:, 1])
+        return acc
+
+    def on_line(P: Part):
+        loc = apply(np.linalg.inv(P.mat), p0 + np.outer(ts, d))
         return shapely.contains_xy(P.shape, loc[:, 0], loc[:, 1])
 
-    both = inside(A) & inside(B)
+    both = on_line(A) & on_line(B)
     if not both.any():
         raise ValueError(f'cross_halflap: {A.name} and {B.name} do not cross')
     idx = np.nonzero(both)[0]
@@ -161,7 +176,6 @@ def cross_halflap(A: Part, B: Part, a_from_start=True, fit='press'):
     i0, i1 = max(runs, key=lambda r: r[1] - r[0])
     t0, t1 = ts[i0], ts[i1]
     tm = (t0 + t1) / 2
-    w = T / s  # strip width of a plate crossing at angle: T / sin(angle)
 
     def run_ends(mask):
         lo = i0

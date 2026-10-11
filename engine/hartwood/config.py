@@ -46,16 +46,16 @@ RUBBER_BAND = '#64 rubber band, 3.5 x 1/4 in (Estimate)'
 
 # --- colors (only supplier-confirmed 3 mm colors, see research/materials.md) ---
 MATERIALS = {
-    'natural': {'label': 'Natural basswood', 'face': '#ecd2a6', 'edge': '#4f301b', 'engrave': '#7a4a28'},
-    'orange':  {'label': 'Sunset Orange (blaze tip)', 'face': '#ff6a13', 'edge': '#5a2a10', 'engrave': '#c9a27a'},
-    'teal':    {'label': 'Haze Blue', 'face': '#7fb3c8', 'edge': '#3c3a36', 'engrave': '#d9c29f'},
-    'pink':    {'label': 'Pink', 'face': '#f2a7bd', 'edge': '#6d3f3f', 'engrave': '#d8b48c'},
-    'yellow':  {'label': 'Yellow', 'face': '#f6d65a', 'edge': '#6a5326', 'engrave': '#c9a26a'},
-    'green':   {'label': 'Green', 'face': '#8cc084', 'edge': '#3c4a2e', 'engrave': '#d8c49a'},
-    'purple':  {'label': 'Purple', 'face': '#a58ad6', 'edge': '#3e3352', 'engrave': '#d9c4a2'},
-    'red':     {'label': 'Red', 'face': '#d9483b', 'edge': '#4a1c16', 'engrave': '#d8b48c'},
-    'gold':    {'label': 'Gold', 'face': '#d8b04a', 'edge': '#5c4417', 'engrave': '#8e6a2a'},
-    'white':   {'label': 'White', 'face': '#f4f1ea', 'edge': '#6b5b4a', 'engrave': '#c9a77f'},
+    'natural': {'label': 'Natural basswood', 'face': '#ecd2a6', 'edge': '#5e3b22', 'engrave': '#7a4a28'},
+    'orange':  {'label': 'Sunset Orange (blaze tip)', 'face': '#ff6a13', 'edge': '#7a5232', 'engrave': '#c9a27a'},
+    'teal':    {'label': 'Haze Blue', 'face': '#7fb3c8', 'edge': '#7a5232', 'engrave': '#d9c29f'},
+    'pink':    {'label': 'Pink', 'face': '#f2a7bd', 'edge': '#7a5232', 'engrave': '#d8b48c'},
+    'yellow':  {'label': 'Yellow', 'face': '#f6d65a', 'edge': '#7a5232', 'engrave': '#c9a26a'},
+    'green':   {'label': 'Green', 'face': '#8cc084', 'edge': '#7a5232', 'engrave': '#d8c49a'},
+    'purple':  {'label': 'Purple', 'face': '#a58ad6', 'edge': '#7a5232', 'engrave': '#d9c4a2'},
+    'red':     {'label': 'Red', 'face': '#d9483b', 'edge': '#7a5232', 'engrave': '#d8b48c'},
+    'gold':    {'label': 'Gold', 'face': '#d8b04a', 'edge': '#7a5232', 'engrave': '#8e6a2a'},
+    'white':   {'label': 'White', 'face': '#f4f1ea', 'edge': '#7a5232', 'engrave': '#c9a77f'},
 }
 
 # --- cost inputs (Estimate; see supply/ for sources) -----------------------

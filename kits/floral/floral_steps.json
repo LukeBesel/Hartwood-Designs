@@ -1,0 +1,2188 @@
+{
+ "kit": "floral",
+ "name": "Blossom Waltz",
+ "tagline": "A flower music box that turns while it plays.",
+ "story": "Wind the key and the bouquet starts to dance. Blossom Waltz is a pastel garden in a box: eight layered flowers in a striped vase turn slowly on a little stage while a real wind-up movement plays. Every petal is cut from colored wood, with veins drawn by the laser. Build it in an evening, give it to someone, and watch them wind it again and again.",
+ "difficulty": 3,
+ "build_hours": "4 to 5 h",
+ "price": 49.99,
+ "piece_count": 156,
+ "unique_codes": 106,
+ "sheets": [
+  {
+   "letter": "A",
+   "color": "natural",
+   "label": "Natural basswood",
+   "parts": 43,
+   "spares": 0
+  },
+  {
+   "letter": "B",
+   "color": "white",
+   "label": "White",
+   "parts": 30,
+   "spares": 0
+  },
+  {
+   "letter": "C",
+   "color": "white",
+   "label": "White",
+   "parts": 14,
+   "spares": 0
+  },
+  {
+   "letter": "D",
+   "color": "pink",
+   "label": "Pink",
+   "parts": 18,
+   "spares": 0
+  },
+  {
+   "letter": "E",
+   "color": "green",
+   "label": "Green",
+   "parts": 19,
+   "spares": 0
+  },
+  {
+   "letter": "F",
+   "color": "yellow",
+   "label": "Yellow",
+   "parts": 7,
+   "spares": 0
+  },
+  {
+   "letter": "G",
+   "color": "teal",
+   "label": "Haze Blue",
+   "parts": 10,
+   "spares": 0
+  },
+  {
+   "letter": "H",
+   "color": "purple",
+   "label": "Purple",
+   "parts": 15,
+   "spares": 0
+  }
+ ],
+ "extras": {
+  "18-note wind-up music movement with rotating shaft": 1,
+  "3/16 in birch dowel, 55 mm": 1,
+  "wax stick": 1,
+  "sandpaper 240 grit": 1
+ },
+ "steps": [
+  {
+   "n": 1,
+   "title": "Build the four feet",
+   "tip": "Push each peg into the bottom square first, then stack the rest.",
+   "icons": [
+    "x4",
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A3",
+     "qty": 4,
+     "sheet": "A",
+     "name": "foot_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "A6",
+     "qty": 4,
+     "sheet": "A",
+     "name": "foot0_3",
+     "color": "natural"
+    },
+    {
+     "code": "A7",
+     "qty": 4,
+     "sheet": "A",
+     "name": "foot0_1",
+     "color": "natural"
+    },
+    {
+     "code": "B3",
+     "qty": 3,
+     "sheet": "B",
+     "name": "foot0_0",
+     "color": "white"
+    },
+    {
+     "code": "B13",
+     "qty": 4,
+     "sheet": "B",
+     "name": "foot0_4",
+     "color": "white"
+    },
+    {
+     "code": "B18",
+     "qty": 1,
+     "sheet": "B",
+     "name": "foot0_2",
+     "color": "white"
+    },
+    {
+     "code": "C1",
+     "qty": 3,
+     "sheet": "C",
+     "name": "foot1_2",
+     "color": "white"
+    },
+    {
+     "code": "C6",
+     "qty": 1,
+     "sheet": "C",
+     "name": "foot3_0",
+     "color": "white"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 2,
+   "title": "Add the base plate",
+   "tip": "The round hole is for the winding key.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A5",
+     "qty": 1,
+     "sheet": "A",
+     "name": "base",
+     "color": "natural"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 3,
+   "title": "Build the movement cradle",
+   "tip": "Four low walls hold the music movement.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A13",
+     "qty": 2,
+     "sheet": "A",
+     "name": "cradle_fb0",
+     "color": "natural"
+    },
+    {
+     "code": "A15",
+     "qty": 2,
+     "sheet": "A",
+     "name": "cradle_side0",
+     "color": "natural"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 4,
+   "title": "Drop in the music movement",
+   "tip": "Key side down. The key goes through the round hole.",
+   "icons": [
+    "careful"
+   ],
+   "test": "Wind the key two turns. You should hear music.",
+   "view": null,
+   "parts": [],
+   "hardware": [
+    {
+     "name": "winding key shaft",
+     "kind": "rod",
+     "note": "part of the movement"
+    },
+    {
+     "name": "music movement",
+     "kind": "block",
+     "note": "18-note wind-up movement (bought part)"
+    },
+    {
+     "name": "movement shaft",
+     "kind": "rod",
+     "note": "part of the movement"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Build the drive coupler",
+   "tip": "Two pegs lock the four discs together. Wax the top hole.",
+   "icons": [
+    "wax",
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A10",
+     "qty": 2,
+     "sheet": "A",
+     "name": "coupler0",
+     "color": "natural"
+    },
+    {
+     "code": "A11",
+     "qty": 2,
+     "sheet": "A",
+     "name": "coupler2",
+     "color": "natural"
+    },
+    {
+     "code": "A17",
+     "qty": 1,
+     "sheet": "A",
+     "name": "coupler_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "A18",
+     "qty": 1,
+     "sheet": "A",
+     "name": "coupler_peg1",
+     "color": "natural"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 6,
+   "title": "Stand up the front and back walls",
+   "tip": "Window faces front.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "B15",
+     "qty": 1,
+     "sheet": "B",
+     "name": "wall_back",
+     "color": "white"
+    },
+    {
+     "code": "B17",
+     "qty": 1,
+     "sheet": "B",
+     "name": "wall_front",
+     "color": "white"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 7,
+   "title": "Add the side walls",
+   "tip": "Their tabs lock into the front and back walls.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "D14",
+     "qty": 2,
+     "sheet": "D",
+     "name": "wall_left",
+     "color": "pink"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 8,
+   "title": "Decorate the walls",
+   "tip": "Each picture is held by little square pegs. Push from outside.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A1",
+     "qty": 10,
+     "sheet": "A",
+     "name": "window_frame_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "D7",
+     "qty": 1,
+     "sheet": "D",
+     "name": "window_frame",
+     "color": "pink"
+    },
+    {
+     "code": "D15",
+     "qty": 1,
+     "sheet": "D",
+     "name": "back_plaque",
+     "color": "pink"
+    },
+    {
+     "code": "E1",
+     "qty": 2,
+     "sheet": "E",
+     "name": "wall_left_leaves",
+     "color": "green"
+    },
+    {
+     "code": "F1",
+     "qty": 2,
+     "sheet": "F",
+     "name": "wall_left_flower",
+     "color": "yellow"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 9,
+   "title": "Close the box with the lid",
+   "tip": "Line up the round bearing hole with the coupler.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "B16",
+     "qty": 1,
+     "sheet": "B",
+     "name": "top",
+     "color": "white"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 10,
+   "title": "Fit the drive dowel and the turntable",
+   "tip": "Wax the dowel where it turns in the lid.",
+   "icons": [
+    "wax",
+    "press"
+   ],
+   "test": "Wind the movement. The turntable should spin smoothly.",
+   "view": null,
+   "parts": [
+    {
+     "code": "A9",
+     "qty": 2,
+     "sheet": "A",
+     "name": "hub0",
+     "color": "natural"
+    },
+    {
+     "code": "A12",
+     "qty": 1,
+     "sheet": "A",
+     "name": "hub_peg1",
+     "color": "natural"
+    },
+    {
+     "code": "A19",
+     "qty": 1,
+     "sheet": "A",
+     "name": "hub_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "D8",
+     "qty": 1,
+     "sheet": "D",
+     "name": "turntable",
+     "color": "pink"
+    }
+   ],
+   "hardware": [
+    {
+     "name": "drive dowel",
+     "kind": "rod",
+     "note": "3/16 in birch dowel cut to length"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "title": "Plant the garden fence",
+   "tip": "Eight fence pieces slot into the lid.",
+   "icons": [
+    "press",
+    "x8"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "B1",
+     "qty": 8,
+     "sheet": "B",
+     "name": "fence0",
+     "color": "white"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 12,
+   "title": "Stand the two vase keys in the turntable",
+   "tip": "They are the backbone of the vase.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A14",
+     "qty": 2,
+     "sheet": "A",
+     "name": "vase_key0",
+     "color": "natural"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 13,
+   "title": "Stack vase rings 1 to 7",
+   "tip": "Slide each ring down both keys. Watch the colors.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "B5",
+     "qty": 1,
+     "sheet": "B",
+     "name": "ring02",
+     "color": "white"
+    },
+    {
+     "code": "B8",
+     "qty": 1,
+     "sheet": "B",
+     "name": "ring04",
+     "color": "white"
+    },
+    {
+     "code": "B9",
+     "qty": 1,
+     "sheet": "B",
+     "name": "ring06",
+     "color": "white"
+    },
+    {
+     "code": "C11",
+     "qty": 1,
+     "sheet": "C",
+     "name": "ring00",
+     "color": "white"
+    },
+    {
+     "code": "D6",
+     "qty": 1,
+     "sheet": "D",
+     "name": "ring03",
+     "color": "pink"
+    },
+    {
+     "code": "G7",
+     "qty": 1,
+     "sheet": "G",
+     "name": "ring05",
+     "color": "teal"
+    },
+    {
+     "code": "G9",
+     "qty": 1,
+     "sheet": "G",
+     "name": "ring01",
+     "color": "teal"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 14,
+   "title": "Stack vase rings 8 to 14",
+   "tip": "Slide each ring down both keys. Watch the colors.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "B6",
+     "qty": 1,
+     "sheet": "B",
+     "name": "ring12",
+     "color": "white"
+    },
+    {
+     "code": "B10",
+     "qty": 1,
+     "sheet": "B",
+     "name": "ring10",
+     "color": "white"
+    },
+    {
+     "code": "B12",
+     "qty": 1,
+     "sheet": "B",
+     "name": "ring08",
+     "color": "white"
+    },
+    {
+     "code": "D5",
+     "qty": 1,
+     "sheet": "D",
+     "name": "ring11",
+     "color": "pink"
+    },
+    {
+     "code": "D9",
+     "qty": 1,
+     "sheet": "D",
+     "name": "ring07",
+     "color": "pink"
+    },
+    {
+     "code": "G6",
+     "qty": 1,
+     "sheet": "G",
+     "name": "ring09",
+     "color": "teal"
+    },
+    {
+     "code": "G8",
+     "qty": 1,
+     "sheet": "G",
+     "name": "ring13",
+     "color": "teal"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 15,
+   "title": "Stack vase rings 15 to 21",
+   "tip": "Slide each ring down both keys. Watch the colors.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "B7",
+     "qty": 1,
+     "sheet": "B",
+     "name": "ring14",
+     "color": "white"
+    },
+    {
+     "code": "B11",
+     "qty": 1,
+     "sheet": "B",
+     "name": "guide",
+     "color": "white"
+    },
+    {
+     "code": "C3",
+     "qty": 1,
+     "sheet": "C",
+     "name": "ring20",
+     "color": "white"
+    },
+    {
+     "code": "C8",
+     "qty": 1,
+     "sheet": "C",
+     "name": "ring16",
+     "color": "white"
+    },
+    {
+     "code": "C10",
+     "qty": 1,
+     "sheet": "C",
+     "name": "ring18",
+     "color": "white"
+    },
+    {
+     "code": "D1",
+     "qty": 1,
+     "sheet": "D",
+     "name": "ring15",
+     "color": "pink"
+    },
+    {
+     "code": "G5",
+     "qty": 1,
+     "sheet": "G",
+     "name": "ring17",
+     "color": "teal"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 16,
+   "title": "Stack vase rings 22 to 28",
+   "tip": "Slide each ring down both keys. Watch the colors.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "C4",
+     "qty": 1,
+     "sheet": "C",
+     "name": "ring22",
+     "color": "white"
+    },
+    {
+     "code": "C9",
+     "qty": 1,
+     "sheet": "C",
+     "name": "ring26",
+     "color": "white"
+    },
+    {
+     "code": "C12",
+     "qty": 1,
+     "sheet": "C",
+     "name": "ring24",
+     "color": "white"
+    },
+    {
+     "code": "D4",
+     "qty": 1,
+     "sheet": "D",
+     "name": "ring23",
+     "color": "pink"
+    },
+    {
+     "code": "E11",
+     "qty": 1,
+     "sheet": "E",
+     "name": "frog",
+     "color": "green"
+    },
+    {
+     "code": "G2",
+     "qty": 1,
+     "sheet": "G",
+     "name": "ring21",
+     "color": "teal"
+    },
+    {
+     "code": "G4",
+     "qty": 1,
+     "sheet": "G",
+     "name": "ring25",
+     "color": "teal"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 17,
+   "title": "Build and plant the rose",
+   "tip": "Stem first, then leaves, then stack the petals from big to small.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "B2",
+     "qty": 1,
+     "sheet": "B",
+     "name": "rose_head4",
+     "color": "white"
+    },
+    {
+     "code": "C2",
+     "qty": 1,
+     "sheet": "C",
+     "name": "rose_head2",
+     "color": "white"
+    },
+    {
+     "code": "D2",
+     "qty": 1,
+     "sheet": "D",
+     "name": "rose_head1",
+     "color": "pink"
+    },
+    {
+     "code": "D10",
+     "qty": 1,
+     "sheet": "D",
+     "name": "rose_head3",
+     "color": "pink"
+    },
+    {
+     "code": "D11",
+     "qty": 1,
+     "sheet": "D",
+     "name": "rose_head5",
+     "color": "pink"
+    },
+    {
+     "code": "D16",
+     "qty": 1,
+     "sheet": "D",
+     "name": "rose_head6",
+     "color": "pink"
+    },
+    {
+     "code": "E7",
+     "qty": 1,
+     "sheet": "E",
+     "name": "rose_leaf0",
+     "color": "green"
+    },
+    {
+     "code": "E8",
+     "qty": 1,
+     "sheet": "E",
+     "name": "rose_head0",
+     "color": "green"
+    },
+    {
+     "code": "E15",
+     "qty": 1,
+     "sheet": "E",
+     "name": "rose_stem",
+     "color": "green"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 18,
+   "title": "Build and plant the daisy",
+   "tip": "Stem first, then leaves, then stack the petals from big to small.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "B4",
+     "qty": 1,
+     "sheet": "B",
+     "name": "daisy_head0",
+     "color": "white"
+    },
+    {
+     "code": "C5",
+     "qty": 1,
+     "sheet": "C",
+     "name": "daisy_head1",
+     "color": "white"
+    },
+    {
+     "code": "E3",
+     "qty": 1,
+     "sheet": "E",
+     "name": "daisy_stem",
+     "color": "green"
+    },
+    {
+     "code": "E4",
+     "qty": 1,
+     "sheet": "E",
+     "name": "daisy_leaf0",
+     "color": "green"
+    },
+    {
+     "code": "F5",
+     "qty": 1,
+     "sheet": "F",
+     "name": "daisy_head3",
+     "color": "yellow"
+    },
+    {
+     "code": "F6",
+     "qty": 1,
+     "sheet": "F",
+     "name": "daisy_head2",
+     "color": "yellow"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 19,
+   "title": "Build and plant the lavender",
+   "tip": "Stem first, then leaves, then stack the petals from big to small.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "E13",
+     "qty": 1,
+     "sheet": "E",
+     "name": "lavender1_stem",
+     "color": "green"
+    },
+    {
+     "code": "H2",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender1_head2",
+     "color": "purple"
+    },
+    {
+     "code": "H4",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender1_head4",
+     "color": "purple"
+    },
+    {
+     "code": "H6",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender1_head3",
+     "color": "purple"
+    },
+    {
+     "code": "H8",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender1_head1",
+     "color": "purple"
+    },
+    {
+     "code": "H10",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender1_head0",
+     "color": "purple"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 20,
+   "title": "Build and plant the tulip",
+   "tip": "Stem first, then leaves, then stack the petals from big to small.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "D13",
+     "qty": 1,
+     "sheet": "D",
+     "name": "tulip_head1",
+     "color": "pink"
+    },
+    {
+     "code": "E4",
+     "qty": 1,
+     "sheet": "E",
+     "name": "tulip_leaf0",
+     "color": "green"
+    },
+    {
+     "code": "E10",
+     "qty": 1,
+     "sheet": "E",
+     "name": "tulip_stem",
+     "color": "green"
+    },
+    {
+     "code": "F4",
+     "qty": 1,
+     "sheet": "F",
+     "name": "tulip_head3",
+     "color": "yellow"
+    },
+    {
+     "code": "H3",
+     "qty": 1,
+     "sheet": "H",
+     "name": "tulip_head0",
+     "color": "purple"
+    },
+    {
+     "code": "H9",
+     "qty": 1,
+     "sheet": "H",
+     "name": "tulip_head2",
+     "color": "purple"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 21,
+   "title": "Build and plant the sunflower",
+   "tip": "Stem first, then leaves, then stack the petals from big to small.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A4",
+     "qty": 1,
+     "sheet": "A",
+     "name": "sunflower_head3",
+     "color": "natural"
+    },
+    {
+     "code": "A16",
+     "qty": 1,
+     "sheet": "A",
+     "name": "sunflower_head2",
+     "color": "natural"
+    },
+    {
+     "code": "E2",
+     "qty": 1,
+     "sheet": "E",
+     "name": "sunflower_leaf0",
+     "color": "green"
+    },
+    {
+     "code": "E12",
+     "qty": 1,
+     "sheet": "E",
+     "name": "sunflower_stem",
+     "color": "green"
+    },
+    {
+     "code": "F2",
+     "qty": 1,
+     "sheet": "F",
+     "name": "sunflower_head0",
+     "color": "yellow"
+    },
+    {
+     "code": "F3",
+     "qty": 1,
+     "sheet": "F",
+     "name": "sunflower_head1",
+     "color": "yellow"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 22,
+   "title": "Build and plant the lavender",
+   "tip": "Stem first, then leaves, then stack the petals from big to small.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "E9",
+     "qty": 1,
+     "sheet": "E",
+     "name": "lavender2_stem",
+     "color": "green"
+    },
+    {
+     "code": "H2",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender2_head2",
+     "color": "purple"
+    },
+    {
+     "code": "H4",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender2_head4",
+     "color": "purple"
+    },
+    {
+     "code": "H6",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender2_head3",
+     "color": "purple"
+    },
+    {
+     "code": "H8",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender2_head1",
+     "color": "purple"
+    },
+    {
+     "code": "H10",
+     "qty": 1,
+     "sheet": "H",
+     "name": "lavender2_head0",
+     "color": "purple"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 23,
+   "title": "Build and plant the rosebud",
+   "tip": "Stem first, then leaves, then stack the petals from big to small.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "B14",
+     "qty": 1,
+     "sheet": "B",
+     "name": "rosebud_head3",
+     "color": "white"
+    },
+    {
+     "code": "C7",
+     "qty": 1,
+     "sheet": "C",
+     "name": "rosebud_head1",
+     "color": "white"
+    },
+    {
+     "code": "D3",
+     "qty": 1,
+     "sheet": "D",
+     "name": "rosebud_head2",
+     "color": "pink"
+    },
+    {
+     "code": "D12",
+     "qty": 1,
+     "sheet": "D",
+     "name": "rosebud_head4",
+     "color": "pink"
+    },
+    {
+     "code": "D16",
+     "qty": 1,
+     "sheet": "D",
+     "name": "rosebud_head5",
+     "color": "pink"
+    },
+    {
+     "code": "E2",
+     "qty": 1,
+     "sheet": "E",
+     "name": "rosebud_leaf0",
+     "color": "green"
+    },
+    {
+     "code": "E5",
+     "qty": 1,
+     "sheet": "E",
+     "name": "rosebud_stem",
+     "color": "green"
+    },
+    {
+     "code": "E6",
+     "qty": 1,
+     "sheet": "E",
+     "name": "rosebud_head0",
+     "color": "green"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 24,
+   "title": "Build and plant the cornflower",
+   "tip": "Stem first, then leaves, then stack the petals from big to small.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "E2",
+     "qty": 1,
+     "sheet": "E",
+     "name": "cornflower_leaf0",
+     "color": "green"
+    },
+    {
+     "code": "E14",
+     "qty": 1,
+     "sheet": "E",
+     "name": "cornflower_stem",
+     "color": "green"
+    },
+    {
+     "code": "G3",
+     "qty": 1,
+     "sheet": "G",
+     "name": "cornflower_head0",
+     "color": "teal"
+    },
+    {
+     "code": "G10",
+     "qty": 1,
+     "sheet": "G",
+     "name": "cornflower_head1",
+     "color": "teal"
+    },
+    {
+     "code": "H1",
+     "qty": 1,
+     "sheet": "H",
+     "name": "cornflower_head2",
+     "color": "purple"
+    },
+    {
+     "code": "H7",
+     "qty": 1,
+     "sheet": "H",
+     "name": "cornflower_head3",
+     "color": "purple"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 25,
+   "title": "Let the butterflies land",
+   "tip": "Push each body into the lid, then slide the wings down.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A2",
+     "qty": 1,
+     "sheet": "A",
+     "name": "butterfly1_body",
+     "color": "natural"
+    },
+    {
+     "code": "A8",
+     "qty": 1,
+     "sheet": "A",
+     "name": "butterfly0_body",
+     "color": "natural"
+    },
+    {
+     "code": "G1",
+     "qty": 1,
+     "sheet": "G",
+     "name": "butterfly1_wings",
+     "color": "teal"
+    },
+    {
+     "code": "H5",
+     "qty": 1,
+     "sheet": "H",
+     "name": "butterfly0_wings",
+     "color": "purple"
+    }
+   ],
+   "hardware": []
+  }
+ ],
+ "parts": [
+  {
+   "code": "A1",
+   "name": "window_frame_peg0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 10,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "A10",
+   "name": "coupler0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 2,
+   "step": 5,
+   "mechanism": true
+  },
+  {
+   "code": "A11",
+   "name": "coupler2",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 2,
+   "step": 5,
+   "mechanism": true
+  },
+  {
+   "code": "A12",
+   "name": "hub_peg1",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 10,
+   "mechanism": true
+  },
+  {
+   "code": "A13",
+   "name": "cradle_fb0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 2,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A14",
+   "name": "vase_key0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 2,
+   "step": 12,
+   "mechanism": false
+  },
+  {
+   "code": "A15",
+   "name": "cradle_side0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 2,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A16",
+   "name": "sunflower_head2",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 21,
+   "mechanism": false
+  },
+  {
+   "code": "A17",
+   "name": "coupler_peg0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 5,
+   "mechanism": true
+  },
+  {
+   "code": "A18",
+   "name": "coupler_peg1",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 5,
+   "mechanism": true
+  },
+  {
+   "code": "A19",
+   "name": "hub_peg0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 10,
+   "mechanism": true
+  },
+  {
+   "code": "A2",
+   "name": "butterfly1_body",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 25,
+   "mechanism": false
+  },
+  {
+   "code": "A3",
+   "name": "foot_peg0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 4,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "A4",
+   "name": "sunflower_head3",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 21,
+   "mechanism": false
+  },
+  {
+   "code": "A5",
+   "name": "base",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A6",
+   "name": "foot0_3",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 4,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "A7",
+   "name": "foot0_1",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 4,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "A8",
+   "name": "butterfly0_body",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 25,
+   "mechanism": false
+  },
+  {
+   "code": "A9",
+   "name": "hub0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 2,
+   "step": 10,
+   "mechanism": true
+  },
+  {
+   "code": "B1",
+   "name": "fence0",
+   "sheet": "B",
+   "color": "white",
+   "qty": 8,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "B10",
+   "name": "ring10",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 14,
+   "mechanism": false
+  },
+  {
+   "code": "B11",
+   "name": "guide",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "B12",
+   "name": "ring08",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 14,
+   "mechanism": false
+  },
+  {
+   "code": "B13",
+   "name": "foot0_4",
+   "sheet": "B",
+   "color": "white",
+   "qty": 4,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "B14",
+   "name": "rosebud_head3",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 23,
+   "mechanism": false
+  },
+  {
+   "code": "B15",
+   "name": "wall_back",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "B16",
+   "name": "top",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 9,
+   "mechanism": false
+  },
+  {
+   "code": "B17",
+   "name": "wall_front",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "B18",
+   "name": "foot0_2",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "B2",
+   "name": "rose_head4",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "B3",
+   "name": "foot0_0",
+   "sheet": "B",
+   "color": "white",
+   "qty": 3,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "B4",
+   "name": "daisy_head0",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "B5",
+   "name": "ring02",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "B6",
+   "name": "ring12",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 14,
+   "mechanism": false
+  },
+  {
+   "code": "B7",
+   "name": "ring14",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "B8",
+   "name": "ring04",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "B9",
+   "name": "ring06",
+   "sheet": "B",
+   "color": "white",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "C1",
+   "name": "foot1_2",
+   "sheet": "C",
+   "color": "white",
+   "qty": 3,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "C10",
+   "name": "ring18",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "C11",
+   "name": "ring00",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "C12",
+   "name": "ring24",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "C2",
+   "name": "rose_head2",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "C3",
+   "name": "ring20",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "C4",
+   "name": "ring22",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "C5",
+   "name": "daisy_head1",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "C6",
+   "name": "foot3_0",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "C7",
+   "name": "rosebud_head1",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 23,
+   "mechanism": false
+  },
+  {
+   "code": "C8",
+   "name": "ring16",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "C9",
+   "name": "ring26",
+   "sheet": "C",
+   "color": "white",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "D1",
+   "name": "ring15",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "D10",
+   "name": "rose_head3",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "D11",
+   "name": "rose_head5",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "D12",
+   "name": "rosebud_head4",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 23,
+   "mechanism": false
+  },
+  {
+   "code": "D13",
+   "name": "tulip_head1",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 20,
+   "mechanism": false
+  },
+  {
+   "code": "D14",
+   "name": "wall_left",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 2,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "D15",
+   "name": "back_plaque",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "D16",
+   "name": "rose_head6",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 2,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "D2",
+   "name": "rose_head1",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "D3",
+   "name": "rosebud_head2",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 23,
+   "mechanism": false
+  },
+  {
+   "code": "D4",
+   "name": "ring23",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "D5",
+   "name": "ring11",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 14,
+   "mechanism": false
+  },
+  {
+   "code": "D6",
+   "name": "ring03",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "D7",
+   "name": "window_frame",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "D8",
+   "name": "turntable",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 10,
+   "mechanism": true
+  },
+  {
+   "code": "D9",
+   "name": "ring07",
+   "sheet": "D",
+   "color": "pink",
+   "qty": 1,
+   "step": 14,
+   "mechanism": false
+  },
+  {
+   "code": "E1",
+   "name": "wall_left_leaves",
+   "sheet": "E",
+   "color": "green",
+   "qty": 2,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "E10",
+   "name": "tulip_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 20,
+   "mechanism": false
+  },
+  {
+   "code": "E11",
+   "name": "frog",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "E12",
+   "name": "sunflower_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 21,
+   "mechanism": false
+  },
+  {
+   "code": "E13",
+   "name": "lavender1_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 19,
+   "mechanism": false
+  },
+  {
+   "code": "E14",
+   "name": "cornflower_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 24,
+   "mechanism": false
+  },
+  {
+   "code": "E15",
+   "name": "rose_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "E2",
+   "name": "sunflower_leaf0",
+   "sheet": "E",
+   "color": "green",
+   "qty": 3,
+   "step": 21,
+   "mechanism": false
+  },
+  {
+   "code": "E3",
+   "name": "daisy_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "E4",
+   "name": "daisy_leaf0",
+   "sheet": "E",
+   "color": "green",
+   "qty": 2,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "E5",
+   "name": "rosebud_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 23,
+   "mechanism": false
+  },
+  {
+   "code": "E6",
+   "name": "rosebud_head0",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 23,
+   "mechanism": false
+  },
+  {
+   "code": "E7",
+   "name": "rose_leaf0",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "E8",
+   "name": "rose_head0",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "E9",
+   "name": "lavender2_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 22,
+   "mechanism": false
+  },
+  {
+   "code": "F1",
+   "name": "wall_left_flower",
+   "sheet": "F",
+   "color": "yellow",
+   "qty": 2,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "F2",
+   "name": "sunflower_head0",
+   "sheet": "F",
+   "color": "yellow",
+   "qty": 1,
+   "step": 21,
+   "mechanism": false
+  },
+  {
+   "code": "F3",
+   "name": "sunflower_head1",
+   "sheet": "F",
+   "color": "yellow",
+   "qty": 1,
+   "step": 21,
+   "mechanism": false
+  },
+  {
+   "code": "F4",
+   "name": "tulip_head3",
+   "sheet": "F",
+   "color": "yellow",
+   "qty": 1,
+   "step": 20,
+   "mechanism": false
+  },
+  {
+   "code": "F5",
+   "name": "daisy_head3",
+   "sheet": "F",
+   "color": "yellow",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "F6",
+   "name": "daisy_head2",
+   "sheet": "F",
+   "color": "yellow",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "G1",
+   "name": "butterfly1_wings",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 25,
+   "mechanism": false
+  },
+  {
+   "code": "G10",
+   "name": "cornflower_head1",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 24,
+   "mechanism": false
+  },
+  {
+   "code": "G2",
+   "name": "ring21",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "G3",
+   "name": "cornflower_head0",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 24,
+   "mechanism": false
+  },
+  {
+   "code": "G4",
+   "name": "ring25",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "G5",
+   "name": "ring17",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "G6",
+   "name": "ring09",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 14,
+   "mechanism": false
+  },
+  {
+   "code": "G7",
+   "name": "ring05",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "G8",
+   "name": "ring13",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 14,
+   "mechanism": false
+  },
+  {
+   "code": "G9",
+   "name": "ring01",
+   "sheet": "G",
+   "color": "teal",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "H1",
+   "name": "cornflower_head2",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 1,
+   "step": 24,
+   "mechanism": false
+  },
+  {
+   "code": "H10",
+   "name": "lavender1_head0",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 2,
+   "step": 19,
+   "mechanism": false
+  },
+  {
+   "code": "H2",
+   "name": "lavender1_head2",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 2,
+   "step": 19,
+   "mechanism": false
+  },
+  {
+   "code": "H3",
+   "name": "tulip_head0",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 1,
+   "step": 20,
+   "mechanism": false
+  },
+  {
+   "code": "H4",
+   "name": "lavender1_head4",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 2,
+   "step": 19,
+   "mechanism": false
+  },
+  {
+   "code": "H5",
+   "name": "butterfly0_wings",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 1,
+   "step": 25,
+   "mechanism": false
+  },
+  {
+   "code": "H6",
+   "name": "lavender1_head3",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 2,
+   "step": 19,
+   "mechanism": false
+  },
+  {
+   "code": "H7",
+   "name": "cornflower_head3",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 1,
+   "step": 24,
+   "mechanism": false
+  },
+  {
+   "code": "H8",
+   "name": "lavender1_head1",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 2,
+   "step": 19,
+   "mechanism": false
+  },
+  {
+   "code": "H9",
+   "name": "tulip_head2",
+   "sheet": "H",
+   "color": "purple",
+   "qty": 1,
+   "step": 20,
+   "mechanism": false
+  }
+ ]
+}
