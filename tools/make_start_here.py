@@ -284,6 +284,11 @@ def main(tests=True):
         + ([('Mechanism test plan', 'kits/blaster/mechanism_test_plan.md', '')] if r['kit'] == 'blaster' else [])) for r in rows)
 
     cards = ''.join([
+        card('Blaster test: order and cut', 'guides/img/blaster_job1_bed.png', [
+            ('What to order, with direct links', 'guides/BLASTER_TEST.md', '(about $165 for 3 kits)'),
+            ('How to cut on the laser (LightBurn)', 'guides/HOW_TO_CUT.md', ''),
+            ('Private preview of the site and apps', 'https://claude.ai/artifact/Us7byCEqYgrpMZUNkgTNFP', '(only you can open it)')],
+            'Cut the coupon, then 3 Star Slingers. The ship lifts off its stand.'),
         card('Research dashboard', 'review/research_dashboard_desktop.png', [
             ('Open the dashboard', 'research/dashboard/index.html', ''), ('ROKR deep dive', 'research/rokr_deep_dive.md', ''),
             ('Design language', 'research/design_language.md', ''), ('Review mining', 'research/review_mining.md', ''),

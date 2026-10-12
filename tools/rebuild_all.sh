@@ -23,4 +23,5 @@ $PY tools/make_layout.py
 $PY tools/make_sops.py                                # six SOPs as HTML + PDF
 $PY brand/make_packaging.py                           # labels, sleeve, mockups
 $PY tools/make_start_here.py                          # START_HERE.html; also runs the engine, app and planner tests
+# Private preview copy for claude.ai (optional):  .venv/bin/python tools/build_preview.py <empty folder>
 echo "done: open website/ with  node tools/serve.js  and check START_HERE.html"

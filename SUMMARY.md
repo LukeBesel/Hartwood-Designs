@@ -14,7 +14,7 @@ Cost is materials and packaging with pre-colored sheets. Profit is after free sh
 
 ## What was built
 
-1. **Research** (`research/`): a 51-product ROKR table, 45 competitor products, 68 review mentions turned into 12 design rules, a laser comparison of 9 machines, materials and color printing studies, and a visual dashboard (`research/dashboard/index.html`) with price vs pieces, price per piece, category mix, the complaints Pareto and a white-space map. 245 sources are listed in `research/sources.md`.
+1. **Research** (`research/`): a 51-product ROKR table, 45 competitor products, 68 review mentions turned into 12 design rules, a laser comparison of 9 machines, materials and color printing studies, and a visual dashboard (`research/dashboard/index.html`) with price vs pieces, price per piece, category mix, the complaints Pareto and a white-space map. 258 sources are listed in `research/sources.md`.
 2. **Machine and design rules:** the OMTech Polar 2 70W ($3,699.99), one sheet size (12 x 12 in, 3 mm), a fit-test coupon, and planning speeds (D009 to D015).
 3. **Kit engine** (`engine/`): Python with shapely. Glue-free joints (tabs, half-laps, slices on keys, discs on pegs), five design checks (collision, nothing floats, assembly path, minimum feature with a one-piece rule, and pop-out), nesting with half and quarter color tiles, cut files (SVG, DXF, LightBurn) with kerf compensation and 0.5 mm bridges, a UV-print mode with Print and Cut targets, GLB and step JSON, renders and part images. Each check is proven by breaking a test model on purpose: 7 of 7 breaks are caught, and the clean model passes.
 4. **Three kits** (`kits/`): 3 scored concepts each (`review/concepts/`), hero renders and close-ups, a part image for every code (91, 107 and 106 images), cut files per sheet, bridge maps, and a mechanism test plan for the blaster. The blaster has a permanent blaze orange nose, plug and cap (15 CFR 1150).
@@ -22,7 +22,8 @@ Cost is materials and packaging with pre-colored sheets. Profit is after free sh
 6. **Website and brand** (`website/`, `brand/`): a static site with a page per kit (spinning 3D model, renders, details), FAQ, safety, about, contact and checkout placeholders; logo, colors, fonts and icons; box labels, an optional retail sleeve and mockups. Screenshots of every page on desktop and phone are in `review/site/`.
 7. **Production** (`production/`): a capacity model with takt time and where the bottleneck moves, a tablet planner (orders, cut queue, printable schedule, tracking board, inventory with reorder alerts, quality log with Pareto and a design-change list; 8 of 8 tests pass), seven one-page picture SOPs, a to-scale garage layout and the quality loop.
 8. **Supply** (`supply/`): BOM per kit and for 25 and 100 kits, 2 or more suppliers per item, a startup shopping list (about $7,526 required), reorder points, unit economics at 3 prices with charts, and a legal must-do checklist with sources.
-9. **Records:** `DECISIONS.md` (38 decisions with reasons), `TODO_LUCAS.md`, and review images for every visual in `review/`.
+9. **Records:** `DECISIONS.md` (42 decisions with reasons), `TODO_LUCAS.md`, and review images for every visual in `review/`.
+10. **Blaster test and preview** (`guides/`): an order list for 3 Star Slingers with a direct link for every material, tool and safety item (`BLASTER_TEST.md`, about $165 of materials), and a step-by-step LightBurn cutting guide (`HOW_TO_CUT.md`). The ship now lifts off its stand. A private claude.ai preview shows the website, 3D app, planner, SOPs and guides (`tools/build_preview.py`; 10 of 10 pages load without errors).
 
 ## What is verified
 
@@ -61,4 +62,6 @@ Start the LLC, sales tax permit and insurance at the same time. The full list is
 bash tools/rebuild_all.sh             # kits, checks, cut files, renders, booklets, site, supply, SOPs, packaging
 .venv/bin/python tools/make_start_here.py   # refresh START_HERE.html and run all tests
 node tools/serve.js                   # then open http://localhost:8080 for the website and 3D app
+.venv/bin/python tools/build_preview.py OUT   # private preview copy (hash routes, CDN three.js, glTF JSON)
+node tools/test_preview.js http://localhost:PORT OUT   # check every preview page loads
 ```

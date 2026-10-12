@@ -5,12 +5,19 @@ Things only you can do. I was not allowed to buy anything, create accounts, publ
 ## The first 5 things (in this order)
 
 1. [ ] **Choose the color method.** Pre-colored sheets (launch with no extra machine) or a UV printer (about $1,700 more, the ROKR look, better margins). See D028 and `research/color_printing.md`. It changes the shopping list and the Blossom Waltz price ($59.99 without a printer).
-2. [ ] **Order samples before anything big:** one natural 12 x 12 x 1/8 in basswood pack, one mixed color pack (check Pink, Haze Blue, Yellow, White look pastel, and Sunset Orange against blaze orange), #64 and #16 bands, 3/16 in birch dowels, and one 18-note wind-up movement. Measure the movement and put its size in `MOV` in `engine/kits/floral.py`.
+2. [ ] **Order samples before anything big:** one natural 12 x 12 x 1/8 in basswood pack, one mixed color pack (check Pink, Haze Blue, Yellow, White look pastel, and Sunset Orange against blaze orange), #64 and #16 bands, 3/16 in birch dowels, and one 18-note wind-up movement. Direct links for the blaster test are in `guides/BLASTER_TEST.md`. Measure the movement and put its size in `MOV` in `engine/kits/floral.py`.
 3. [ ] **Buy and set up the laser.** Confirm the OMTech Polar 2 70W price, tube warranty and spare tube price with OMTech, then buy direct from omtech.com (D009). Keep the garage above 10 °C (50 °F) and vent the exhaust outside. Read SOP-6 before the first cut.
-4. [ ] **Calibrate.** Cut the fit coupon (`kits/coupon/`) and a speed ladder. Put your kerf, bridge width (pick from the 0.3 to 0.6 mm tags) and real speeds into `engine/hartwood/config.py`, then run `bash tools/rebuild_all.sh`. Open one `.lbrn2` file in LightBurn: the LightBurn files are written by my own code and are untested. If one will not open, import the SVG instead.
+4. [ ] **Calibrate.** Cut the fit coupon (`kits/coupon/`) and a speed ladder. Put your kerf, bridge width (pick from the 0.3 to 0.6 mm tags) and real speeds into `engine/hartwood/config.py`, then run `bash tools/rebuild_all.sh`. Open one `.lbrn2` file in LightBurn: the LightBurn files are written by my own code and are untested. If one will not open, import the SVG instead. Step by step: `guides/HOW_TO_CUT.md`.
 5. [ ] **Build 3 of each kit.** Run the blaster mechanism test plan (`kits/blaster/mechanism_test_plan.md`), press every sheet out, and log every problem in the planner's Quality tab. Fix the top bar before you sell.
 
 Start the business setup (section "Legal and money") at the same time: it takes weeks.
+
+## Blaster test
+
+- [ ] Open the private preview: https://claude.ai/artifact/Us7byCEqYgrpMZUNkgTNFP (only you can open it; use its Share menu to show someone). It is a copy: after you change the site, ask me to run `tools/build_preview.py` again, or deploy the real site.
+- [ ] Order the blaster test list: `guides/BLASTER_TEST.md` (about $165 of materials for 3 kits, every item with a direct link).
+- [ ] Open `kits/blaster/cutfiles/blaster_job1_A-B_bed.lbrn2` in LightBurn. Check that blue is at the top of the layer list, red at the bottom, and "STAR SLINGER" reads the right way. If not, import the SVG (`guides/HOW_TO_CUT.md`) and tell me.
+- [ ] Lift the ship off its stand and drop it back 10 times on each test build. Tell me if it rubs, wobbles or sticks.
 
 ## Purchases (I did not buy anything)
 
