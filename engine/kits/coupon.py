@@ -6,7 +6,8 @@ Cut it on every new wood batch. It contains:
   3. Dowel holes : 4.4 .. 5.2 mm for the 3/16 in dowel (grip vs spin).
   4. Kerf square : a 30.00 mm square part with a 20.00 mm square hole. Measure both with calipers.
   5. Half-lap   : two 40 mm cross half-lap pieces.
-  6. Bridges    : three tags held by 0.4 / 0.6 / 0.8 mm bridges. Pick the one that pops out cleanly.
+  6. Bridges    : four tags held by 0.3 / 0.4 / 0.5 / 0.6 mm bridges. Pick the thinnest that still holds the
+                  tag through shipping (shake test) and pops out with a thumb. Set C.BRIDGE to it.
   7. Speed ladder: 5 small squares on their own colors for 20 / 25 / 30 / 35 / 40 mm/s cuts.
   8. Engrave/score swatch.
 Kerf compensation (config.KERF) is applied to everything except the speed ladder labels.
@@ -108,10 +109,10 @@ def build(out_dir):
     label(sp, '5 HALF-LAP (3.00 SLOT)', hx0, hy0 + 23, 2.2)
     # 6 bridge tags
     tx0, ty0 = hx0 + 105, ky0
-    for j, bl in enumerate([0.4, 0.6, 0.8]):
-        g = rect(tx0 + j * 22, ty0, tx0 + j * 22 + 16, ty0 + 24)
+    for j, bl in enumerate([0.3, 0.4, 0.5, 0.6]):
+        g = rect(tx0 + j * 17, ty0, tx0 + j * 17 + 13, ty0 + 24)
         outer(sp, g, 2, bridge_len=bl)
-        label(sp, f'{bl:.1f}', tx0 + j * 22 + 8, ty0 + 27, 2.2, anchor='center')
+        label(sp, f'{bl:.1f}', tx0 + j * 17 + 6.5, ty0 + 27, 2.2, anchor='center')
     label(sp, '6 BRIDGES', tx0, ty0 + 33, 2.2)
     # 7 speed ladder (own layers: colors 03..07 in LightBurn)
     ladder = []

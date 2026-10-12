@@ -7,28 +7,28 @@
  "build_hours": "6 to 8 h",
  "price": 54.99,
  "piece_count": 152,
- "unique_codes": 105,
+ "unique_codes": 107,
  "sheets": [
   {
    "letter": "A",
    "color": "natural",
    "label": "Natural basswood",
-   "parts": 38,
+   "parts": 22,
    "spares": 0
   },
   {
    "letter": "B",
    "color": "natural",
    "label": "Natural basswood",
-   "parts": 61,
-   "spares": 4
+   "parts": 41,
+   "spares": 2
   },
   {
    "letter": "C",
    "color": "natural",
    "label": "Natural basswood",
-   "parts": 24,
-   "spares": 2
+   "parts": 56,
+   "spares": 4
   },
   {
    "letter": "D",
@@ -41,7 +41,7 @@
    "letter": "E",
    "color": "natural",
    "label": "Natural basswood",
-   "parts": 4,
+   "parts": 8,
    "spares": 0
   },
   {
@@ -84,80 +84,80 @@
    "view": null,
    "parts": [
     {
-     "code": "A11",
+     "code": "A8",
      "qty": 1,
      "sheet": "A",
-     "name": "wing_bar",
+     "name": "key_hips",
      "color": "natural"
     },
     {
-     "code": "A16",
-     "qty": 1,
-     "sheet": "A",
-     "name": "jaw_r",
-     "color": "natural"
-    },
-    {
-     "code": "A20",
+     "code": "A18",
      "qty": 1,
      "sheet": "A",
      "name": "jaw_key",
      "color": "natural"
     },
     {
-     "code": "A22",
+     "code": "B2",
      "qty": 1,
-     "sheet": "A",
+     "sheet": "B",
      "name": "key_tail_base",
-     "color": "natural"
-    },
-    {
-     "code": "B6",
-     "qty": 1,
-     "sheet": "B",
-     "name": "key_skull",
-     "color": "natural"
-    },
-    {
-     "code": "B9",
-     "qty": 1,
-     "sheet": "B",
-     "name": "key_chest",
      "color": "natural"
     },
     {
      "code": "B14",
      "qty": 1,
      "sheet": "B",
-     "name": "key_neck_high",
-     "color": "natural"
-    },
-    {
-     "code": "B23",
-     "qty": 1,
-     "sheet": "B",
      "name": "key_neck_low",
      "color": "natural"
     },
     {
-     "code": "B28",
+     "code": "B21",
      "qty": 1,
      "sheet": "B",
      "name": "jaw_l",
      "color": "natural"
     },
     {
-     "code": "C6",
+     "code": "B24",
      "qty": 1,
-     "sheet": "C",
-     "name": "key_back",
+     "sheet": "B",
+     "name": "jaw_r",
      "color": "natural"
     },
     {
-     "code": "C20",
+     "code": "C2",
      "qty": 1,
      "sheet": "C",
-     "name": "key_hips",
+     "name": "wing_bar",
+     "color": "natural"
+    },
+    {
+     "code": "C17",
+     "qty": 1,
+     "sheet": "C",
+     "name": "key_skull",
+     "color": "natural"
+    },
+    {
+     "code": "C21",
+     "qty": 1,
+     "sheet": "C",
+     "name": "key_chest",
+     "color": "natural"
+    },
+    {
+     "code": "C30",
+     "qty": 1,
+     "sheet": "C",
+     "name": "key_neck_high",
+     "color": "natural"
+    },
+    {
+     "code": "C35",
+     "qty": 1,
+     "sheet": "C",
+     "name": "key_back",
      "color": "natural"
     },
     {
@@ -189,24 +189,24 @@
    "view": null,
    "parts": [
     {
-     "code": "B18",
+     "code": "B7",
      "qty": 1,
      "sheet": "B",
      "name": "slice_r1",
      "color": "natural"
     },
     {
-     "code": "C2",
+     "code": "C3",
      "qty": 1,
      "sheet": "C",
-     "name": "slice_r2",
+     "name": "slice_r3",
      "color": "natural"
     },
     {
-     "code": "E4",
+     "code": "C12",
      "qty": 1,
-     "sheet": "E",
-     "name": "slice_r3",
+     "sheet": "C",
+     "name": "slice_r2",
      "color": "natural"
     }
    ],
@@ -224,31 +224,31 @@
    "view": null,
    "parts": [
     {
-     "code": "B7",
+     "code": "A2",
      "qty": 1,
-     "sheet": "B",
-     "name": "slice_r5",
+     "sheet": "A",
+     "name": "slice_r4",
      "color": "natural"
     },
     {
-     "code": "B10",
+     "code": "A5",
      "qty": 1,
-     "sheet": "B",
+     "sheet": "A",
      "name": "slice_r6",
      "color": "natural"
     },
     {
-     "code": "C3",
+     "code": "B9",
      "qty": 1,
-     "sheet": "C",
+     "sheet": "B",
      "name": "slice_r6_1",
      "color": "natural"
     },
     {
-     "code": "C4",
+     "code": "E3",
      "qty": 1,
-     "sheet": "C",
-     "name": "slice_r4",
+     "sheet": "E",
+     "name": "slice_r5",
      "color": "natural"
     }
    ],
@@ -266,44 +266,30 @@
    "view": null,
    "parts": [
     {
-     "code": "A7",
+     "code": "A1",
      "qty": 1,
      "sheet": "A",
      "name": "slice_r7",
      "color": "natural"
     },
     {
-     "code": "A18",
-     "qty": 1,
-     "sheet": "A",
-     "name": "slice_r8_1",
-     "color": "natural"
-    },
-    {
-     "code": "B17",
-     "qty": 1,
-     "sheet": "B",
-     "name": "slice_r8",
-     "color": "natural"
-    },
-    {
-     "code": "B22",
+     "code": "B5",
      "qty": 1,
      "sheet": "B",
      "name": "key_aux2",
      "color": "natural"
     },
     {
-     "code": "B29",
+     "code": "B17",
      "qty": 1,
      "sheet": "B",
-     "name": "slice_r7_1",
+     "name": "slice_r8_1",
      "color": "natural"
     },
     {
-     "code": "B36",
+     "code": "C4",
      "qty": 1,
-     "sheet": "B",
+     "sheet": "C",
      "name": "key_aux3",
      "color": "natural"
     },
@@ -311,7 +297,21 @@
      "code": "C19",
      "qty": 1,
      "sheet": "C",
+     "name": "slice_r7_1",
+     "color": "natural"
+    },
+    {
+     "code": "C23",
+     "qty": 1,
+     "sheet": "C",
      "name": "slice_r9",
+     "color": "natural"
+    },
+    {
+     "code": "C27",
+     "qty": 1,
+     "sheet": "C",
+     "name": "slice_r8",
      "color": "natural"
     }
    ],
@@ -330,24 +330,24 @@
    "view": null,
    "parts": [
     {
-     "code": "B11",
-     "qty": 1,
-     "sheet": "B",
-     "name": "slice_l2",
-     "color": "natural"
-    },
-    {
-     "code": "C5",
+     "code": "C18",
      "qty": 1,
      "sheet": "C",
      "name": "slice_l1",
      "color": "natural"
     },
     {
-     "code": "C10",
+     "code": "C24",
      "qty": 1,
      "sheet": "C",
      "name": "slice_l3",
+     "color": "natural"
+    },
+    {
+     "code": "E1",
+     "qty": 1,
+     "sheet": "E",
+     "name": "slice_l2",
      "color": "natural"
     }
    ],
@@ -372,31 +372,31 @@
    "view": null,
    "parts": [
     {
-     "code": "B19",
+     "code": "B3",
      "qty": 1,
      "sheet": "B",
      "name": "slice_l5",
      "color": "natural"
     },
     {
-     "code": "B26",
-     "qty": 1,
-     "sheet": "B",
-     "name": "slice_l6",
-     "color": "natural"
-    },
-    {
-     "code": "B32",
+     "code": "B25",
      "qty": 1,
      "sheet": "B",
      "name": "slice_l4",
      "color": "natural"
     },
     {
-     "code": "C9",
+     "code": "C22",
      "qty": 1,
      "sheet": "C",
      "name": "slice_l6_1",
+     "color": "natural"
+    },
+    {
+     "code": "C31",
+     "qty": 1,
+     "sheet": "C",
+     "name": "slice_l6",
      "color": "natural"
     }
    ],
@@ -415,45 +415,45 @@
    "view": null,
    "parts": [
     {
-     "code": "A3",
+     "code": "A6",
      "qty": 1,
      "sheet": "A",
+     "name": "key_aux1",
+     "color": "natural"
+    },
+    {
+     "code": "B26",
+     "qty": 1,
+     "sheet": "B",
      "name": "slice_l7_1",
      "color": "natural"
     },
     {
-     "code": "B1",
+     "code": "B31",
      "qty": 1,
      "sheet": "B",
      "name": "slice_l9",
      "color": "natural"
     },
     {
-     "code": "B3",
+     "code": "C9",
      "qty": 1,
-     "sheet": "B",
+     "sheet": "C",
      "name": "slice_l7",
      "color": "natural"
     },
     {
-     "code": "B16",
+     "code": "C26",
      "qty": 1,
-     "sheet": "B",
-     "name": "slice_l8_1",
-     "color": "natural"
-    },
-    {
-     "code": "B21",
-     "qty": 1,
-     "sheet": "B",
+     "sheet": "C",
      "name": "slice_l8",
      "color": "natural"
     },
     {
-     "code": "B35",
+     "code": "C29",
      "qty": 1,
-     "sheet": "B",
-     "name": "key_aux1",
+     "sheet": "C",
+     "name": "slice_l8_1",
      "color": "natural"
     }
    ],
@@ -472,9 +472,9 @@
    "view": null,
    "parts": [
     {
-     "code": "A2",
+     "code": "B8",
      "qty": 2,
-     "sheet": "A",
+     "sheet": "B",
      "name": "eye_r_peg",
      "color": "natural"
     },
@@ -508,38 +508,31 @@
    "view": null,
    "parts": [
     {
-     "code": "A1",
+     "code": "A7",
      "qty": 1,
      "sheet": "A",
      "name": "wing_l_peg0",
      "color": "natural"
     },
     {
-     "code": "A10",
+     "code": "B27",
      "qty": 1,
-     "sheet": "A",
-     "name": "wing_l_bones",
+     "sheet": "B",
+     "name": "wing_r_peg0",
      "color": "natural"
     },
     {
-     "code": "B8",
+     "code": "C20",
      "qty": 2,
-     "sheet": "B",
+     "sheet": "C",
      "name": "wing_r_peg1",
      "color": "natural"
     },
     {
-     "code": "B24",
-     "qty": 1,
-     "sheet": "B",
+     "code": "E2",
+     "qty": 2,
+     "sheet": "E",
      "name": "wing_r_bones",
-     "color": "natural"
-    },
-    {
-     "code": "B30",
-     "qty": 1,
-     "sheet": "B",
-     "name": "wing_r_peg0",
      "color": "natural"
     },
     {
@@ -604,7 +597,7 @@
    "view": null,
    "parts": [
     {
-     "code": "A21",
+     "code": "A15",
      "qty": 1,
      "sheet": "A",
      "name": "ground",
@@ -625,31 +618,31 @@
    "view": null,
    "parts": [
     {
-     "code": "C1",
+     "code": "A10",
      "qty": 1,
-     "sheet": "C",
-     "name": "wall_right",
-     "color": "natural"
-    },
-    {
-     "code": "E1",
-     "qty": 1,
-     "sheet": "E",
+     "sheet": "A",
      "name": "wall_left",
      "color": "natural"
     },
     {
-     "code": "E2",
+     "code": "B6",
      "qty": 1,
-     "sheet": "E",
-     "name": "wall_back",
+     "sheet": "B",
+     "name": "wall_right",
      "color": "natural"
     },
     {
-     "code": "E3",
+     "code": "B22",
      "qty": 1,
-     "sheet": "E",
+     "sheet": "B",
      "name": "wall_front",
+     "color": "natural"
+    },
+    {
+     "code": "B30",
+     "qty": 1,
+     "sheet": "B",
+     "name": "wall_back",
      "color": "natural"
     }
    ],
@@ -667,7 +660,7 @@
    "view": null,
    "parts": [
     {
-     "code": "A15",
+     "code": "A9",
      "qty": 1,
      "sheet": "A",
      "name": "tower_top",
@@ -688,52 +681,59 @@
    "view": null,
    "parts": [
     {
-     "code": "B13",
+     "code": "B1",
      "qty": 1,
      "sheet": "B",
-     "name": "merlon3",
+     "name": "merlon4",
      "color": "natural"
     },
     {
-     "code": "C7",
+     "code": "B20",
      "qty": 1,
-     "sheet": "C",
-     "name": "merlon7",
-     "color": "natural"
-    },
-    {
-     "code": "C11",
-     "qty": 1,
-     "sheet": "C",
+     "sheet": "B",
      "name": "merlon1",
      "color": "natural"
     },
     {
-     "code": "C12",
-     "qty": 2,
+     "code": "B28",
+     "qty": 1,
+     "sheet": "B",
+     "name": "merlon7",
+     "color": "natural"
+    },
+    {
+     "code": "B29",
+     "qty": 1,
+     "sheet": "B",
+     "name": "merlon0",
+     "color": "natural"
+    },
+    {
+     "code": "C6",
+     "qty": 1,
      "sheet": "C",
-     "name": "merlon_claw_r",
+     "name": "merlon3",
      "color": "natural"
     },
     {
      "code": "C13",
      "qty": 1,
      "sheet": "C",
-     "name": "merlon4",
-     "color": "natural"
-    },
-    {
-     "code": "C15",
-     "qty": 3,
-     "sheet": "C",
-     "name": "merlon0",
-     "color": "natural"
-    },
-    {
-     "code": "C16",
-     "qty": 1,
-     "sheet": "C",
      "name": "merlon5",
+     "color": "natural"
+    },
+    {
+     "code": "C25",
+     "qty": 2,
+     "sheet": "C",
+     "name": "merlon2",
+     "color": "natural"
+    },
+    {
+     "code": "E5",
+     "qty": 2,
+     "sheet": "E",
+     "name": "merlon_claw_r",
      "color": "natural"
     }
    ],
@@ -823,73 +823,80 @@
    "view": null,
    "parts": [
     {
-     "code": "A2",
-     "qty": 2,
-     "sheet": "A",
-     "name": "door_arch_peg0",
-     "color": "natural"
-    },
-    {
-     "code": "A12",
-     "qty": 2,
-     "sheet": "A",
-     "name": "wall_right_stone0",
-     "color": "natural"
-    },
-    {
-     "code": "A14",
+     "code": "A4",
      "qty": 1,
      "sheet": "A",
-     "name": "wall_left_stone1",
+     "name": "wall_left_stone0",
+     "color": "natural"
+    },
+    {
+     "code": "A11",
+     "qty": 1,
+     "sheet": "A",
+     "name": "front_stone1",
      "color": "natural"
     },
     {
      "code": "A17",
      "qty": 1,
      "sheet": "A",
-     "name": "front_stone0",
+     "name": "door_arch_peg0",
      "color": "natural"
     },
     {
-     "code": "B2",
-     "qty": 20,
+     "code": "B8",
+     "qty": 5,
      "sheet": "B",
-     "name": "ivy_front_peg0",
+     "name": "door_arch_peg1",
      "color": "natural"
     },
     {
-     "code": "B20",
+     "code": "C1",
      "qty": 1,
-     "sheet": "B",
-     "name": "torch",
-     "color": "natural"
-    },
-    {
-     "code": "B25",
-     "qty": 1,
-     "sheet": "B",
+     "sheet": "C",
      "name": "door_arch",
      "color": "natural"
     },
     {
-     "code": "B27",
+     "code": "C5",
+     "qty": 1,
+     "sheet": "C",
+     "name": "torch",
+     "color": "natural"
+    },
+    {
+     "code": "C7",
      "qty": 2,
-     "sheet": "B",
-     "name": "wall_right_stone2",
-     "color": "natural"
-    },
-    {
-     "code": "B31",
-     "qty": 1,
-     "sheet": "B",
-     "name": "front_stone1",
-     "color": "natural"
-    },
-    {
-     "code": "B37",
-     "qty": 1,
-     "sheet": "B",
+     "sheet": "C",
      "name": "wall_right_stone1",
+     "color": "natural"
+    },
+    {
+     "code": "C11",
+     "qty": 1,
+     "sheet": "C",
+     "name": "wall_right_stone0",
+     "color": "natural"
+    },
+    {
+     "code": "C16",
+     "qty": 16,
+     "sheet": "C",
+     "name": "ivy_front_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "C36",
+     "qty": 1,
+     "sheet": "C",
+     "name": "front_stone0",
+     "color": "natural"
+    },
+    {
+     "code": "E4",
+     "qty": 2,
+     "sheet": "E",
+     "name": "wall_right_stone2",
      "color": "natural"
     },
     {
@@ -921,94 +928,94 @@
    "view": null,
    "parts": [
     {
-     "code": "A5",
-     "qty": 4,
-     "sheet": "A",
-     "name": "rubble_peg0",
-     "color": "natural"
-    },
-    {
-     "code": "A6",
-     "qty": 1,
-     "sheet": "A",
-     "name": "rubble1_2",
-     "color": "natural"
-    },
-    {
-     "code": "A8",
-     "qty": 1,
-     "sheet": "A",
-     "name": "rubble2_2",
-     "color": "natural"
-    },
-    {
-     "code": "A9",
-     "qty": 1,
-     "sheet": "A",
-     "name": "rubble0_2",
-     "color": "natural"
-    },
-    {
-     "code": "A25",
-     "qty": 1,
-     "sheet": "A",
-     "name": "rubble3_2",
-     "color": "natural"
-    },
-    {
      "code": "B4",
-     "qty": 1,
-     "sheet": "B",
-     "name": "rubble2_0",
-     "color": "natural"
-    },
-    {
-     "code": "B12",
-     "qty": 1,
-     "sheet": "B",
-     "name": "rubble2_1",
-     "color": "natural"
-    },
-    {
-     "code": "B15",
-     "qty": 1,
-     "sheet": "B",
-     "name": "rubble3_0",
-     "color": "natural"
-    },
-    {
-     "code": "B33",
-     "qty": 1,
-     "sheet": "B",
-     "name": "rubble3_1",
-     "color": "natural"
-    },
-    {
-     "code": "B34",
-     "qty": 1,
-     "sheet": "B",
-     "name": "rubble0_1",
-     "color": "natural"
-    },
-    {
-     "code": "B38",
      "qty": 1,
      "sheet": "B",
      "name": "rubble1_1",
      "color": "natural"
     },
     {
-     "code": "C18",
+     "code": "B11",
+     "qty": 1,
+     "sheet": "B",
+     "name": "rubble3_1",
+     "color": "natural"
+    },
+    {
+     "code": "B12",
+     "qty": 1,
+     "sheet": "B",
+     "name": "rubble3_2",
+     "color": "natural"
+    },
+    {
+     "code": "B15",
+     "qty": 4,
+     "sheet": "B",
+     "name": "rubble_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "B16",
+     "qty": 1,
+     "sheet": "B",
+     "name": "rubble2_1",
+     "color": "natural"
+    },
+    {
+     "code": "B23",
+     "qty": 1,
+     "sheet": "B",
+     "name": "rubble0_1",
+     "color": "natural"
+    },
+    {
+     "code": "C8",
      "qty": 1,
      "sheet": "C",
      "name": "rubble0_0",
      "color": "natural"
     },
     {
-     "code": "C22",
+     "code": "C10",
+     "qty": 1,
+     "sheet": "C",
+     "name": "rubble2_0",
+     "color": "natural"
+    },
+    {
+     "code": "C14",
      "qty": 1,
      "sheet": "C",
      "name": "rubble1_0",
+     "color": "natural"
+    },
+    {
+     "code": "C15",
+     "qty": 1,
+     "sheet": "C",
+     "name": "rubble3_0",
+     "color": "natural"
+    },
+    {
+     "code": "C32",
+     "qty": 1,
+     "sheet": "C",
+     "name": "rubble0_2",
+     "color": "natural"
+    },
+    {
+     "code": "C33",
+     "qty": 1,
+     "sheet": "C",
+     "name": "rubble2_2",
+     "color": "natural"
+    },
+    {
+     "code": "C34",
+     "qty": 1,
+     "sheet": "C",
+     "name": "rubble1_2",
      "color": "natural"
     }
    ],
@@ -1026,16 +1033,16 @@
    "view": null,
    "parts": [
     {
-     "code": "A1",
+     "code": "A7",
      "qty": 2,
      "sheet": "A",
      "name": "banner_peg0",
      "color": "natural"
     },
     {
-     "code": "A4",
+     "code": "B10",
      "qty": 1,
-     "sheet": "A",
+     "sheet": "B",
      "name": "banner_pole",
      "color": "natural"
     },
@@ -1062,51 +1069,51 @@
    "parts": [
     {
      "code": "A13",
-     "qty": 2,
+     "qty": 1,
      "sheet": "A",
-     "name": "chest_peg0",
+     "name": "chest_front",
      "color": "natural"
     },
     {
-     "code": "A26",
+     "code": "A16",
+     "qty": 1,
+     "sheet": "A",
+     "name": "chest_back",
+     "color": "natural"
+    },
+    {
+     "code": "A19",
      "qty": 1,
      "sheet": "A",
      "name": "chest_bottom",
      "color": "natural"
     },
     {
-     "code": "B2",
+     "code": "B18",
      "qty": 2,
      "sheet": "B",
-     "name": "gem0_peg",
+     "name": "chest_peg0",
      "color": "natural"
     },
     {
-     "code": "B5",
+     "code": "B19",
      "qty": 1,
      "sheet": "B",
      "name": "chest_right",
      "color": "natural"
     },
     {
-     "code": "C8",
-     "qty": 1,
+     "code": "C16",
+     "qty": 2,
      "sheet": "C",
-     "name": "chest_back",
+     "name": "gem0_peg",
      "color": "natural"
     },
     {
-     "code": "C14",
+     "code": "C28",
      "qty": 1,
      "sheet": "C",
      "name": "chest_left",
-     "color": "natural"
-    },
-    {
-     "code": "C17",
-     "qty": 1,
-     "sheet": "C",
-     "name": "chest_front",
      "color": "natural"
     },
     {
@@ -1139,17 +1146,17 @@
    "view": null,
    "parts": [
     {
-     "code": "A19",
-     "qty": 1,
-     "sheet": "A",
-     "name": "lid_front",
-     "color": "natural"
-    },
-    {
-     "code": "A24",
+     "code": "A14",
      "qty": 1,
      "sheet": "A",
      "name": "lid_top",
+     "color": "natural"
+    },
+    {
+     "code": "B13",
+     "qty": 1,
+     "sheet": "B",
+     "name": "lid_front",
      "color": "natural"
     },
     {
@@ -1211,14 +1218,14 @@
    "view": null,
    "parts": [
     {
-     "code": "A5",
+     "code": "A3",
      "qty": 2,
      "sheet": "A",
      "name": "coin_peg1",
      "color": "natural"
     },
     {
-     "code": "A23",
+     "code": "A12",
      "qty": 1,
      "sheet": "A",
      "name": "coin_peg0",
@@ -1260,213 +1267,6 @@
  "parts": [
   {
    "code": "A1",
-   "name": "wing_l_peg0",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 3,
-   "step": 9,
-   "mechanism": false
-  },
-  {
-   "code": "A10",
-   "name": "wing_l_bones",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 9,
-   "mechanism": false
-  },
-  {
-   "code": "A11",
-   "name": "wing_bar",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 1,
-   "mechanism": false
-  },
-  {
-   "code": "A12",
-   "name": "wall_right_stone0",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 2,
-   "step": 15,
-   "mechanism": false
-  },
-  {
-   "code": "A13",
-   "name": "chest_peg0",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 2,
-   "step": 18,
-   "mechanism": false
-  },
-  {
-   "code": "A14",
-   "name": "wall_left_stone1",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 15,
-   "mechanism": false
-  },
-  {
-   "code": "A15",
-   "name": "tower_top",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 12,
-   "mechanism": false
-  },
-  {
-   "code": "A16",
-   "name": "jaw_r",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 1,
-   "mechanism": true
-  },
-  {
-   "code": "A17",
-   "name": "front_stone0",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 15,
-   "mechanism": false
-  },
-  {
-   "code": "A18",
-   "name": "slice_r8_1",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 4,
-   "mechanism": false
-  },
-  {
-   "code": "A19",
-   "name": "lid_front",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 19,
-   "mechanism": true
-  },
-  {
-   "code": "A2",
-   "name": "eye_r_peg",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 4,
-   "step": 8,
-   "mechanism": false
-  },
-  {
-   "code": "A20",
-   "name": "jaw_key",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 1,
-   "mechanism": true
-  },
-  {
-   "code": "A21",
-   "name": "ground",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 10,
-   "mechanism": false
-  },
-  {
-   "code": "A22",
-   "name": "key_tail_base",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 1,
-   "mechanism": false
-  },
-  {
-   "code": "A23",
-   "name": "coin_peg0",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 21,
-   "mechanism": false
-  },
-  {
-   "code": "A24",
-   "name": "lid_top",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 19,
-   "mechanism": true
-  },
-  {
-   "code": "A25",
-   "name": "rubble3_2",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 16,
-   "mechanism": false
-  },
-  {
-   "code": "A26",
-   "name": "chest_bottom",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 18,
-   "mechanism": false
-  },
-  {
-   "code": "A3",
-   "name": "slice_l7_1",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 7,
-   "mechanism": false
-  },
-  {
-   "code": "A4",
-   "name": "banner_pole",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 17,
-   "mechanism": false
-  },
-  {
-   "code": "A5",
-   "name": "rubble_peg0",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 6,
-   "step": 16,
-   "mechanism": false
-  },
-  {
-   "code": "A6",
-   "name": "rubble1_2",
-   "sheet": "A",
-   "color": "natural",
-   "qty": 1,
-   "step": 16,
-   "mechanism": false
-  },
-  {
-   "code": "A7",
    "name": "slice_r7",
    "sheet": "A",
    "color": "natural",
@@ -1475,62 +1275,170 @@
    "mechanism": false
   },
   {
-   "code": "A8",
-   "name": "rubble2_2",
+   "code": "A10",
+   "name": "wall_left",
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 16,
+   "step": 11,
    "mechanism": false
   },
   {
-   "code": "A9",
-   "name": "rubble0_2",
+   "code": "A11",
+   "name": "front_stone1",
    "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
-   "code": "B1",
-   "name": "slice_l9",
-   "sheet": "B",
+   "code": "A12",
+   "name": "coin_peg0",
+   "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 7,
+   "step": 21,
    "mechanism": false
   },
   {
-   "code": "B10",
-   "name": "slice_r6",
-   "sheet": "B",
+   "code": "A13",
+   "name": "chest_front",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "A14",
+   "name": "lid_top",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 19,
+   "mechanism": true
+  },
+  {
+   "code": "A15",
+   "name": "ground",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 10,
+   "mechanism": false
+  },
+  {
+   "code": "A16",
+   "name": "chest_back",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "A17",
+   "name": "door_arch_peg0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "A18",
+   "name": "jaw_key",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
+   "mechanism": true
+  },
+  {
+   "code": "A19",
+   "name": "chest_bottom",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "A2",
+   "name": "slice_r4",
+   "sheet": "A",
    "color": "natural",
    "qty": 1,
    "step": 3,
    "mechanism": false
   },
   {
-   "code": "B11",
-   "name": "slice_l2",
-   "sheet": "B",
+   "code": "A3",
+   "name": "coin_peg1",
+   "sheet": "A",
    "color": "natural",
-   "qty": 1,
-   "step": 5,
+   "qty": 2,
+   "step": 21,
    "mechanism": false
   },
   {
-   "code": "B12",
-   "name": "rubble2_1",
-   "sheet": "B",
+   "code": "A4",
+   "name": "wall_left_stone0",
+   "sheet": "A",
    "color": "natural",
    "qty": 1,
-   "step": 16,
+   "step": 15,
    "mechanism": false
   },
   {
-   "code": "B13",
-   "name": "merlon3",
+   "code": "A5",
+   "name": "slice_r6",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A6",
+   "name": "key_aux1",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "A7",
+   "name": "wing_l_peg0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 3,
+   "step": 9,
+   "mechanism": false
+  },
+  {
+   "code": "A8",
+   "name": "key_hips",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "A9",
+   "name": "tower_top",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 12,
+   "mechanism": false
+  },
+  {
+   "code": "B1",
+   "name": "merlon4",
    "sheet": "B",
    "color": "natural",
    "qty": 1,
@@ -1538,196 +1446,16 @@
    "mechanism": false
   },
   {
-   "code": "B14",
-   "name": "key_neck_high",
+   "code": "B10",
+   "name": "banner_pole",
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 1,
+   "step": 17,
    "mechanism": false
   },
   {
-   "code": "B15",
-   "name": "rubble3_0",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 16,
-   "mechanism": false
-  },
-  {
-   "code": "B16",
-   "name": "slice_l8_1",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 7,
-   "mechanism": false
-  },
-  {
-   "code": "B17",
-   "name": "slice_r8",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 4,
-   "mechanism": false
-  },
-  {
-   "code": "B18",
-   "name": "slice_r1",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 2,
-   "mechanism": false
-  },
-  {
-   "code": "B19",
-   "name": "slice_l5",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 6,
-   "mechanism": false
-  },
-  {
-   "code": "B2",
-   "name": "ivy_front_peg0",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 22,
-   "step": 15,
-   "mechanism": false
-  },
-  {
-   "code": "B20",
-   "name": "torch",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 15,
-   "mechanism": false
-  },
-  {
-   "code": "B21",
-   "name": "slice_l8",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 7,
-   "mechanism": false
-  },
-  {
-   "code": "B22",
-   "name": "key_aux2",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 4,
-   "mechanism": false
-  },
-  {
-   "code": "B23",
-   "name": "key_neck_low",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 1,
-   "mechanism": false
-  },
-  {
-   "code": "B24",
-   "name": "wing_r_bones",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 9,
-   "mechanism": false
-  },
-  {
-   "code": "B25",
-   "name": "door_arch",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 15,
-   "mechanism": false
-  },
-  {
-   "code": "B26",
-   "name": "slice_l6",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 6,
-   "mechanism": false
-  },
-  {
-   "code": "B27",
-   "name": "wall_right_stone2",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 2,
-   "step": 15,
-   "mechanism": false
-  },
-  {
-   "code": "B28",
-   "name": "jaw_l",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 1,
-   "mechanism": true
-  },
-  {
-   "code": "B29",
-   "name": "slice_r7_1",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 4,
-   "mechanism": false
-  },
-  {
-   "code": "B3",
-   "name": "slice_l7",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 7,
-   "mechanism": false
-  },
-  {
-   "code": "B30",
-   "name": "wing_r_peg0",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 9,
-   "mechanism": false
-  },
-  {
-   "code": "B31",
-   "name": "front_stone1",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 15,
-   "mechanism": false
-  },
-  {
-   "code": "B32",
-   "name": "slice_l4",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 6,
-   "mechanism": false
-  },
-  {
-   "code": "B33",
+   "code": "B11",
    "name": "rubble3_1",
    "sheet": "B",
    "color": "natural",
@@ -1736,8 +1464,8 @@
    "mechanism": false
   },
   {
-   "code": "B34",
-   "name": "rubble0_1",
+   "code": "B12",
+   "name": "rubble3_2",
    "sheet": "B",
    "color": "natural",
    "qty": 1,
@@ -1745,17 +1473,44 @@
    "mechanism": false
   },
   {
-   "code": "B35",
-   "name": "key_aux1",
+   "code": "B13",
+   "name": "lid_front",
    "sheet": "B",
    "color": "natural",
    "qty": 1,
-   "step": 7,
+   "step": 19,
+   "mechanism": true
+  },
+  {
+   "code": "B14",
+   "name": "key_neck_low",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
    "mechanism": false
   },
   {
-   "code": "B36",
-   "name": "key_aux3",
+   "code": "B15",
+   "name": "rubble_peg0",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 4,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "B16",
+   "name": "rubble2_1",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "B17",
+   "name": "slice_r8_1",
    "sheet": "B",
    "color": "natural",
    "qty": 1,
@@ -1763,34 +1518,16 @@
    "mechanism": false
   },
   {
-   "code": "B37",
-   "name": "wall_right_stone1",
+   "code": "B18",
+   "name": "chest_peg0",
    "sheet": "B",
    "color": "natural",
-   "qty": 1,
-   "step": 15,
+   "qty": 2,
+   "step": 18,
    "mechanism": false
   },
   {
-   "code": "B38",
-   "name": "rubble1_1",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 16,
-   "mechanism": false
-  },
-  {
-   "code": "B4",
-   "name": "rubble2_0",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 16,
-   "mechanism": false
-  },
-  {
-   "code": "B5",
+   "code": "B19",
    "name": "chest_right",
    "sheet": "B",
    "color": "natural",
@@ -1799,8 +1536,8 @@
    "mechanism": false
   },
   {
-   "code": "B6",
-   "name": "key_skull",
+   "code": "B2",
+   "name": "key_tail_base",
    "sheet": "B",
    "color": "natural",
    "qty": 1,
@@ -1808,8 +1545,170 @@
    "mechanism": false
   },
   {
+   "code": "B20",
+   "name": "merlon1",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "B21",
+   "name": "jaw_l",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
+   "mechanism": true
+  },
+  {
+   "code": "B22",
+   "name": "wall_front",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "B23",
+   "name": "rubble0_1",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "B24",
+   "name": "jaw_r",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
+   "mechanism": true
+  },
+  {
+   "code": "B25",
+   "name": "slice_l4",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "B26",
+   "name": "slice_l7_1",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "B27",
+   "name": "wing_r_peg0",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 9,
+   "mechanism": false
+  },
+  {
+   "code": "B28",
+   "name": "merlon7",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "B29",
+   "name": "merlon0",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "B3",
+   "name": "slice_l5",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "B30",
+   "name": "wall_back",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "B31",
+   "name": "slice_l9",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "B4",
+   "name": "rubble1_1",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "B5",
+   "name": "key_aux2",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 4,
+   "mechanism": false
+  },
+  {
+   "code": "B6",
+   "name": "wall_right",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
    "code": "B7",
-   "name": "slice_r5",
+   "name": "slice_r1",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "B8",
+   "name": "eye_r_peg",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 7,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "B9",
+   "name": "slice_r6_1",
    "sheet": "B",
    "color": "natural",
    "qty": 1,
@@ -1817,107 +1716,17 @@
    "mechanism": false
   },
   {
-   "code": "B8",
-   "name": "wing_r_peg1",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 2,
-   "step": 9,
-   "mechanism": false
-  },
-  {
-   "code": "B9",
-   "name": "key_chest",
-   "sheet": "B",
-   "color": "natural",
-   "qty": 1,
-   "step": 1,
-   "mechanism": false
-  },
-  {
    "code": "C1",
-   "name": "wall_right",
+   "name": "door_arch",
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 11,
+   "step": 15,
    "mechanism": false
   },
   {
    "code": "C10",
-   "name": "slice_l3",
-   "sheet": "C",
-   "color": "natural",
-   "qty": 1,
-   "step": 5,
-   "mechanism": false
-  },
-  {
-   "code": "C11",
-   "name": "merlon1",
-   "sheet": "C",
-   "color": "natural",
-   "qty": 1,
-   "step": 13,
-   "mechanism": false
-  },
-  {
-   "code": "C12",
-   "name": "merlon_claw_r",
-   "sheet": "C",
-   "color": "natural",
-   "qty": 2,
-   "step": 13,
-   "mechanism": false
-  },
-  {
-   "code": "C13",
-   "name": "merlon4",
-   "sheet": "C",
-   "color": "natural",
-   "qty": 1,
-   "step": 13,
-   "mechanism": false
-  },
-  {
-   "code": "C14",
-   "name": "chest_left",
-   "sheet": "C",
-   "color": "natural",
-   "qty": 1,
-   "step": 18,
-   "mechanism": false
-  },
-  {
-   "code": "C15",
-   "name": "merlon0",
-   "sheet": "C",
-   "color": "natural",
-   "qty": 3,
-   "step": 13,
-   "mechanism": false
-  },
-  {
-   "code": "C16",
-   "name": "merlon5",
-   "sheet": "C",
-   "color": "natural",
-   "qty": 1,
-   "step": 13,
-   "mechanism": false
-  },
-  {
-   "code": "C17",
-   "name": "chest_front",
-   "sheet": "C",
-   "color": "natural",
-   "qty": 1,
-   "step": 18,
-   "mechanism": false
-  },
-  {
-   "code": "C18",
-   "name": "rubble0_0",
+   "name": "rubble2_0",
    "sheet": "C",
    "color": "natural",
    "qty": 1,
@@ -1925,16 +1734,16 @@
    "mechanism": false
   },
   {
-   "code": "C19",
-   "name": "slice_r9",
+   "code": "C11",
+   "name": "wall_right_stone0",
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 4,
+   "step": 15,
    "mechanism": false
   },
   {
-   "code": "C2",
+   "code": "C12",
    "name": "slice_r2",
    "sheet": "C",
    "color": "natural",
@@ -1943,16 +1752,16 @@
    "mechanism": false
   },
   {
-   "code": "C20",
-   "name": "key_hips",
+   "code": "C13",
+   "name": "merlon5",
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 1,
+   "step": 13,
    "mechanism": false
   },
   {
-   "code": "C22",
+   "code": "C14",
    "name": "rubble1_0",
    "sheet": "C",
    "color": "natural",
@@ -1961,25 +1770,34 @@
    "mechanism": false
   },
   {
-   "code": "C3",
-   "name": "slice_r6_1",
+   "code": "C15",
+   "name": "rubble3_0",
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 3,
+   "step": 16,
    "mechanism": false
   },
   {
-   "code": "C4",
-   "name": "slice_r4",
+   "code": "C16",
+   "name": "ivy_front_peg0",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 18,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "C17",
+   "name": "key_skull",
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 3,
+   "step": 1,
    "mechanism": false
   },
   {
-   "code": "C5",
+   "code": "C18",
    "name": "slice_l1",
    "sheet": "C",
    "color": "natural",
@@ -1988,7 +1806,169 @@
    "mechanism": false
   },
   {
-   "code": "C6",
+   "code": "C19",
+   "name": "slice_r7_1",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 4,
+   "mechanism": false
+  },
+  {
+   "code": "C2",
+   "name": "wing_bar",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "C20",
+   "name": "wing_r_peg1",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 2,
+   "step": 9,
+   "mechanism": false
+  },
+  {
+   "code": "C21",
+   "name": "key_chest",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "C22",
+   "name": "slice_l6_1",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "C23",
+   "name": "slice_r9",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 4,
+   "mechanism": false
+  },
+  {
+   "code": "C24",
+   "name": "slice_l3",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 5,
+   "mechanism": false
+  },
+  {
+   "code": "C25",
+   "name": "merlon2",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 2,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "C26",
+   "name": "slice_l8",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "C27",
+   "name": "slice_r8",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 4,
+   "mechanism": false
+  },
+  {
+   "code": "C28",
+   "name": "chest_left",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 18,
+   "mechanism": false
+  },
+  {
+   "code": "C29",
+   "name": "slice_l8_1",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "C3",
+   "name": "slice_r3",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "C30",
+   "name": "key_neck_high",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "C31",
+   "name": "slice_l6",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "C32",
+   "name": "rubble0_2",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "C33",
+   "name": "rubble2_2",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "C34",
+   "name": "rubble1_2",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "C35",
    "name": "key_back",
    "sheet": "C",
    "color": "natural",
@@ -1997,8 +1977,35 @@
    "mechanism": false
   },
   {
-   "code": "C7",
-   "name": "merlon7",
+   "code": "C36",
+   "name": "front_stone0",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "C4",
+   "name": "key_aux3",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 4,
+   "mechanism": false
+  },
+  {
+   "code": "C5",
+   "name": "torch",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "C6",
+   "name": "merlon3",
    "sheet": "C",
    "color": "natural",
    "qty": 1,
@@ -2006,21 +2013,30 @@
    "mechanism": false
   },
   {
+   "code": "C7",
+   "name": "wall_right_stone1",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 2,
+   "step": 15,
+   "mechanism": false
+  },
+  {
    "code": "C8",
-   "name": "chest_back",
+   "name": "rubble0_0",
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 18,
+   "step": 16,
    "mechanism": false
   },
   {
    "code": "C9",
-   "name": "slice_l6_1",
+   "name": "slice_l7",
    "sheet": "C",
    "color": "natural",
    "qty": 1,
-   "step": 6,
+   "step": 7,
    "mechanism": false
   },
   {
@@ -2070,38 +2086,47 @@
   },
   {
    "code": "E1",
-   "name": "wall_left",
+   "name": "slice_l2",
    "sheet": "E",
    "color": "natural",
    "qty": 1,
-   "step": 11,
+   "step": 5,
    "mechanism": false
   },
   {
    "code": "E2",
-   "name": "wall_back",
+   "name": "wing_r_bones",
    "sheet": "E",
    "color": "natural",
-   "qty": 1,
-   "step": 11,
+   "qty": 2,
+   "step": 9,
    "mechanism": false
   },
   {
    "code": "E3",
-   "name": "wall_front",
+   "name": "slice_r5",
    "sheet": "E",
    "color": "natural",
    "qty": 1,
-   "step": 11,
+   "step": 3,
    "mechanism": false
   },
   {
    "code": "E4",
-   "name": "slice_r3",
+   "name": "wall_right_stone2",
    "sheet": "E",
    "color": "natural",
-   "qty": 1,
-   "step": 2,
+   "qty": 2,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "E5",
+   "name": "merlon_claw_r",
+   "sheet": "E",
+   "color": "natural",
+   "qty": 2,
+   "step": 13,
    "mechanism": false
   },
   {

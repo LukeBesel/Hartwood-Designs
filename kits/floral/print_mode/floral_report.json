@@ -1,0 +1,1534 @@
+{
+ "kit": "floral",
+ "name": "Blossom Waltz",
+ "nest_problems": [],
+ "popout": {
+  "name": "Pop-out check",
+  "pass": true,
+  "count": 0,
+  "details": [],
+  "warnings": [
+   {
+    "sheet": "A",
+    "part": "wall_left",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     171.59,
+     88.92
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "wall_left",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     141.31,
+     155.07
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "wall_left",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     222.51,
+     155.07
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "wall_left",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     252.59,
+     88.92
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "wall_right",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     40.59,
+     142.93
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "wall_right",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     10.31,
+     209.07
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "wall_right",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     91.51,
+     209.07
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "wall_right",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     121.59,
+     142.93
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "coupler_peg0",
+    "why": "part only 3.5 mm wide at the bridge",
+    "at": [
+     209.42,
+     206.07
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "coupler_peg0",
+    "why": "part only 3.5 mm wide at the bridge",
+    "at": [
+     210.47,
+     193.93
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "coupler_peg1",
+    "why": "part only 3.5 mm wide at the bridge",
+    "at": [
+     172.07,
+     289.68
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "coupler_peg1",
+    "why": "part only 3.5 mm wide at the bridge",
+    "at": [
+     159.93,
+     288.63
+    ]
+   },
+   {
+    "sheet": "B",
+    "part": "hub_peg0",
+    "why": "part only 3.5 mm wide at the bridge",
+    "at": [
+     9.43,
+     179.07
+    ]
+   },
+   {
+    "sheet": "B",
+    "part": "hub_peg1",
+    "why": "part only 3.5 mm wide at the bridge",
+    "at": [
+     10.68,
+     198.93
+    ]
+   },
+   {
+    "sheet": "C",
+    "part": "cornflower_head2",
+    "why": "part only 2.5 mm wide at the bridge",
+    "at": [
+     45.15,
+     235.89
+    ]
+   },
+   {
+    "sheet": "C",
+    "part": "cornflower_head2",
+    "why": "part only 2.5 mm wide at the bridge",
+    "at": [
+     50.84,
+     244.38
+    ]
+   },
+   {
+    "sheet": "C",
+    "part": "vase_key0",
+    "why": "only 1 bridge on a large part (its free edges are short)"
+   },
+   {
+    "sheet": "C",
+    "part": "vase_key1",
+    "why": "only 1 bridge on a large part (its free edges are short)"
+   }
+  ],
+  "parts": [
+   {
+    "sheet": "A",
+    "part": "top",
+    "code": "A20",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "A",
+    "part": "wall_back",
+    "code": "A22",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "A",
+    "part": "wall_left",
+    "code": "A17",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "A",
+    "part": "wall_right",
+    "code": "A17",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "A",
+    "part": "wall_front",
+    "code": "A13",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "A",
+    "part": "turntable",
+    "code": "A16",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "ring08",
+    "code": "A11",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "frog",
+    "code": "A7",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "back_plaque",
+    "code": "A23",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "guide",
+    "code": "A12",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "rose_head2",
+    "code": "A3",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "rosebud_head1",
+    "code": "A21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "rosebud_head2",
+    "code": "A19",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "tulip_head1",
+    "code": "A10",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "rose_leaf0",
+    "code": "A1",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "wall_left_leaf_l",
+    "code": "A15",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "wall_right_leaf_l",
+    "code": "A15",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "tulip_head2",
+    "code": "A8",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "wall_left_leaf_r",
+    "code": "A14",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "wall_right_leaf_r",
+    "code": "A14",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "cornflower_head3",
+    "code": "A9",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "rose_head6",
+    "code": "A5",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "foot_peg0",
+    "code": "A6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "foot_peg1",
+    "code": "A6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "foot_peg2",
+    "code": "A6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "coupler_peg0",
+    "code": "A18",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "coupler_peg1",
+    "code": "A4",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "back_plaque_peg0",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "back_plaque_peg1",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring07",
+    "code": "B36",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring09",
+    "code": "B37",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring10",
+    "code": "B38",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring06",
+    "code": "B39",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring11",
+    "code": "B32",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring12",
+    "code": "B33",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring05",
+    "code": "B31",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring13",
+    "code": "B34",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring04",
+    "code": "B23",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring14",
+    "code": "B24",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring03",
+    "code": "B25",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring02",
+    "code": "B26",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring15",
+    "code": "B15",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring16",
+    "code": "B16",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring01",
+    "code": "B18",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring17",
+    "code": "B17",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring26",
+    "code": "B12",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring18",
+    "code": "B6",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "ring00",
+    "code": "B9",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "sunflower_head0",
+    "code": "B10",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "B",
+    "part": "rose_head1",
+    "code": "B5",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "cornflower_stem",
+    "code": "B3",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "rose_head3",
+    "code": "B41",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "tulip_head0",
+    "code": "B40",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "butterfly1_wings",
+    "code": "B35",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "butterfly0_wings",
+    "code": "B29",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "rosebud_head0",
+    "code": "B20",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "fence0",
+    "code": "B8",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "foot0_0",
+    "code": "B1",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "foot1_0",
+    "code": "B1",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "daisy_leaf0",
+    "code": "B7",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "lavender1_head0",
+    "code": "B11",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "daisy_head2",
+    "code": "B30",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "rose_head5",
+    "code": "B2",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "daisy_head3",
+    "code": "B27",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "tulip_head3",
+    "code": "B4",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "rosebud_head5",
+    "code": "B42",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "butterfly0_body",
+    "code": "B21",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "butterfly1_body",
+    "code": "B13",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "foot_peg3",
+    "code": "B14",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "B",
+    "part": "wall_left_flower_peg0",
+    "code": "B28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wall_left_leaf_l_peg0",
+    "code": "B28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wall_left_leaf_r_peg0",
+    "code": "B28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wall_right_flower_peg0",
+    "code": "B28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wall_right_leaf_l_peg0",
+    "code": "B28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wall_right_leaf_r_peg0",
+    "code": "B28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "window_frame_peg0",
+    "code": "B28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "window_frame_peg1",
+    "code": "B28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "hub_peg0",
+    "code": "B22",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "hub_peg1",
+    "code": "B19",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "C",
+    "part": "sunflower_head1",
+    "code": "C39",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "C",
+    "part": "ring25",
+    "code": "C40",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "ring24",
+    "code": "C41",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "ring20",
+    "code": "C42",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "ring23",
+    "code": "C43",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "ring21",
+    "code": "C38",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "window_frame",
+    "code": "C34",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "ring22",
+    "code": "C37",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "daisy_head0",
+    "code": "C36",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "daisy_head1",
+    "code": "C31",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "wall_left_flower",
+    "code": "C35",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "wall_right_flower",
+    "code": "C35",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "rose_stem",
+    "code": "C24",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "lavender1_stem",
+    "code": "C32",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "sunflower_stem",
+    "code": "C23",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "tulip_stem",
+    "code": "C29",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "cornflower_head1",
+    "code": "C28",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "cornflower_head0",
+    "code": "C25",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "daisy_stem",
+    "code": "C18",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "lavender2_stem",
+    "code": "C27",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "rose_head0",
+    "code": "C26",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "rosebud_stem",
+    "code": "C14",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "fence1",
+    "code": "C21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "fence2",
+    "code": "C21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "fence3",
+    "code": "C21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "fence4",
+    "code": "C21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "fence5",
+    "code": "C21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "fence6",
+    "code": "C21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "fence7",
+    "code": "C21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "rose_head4",
+    "code": "C22",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot2_0",
+    "code": "C20",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot3_0",
+    "code": "C20",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "rosebud_head3",
+    "code": "C33",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "tulip_leaf0",
+    "code": "C44",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "cornflower_leaf0",
+    "code": "C17",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "rosebud_leaf0",
+    "code": "C17",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "sunflower_leaf0",
+    "code": "C17",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot0_2",
+    "code": "C12",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot1_2",
+    "code": "C12",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot2_2",
+    "code": "C12",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot3_2",
+    "code": "C12",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "lavender2_head0",
+    "code": "C30",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "lavender1_head1",
+    "code": "C13",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "lavender2_head1",
+    "code": "C13",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "lavender1_head2",
+    "code": "C19",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "lavender2_head2",
+    "code": "C19",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot0_4",
+    "code": "C15",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot1_4",
+    "code": "C15",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot2_4",
+    "code": "C15",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot3_4",
+    "code": "C15",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "rosebud_head4",
+    "code": "C16",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "lavender1_head3",
+    "code": "C8",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "lavender2_head3",
+    "code": "C8",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "lavender1_head4",
+    "code": "C11",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "lavender2_head4",
+    "code": "C11",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "cornflower_head2",
+    "code": "C9",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "cradle_fb0",
+    "code": "C10",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "cradle_fb1",
+    "code": "C10",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "cradle_side0",
+    "code": "C6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "cradle_side1",
+    "code": "C6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "sunflower_head2",
+    "code": "C3",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "vase_key0",
+    "code": "C7",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "C",
+    "part": "vase_key1",
+    "code": "C7",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "C",
+    "part": "coupler0",
+    "code": "C5",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "coupler1",
+    "code": "C5",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "coupler2",
+    "code": "C1",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot0_1",
+    "code": "C4",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "foot0_3",
+    "code": "C2",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "base",
+    "code": "D1",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "D",
+    "part": "coupler3",
+    "code": "D4",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "hub0",
+    "code": "D5",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "hub1",
+    "code": "D5",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "foot1_1",
+    "code": "D6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "foot2_1",
+    "code": "D6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "foot3_1",
+    "code": "D6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "sunflower_head3",
+    "code": "D3",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "foot1_3",
+    "code": "D2",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "foot2_3",
+    "code": "D2",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "foot3_3",
+    "code": "D2",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   }
+  ],
+  "summary": "158 parts held by 377 bridges of 0.5 mm, none on a mating edge or a weak spot, holes cut first, nothing nested in a hole (18 bridges with a note, see warnings)"
+ },
+ "pieces": 158,
+ "unique_codes": 115,
+ "hardware": [
+  {
+   "name": "winding key shaft",
+   "kind": "rod",
+   "note": "part of the movement"
+  },
+  {
+   "name": "music movement",
+   "kind": "block",
+   "note": "18-note wind-up movement (bought part)"
+  },
+  {
+   "name": "movement shaft",
+   "kind": "rod",
+   "note": "part of the movement"
+  },
+  {
+   "name": "drive dowel",
+   "kind": "rod",
+   "note": "3/16 in birch dowel cut to length"
+  }
+ ],
+ "extras": {
+  "18-note wind-up music movement with rotating shaft": 1,
+  "3/16 in birch dowel, 55 mm": 1,
+  "wax stick": 1,
+  "sandpaper 240 grit": 1
+ },
+ "sheets": [
+  {
+   "sheet": "A",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 29,
+   "spares": 0,
+   "used_pct": 69.3,
+   "bridges": 73,
+   "cut_mm": 5620.0,
+   "score_mm": 953.3,
+   "fill_area_mm2": 587.4,
+   "pierces": 195,
+   "cut_s": 194.6,
+   "score_s": 5.6,
+   "fill_s": 68.8,
+   "travel_s": 15.9,
+   "total_s": 285.0,
+   "total_min": 4.75
+  },
+  {
+   "sheet": "B",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 50,
+   "spares": 0,
+   "used_pct": 49.0,
+   "bridges": 114,
+   "cut_mm": 8096.2,
+   "score_mm": 495.8,
+   "fill_area_mm2": 639.8,
+   "pierces": 243,
+   "cut_s": 279.3,
+   "score_s": 4.4,
+   "fill_s": 55.4,
+   "travel_s": 19.8,
+   "total_s": 358.9,
+   "total_min": 5.98
+  },
+  {
+   "sheet": "C",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 68,
+   "spares": 0,
+   "used_pct": 38.1,
+   "bridges": 166,
+   "cut_mm": 10123.1,
+   "score_mm": 1286.1,
+   "fill_area_mm2": 690.9,
+   "pierces": 423,
+   "cut_s": 350.3,
+   "score_s": 12.5,
+   "fill_s": 68.5,
+   "travel_s": 25.0,
+   "total_s": 456.4,
+   "total_min": 7.61
+  },
+  {
+   "sheet": "D",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 11,
+   "spares": 0,
+   "used_pct": 19.8,
+   "bridges": 24,
+   "cut_mm": 1916.9,
+   "score_mm": 0,
+   "fill_area_mm2": 296.7,
+   "pierces": 61,
+   "cut_s": 66.9,
+   "score_s": 0.0,
+   "fill_s": 26.4,
+   "travel_s": 4.4,
+   "total_s": 97.7,
+   "total_min": 1.63
+  }
+ ],
+ "jobs": [
+  {
+   "job": "floral_job1_A-B",
+   "sheets": [
+    "A",
+    "B"
+   ],
+   "laser_min": 10.73,
+   "kits_per_sheet": [
+    1,
+    1
+   ]
+  },
+  {
+   "job": "floral_job2_C-D",
+   "sheets": [
+    "C",
+    "D"
+   ],
+   "laser_min": 9.24,
+   "kits_per_sheet": [
+    1,
+    1
+   ]
+  }
+ ],
+ "n_sheets": 4,
+ "sheet_equivalents": 4.0,
+ "sheets_by_color": {
+  "natural": 4
+ },
+ "laser_minutes": 20.0,
+ "swap_minutes": 1.5,
+ "cut_minutes_per_kit": 21.5,
+ "wood_cost_usd": 3.68,
+ "mechanism_parts": [
+  "A16",
+  "A18",
+  "A4",
+  "B19",
+  "B22",
+  "C1",
+  "C5",
+  "D4",
+  "D5"
+ ],
+ "color_mode": "print",
+ "build_seconds": 136.4,
+ "print": {
+  "sheets": [
+   {
+    "sheet": "A",
+    "front": {
+     "printed_mm2": 62598,
+     "band_mm": 283.8,
+     "minutes": 7.6,
+     "ink_ml": 1.56,
+     "ink_usd": 0.25
+    },
+    "back": {
+     "printed_mm2": 52789,
+     "band_mm": 281.2,
+     "minutes": 7.6,
+     "ink_ml": 1.32,
+     "ink_usd": 0.21
+    }
+   },
+   {
+    "sheet": "B",
+    "front": {
+     "printed_mm2": 7747,
+     "band_mm": 283.8,
+     "minutes": 7.6,
+     "ink_ml": 0.19,
+     "ink_usd": 0.03
+    },
+    "back": {
+     "printed_mm2": 6382,
+     "band_mm": 252.4,
+     "minutes": 7.0,
+     "ink_ml": 0.16,
+     "ink_usd": 0.03
+    }
+   },
+   {
+    "sheet": "C",
+    "front": {
+     "printed_mm2": 21486,
+     "band_mm": 234.7,
+     "minutes": 6.6,
+     "ink_ml": 0.54,
+     "ink_usd": 0.09
+    },
+    "back": {
+     "printed_mm2": 14309,
+     "band_mm": 226.4,
+     "minutes": 6.5,
+     "ink_ml": 0.36,
+     "ink_usd": 0.06
+    }
+   },
+   {
+    "sheet": "D",
+    "front": null,
+    "back": null
+   }
+  ],
+  "printed_sheet_sides": 6,
+  "print_minutes": 42.9,
+  "ink_usd": 0.67,
+  "two_sided_parts": [
+   "A1",
+   "A10",
+   "A13",
+   "A16",
+   "A17",
+   "A20",
+   "A22",
+   "B1",
+   "B10",
+   "B11",
+   "B20",
+   "B29",
+   "B3",
+   "B35",
+   "B40",
+   "B7",
+   "B8",
+   "C14",
+   "C17",
+   "C18",
+   "C20",
+   "C21",
+   "C23",
+   "C24",
+   "C25",
+   "C26",
+   "C27",
+   "C29",
+   "C30",
+   "C32",
+   "C36",
+   "C44"
+  ],
+  "colored_parts": 115
+ }
+}

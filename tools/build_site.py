@@ -25,6 +25,30 @@ def webp(src, dst, width=None, quality=82):
     im.save(dst, 'WEBP', quality=quality, method=5)
 
 
+def glb_size_mm(path):
+    """Finished size (x length, y height, z depth) in mm from the GLB node matrices and mesh bounds."""
+    import struct
+    import numpy as np
+    b = open(path, 'rb').read()
+    n = struct.unpack('<I', b[12:16])[0]
+    js = json.loads(b[20:20 + n])
+    lo, hi = np.full(3, 1e9), np.full(3, -1e9)
+    root = js['nodes'][0]
+    for ci in root.get('children', []):
+        node = js['nodes'][ci]
+        if 'mesh' not in node:
+            continue
+        M = np.array(node.get('matrix', np.eye(4).flatten().tolist())).reshape(4, 4).T
+        for prim in js['meshes'][node['mesh']]['primitives']:
+            acc = js['accessors'][prim['attributes']['POSITION']]
+            mn, mx = acc['min'], acc['max']
+            for i in range(8):
+                c = np.array([mx[0] if i & 1 else mn[0], mx[1] if i & 2 else mn[1], mx[2] if i & 4 else mn[2], 1.0])
+                w = (M @ c)[:3]
+                lo = np.minimum(lo, w); hi = np.maximum(hi, w)
+    return [round(float(v)) for v in (hi - lo)]
+
+
 def main():
     import sys
     sys.path.insert(0, os.path.join(ROOT, 'engine'))
@@ -58,7 +82,9 @@ def main():
         summary.append({'kit': kit, 'url': SLUG_URL[kit], 'name': steps['name'], 'tagline': steps['tagline'],
                         'story': steps['story'], 'price': steps['price'], 'pieces': steps['piece_count'],
                         'steps': len(steps['steps']), 'hours': steps['build_hours'], 'difficulty': steps['difficulty'],
-                        'age': AGE, 'mechanism': bool(rep['mechanism_parts']), 'extras': steps['extras']})
+                        'age': AGE, 'mechanism': bool(rep['mechanism_parts']), 'extras': steps['extras'],
+                        'size_mm': glb_size_mm(os.path.join(src, f'{kit}.glb')),
+                        'sheets': [f"{sh['label']}" for sh in steps['sheets']]})
         print(kit, 'assets copied')
     json.dump(summary, open(os.path.join(SITE, 'assets', 'kits', 'kits.json'), 'w'), indent=1)
     os.makedirs(os.path.join(SITE, 'assets', 'icons'), exist_ok=True)

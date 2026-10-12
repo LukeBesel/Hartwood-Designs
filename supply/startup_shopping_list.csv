@@ -1,0 +1,20 @@
+item,cost USD,price status,where,need
+"OMTech Polar 2 70W glass CO2 laser (bed 710 x 360 mm, LightBurn included)",3699.99,Verified (S16),omtech.com (buy direct for warranty),required
+Window vent kit and 4 in duct for the built-in exhaust fan,40.0,Estimate,hardware store,required
+CO2 fire extinguisher 5 lb (Amerex 322),218.0,Verified (S21),"Walmart, Airgas, Tiger Medical",required
+Smoke alarm and fire blanket,45.0,Estimate,hardware store,required
+"Digital calipers 150 mm (kerf, fit coupon, sheet size)",25.0,Estimate,any,required
+Spare focus lens and mirror set,60.0,Estimate,OMTech parts store,required
+Distilled water and coolant for the water loop,20.0,Estimate,grocery / OMTech,required
+Small shop vacuum (bed and honeycomb),60.0,Estimate,any,required
+Packing table and two wire shelving units,250.0,Estimate,any,required
+Thermal shipping label printer 4 x 6 and labels,180.0,Estimate,any,required
+Shipping scale,30.0,Estimate,any,required
+"Fine razor saw, miter box and stop block (dowels)",35.0,Estimate,any,required
+Minnesota LLC filing (online),155.0,Verified (S22),Minnesota Secretary of State,required
+"Product liability insurance, first year",1200.0,"Estimate (S22 average $1,192)",broker or online insurer,required
+Fume extractor OMTech 300W 4-stage (only if you cannot vent outside),749.99,Verified (S17),omtech.com,optional
+"UV printer xTool O1 Omni single head (recommended, see D028)",1699.0,Verified (S20),xtool.com,recommended
+Extra UV ink set,60.0,Estimate,xtool.com,recommended
+Color laser printer for booklets (only if printing in-house),400.0,Estimate,any,optional
+Starter materials: 25 kits of each design (from bom_batches.csv),1500.27,Mixed (see suppliers.csv),see suppliers.csv,required

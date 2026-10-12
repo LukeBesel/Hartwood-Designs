@@ -296,7 +296,11 @@ def build():
             elif wp.intersects(fp_world):
                 # key exits the body here: clean notch, no thin walls
                 notch = fp_world.buffer(2.6, join_style='mitre')
-                sp.shape = to_local(opening(wp.difference(notch), 1.3), z)
+                cut = opening(wp.difference(notch), 1.3)
+                pieces = sorted(getattr(cut, 'geoms', [cut]), key=lambda q: -q.area)
+                if len(pieces) > 1 and pieces[1].area > 150:
+                    print(f'  note: key notch splits {sp.name}; keeping the main piece, dropping {pieces[1].area:.0f} mm2')
+                sp.shape = to_local(pieces[0], z)      # a part must be one piece; small slivers are dropped
     # center slice + keys first, then the side slices
     dadd(next(sp for sp in slice_parts if abs(sp.__dict__['z']) < 1e-6))
     for kp in keys:
@@ -390,7 +394,11 @@ def build():
         for o in slice_parts:
             oz_ = o.__dict__['z']
             if (oz_ > 0) == (sgn > 0) and abs(oz_) >= abs(oz) - 1e-6 and world_shape(o).intersects(shape_w):
-                o.shape = to_local(opening(world_shape(o).difference(shape_w.buffer(0.3)), 1.3), oz_)
+                cut = opening(world_shape(o).difference(shape_w.buffer(0.3)), 1.3)
+                pieces = sorted(getattr(cut, 'geoms', [cut]), key=lambda q: -q.area)
+                if len(pieces) > 1:
+                    print(f'  note: socket for {name} splits {o.name}; dropping {sum(q.area for q in pieces[1:]):.0f} mm2')
+                o.shape = to_local(pieces[0], oz_)        # a part must be one piece
         o = Part(name, to_local(shape_w, oz), color=color, mat=slice_frame(oz), step=step,
                  insert=(0, 0, -sgn), explode=25, group='dragon')
         o.__dict__['z'] = oz
@@ -495,7 +503,9 @@ def _wing_outline():
     keepout = box(-0.2, -20, 40, 14)          # the wing bar sits here; only the tab passes through it
     membrane = membrane.difference(keepout)
     bones = bones.difference(keepout)
-    return opening(membrane, 1.3), opening(bones, 1.3), opening(thumb, 1.3), tips
+    bones = opening(bones, 1.3)
+    bones = max(getattr(bones, 'geoms', [bones]), key=lambda q: q.area)   # the keep-out cuts off a root stub: drop it
+    return opening(membrane, 1.3), bones, opening(thumb, 1.3), tips
 
 
 def _wing(k, dadd, side, WB, s_bones, s_wing):
@@ -507,7 +517,7 @@ def _wing(k, dadd, side, WB, s_bones, s_wing):
     if m[2, 2] * side < 0:
         pass
     membrane, bones, thumb, tips = _wing_outline()
-    tab = rect(0, -3.0, 3.6, 3.0)
+    tab = rect(-1.5, -3.0, 3.6, 3.0)        # starts 1.3 mm inside the membrane so the two are one piece
     tag = 'r' if side > 0 else 'l'
     mem = Part(f'wing_{tag}', membrane, color='purple', mat=m, step=s_bones, insert=(1, 0, 0), explode=40,
                group='dragon')
@@ -648,9 +658,9 @@ def _tower(k, nxt, slice_parts, world_shape):
             for piece in getattr(band, 'geoms', [band]):
                 bx0, _, bx1, _ = piece.bounds
                 if bx1 - bx0 >= 7:
-                    tab_w = rect(bx0 + 1.5, TOP - T, bx1 - 1.5, TOP + 0.01)
+                    tab_w = rect(bx0 + 1.5, TOP - T, bx1 - 1.5, TOP + 1.0)    # 1 mm into the foot: one piece
                     sp.shape = sp.shape.union(to_local(tab_w, z)).buffer(0)
-                    sp.__dict__.setdefault('tabs', []).append(to_local(tab_w, z))
+                    sp.__dict__.setdefault('tabs', []).append(to_local(rect(bx0 + 1.5, TOP - T, bx1 - 1.5, TOP), z))
                     pierce(top, sp, to_local(tab_w, z))
     # front claws: extend the foot slices down over the claw merlons and half-lap them
     for m in mer[:2]:
@@ -665,7 +675,10 @@ def _tower(k, nxt, slice_parts, world_shape):
             if near.is_empty or near.area < 8:
                 continue
             grip = rounded(rect(claw_x - 7, D.PARAPET - 7, claw_x + 7, D.PARAPET + 2), 2.0)
-            sp.shape = sp.shape.union(to_local(grip, z)).buffer(0)
+            joined = sp.shape.union(to_local(grip, z)).buffer(0)
+            if joined.geom_type != 'Polygon':
+                continue                  # this slice does not reach the paw: no floating grip
+            sp.shape = joined
             cross_halflap(sp, m, fit='press', a_open=np.array([0, -1.0, 0]))
     next(sa for sa in k.subassemblies if sa['name'] == 'dragon')['step'] = s_mount
     # ---- door, ivy, torch

@@ -1,7 +1,7 @@
 """Cut files: SVG (mm), DXF R12 and LightBurn .lbrn2 per sheet, plus two-sheet bed jobs.
 
 Layers
-- CUT     red    #FF0000, 0.1 mm stroke : through cuts, kerf compensated, with 0.6 mm micro-bridges
+- CUT     red    #FF0000, 0.1 mm stroke : through cuts, kerf compensated, with micro-bridges (C.BRIDGE, rules in popout.py)
 - SCORE   black  #000000, 0.1 mm stroke : low-power line engraving (surface detail)
 - ENGRAVE blue   #0000FF, filled        : fill engraving (part codes, labels; text is outlines)
 
@@ -19,6 +19,7 @@ from shapely.geometry import LineString, MultiLineString, Point, Polygon
 from shapely.ops import unary_union
 
 from . import config as C
+from . import popout as PO
 
 GAP_PATH = C.BRIDGE + C.KERF   # length of the break in the cut path that leaves BRIDGE of wood
 
@@ -31,6 +32,8 @@ class SheetPaths:
     scores: list = field(default_factory=list)    # list of coords
     fills: list = field(default_factory=list)     # list of Polygon
     stats: dict = field(default_factory=dict)
+    bridges: list = field(default_factory=list)   # one dict per bridge: pid, at (x, y), tier, width, mating
+    targets: list = field(default_factory=list)   # print mode: registration target centres (never cut)
 
 
 # ----------------------------------------------------------------------------- bridges
@@ -130,13 +133,26 @@ def sheet_paths(sheet, fit=None) -> SheetPaths:
             no_go.append(pl.xf(t).buffer(0.3))
         for c, _cls in part.cuts:
             no_go.append(pl.xf(c).buffer(0.3))
+        hard, soft = part.__dict__.get('mate_hard'), part.__dict__.get('mate_soft')
+        mate_core, soft_s = None, None
+        if hard is not None and not hard.is_empty:
+            no_go.append(pl.xf(hard))
+            mate_core = pl.xf(hard.buffer(-(PO.MATE_CLEAR - 0.5)))
+        if soft is not None and not soft.is_empty:
+            soft_s = pl.xf(soft)
         no_go_u = unary_union(no_go) if no_go else None
         for poly in getattr(g, 'geoms', [g]):
-            for r in poly.interiors:     # holes first (inner shapes cut before the outline)
+            for r in poly.interiors:     # holes first (inner shapes cut before the outline), no bridges: waste drops out
                 sp.cuts.append((np.array(r.coords), True, True))
             ext = LineString(poly.exterior.coords)
-            pos = bridge_positions(ext, no_go_u, n_bridges(ext.length))
+            chosen = PO.choose_bridges(Polygon(poly.exterior), no_go_u, PO.n_bridges(Polygon(poly.exterior)), soft=soft_s)
+            pos = [c for c, _ in chosen]
             n_br += len(pos)
+            for (c, tier) in chosen:
+                q = ext.interpolate(c)
+                sp.bridges.append({'pid': id(pl), 'at': (round(q.x, 2), round(q.y, 2)), 'tier': tier,
+                                   'width': PO.local_width(poly, q),
+                                   'mating': bool(mate_core is not None and not mate_core.is_empty and mate_core.contains(q))})
             for seg in split_ring(ext, pos):
                 sp.cuts.append((seg, False, False))
         for s in part.score:
@@ -244,7 +260,14 @@ def write_svg(sp, path, W=C.SHEET_W, H=C.SHEET_H, x_off=0.0, show_sheet=True, ti
     out.append('<g id="CUT" fill="none" stroke="#ff0000" stroke-width="0.1">')
     for c, closed, _inner in sp.cuts:
         out.append(f'<path d="{_svg_path(c, closed, H)}"/>')
-    out.append('</g></svg>')
+    out.append('</g>')
+    if sp.targets:
+        r = C.PRINT['target_r']
+        out.append('<g id="REGISTRATION" fill="none" stroke="#00a000" stroke-width="0.1"><title>Print and Cut targets: do not cut</title>')
+        for x, y in sp.targets:
+            out.append(f'<circle cx="{x}" cy="{H - y}" r="{r}"/><path d="M{x - r * 1.6} {H - y}H{x + r * 1.6}M{x} {H - y - r * 1.6}V{H - y + r * 1.6}"/>')
+        out.append('</g>')
+    out.append('</svg>')
     open(path, 'w').write('\n'.join(out))
 
 
@@ -291,6 +314,8 @@ def write_lbrn(sps, path, offsets=None):
     L.append(cs(1, 'Engrave fill', 'Scan', C.FILL_SPEED, C.FILL_POWER,
                 f'        <interval Value="{C.FILL_INTERVAL}"/>\n        <overscanning Value="{C.FILL_OVERSCAN}"/>\n'))
     L.append(cs(0, 'Cut 3mm basswood', 'Cut', C.CUT_SPEED, C.CUT_POWER, '        <numPasses Value="1"/>\n'))
+    if any(sp.targets for sp in sps):
+        L.append(cs(3, 'Print and Cut targets (no output)', 'Cut', C.CUT_SPEED, 0, '        <doOutput Value="0"/>\n'))
 
     def shape(coords, closed, idx, ox, oy):
         s = [f'    <Shape Type="Path" CutIndex="{idx}">', '        <XForm>1 0 0 1 0 0</XForm>']
@@ -313,6 +338,10 @@ def write_lbrn(sps, path, offsets=None):
             L.append(shape(s, False, 2, ox, oy))
         for c, closed, _ in sp.cuts:
             L.append(shape(c, closed, 0, ox, oy))
+        for x, y in sp.targets:
+            r = C.PRINT['target_r']
+            ring = np.array([(x + r * np.cos(a), y + r * np.sin(a)) for a in np.linspace(0, 2 * np.pi, 33)])
+            L.append(shape(ring, True, 3, ox, oy))
     L.append('</LightBurnProject>')
     open(path, 'w').write('\n'.join(L) + '\n')
 

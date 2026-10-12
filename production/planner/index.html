@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workshop Planner | Hartwood</title>
+<link rel="icon" href="../../website/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="planner.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img src="../../website/favicon.svg" alt="" width="34" height="34"><div><b>Workshop planner</b><span id="modeTag"></span></div></div>
+  <nav class="tabs" role="tablist" aria-label="Planner sections">
+    <button role="tab" data-tab="orders" aria-selected="true">Orders</button>
+    <button role="tab" data-tab="queue">Cut queue</button>
+    <button role="tab" data-tab="schedule">Schedule</button>
+    <button role="tab" data-tab="track">Tracking</button>
+    <button role="tab" data-tab="stock">Inventory <span class="badge" id="stockBadge" hidden></span></button>
+    <button role="tab" data-tab="quality">Quality</button>
+    <button role="tab" data-tab="settings" aria-label="Settings">&#9881;</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ORDERS -->
+  <section id="orders" class="panel" role="tabpanel">
+    <div class="row-head"><h1>Orders</h1>
+      <div class="actions">
+        <label class="btn">Import CSV<input type="file" id="csvFile" accept=".csv,text/csv" hidden></label>
+        <a class="btn ghost" href="sample_orders.csv" download>Sample CSV</a>
+      </div></div>
+    <p class="hint">CSV columns: <code>order_id, date, kit, qty, customer, channel</code>. Kit can be <code>blaster</code>, <code>Star Slinger</code>, <code>dragon</code>, <code>Emberwing</code>, <code>floral</code> or <code>Blossom Waltz</code>.</p>
+    <form id="orderForm" class="card form-row">
+      <label>Kit<select name="kit" id="orderKit"></select></label>
+      <label>Qty<input name="qty" type="number" min="1" value="1" required></label>
+      <label>Customer<input name="customer" placeholder="Name"></label>
+      <label>Channel<select name="channel"><option>own site</option><option>Etsy</option><option>wholesale</option><option>other</option></select></label>
+      <button class="btn primary" type="submit">Add order</button>
+    </form>
+    <div class="table-wrap"><table id="orderTable"><thead><tr><th>Order</th><th>Date</th><th>Kit</th><th>Qty</th><th>Customer</th><th>Channel</th><th>Progress</th><th></th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <!-- CUT QUEUE -->
+  <section id="queue" class="panel" role="tabpanel" hidden>
+    <div class="row-head"><h1>Cut queue</h1><div class="actions"><button class="btn primary" id="startBatch">Start a batch from the queue</button></div></div>
+    <p class="hint">Kits waiting to be cut. A batch reserves the sheets and lists the laser jobs. Half and quarter color sheets serve 2 or 4 kits per run.</p>
+    <div id="queueSummary" class="cards"></div>
+    <h2>Batches</h2>
+    <div id="batchList"></div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule" class="panel" role="tabpanel" hidden>
+    <div class="row-head"><h1>Schedule</h1></div>
+    <p class="hint" id="schedHint"></p>
+    <div id="timeline"></div>
+  </section>
+
+  <!-- TRACKING -->
+  <section id="track" class="panel" role="tabpanel" hidden>
+    <div class="row-head"><h1>Tracking</h1></div>
+    <p class="hint">Tap a kit to move it to the next stage. Packing takes the extras out of stock.</p>
+    <div class="board" id="board"></div>
+  </section>
+
+  <!-- INVENTORY -->
+  <section id="stock" class="panel" role="tabpanel" hidden>
+    <div class="row-head"><h1>Inventory</h1></div>
+    <p class="hint">Type what is on the shelf. Reorder levels come from <code>supply/reorder_points.csv</code> (launch plan, lead time + one week of safety stock).</p>
+    <div class="table-wrap"><table id="stockTable"><thead><tr><th>Item</th><th>On hand</th><th>Reorder at</th><th>Status</th><th>Order qty</th><th>Suppliers</th><th></th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <!-- QUALITY -->
+  <section id="quality" class="panel" role="tabpanel" hidden>
+    <div class="row-head"><h1>Quality loop</h1><div class="actions"><button class="btn ghost" id="exportDefects">Export CSV</button></div></div>
+    <p class="hint">Log every problem you or a customer finds. Each week, fix the tallest bar first, then check the next week's chart.</p>
+    <form id="defectForm" class="card form-row">
+      <label>Kit<select name="kit" id="defectKit"></select></label>
+      <label>Part code<input name="code" placeholder="e.g. B12" maxlength="8"></label>
+      <label>Problem<select name="cat" id="defectCat"></select></label>
+      <label>Count<input name="count" type="number" min="1" value="1"></label>
+      <label class="grow">Note<input name="note" placeholder="What happened, what you changed"></label>
+      <button class="btn primary" type="submit">Log it</button>
+    </form>
+    <div class="card"><h2>Pareto: problems by type <span class="muted" id="paretoRange"></span></h2>
+      <div id="pareto" class="pareto"></div><p id="fixFirst" class="fix-first"></p></div>
+    <div class="table-wrap"><table id="defectTable"><thead><tr><th>Date</th><th>Kit</th><th>Part</th><th>Problem</th><th>Count</th><th>Note</th><th></th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <!-- SETTINGS -->
+  <section id="settings" class="panel" role="tabpanel" hidden>
+    <h1>Settings</h1>
+    <form id="settingsForm" class="card form-row">
+      <label>Shift start<input name="shift_start" type="time"></label>
+      <label>Shift hours<input name="shift_hours" type="number" min="1" max="24" step="0.5"></label>
+      <label>Laser efficiency<input name="efficiency" type="number" min="0.3" max="1" step="0.05"></label>
+      <button class="btn primary" type="submit">Save</button>
+    </form>
+    <div class="card"><h2>Backup</h2><p>Everything is saved on this tablet only. Export a backup each week.</p>
+      <button class="btn" id="exportAll">Export backup</button>
+      <label class="btn ghost">Import backup<input type="file" id="importAll" accept=".json,application/json" hidden></label>
+      <button class="btn danger" id="resetAll">Clear everything</button></div>
+  </section>
+</main>
+<div id="toast" class="toast" role="status" hidden></div>
+<div id="tip" class="tip" hidden></div>
+<script src="data.js"></script>
+<script src="planner.js"></script>
+</body>
+</html>

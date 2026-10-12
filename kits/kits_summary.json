@@ -6,14 +6,15 @@
   "steps": 17,
   "sheet_equivalents": 3.0,
   "cut_minutes": 17.6,
-  "wood_cost": 6.3,
+  "wood_cost": 6.34,
   "price": 49.99,
   "all_checks_pass": true,
   "checks": {
    "Collision check": true,
    "Nothing-floats check": true,
    "Assembly path check": true,
-   "Minimum feature check": true
+   "Minimum feature check": true,
+   "Pop-out check": true
   }
  },
  {
@@ -22,32 +23,34 @@
   "pieces": 152,
   "steps": 21,
   "sheet_equivalents": 6.0,
-  "cut_minutes": 24.6,
-  "wood_cost": 12.6,
+  "cut_minutes": 24.4,
+  "wood_cost": 12.68,
   "price": 54.99,
   "all_checks_pass": true,
   "checks": {
    "Collision check": true,
    "Nothing-floats check": true,
    "Assembly path check": true,
-   "Minimum feature check": true
+   "Minimum feature check": true,
+   "Pop-out check": true
   }
  },
  {
   "kit": "floral",
   "name": "Blossom Waltz",
-  "pieces": 156,
+  "pieces": 158,
   "steps": 25,
   "sheet_equivalents": 4.5,
   "cut_minutes": 20.7,
-  "wood_cost": 13.2,
+  "wood_cost": 18.46,
   "price": 49.99,
   "all_checks_pass": true,
   "checks": {
    "Collision check": true,
    "Nothing-floats check": true,
    "Assembly path check": true,
-   "Minimum feature check": true
+   "Minimum feature check": true,
+   "Pop-out check": true
   }
  }
 ]

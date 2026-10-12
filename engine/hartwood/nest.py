@@ -17,6 +17,7 @@ import shapely
 from PIL import Image, ImageDraw
 from scipy.signal import fftconvolve
 from shapely import affinity
+from shapely.geometry import Polygon
 from shapely.ops import unary_union
 
 from . import config as C
@@ -139,8 +140,13 @@ def _try_place(sheet, g, angles):
     return best
 
 
+def filled(g):
+    """The part with its holes filled: hole waste drops out during cutting, so nothing may be nested in a hole."""
+    return unary_union([Polygon(p.exterior) for p in getattr(g, 'geoms', [g]) if not p.is_empty])
+
+
 def _mark(sheet, gr_placed):
-    K, kx0, ky0 = rasterize(gr_placed, dilate=0.0)
+    K, kx0, ky0 = rasterize(filled(gr_placed), dilate=0.0)
     r0, c0 = int(round(ky0 / RES)), int(round(kx0 / RES))
     h, w = K.shape
     H, W = sheet.occ.shape
@@ -161,11 +167,11 @@ def _place_into(sheet, p):
     return True
 
 
-def _nest_once(plist, tile):
+def _nest_once(plist, tile, color=None):
     sheets = []
     for p in plist:
         if not any(_place_into(sh, p) for sh in sheets):
-            sh = Sheet(plist[0].color, tile)
+            sh = Sheet(color or plist[0].color, tile)
             if not _place_into(sh, p):
                 return None
             sheets.append(sh)
@@ -185,17 +191,28 @@ ORDERS = [
 ]
 
 
-def _nest_group(plist, tile):
-    """Nest all parts of one color into as few sheets of this tile size as possible (tries several
-    part orders, keeps the best). None if a part does not fit."""
+def printed_band(sheet):
+    """Print mode: height (mm) of the strip that holds the colored parts of a sheet (print time grows with it)."""
+    ys = [pl.xf(pl.part.outline()).bounds for pl in sheet.placed if pl.part.color != 'natural']
+    if not ys:
+        return 0.0
+    return max(b[3] for b in ys) - min(b[1] for b in ys)
+
+
+def _nest_group(plist, tile, mode='sheets'):
+    """Nest all parts of one group into as few sheets of this tile size as possible (tries several
+    part orders, keeps the best). In print mode the colored parts are also kept together in a low band.
+    None if a part does not fit."""
     best = None
-    for key in ORDERS:
-        order = sorted(plist, key=lambda p: (key(p), p.name))
-        res = _nest_once(order, tile)
+    orders = [(k, False) for k in ORDERS] + ([(k, True) for k in ORDERS] if mode == 'print' else [])
+    for key, colored_first in orders:
+        order = sorted(plist, key=lambda p: ((p.color == 'natural') if colored_first else 0, key(p), p.name))
+        res = _nest_once(order, tile, 'natural' if mode == 'print' else None)
         if res is None:
             continue
         top = max(max(pl.xf(pl.part.outline()).bounds[3] for pl in sh.placed) for sh in res)
-        score = (len(res), top)
+        band = sum(printed_band(sh) for sh in res) if mode == 'print' else 0.0
+        score = (len(res), round(band), top)
         if best is None or score < best[0]:
             best = (score, res)
         if len(res) == 1 and tile != 'full':
@@ -203,14 +220,17 @@ def _nest_group(plist, tile):
     return None if best is None else best[1]
 
 
-def nest(parts, max_sheets=60, allow_tiles=True):
-    """Place every part (plus spares). One color per sheet. Small color groups go on half or quarter
-    tiles (2 or 4 kits share one physical sheet; the packer snaps it apart). Returns list of Sheet."""
+def nest(parts, max_sheets=60, allow_tiles=True, mode=None):
+    """Place every part (plus spares). Sheets mode: one color per sheet; small color groups go on half or
+    quarter tiles (2 or 4 kits share one physical sheet; the packer snaps it apart). Print mode: every part on
+    natural sheets, color is printed on the parts afterwards. Returns list of Sheet."""
+    mode = mode or C.COLOR_MODE
+    group = (lambda p: 'natural') if mode == 'print' else (lambda p: p.color)
     sheets = []
     order = sorted(parts, key=lambda p: (-p.outline().area, p.name))
     by_color = {}
     for p in order:
-        by_color.setdefault(p.color, []).append(p)
+        by_color.setdefault(group(p), []).append(p)
     for color, plist in by_color.items():
         area = sum(p.outline().area for p in plist)
         result = None
@@ -219,12 +239,12 @@ def nest(parts, max_sheets=60, allow_tiles=True):
                 w, h, _ = TILES[tile]
                 inner = (w - 2 * C.SHEET_MARGIN) * (h - 2 * C.SHEET_MARGIN - 6)
                 if area < 0.80 * inner:
-                    result = _nest_group(plist, tile)
+                    result = _nest_group(plist, tile, mode)
                     if result and len(result) == 1:
                         break
                     result = None
         if result is None:
-            result = _nest_group(plist, 'full')
+            result = _nest_group(plist, 'full', mode)
             if result is None:
                 raise ValueError(f'a {color} part does not fit on a sheet')
             # the last full sheet may shrink to a tile
@@ -232,7 +252,7 @@ def nest(parts, max_sheets=60, allow_tiles=True):
                 last = result[-1]
                 lp = [pl.part for pl in last.placed]
                 for tile in ('quarter', 'half'):
-                    alt = _nest_group(lp, tile)
+                    alt = _nest_group(lp, tile, mode)
                     if alt and len(alt) == 1:
                         result[-1] = alt[0]
                         break
@@ -244,7 +264,7 @@ def nest(parts, max_sheets=60, allow_tiles=True):
         for _ in range(getattr(p, 'spares', 0)):
             g = p.outline()
             angles = candidate_angles(g, grain_lock=is_long_thin(g))
-            for sh in [s for s in sheets if s.color == p.color]:
+            for sh in [s for s in sheets if s.color == group(p)]:
                 best = _try_place(sh, g, angles)
                 if best:
                     _, ang, dx, dy, *_ = best
@@ -272,6 +292,8 @@ def verify(sheets):
                 d = g.distance(geoms[j])
                 if d < C.PART_GAP - 0.05:
                     probs.append(f'{sh.letter}: {sh.placed[i].part.name} and {sh.placed[j].part.name} only {d:.2f} mm apart')
+                if filled(g).distance(geoms[j]) < C.PART_GAP - 0.05 or filled(geoms[j]).distance(g) < C.PART_GAP - 0.05:
+                    probs.append(f'{sh.letter}: {sh.placed[i].part.name} and {sh.placed[j].part.name}: one sits in the other\'s hole')
     return probs
 
 

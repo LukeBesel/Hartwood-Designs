@@ -1,0 +1,2056 @@
+{
+ "kit": "blaster",
+ "name": "Star Slinger",
+ "tagline": "A starship that slings rubber bands. Seven shots, one at a time.",
+ "story": "The Star Slinger is a little starfighter with a big secret: a clockwork star wheel in its engine. Load up to seven rubber bands, aim at a paper target, and each pull of the trigger lets exactly one band fly. Its blaze orange nose is built into the ship, so it always looks like what it is: a toy. Build the mechanism, test it at each step, then show it off on its launch stand.",
+ "difficulty": 4,
+ "build_hours": "5 to 6 h",
+ "price": 49.99,
+ "piece_count": 153,
+ "unique_codes": 93,
+ "sheets": [
+  {
+   "letter": "A",
+   "color": "natural",
+   "label": "Natural basswood",
+   "parts": 109,
+   "spares": 0
+  },
+  {
+   "letter": "B",
+   "color": "natural",
+   "label": "Natural basswood",
+   "parts": 32,
+   "spares": 57
+  },
+  {
+   "letter": "C",
+   "color": "natural",
+   "label": "Natural basswood",
+   "parts": 12,
+   "spares": 0
+  }
+ ],
+ "extras": {
+  "#64 rubber bands (3.5 x 1/4 in), ammo": 12,
+  "#16 rubber band, trigger return": 2,
+  "3/16 in birch dowel, 15.6 mm": 3,
+  "wax stick": 1,
+  "sandpaper 240 grit": 1,
+  "paper targets (printed)": 3,
+  "3/16 in birch dowel, 63 mm (target hinge)": 1
+ },
+ "steps": [
+  {
+   "n": 1,
+   "title": "Lay down the left inner walls",
+   "tip": "Build the ship lying on its left side.",
+   "icons": [
+    "flip"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A4",
+     "qty": 1,
+     "sheet": "A",
+     "name": "wall_l_front",
+     "color": "natural"
+    },
+    {
+     "code": "A34",
+     "qty": 1,
+     "sheet": "A",
+     "name": "wall_l_nose",
+     "color": "orange"
+    },
+    {
+     "code": "B5",
+     "qty": 1,
+     "sheet": "B",
+     "name": "wall_l_rear",
+     "color": "natural"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 2,
+   "title": "Stand the ribs in the left walls",
+   "tip": "Each rib has tabs on both long edges.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A1",
+     "qty": 1,
+     "sheet": "A",
+     "name": "rib_deck",
+     "color": "natural"
+    },
+    {
+     "code": "A3",
+     "qty": 1,
+     "sheet": "A",
+     "name": "rib_guard_front",
+     "color": "natural"
+    },
+    {
+     "code": "A5",
+     "qty": 1,
+     "sheet": "A",
+     "name": "rib_guard",
+     "color": "natural"
+    },
+    {
+     "code": "A8",
+     "qty": 1,
+     "sheet": "A",
+     "name": "rib_tail_top",
+     "color": "natural"
+    },
+    {
+     "code": "A13",
+     "qty": 1,
+     "sheet": "A",
+     "name": "nose_top",
+     "color": "orange"
+    },
+    {
+     "code": "A16",
+     "qty": 1,
+     "sheet": "A",
+     "name": "rib_grip_back",
+     "color": "natural"
+    },
+    {
+     "code": "A19",
+     "qty": 1,
+     "sheet": "A",
+     "name": "nose_bottom",
+     "color": "orange"
+    },
+    {
+     "code": "A62",
+     "qty": 1,
+     "sheet": "A",
+     "name": "rib_tail_end",
+     "color": "natural"
+    },
+    {
+     "code": "B11",
+     "qty": 1,
+     "sheet": "B",
+     "name": "rib_grip_bottom",
+     "color": "natural"
+    },
+    {
+     "code": "B13",
+     "qty": 1,
+     "sheet": "B",
+     "name": "rib_grip_front",
+     "color": "natural"
+    },
+    {
+     "code": "C11",
+     "qty": 1,
+     "sheet": "C",
+     "name": "rib_keel",
+     "color": "natural"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 3,
+   "title": "Build the star wheel and put it on its axle",
+   "tip": "Three discs, two pegs. Wax the axle hole.",
+   "icons": [
+    "wax",
+    "press"
+   ],
+   "test": "Spin the wheel with a finger. It should turn freely and wobble less than 1 mm.",
+   "view": null,
+   "parts": [
+    {
+     "code": "A44",
+     "qty": 2,
+     "sheet": "A",
+     "name": "wheel_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "A66",
+     "qty": 1,
+     "sheet": "A",
+     "name": "wheel1",
+     "color": "teal"
+    },
+    {
+     "code": "C7",
+     "qty": 2,
+     "sheet": "C",
+     "name": "wheel0",
+     "color": "natural"
+    }
+   ],
+   "hardware": [
+    {
+     "name": "wheel axle",
+     "kind": "rod",
+     "note": "3/16 in dowel, 15.6 mm"
+    }
+   ],
+   "mounts": []
+  },
+  {
+   "n": 4,
+   "title": "Build the trigger and fit it under the wheel",
+   "tip": "The two pallets must point at the wheel. Wax the pivot.",
+   "icons": [
+    "wax",
+    "press"
+   ],
+   "test": "Press the trigger slowly: the wheel turns half a tooth. Release: another half tooth.",
+   "view": null,
+   "parts": [
+    {
+     "code": "A44",
+     "qty": 2,
+     "sheet": "A",
+     "name": "trigger_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "A61",
+     "qty": 1,
+     "sheet": "A",
+     "name": "trigger1",
+     "color": "orange"
+    },
+    {
+     "code": "B3",
+     "qty": 1,
+     "sheet": "B",
+     "name": "trigger0",
+     "color": "natural"
+    },
+    {
+     "code": "C6",
+     "qty": 1,
+     "sheet": "C",
+     "name": "trigger2",
+     "color": "natural"
+    }
+   ],
+   "hardware": [
+    {
+     "name": "trigger pivot",
+     "kind": "rod",
+     "note": "3/16 in dowel, 15.6 mm"
+    },
+    {
+     "name": "return band post",
+     "kind": "rod",
+     "note": "3/16 in dowel, 15.6 mm; the #16 band runs from here to the hook on the trigger"
+    }
+   ],
+   "mounts": []
+  },
+  {
+   "n": 5,
+   "title": "Close it with the right inner walls",
+   "tip": "Line up the three dowels and all the rib tabs, then press evenly.",
+   "icons": [
+    "press"
+   ],
+   "test": "Pull the trigger 8 times. The wheel should step one tooth per pull.",
+   "view": null,
+   "parts": [
+    {
+     "code": "A34",
+     "qty": 1,
+     "sheet": "A",
+     "name": "wall_r_nose",
+     "color": "orange"
+    },
+    {
+     "code": "B5",
+     "qty": 1,
+     "sheet": "B",
+     "name": "wall_r_rear",
+     "color": "natural"
+    },
+    {
+     "code": "C10",
+     "qty": 1,
+     "sheet": "C",
+     "name": "wall_r_front",
+     "color": "natural"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 6,
+   "title": "Build the blaze orange nose",
+   "tip": "This orange box must stay on the ship: it marks it as a toy.",
+   "icons": [
+    "press",
+    "careful"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A18",
+     "qty": 1,
+     "sheet": "A",
+     "name": "nose_plug",
+     "color": "orange"
+    },
+    {
+     "code": "A26",
+     "qty": 2,
+     "sheet": "A",
+     "name": "nose_hook0",
+     "color": "orange"
+    },
+    {
+     "code": "A28",
+     "qty": 1,
+     "sheet": "A",
+     "name": "nose_hook1",
+     "color": "orange"
+    },
+    {
+     "code": "A35",
+     "qty": 1,
+     "sheet": "A",
+     "name": "nose_cap",
+     "color": "orange"
+    },
+    {
+     "code": "A71",
+     "qty": 1,
+     "sheet": "A",
+     "name": "nose_hook_peg",
+     "color": "orange"
+    },
+    {
+     "code": "A72",
+     "qty": 1,
+     "sheet": "A",
+     "name": "nose_cap_peg",
+     "color": "orange"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 7,
+   "title": "Add the right hull skins",
+   "tip": "Square pegs lock each skin to the wall.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A2",
+     "qty": 6,
+     "sheet": "A",
+     "name": "engine_panel_r_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "A41",
+     "qty": 1,
+     "sheet": "A",
+     "name": "cockpit_side_r",
+     "color": "teal"
+    },
+    {
+     "code": "A49",
+     "qty": 1,
+     "sheet": "A",
+     "name": "skin_nose_r",
+     "color": "orange"
+    },
+    {
+     "code": "A53",
+     "qty": 1,
+     "sheet": "A",
+     "name": "stripe_r",
+     "color": "orange"
+    },
+    {
+     "code": "A63",
+     "qty": 1,
+     "sheet": "A",
+     "name": "intake_r",
+     "color": "teal"
+    },
+    {
+     "code": "A65",
+     "qty": 1,
+     "sheet": "A",
+     "name": "panel_r0",
+     "color": "teal"
+    },
+    {
+     "code": "A69",
+     "qty": 1,
+     "sheet": "A",
+     "name": "engine_panel_r",
+     "color": "teal"
+    },
+    {
+     "code": "B1",
+     "qty": 1,
+     "sheet": "B",
+     "name": "skin_rear_r",
+     "color": "natural"
+    },
+    {
+     "code": "B2",
+     "qty": 10,
+     "sheet": "B",
+     "name": "skin_rear_r_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "B14",
+     "qty": 1,
+     "sheet": "B",
+     "name": "panel_r1",
+     "color": "natural"
+    },
+    {
+     "code": "C3",
+     "qty": 1,
+     "sheet": "C",
+     "name": "skin_front_r",
+     "color": "natural"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 8,
+   "title": "Turn the ship over and add the left hull skins",
+   "tip": "Mirror image of the last step.",
+   "icons": [
+    "flip",
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A2",
+     "qty": 7,
+     "sheet": "A",
+     "name": "skin_front_l_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "A14",
+     "qty": 1,
+     "sheet": "A",
+     "name": "panel_l1",
+     "color": "natural"
+    },
+    {
+     "code": "A20",
+     "qty": 1,
+     "sheet": "A",
+     "name": "intake_l",
+     "color": "teal"
+    },
+    {
+     "code": "A40",
+     "qty": 1,
+     "sheet": "A",
+     "name": "cockpit_side_l",
+     "color": "teal"
+    },
+    {
+     "code": "A42",
+     "qty": 1,
+     "sheet": "A",
+     "name": "panel_l0",
+     "color": "teal"
+    },
+    {
+     "code": "A48",
+     "qty": 1,
+     "sheet": "A",
+     "name": "skin_nose_l",
+     "color": "orange"
+    },
+    {
+     "code": "A54",
+     "qty": 1,
+     "sheet": "A",
+     "name": "engine_panel_l",
+     "color": "teal"
+    },
+    {
+     "code": "A56",
+     "qty": 1,
+     "sheet": "A",
+     "name": "stripe_l",
+     "color": "orange"
+    },
+    {
+     "code": "B2",
+     "qty": 9,
+     "sheet": "B",
+     "name": "skin_rear_l_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "B4",
+     "qty": 1,
+     "sheet": "B",
+     "name": "skin_rear_l",
+     "color": "natural"
+    },
+    {
+     "code": "C5",
+     "qty": 1,
+     "sheet": "C",
+     "name": "skin_front_l",
+     "color": "natural"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 9,
+   "title": "Add the reactor rings",
+   "tip": "Rings sit around the wheel axle on both sides.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A2",
+     "qty": 4,
+     "sheet": "A",
+     "name": "reactor_r0_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "A45",
+     "qty": 1,
+     "sheet": "A",
+     "name": "reactor_l1",
+     "color": "orange"
+    },
+    {
+     "code": "A50",
+     "qty": 1,
+     "sheet": "A",
+     "name": "reactor_r1",
+     "color": "orange"
+    },
+    {
+     "code": "A52",
+     "qty": 1,
+     "sheet": "A",
+     "name": "reactor_r0",
+     "color": "teal"
+    },
+    {
+     "code": "A64",
+     "qty": 1,
+     "sheet": "A",
+     "name": "reactor_l0",
+     "color": "teal"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 10,
+   "title": "Fit the cockpit canopy",
+   "tip": "The canopy tabs go into the deck rib.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A25",
+     "qty": 2,
+     "sheet": "A",
+     "name": "canopy0",
+     "color": "teal"
+    },
+    {
+     "code": "A44",
+     "qty": 1,
+     "sheet": "A",
+     "name": "canopy_peg",
+     "color": "natural"
+    },
+    {
+     "code": "A68",
+     "qty": 1,
+     "sheet": "A",
+     "name": "canopy1",
+     "color": "teal"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 11,
+   "title": "Slide in the wings",
+   "tip": "Each wing has two tabs that go through the skin and the wall.",
+   "icons": [
+    "press",
+    "x2"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A6",
+     "qty": 1,
+     "sheet": "A",
+     "name": "pod_l_side0",
+     "color": "natural"
+    },
+    {
+     "code": "A22",
+     "qty": 1,
+     "sheet": "A",
+     "name": "pod_l_side1",
+     "color": "orange"
+    },
+    {
+     "code": "A29",
+     "qty": 1,
+     "sheet": "A",
+     "name": "wing_fin_l",
+     "color": "orange"
+    },
+    {
+     "code": "A30",
+     "qty": 1,
+     "sheet": "A",
+     "name": "missile_l",
+     "color": "orange"
+    },
+    {
+     "code": "A31",
+     "qty": 1,
+     "sheet": "A",
+     "name": "pod_r_side0",
+     "color": "orange"
+    },
+    {
+     "code": "A33",
+     "qty": 1,
+     "sheet": "A",
+     "name": "wing_stripe_l",
+     "color": "orange"
+    },
+    {
+     "code": "A36",
+     "qty": 1,
+     "sheet": "A",
+     "name": "wing_stripe_r",
+     "color": "orange"
+    },
+    {
+     "code": "A37",
+     "qty": 1,
+     "sheet": "A",
+     "name": "wing_fin_r",
+     "color": "orange"
+    },
+    {
+     "code": "A39",
+     "qty": 2,
+     "sheet": "A",
+     "name": "pod_r",
+     "color": "teal"
+    },
+    {
+     "code": "A44",
+     "qty": 2,
+     "sheet": "A",
+     "name": "pod_r_peg",
+     "color": "natural"
+    },
+    {
+     "code": "A57",
+     "qty": 1,
+     "sheet": "A",
+     "name": "missile_r",
+     "color": "orange"
+    },
+    {
+     "code": "B2",
+     "qty": 2,
+     "sheet": "B",
+     "name": "wing_stripe_r_peg",
+     "color": "natural"
+    },
+    {
+     "code": "B10",
+     "qty": 1,
+     "sheet": "B",
+     "name": "pod_r_side1",
+     "color": "natural"
+    },
+    {
+     "code": "C8",
+     "qty": 1,
+     "sheet": "C",
+     "name": "wing_l",
+     "color": "natural"
+    },
+    {
+     "code": "C9",
+     "qty": 1,
+     "sheet": "C",
+     "name": "wing_r",
+     "color": "natural"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 12,
+   "title": "Raise the tail fin",
+   "tip": "Its two tabs go into the top rib behind the wheel.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A23",
+     "qty": 1,
+     "sheet": "A",
+     "name": "tail_fin_l",
+     "color": "orange"
+    },
+    {
+     "code": "A44",
+     "qty": 1,
+     "sheet": "A",
+     "name": "tail_fin_peg",
+     "color": "natural"
+    },
+    {
+     "code": "A46",
+     "qty": 1,
+     "sheet": "A",
+     "name": "tail_fin",
+     "color": "teal"
+    },
+    {
+     "code": "A55",
+     "qty": 1,
+     "sheet": "A",
+     "name": "tail_fin_r",
+     "color": "orange"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 13,
+   "title": "Build the thruster",
+   "tip": "The peg goes into the tail. Then stack the rings, big ones first.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A7",
+     "qty": 1,
+     "sheet": "A",
+     "name": "thruster3",
+     "color": "orange"
+    },
+    {
+     "code": "A9",
+     "qty": 1,
+     "sheet": "A",
+     "name": "thruster0",
+     "color": "teal"
+    },
+    {
+     "code": "A10",
+     "qty": 1,
+     "sheet": "A",
+     "name": "thruster4",
+     "color": "teal"
+    },
+    {
+     "code": "A12",
+     "qty": 1,
+     "sheet": "A",
+     "name": "thruster1",
+     "color": "orange"
+    },
+    {
+     "code": "A15",
+     "qty": 1,
+     "sheet": "A",
+     "name": "thruster2",
+     "color": "teal"
+    },
+    {
+     "code": "A32",
+     "qty": 1,
+     "sheet": "A",
+     "name": "thruster_peg",
+     "color": "natural"
+    },
+    {
+     "code": "A59",
+     "qty": 1,
+     "sheet": "A",
+     "name": "thruster5",
+     "color": "natural"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 14,
+   "title": "Add the grip panels",
+   "tip": "Textured panels on both sides of the grip.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A2",
+     "qty": 4,
+     "sheet": "A",
+     "name": "grip_r_peg0",
+     "color": "natural"
+    },
+    {
+     "code": "C2",
+     "qty": 1,
+     "sheet": "C",
+     "name": "grip_l",
+     "color": "natural"
+    },
+    {
+     "code": "C4",
+     "qty": 1,
+     "sheet": "C",
+     "name": "grip_r",
+     "color": "natural"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 15,
+   "title": "Add the belly fin",
+   "tip": "Tabs up into the keel, then a stripe on each side and one peg.",
+   "icons": [
+    "press"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A11",
+     "qty": 1,
+     "sheet": "A",
+     "name": "belly_fin_r",
+     "color": "orange"
+    },
+    {
+     "code": "A17",
+     "qty": 1,
+     "sheet": "A",
+     "name": "belly_fin_l",
+     "color": "orange"
+    },
+    {
+     "code": "A38",
+     "qty": 1,
+     "sheet": "A",
+     "name": "belly_fin",
+     "color": "teal"
+    },
+    {
+     "code": "A44",
+     "qty": 1,
+     "sheet": "A",
+     "name": "belly_fin_peg",
+     "color": "natural"
+    }
+   ],
+   "hardware": [],
+   "mounts": []
+  },
+  {
+   "n": 16,
+   "title": "Build the launch stand and the target",
+   "tip": "The target hangs on its dowel and swings when hit.",
+   "icons": [
+    "press"
+   ],
+   "test": "Tap the target plate. It should swing back and settle again.",
+   "view": null,
+   "parts": [
+    {
+     "code": "A2",
+     "qty": 1,
+     "sheet": "A",
+     "name": "safety_peg",
+     "color": "natural"
+    },
+    {
+     "code": "A21",
+     "qty": 2,
+     "sheet": "A",
+     "name": "stand_boot_r",
+     "color": "teal"
+    },
+    {
+     "code": "A24",
+     "qty": 2,
+     "sheet": "A",
+     "name": "target_ear0",
+     "color": "orange"
+    },
+    {
+     "code": "A27",
+     "qty": 1,
+     "sheet": "A",
+     "name": "target_ring1",
+     "color": "teal"
+    },
+    {
+     "code": "A43",
+     "qty": 1,
+     "sheet": "A",
+     "name": "safety_back",
+     "color": "teal"
+    },
+    {
+     "code": "A44",
+     "qty": 1,
+     "sheet": "A",
+     "name": "target_dot_peg",
+     "color": "natural"
+    },
+    {
+     "code": "A47",
+     "qty": 1,
+     "sheet": "A",
+     "name": "safety_plaque",
+     "color": "orange"
+    },
+    {
+     "code": "A51",
+     "qty": 1,
+     "sheet": "A",
+     "name": "stand_upright",
+     "color": "teal"
+    },
+    {
+     "code": "A58",
+     "qty": 2,
+     "sheet": "A",
+     "name": "target_side0",
+     "color": "teal"
+    },
+    {
+     "code": "A60",
+     "qty": 1,
+     "sheet": "A",
+     "name": "target_ring0",
+     "color": "orange"
+    },
+    {
+     "code": "A67",
+     "qty": 1,
+     "sheet": "A",
+     "name": "band_rack",
+     "color": "orange"
+    },
+    {
+     "code": "A70",
+     "qty": 1,
+     "sheet": "A",
+     "name": "target_ring2",
+     "color": "orange"
+    },
+    {
+     "code": "B2",
+     "qty": 1,
+     "sheet": "B",
+     "name": "target_ring0_peg",
+     "color": "natural"
+    },
+    {
+     "code": "B12",
+     "qty": 1,
+     "sheet": "B",
+     "name": "stand_base",
+     "color": "natural"
+    },
+    {
+     "code": "C1",
+     "qty": 1,
+     "sheet": "C",
+     "name": "target_plate",
+     "color": "natural"
+    }
+   ],
+   "hardware": [
+    {
+     "name": "target hinge dowel",
+     "kind": "rod",
+     "note": "3/16 in dowel, 63 mm"
+    }
+   ],
+   "mounts": []
+  },
+  {
+   "n": 17,
+   "title": "Put the ship on its launch stand",
+   "tip": "Grip between the two boots, barrel on the upright.",
+   "icons": [
+    "careful"
+   ],
+   "test": "",
+   "view": null,
+   "parts": [],
+   "hardware": [],
+   "mounts": [
+    {
+     "name": "ship",
+     "into": null,
+     "insert": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "explode": 60.0,
+     "members": [
+      "belly_fin",
+      "belly_fin_l",
+      "belly_fin_peg",
+      "belly_fin_r",
+      "canopy0",
+      "canopy1",
+      "canopy2",
+      "canopy_peg",
+      "cockpit_side_l",
+      "cockpit_side_l_peg0",
+      "cockpit_side_r",
+      "cockpit_side_r_peg0",
+      "engine_panel_l",
+      "engine_panel_l_peg0",
+      "engine_panel_l_peg1",
+      "engine_panel_r",
+      "engine_panel_r_peg0",
+      "engine_panel_r_peg1",
+      "grip_l",
+      "grip_l_peg0",
+      "grip_l_peg1",
+      "grip_r",
+      "grip_r_peg0",
+      "grip_r_peg1",
+      "intake_l",
+      "intake_l_peg0",
+      "intake_r",
+      "intake_r_peg0",
+      "missile_l",
+      "missile_r",
+      "nose_bottom",
+      "nose_cap",
+      "nose_cap_peg",
+      "nose_hook0",
+      "nose_hook1",
+      "nose_hook2",
+      "nose_hook_peg",
+      "nose_plug",
+      "nose_top",
+      "panel_l0",
+      "panel_l0_peg0",
+      "panel_l1",
+      "panel_l1_peg0",
+      "panel_r0",
+      "panel_r0_peg0",
+      "panel_r1",
+      "panel_r1_peg0",
+      "pod_l",
+      "pod_l_peg",
+      "pod_l_side0",
+      "pod_l_side1",
+      "pod_r",
+      "pod_r_peg",
+      "pod_r_side0",
+      "pod_r_side1",
+      "reactor_l0",
+      "reactor_l0_peg0",
+      "reactor_l1",
+      "reactor_l1_peg0",
+      "reactor_r0",
+      "reactor_r0_peg0",
+      "reactor_r1",
+      "reactor_r1_peg0",
+      "return band post",
+      "rib_deck",
+      "rib_grip_back",
+      "rib_grip_bottom",
+      "rib_grip_front",
+      "rib_guard",
+      "rib_guard_front",
+      "rib_keel",
+      "rib_tail_end",
+      "rib_tail_top",
+      "skin_front_l",
+      "skin_front_l_peg0",
+      "skin_front_l_peg1",
+      "skin_front_r",
+      "skin_front_r_peg0",
+      "skin_front_r_peg1",
+      "skin_nose_l",
+      "skin_nose_l_peg0",
+      "skin_nose_l_peg1",
+      "skin_nose_r",
+      "skin_nose_r_peg0",
+      "skin_nose_r_peg1",
+      "skin_rear_l",
+      "skin_rear_l_peg0",
+      "skin_rear_l_peg1",
+      "skin_rear_l_peg2",
+      "skin_rear_l_peg3",
+      "skin_rear_r",
+      "skin_rear_r_peg0",
+      "skin_rear_r_peg1",
+      "skin_rear_r_peg2",
+      "skin_rear_r_peg3",
+      "stripe_l",
+      "stripe_l_peg0",
+      "stripe_l_peg1",
+      "stripe_r",
+      "stripe_r_peg0",
+      "stripe_r_peg1",
+      "tail_fin",
+      "tail_fin_l",
+      "tail_fin_peg",
+      "tail_fin_r",
+      "thruster0",
+      "thruster1",
+      "thruster2",
+      "thruster3",
+      "thruster4",
+      "thruster5",
+      "thruster_peg",
+      "trigger pivot",
+      "trigger0",
+      "trigger1",
+      "trigger2",
+      "trigger_peg0",
+      "trigger_peg1",
+      "wall_l_front",
+      "wall_l_nose",
+      "wall_l_rear",
+      "wall_r_front",
+      "wall_r_nose",
+      "wall_r_rear",
+      "wheel axle",
+      "wheel0",
+      "wheel1",
+      "wheel2",
+      "wheel_peg0",
+      "wheel_peg1",
+      "wing_fin_l",
+      "wing_fin_r",
+      "wing_l",
+      "wing_r",
+      "wing_stripe_l",
+      "wing_stripe_l_peg",
+      "wing_stripe_r",
+      "wing_stripe_r_peg"
+     ]
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "code": "A1",
+   "name": "rib_deck",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A10",
+   "name": "thruster4",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "A11",
+   "name": "belly_fin_r",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "A12",
+   "name": "thruster1",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "A13",
+   "name": "nose_top",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A14",
+   "name": "panel_l1",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "A15",
+   "name": "thruster2",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "A16",
+   "name": "rib_grip_back",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A17",
+   "name": "belly_fin_l",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "A18",
+   "name": "nose_plug",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "A19",
+   "name": "nose_bottom",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A2",
+   "name": "engine_panel_r_peg0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 22,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "A20",
+   "name": "intake_l",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "A21",
+   "name": "stand_boot_r",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 2,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "A22",
+   "name": "pod_l_side1",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A23",
+   "name": "tail_fin_l",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 12,
+   "mechanism": false
+  },
+  {
+   "code": "A24",
+   "name": "target_ear0",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 2,
+   "step": 16,
+   "mechanism": true
+  },
+  {
+   "code": "A25",
+   "name": "canopy0",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 2,
+   "step": 10,
+   "mechanism": false
+  },
+  {
+   "code": "A26",
+   "name": "nose_hook0",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 2,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "A27",
+   "name": "target_ring1",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "A28",
+   "name": "nose_hook1",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "A29",
+   "name": "wing_fin_l",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A3",
+   "name": "rib_guard_front",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A30",
+   "name": "missile_l",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A31",
+   "name": "pod_r_side0",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A32",
+   "name": "thruster_peg",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "A33",
+   "name": "wing_stripe_l",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A34",
+   "name": "wall_l_nose",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 2,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "A35",
+   "name": "nose_cap",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "A36",
+   "name": "wing_stripe_r",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A37",
+   "name": "wing_fin_r",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A38",
+   "name": "belly_fin",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 15,
+   "mechanism": false
+  },
+  {
+   "code": "A39",
+   "name": "pod_r",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 2,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A4",
+   "name": "wall_l_front",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "A40",
+   "name": "cockpit_side_l",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "A41",
+   "name": "cockpit_side_r",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "A42",
+   "name": "panel_l0",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "A43",
+   "name": "safety_back",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "A44",
+   "name": "wheel_peg0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 10,
+   "step": 3,
+   "mechanism": true
+  },
+  {
+   "code": "A45",
+   "name": "reactor_l1",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 9,
+   "mechanism": false
+  },
+  {
+   "code": "A46",
+   "name": "tail_fin",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 12,
+   "mechanism": false
+  },
+  {
+   "code": "A47",
+   "name": "safety_plaque",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "A48",
+   "name": "skin_nose_l",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "A49",
+   "name": "skin_nose_r",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "A5",
+   "name": "rib_guard",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A50",
+   "name": "reactor_r1",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 9,
+   "mechanism": false
+  },
+  {
+   "code": "A51",
+   "name": "stand_upright",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "A52",
+   "name": "reactor_r0",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 9,
+   "mechanism": false
+  },
+  {
+   "code": "A53",
+   "name": "stripe_r",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "A54",
+   "name": "engine_panel_l",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "A55",
+   "name": "tail_fin_r",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 12,
+   "mechanism": false
+  },
+  {
+   "code": "A56",
+   "name": "stripe_l",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "A57",
+   "name": "missile_r",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A58",
+   "name": "target_side0",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 2,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "A59",
+   "name": "thruster5",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "A6",
+   "name": "pod_l_side0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "A60",
+   "name": "target_ring0",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "A61",
+   "name": "trigger1",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 4,
+   "mechanism": true
+  },
+  {
+   "code": "A62",
+   "name": "rib_tail_end",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A63",
+   "name": "intake_r",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "A64",
+   "name": "reactor_l0",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 9,
+   "mechanism": false
+  },
+  {
+   "code": "A65",
+   "name": "panel_r0",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "A66",
+   "name": "wheel1",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 3,
+   "mechanism": true
+  },
+  {
+   "code": "A67",
+   "name": "band_rack",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "A68",
+   "name": "canopy1",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 10,
+   "mechanism": false
+  },
+  {
+   "code": "A69",
+   "name": "engine_panel_r",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "A7",
+   "name": "thruster3",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "A70",
+   "name": "target_ring2",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "A71",
+   "name": "nose_hook_peg",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "A72",
+   "name": "nose_cap_peg",
+   "sheet": "A",
+   "color": "orange",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
+   "code": "A8",
+   "name": "rib_tail_top",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A9",
+   "name": "thruster0",
+   "sheet": "A",
+   "color": "teal",
+   "qty": 1,
+   "step": 13,
+   "mechanism": false
+  },
+  {
+   "code": "B1",
+   "name": "skin_rear_r",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "B10",
+   "name": "pod_r_side1",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "B11",
+   "name": "rib_grip_bottom",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "B12",
+   "name": "stand_base",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "B13",
+   "name": "rib_grip_front",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "B14",
+   "name": "panel_r1",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "B2",
+   "name": "skin_rear_r_peg0",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 22,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "B3",
+   "name": "trigger0",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 4,
+   "mechanism": true
+  },
+  {
+   "code": "B4",
+   "name": "skin_rear_l",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "B5",
+   "name": "wall_l_rear",
+   "sheet": "B",
+   "color": "natural",
+   "qty": 2,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "C1",
+   "name": "target_plate",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 16,
+   "mechanism": true
+  },
+  {
+   "code": "C10",
+   "name": "wall_r_front",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 5,
+   "mechanism": false
+  },
+  {
+   "code": "C11",
+   "name": "rib_keel",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "C2",
+   "name": "grip_l",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 14,
+   "mechanism": false
+  },
+  {
+   "code": "C3",
+   "name": "skin_front_r",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "C4",
+   "name": "grip_r",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 14,
+   "mechanism": false
+  },
+  {
+   "code": "C5",
+   "name": "skin_front_l",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 8,
+   "mechanism": false
+  },
+  {
+   "code": "C6",
+   "name": "trigger2",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 4,
+   "mechanism": true
+  },
+  {
+   "code": "C7",
+   "name": "wheel0",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 2,
+   "step": 3,
+   "mechanism": true
+  },
+  {
+   "code": "C8",
+   "name": "wing_l",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  },
+  {
+   "code": "C9",
+   "name": "wing_r",
+   "sheet": "C",
+   "color": "natural",
+   "qty": 1,
+   "step": 11,
+   "mechanism": false
+  }
+ ]
+}

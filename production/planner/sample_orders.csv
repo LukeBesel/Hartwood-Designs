@@ -1,0 +1,5 @@
+order_id,date,kit,qty,customer,channel
+1001,2026-10-12,Star Slinger,2,Sample A,own site
+1002,2026-10-12,Emberwing,1,Sample B,Etsy
+1003,2026-10-13,Blossom Waltz,3,Sample C,own site
+1004,2026-10-13,blaster,1,Sample D,Etsy

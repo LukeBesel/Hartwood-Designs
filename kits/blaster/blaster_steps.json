@@ -348,14 +348,14 @@
      "code": "C27",
      "qty": 1,
      "sheet": "C",
-     "name": "nose_cap_peg",
+     "name": "nose_hook_peg",
      "color": "orange"
     },
     {
      "code": "C28",
      "qty": 1,
      "sheet": "C",
-     "name": "nose_hook_peg",
+     "name": "nose_cap_peg",
      "color": "orange"
     }
    ],
@@ -486,14 +486,14 @@
      "color": "natural"
     },
     {
-     "code": "C30",
+     "code": "C31",
      "qty": 1,
      "sheet": "C",
      "name": "stripe_l",
      "color": "orange"
     },
     {
-     "code": "C33",
+     "code": "C34",
      "qty": 1,
      "sheet": "C",
      "name": "skin_nose_l",
@@ -549,14 +549,14 @@
      "color": "natural"
     },
     {
-     "code": "C31",
+     "code": "C32",
      "qty": 1,
      "sheet": "C",
      "name": "reactor_r1",
      "color": "orange"
     },
     {
-     "code": "C32",
+     "code": "C33",
      "qty": 1,
      "sheet": "C",
      "name": "reactor_l1",
@@ -973,21 +973,21 @@
      "code": "C29",
      "qty": 1,
      "sheet": "C",
-     "name": "target_ring0",
+     "name": "target_ring2",
      "color": "orange"
     },
     {
-     "code": "C34",
+     "code": "C30",
      "qty": 1,
      "sheet": "C",
-     "name": "safety_plaque",
+     "name": "target_ring0",
      "color": "orange"
     },
     {
      "code": "C35",
      "qty": 1,
      "sheet": "C",
-     "name": "target_ring2",
+     "name": "safety_plaque",
      "color": "orange"
     },
     {
@@ -1662,15 +1662,6 @@
   },
   {
    "code": "C27",
-   "name": "nose_cap_peg",
-   "sheet": "C",
-   "color": "orange",
-   "qty": 1,
-   "step": 6,
-   "mechanism": false
-  },
-  {
-   "code": "C28",
    "name": "nose_hook_peg",
    "sheet": "C",
    "color": "orange",
@@ -1679,8 +1670,17 @@
    "mechanism": false
   },
   {
+   "code": "C28",
+   "name": "nose_cap_peg",
+   "sheet": "C",
+   "color": "orange",
+   "qty": 1,
+   "step": 6,
+   "mechanism": false
+  },
+  {
    "code": "C29",
-   "name": "target_ring0",
+   "name": "target_ring2",
    "sheet": "C",
    "color": "orange",
    "qty": 1,
@@ -1698,6 +1698,15 @@
   },
   {
    "code": "C30",
+   "name": "target_ring0",
+   "sheet": "C",
+   "color": "orange",
+   "qty": 1,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "C31",
    "name": "stripe_l",
    "sheet": "C",
    "color": "orange",
@@ -1706,7 +1715,7 @@
    "mechanism": false
   },
   {
-   "code": "C31",
+   "code": "C32",
    "name": "reactor_r1",
    "sheet": "C",
    "color": "orange",
@@ -1715,7 +1724,7 @@
    "mechanism": false
   },
   {
-   "code": "C32",
+   "code": "C33",
    "name": "reactor_l1",
    "sheet": "C",
    "color": "orange",
@@ -1724,7 +1733,7 @@
    "mechanism": false
   },
   {
-   "code": "C33",
+   "code": "C34",
    "name": "skin_nose_l",
    "sheet": "C",
    "color": "orange",
@@ -1733,17 +1742,8 @@
    "mechanism": false
   },
   {
-   "code": "C34",
-   "name": "safety_plaque",
-   "sheet": "C",
-   "color": "orange",
-   "qty": 1,
-   "step": 16,
-   "mechanism": false
-  },
-  {
    "code": "C35",
-   "name": "target_ring2",
+   "name": "safety_plaque",
    "sheet": "C",
    "color": "orange",
    "qty": 1,

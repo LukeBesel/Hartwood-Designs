@@ -15,7 +15,7 @@ The Star Slinger is a little starfighter with a big secret: a clockwork star whe
 | Difficulty | 4 of 5, about 5 to 6 h |
 | Sheets | 4 cut sheets = 3.0 full 12 x 12 in sheet equivalents (2 natural, 1 orange, 1 teal) |
 | Laser time per kit | 16.5 min cutting + 1.1 min sheet swaps = **17.6 min** (Estimate, planning speeds) |
-| Wood cost per kit | **$6.30** (Estimate, sheet prices in `engine/hartwood/config.py`) |
+| Wood cost per kit | **$6.34** (Estimate, sheet prices in `engine/hartwood/config.py`) |
 | Target price | $49.99 |
 | Extras in the box | #64 rubber bands (3.5 x 1/4 in), ammo x12; #16 rubber band, trigger return x2; 3/16 in birch dowel, 15.6 mm x3; wax stick x1; sandpaper 240 grit x1; paper targets (printed) x3; 3/16 in birch dowel, 63 mm (target hinge) x1 |
 
@@ -26,7 +26,8 @@ The Star Slinger is a little starfighter with a big secret: a clockwork star whe
 | Collision check | PASS: zero overlaps |
 | Nothing-floats check | PASS: every part touches another; model is one piece |
 | Assembly path check | PASS: every part slides into place without hitting a placed part |
-| Minimum feature check | PASS: no feature thinner than 2.5 mm |
+| Minimum feature check | PASS: every part is one piece; no feature thinner than 2.5 mm |
+| Pop-out check | PASS: 210 parts held by 353 bridges of 0.5 mm, none on a mating edge or a weak spot, holes cut first, nothing nested in a hole (16 bridges with a note, see warnings) |
 
 Fragile-part report: 45 small or thin parts, each cut with a spare: cockpit_side_l_peg, cockpit_side_r_peg, engine_panel_l_peg, engine_panel_r_peg, grip_l_peg, grip_r_peg, intake_l_peg, intake_r_peg, nose_cap_peg, panel_l0_peg, panel_l1_peg, panel_r0_peg, panel_r1_peg, reactor_l0_peg, reactor_l1_peg, reactor_r0_peg, reactor_r1_peg, safety_peg, skin_front_l_peg, skin_front_r_peg, skin_nose_l_peg, skin_nose_r_peg, skin_rear_l_peg, skin_rear_r_peg, stripe_l_peg, stripe_r_peg, target_ring0_peg, wing_stripe_l_peg, wing_stripe_r_peg.
 

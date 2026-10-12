@@ -78,12 +78,16 @@ def anchor_shape():
     pad = rounded(rect(-44, -70, -33, -56), 3.0)
     hook = circle(-32, -64, 3.4)                 # return band hooks here
     g = unary_union([arm_a, arm_b, boss, trig, pad, hook])
-    # keep clear of the wheel except the pallet tips
+    # keep clear of the wheel except the pallet tips; pallet B reaches in through the tooth gap on a finger
     clear = circle(*W, R_TIP + 1.2)
-    tips = unary_union([circle(*b_tip, 3.6), circle(*a_tip, 3.6)])
+    finger_b = LineString([b_tip, polar(W, R_TIP + 4.0, B_ang - 6.0)]).buffer(2.6, cap_style='round')
+    tips = unary_union([circle(*b_tip, 3.6), circle(*a_tip, 3.6), finger_b])
     g = g.difference(clear.difference(tips.buffer(0.01)))
     g = g.difference(wheel_shape().buffer(0.6))
-    return opening(g, 1.25)
+    g = opening(g, 1.25)
+    parts = list(getattr(g, 'geoms', [g]))
+    assert len(parts) == 1, f'anchor is {len(parts)} pieces: a pallet is cut off'
+    return g
 
 
 def hull_rear():
@@ -271,7 +275,7 @@ def build():
     for h in hooks:
         pierce(h, hpeg, fit='snug')
     # muzzle plug (fills the nose box end, flush) and cap, both blaze orange, locked by one peg
-    plug = Part('nose_plug', rect(-GAP / 2, -5.0, GAP / 2, 13.0), color='orange',
+    plug = Part('nose_plug', rect(-GAP / 2, -4.7, GAP / 2, 12.7), color='orange',   # 0.3 mm free at top and bottom for the bridges
                 mat=frame((NOSE_X - T / 2, 0, 0), -Z, Y), step=s_nose, insert=(-1, 0, 0), explode=25)
     cap = Part('nose_cap', rounded(rect(-ZS - T / 2, -8.0, ZS + T / 2, 16.0), 2.5), color='orange',
                mat=frame((NOSE_X + T / 2, 0, 0), -Z, Y), step=s_nose, insert=(-1, 0, 0), explode=25)

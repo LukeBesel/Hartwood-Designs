@@ -5,8 +5,8 @@
 2. floating        : every solid touches at least one other solid, and the model is one piece.
 3. assembly paths  : each new solid is swept from its exploded position to its final position along
                      its insertion direction; it must never pass through a solid that is already placed.
-4. features        : minimum feature (no wall, bridge or tab thinner than MIN_FEATURE) and a
-                     fragile-part report (long thin parts, tiny parts).
+4. features        : every part is one piece, minimum feature (no wall, bridge or tab thinner than
+                     MIN_FEATURE) and a fragile-part report (long thin parts, tiny parts).
 """
 from __future__ import annotations
 
@@ -212,6 +212,11 @@ def check_features(kit):
         if g.is_empty or g.area < 1.0:
             issues.append({'part': p.name, 'width': 0.0, 'length': 0.0, 'at': [0, 0], 'why': 'empty outline'})
             continue
+        pieces = [q for q in getattr(g, 'geoms', [g]) if q.area >= 1.0]
+        if len(pieces) > 1:
+            c = [round(v, 1) for v in min(pieces, key=lambda q: q.area).centroid.coords[0]]
+            issues.append({'part': p.name, 'width': 0.0, 'length': 0.0, 'at': c,
+                           'why': f'{len(pieces)} separate pieces: a part must be one piece (smallest piece at {c})'})
         for t in thin_regions(g):
             issues.append({'part': p.name, **t})
         mrr = g.minimum_rotated_rectangle
@@ -227,8 +232,8 @@ def check_features(kit):
             fragile.append({'part': p.name, 'why': ', '.join(reasons), 'spares': p.spares})
     return {'name': 'Minimum feature check', 'pass': not issues, 'count': len(issues), 'details': issues,
             'fragile': fragile,
-            'summary': (f'no feature thinner than {C.MIN_FEATURE} mm' if not issues else
-                        f'{len(issues)} features thinner than {C.MIN_FEATURE} mm')}
+            'summary': (f'every part is one piece; no feature thinner than {C.MIN_FEATURE} mm' if not issues else
+                        f'{len(issues)} problems: parts in several pieces or features thinner than {C.MIN_FEATURE} mm')}
 
 
 def run_all(kit, spacing=1.0):

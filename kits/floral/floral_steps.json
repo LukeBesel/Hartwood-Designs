@@ -6,7 +6,7 @@
  "difficulty": 3,
  "build_hours": "4 to 5 h",
  "price": 49.99,
- "piece_count": 156,
+ "piece_count": 158,
  "unique_codes": 106,
  "sheets": [
   {
@@ -20,14 +20,14 @@
    "letter": "B",
    "color": "white",
    "label": "White",
-   "parts": 30,
+   "parts": 29,
    "spares": 0
   },
   {
    "letter": "C",
    "color": "white",
    "label": "White",
-   "parts": 14,
+   "parts": 15,
    "spares": 0
   },
   {
@@ -41,7 +41,7 @@
    "letter": "E",
    "color": "green",
    "label": "Green",
-   "parts": 19,
+   "parts": 21,
    "spares": 0
   },
   {
@@ -113,24 +113,17 @@
      "color": "white"
     },
     {
-     "code": "B13",
+     "code": "B10",
      "qty": 4,
      "sheet": "B",
      "name": "foot0_4",
      "color": "white"
     },
     {
-     "code": "B18",
-     "qty": 1,
-     "sheet": "B",
-     "name": "foot0_2",
-     "color": "white"
-    },
-    {
      "code": "C1",
-     "qty": 3,
+     "qty": 4,
      "sheet": "C",
-     "name": "foot1_2",
+     "name": "foot0_2",
      "color": "white"
     },
     {
@@ -346,10 +339,17 @@
      "color": "pink"
     },
     {
-     "code": "E5",
+     "code": "E10",
      "qty": 2,
      "sheet": "E",
-     "name": "wall_left_leaves",
+     "name": "wall_left_leaf_r",
+     "color": "green"
+    },
+    {
+     "code": "E12",
+     "qty": 2,
+     "sheet": "E",
+     "name": "wall_left_leaf_l",
      "color": "green"
     },
     {
@@ -557,14 +557,14 @@
      "color": "white"
     },
     {
-     "code": "B10",
+     "code": "B11",
      "qty": 1,
      "sheet": "B",
      "name": "ring10",
      "color": "white"
     },
     {
-     "code": "B12",
+     "code": "B13",
      "qty": 1,
      "sheet": "B",
      "name": "ring08",
@@ -620,7 +620,7 @@
      "color": "white"
     },
     {
-     "code": "B11",
+     "code": "B12",
      "qty": 1,
      "sheet": "B",
      "name": "guide",
@@ -704,7 +704,7 @@
      "color": "pink"
     },
     {
-     "code": "E12",
+     "code": "E11",
      "qty": 1,
      "sheet": "E",
      "name": "frog",
@@ -781,14 +781,7 @@
      "color": "pink"
     },
     {
-     "code": "E9",
-     "qty": 1,
-     "sheet": "E",
-     "name": "rose_leaf0",
-     "color": "green"
-    },
-    {
-     "code": "E10",
+     "code": "E8",
      "qty": 1,
      "sheet": "E",
      "name": "rose_head0",
@@ -799,6 +792,13 @@
      "qty": 1,
      "sheet": "E",
      "name": "rose_stem",
+     "color": "green"
+    },
+    {
+     "code": "E16",
+     "qty": 1,
+     "sheet": "E",
+     "name": "rose_leaf0",
      "color": "green"
     }
    ],
@@ -1005,7 +1005,7 @@
      "color": "green"
     },
     {
-     "code": "E6",
+     "code": "E5",
      "qty": 1,
      "sheet": "E",
      "name": "sunflower_leaf0",
@@ -1040,7 +1040,7 @@
    "view": null,
    "parts": [
     {
-     "code": "E11",
+     "code": "E9",
      "qty": 1,
      "sheet": "E",
      "name": "lavender2_stem",
@@ -1138,14 +1138,14 @@
      "color": "green"
     },
     {
-     "code": "E6",
+     "code": "E5",
      "qty": 1,
      "sheet": "E",
      "name": "rosebud_leaf0",
      "color": "green"
     },
     {
-     "code": "E8",
+     "code": "E6",
      "qty": 1,
      "sheet": "E",
      "name": "rosebud_head0",
@@ -1173,7 +1173,7 @@
      "color": "green"
     },
     {
-     "code": "E6",
+     "code": "E5",
      "qty": 1,
      "sheet": "E",
      "name": "cornflower_leaf0",
@@ -1437,6 +1437,15 @@
   },
   {
    "code": "B10",
+   "name": "foot0_4",
+   "sheet": "B",
+   "color": "white",
+   "qty": 4,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "B11",
    "name": "ring10",
    "sheet": "B",
    "color": "white",
@@ -1445,7 +1454,7 @@
    "mechanism": false
   },
   {
-   "code": "B11",
+   "code": "B12",
    "name": "guide",
    "sheet": "B",
    "color": "white",
@@ -1454,21 +1463,12 @@
    "mechanism": false
   },
   {
-   "code": "B12",
+   "code": "B13",
    "name": "ring08",
    "sheet": "B",
    "color": "white",
    "qty": 1,
    "step": 14,
-   "mechanism": false
-  },
-  {
-   "code": "B13",
-   "name": "foot0_4",
-   "sheet": "B",
-   "color": "white",
-   "qty": 4,
-   "step": 1,
    "mechanism": false
   },
   {
@@ -1505,15 +1505,6 @@
    "color": "white",
    "qty": 1,
    "step": 6,
-   "mechanism": false
-  },
-  {
-   "code": "B18",
-   "name": "foot0_2",
-   "sheet": "B",
-   "color": "white",
-   "qty": 1,
-   "step": 1,
    "mechanism": false
   },
   {
@@ -1590,10 +1581,10 @@
   },
   {
    "code": "C1",
-   "name": "foot1_2",
+   "name": "foot0_2",
    "sheet": "C",
    "color": "white",
-   "qty": 3,
+   "qty": 4,
    "step": 1,
    "mechanism": false
   },
@@ -1851,29 +1842,29 @@
   },
   {
    "code": "E10",
-   "name": "rose_head0",
+   "name": "wall_left_leaf_r",
    "sheet": "E",
    "color": "green",
-   "qty": 1,
-   "step": 17,
+   "qty": 2,
+   "step": 8,
    "mechanism": false
   },
   {
    "code": "E11",
-   "name": "lavender2_stem",
-   "sheet": "E",
-   "color": "green",
-   "qty": 1,
-   "step": 22,
-   "mechanism": false
-  },
-  {
-   "code": "E12",
    "name": "frog",
    "sheet": "E",
    "color": "green",
    "qty": 1,
    "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "E12",
+   "name": "wall_left_leaf_l",
+   "sheet": "E",
+   "color": "green",
+   "qty": 2,
+   "step": 8,
    "mechanism": false
   },
   {
@@ -1897,6 +1888,15 @@
   {
    "code": "E15",
    "name": "rose_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "E16",
+   "name": "rose_leaf0",
    "sheet": "E",
    "color": "green",
    "qty": 1,
@@ -1932,20 +1932,20 @@
   },
   {
    "code": "E5",
-   "name": "wall_left_leaves",
-   "sheet": "E",
-   "color": "green",
-   "qty": 2,
-   "step": 8,
-   "mechanism": false
-  },
-  {
-   "code": "E6",
    "name": "sunflower_leaf0",
    "sheet": "E",
    "color": "green",
    "qty": 3,
    "step": 21,
+   "mechanism": false
+  },
+  {
+   "code": "E6",
+   "name": "rosebud_head0",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 23,
    "mechanism": false
   },
   {
@@ -1959,20 +1959,20 @@
   },
   {
    "code": "E8",
-   "name": "rosebud_head0",
-   "sheet": "E",
-   "color": "green",
-   "qty": 1,
-   "step": 23,
-   "mechanism": false
-  },
-  {
-   "code": "E9",
-   "name": "rose_leaf0",
+   "name": "rose_head0",
    "sheet": "E",
    "color": "green",
    "qty": 1,
    "step": 17,
+   "mechanism": false
+  },
+  {
+   "code": "E9",
+   "name": "lavender2_stem",
+   "sheet": "E",
+   "color": "green",
+   "qty": 1,
+   "step": 22,
    "mechanism": false
   },
   {

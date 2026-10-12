@@ -212,7 +212,10 @@ def build():
         leafs = unary_union([affinity.translate(affinity.rotate(S.leaf(30, 12, 2), a, origin=(0, 0)), 0, wy0 + 12)
                              for a in (20, 160)]).buffer(0)
         leafs = leafs.difference(circle(0, wy0 + 36, 21)).buffer(-1.4).buffer(1.4)
-        overlay(f'{side}_leaves', leafs, w, 'green', [(-14.1, wy0 + 17.1), (14.1, wy0 + 17.1)], 1)
+        # two separate leaves: two parts, one peg each
+        for lf in sorted(getattr(leafs, 'geoms', [leafs]), key=lambda q: q.centroid.x):
+            px = -14.1 if lf.centroid.x < 0 else 14.1
+            overlay(f'{side}_leaf_{"l" if px < 0 else "r"}', lf, w, 'green', [(px, wy0 + 17.1)], 1)
     bw = walls['wall_back']
     plaque = rounded(rect_c(0, wy0 + 33, 76, 26), 6)
     from hartwood.text import text_outline
@@ -456,7 +459,8 @@ def _stem(R_head, vase_top, H_head, tilt_deg, kind):
     outline = unary_union(parts).buffer(0.4).buffer(-0.4)
     # nothing of the stem may poke past the collar except the peg
     beyond = Polygon([c0 - perp * 60, c0 + perp * 60, c0 + perp * 60 + e * 80, c0 - perp * 60 + e * 80])
-    outline = outline.difference(beyond).union(peg).buffer(0)
+    peg_root = Polygon([c0 - perp * 3 - e * 1.0, c0 + perp * 3 - e * 1.0, c0 + perp * 3 + e * 0.5, c0 - perp * 3 + e * 0.5])
+    outline = outline.difference(beyond).union(peg).union(peg_root).buffer(0)   # peg overlaps the collar: one piece
     peg_only = Polygon([c0 - perp * 3 + e * 0.05, c0 + perp * 3 + e * 0.05, c0 + perp * 3 + e * (peg_len + 0.5),
                         c0 - perp * 3 + e * (peg_len + 0.5)])
     veins = S.clip_lines(veins, lf.difference(body.buffer(1.0)), 0.8)

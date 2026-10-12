@@ -14,7 +14,7 @@ MIN_FEATURE = 2.5           # no wall, bridge or tab thinner than this
 
 # --- laser ----------------------------------------------------------------
 KERF = 0.15                 # full kerf width of the cut (Estimate, measure with coupon)
-BRIDGE = 0.6                # micro-bridge that holds a part in the sheet
+BRIDGE = 0.5                # micro-bridge that holds a part in the sheet (Estimate; pick from the coupon bridge tags)
 
 # Fit classes. Value = how much each side of a cut feature (slot, hole) moves outward
 # after kerf compensation. Positive = looser. Calibrate with the coupon.
@@ -59,10 +59,24 @@ MATERIALS = {
 }
 
 # --- cost inputs (Estimate; see supply/ for sources) -----------------------
-SHEET_COST = {               # USD per 12 x 12 in x 3 mm sheet
-    'natural': 1.60,
-    'colored': 3.10,
+SHEET_COST = {               # USD per 12 x 12 in x 3 mm sheet (research/raw/search_log.md S21, 2026-10-12)
+    'natural': 0.92,         # Verified: 48 to 50 packs at $0.89 to $0.92 a sheet
+    'colored': 4.50,         # Estimate: TwoTrees about $3.80, Maker Boards $6.67 a sheet
 }
 
 # --- links (TODO_LUCAS: set your real domain, then rerun engine/booklet.py so the QR codes point to it) ---
 SITE_URL = 'https://TODO-LUCAS-domain.example'
+
+# --- color: 'sheets' = pre-colored sheets (current default), 'print' = UV-printed color on natural sheets ---
+COLOR_MODE = 'sheets'
+PRINT = {
+    'bleed_mm': 0.6,              # color runs this far past the cut line, so a small misalignment never shows wood
+    'targets': [(4.0, 4.0), (296.0, 296.0)],   # registration targets (sheet mm) for LightBurn Print and Cut
+    'target_r': 2.5,
+    'rate_m2_per_h': 1.0,         # Estimate: desktop UV printer, color + white, between the published claims (see research/color_printing.md)
+    'overhead_min': 2.0,          # Estimate: load, camera scan, unload per printed sheet
+    'ink_ml_per_m2': 25.0,        # Estimate: CMYK plus white underbase on wood
+    'ink_usd_per_ml': 0.16,       # Verified (search summary, 2026-10-12): xTool O1 UV ink $19.99 per 125 ml
+    'two_sided': True,            # print the back of parts whose back shows (False halves print time on some kits)
+    'bed_mm': (330.0, 420.0),     # Verified (search summary, 2026-10-12): A3+ bed of xTool O1 Omni and eufyMake E1
+}

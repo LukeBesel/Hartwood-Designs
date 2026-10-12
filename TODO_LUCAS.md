@@ -18,3 +18,9 @@ Search the project for `TODO_LUCAS` to find every placeholder in files.
 ## Materials
 - [ ] Order one mixed 8-color pack of Creatorally 12 x 12 x 1/8 in pre-painted basswood and check that Pink, Haze Blue, Yellow and White look pastel enough.
 - [ ] Check "Sunset Orange" against blaze orange (FED-STD-595 color 12199) for the blaster muzzle tip, or buy a blaze orange sheet.
+
+## Pop-out and printed color (added 2026-10-12)
+- [ ] Cut the coupon and test the four bridge tags (0.3 / 0.4 / 0.5 / 0.6 mm): pick the thinnest one that survives a shake test and still pops out with a thumb. Put it in `BRIDGE` in `engine/hartwood/config.py` and rerun the kits.
+- [ ] Look at the bridge maps in `kits/<kit>/popout/` (green = good bridge, orange = note, blue = sliding edge kept clear). Press out one full sheet per kit and note any part that was hard to free.
+- [ ] Decide on printed color (see `research/color_printing.md`). If yes: ask xTool or eufyMake for a test print on 3 mm basswood, time a full-sheet print, then buy the printer and set `COLOR_MODE = 'print'`. Every print file is already in `kits/<kit>/print_mode/`.
+- [ ] If you print: make two identical corner jigs (printer bed and laser bed) and try LightBurn Print and Cut once with the targets in the cut files.

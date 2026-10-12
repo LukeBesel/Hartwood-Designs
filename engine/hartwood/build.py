@@ -11,6 +11,8 @@ from shapely.ops import unary_union
 
 from . import checks as CK
 from . import config as C
+from . import popout as PO
+from . import printfiles as PF
 from .cutfiles import sheet_paths, tile_batch, write_bed_svg, write_dxf, write_lbrn, write_svg
 from .export import export_glb, steps_json
 from .nest import assign_codes, nest, verify
@@ -56,7 +58,8 @@ def parts_map_png(sheet, sp, path, px_per_mm=3.0):
     im.save(path)
 
 
-def build(kit, outdir, run_checks=True, check_spacing=1.0, log=print):
+def build(kit, outdir, run_checks=True, check_spacing=1.0, log=print, color_mode=None):
+    mode = color_mode or C.COLOR_MODE
     t0 = time.time()
     os.makedirs(outdir, exist_ok=True)
     report = {'kit': kit.slug, 'name': kit.name}
@@ -66,7 +69,10 @@ def build(kit, outdir, run_checks=True, check_spacing=1.0, log=print):
         report['checks'] = res
         for r in res:
             log(f"  {r['name']}: {'PASS' if r['pass'] else 'FAIL'} - {r['summary']}")
-    sheets = nest(kit.parts)
+    PO.mating_edges(kit)           # edges that touch other parts: no bridges there
+    if mode == 'print':
+        PF.back_visibility(kit)    # which colored parts show their back face (print both sides)
+    sheets = nest(kit.parts, mode=mode, allow_tiles=(mode != 'print'))
     assign_codes(sheets, kit.name)
     probs = verify(sheets)
     report['nest_problems'] = probs
@@ -75,10 +81,14 @@ def build(kit, outdir, run_checks=True, check_spacing=1.0, log=print):
     import shutil
     cdir = os.path.join(outdir, 'cutfiles'); shutil.rmtree(cdir, ignore_errors=True); os.makedirs(cdir)
     mdir = os.path.join(outdir, 'parts_map'); shutil.rmtree(mdir, ignore_errors=True); os.makedirs(mdir)
+    bdir = os.path.join(outdir, 'popout'); shutil.rmtree(bdir, ignore_errors=True); os.makedirs(bdir)
     sps = []
     batch = []      # physical 12 x 12 sheets to cut (tiles composed into full sheets)
+    prints = []
     for sh in sheets:
         sp = sheet_paths(sh)
+        if mode == 'print':
+            sp.targets = [tuple(t) for t in C.PRINT['targets']]
         sps.append(sp)
         tag = '' if sh.tile == 'full' else f'_{sh.tile}'
         base = os.path.join(cdir, f'{kit.slug}_sheet_{sh.letter}_{sh.color}{tag}')
@@ -87,6 +97,9 @@ def build(kit, outdir, run_checks=True, check_spacing=1.0, log=print):
         write_dxf(sp, base + '.dxf')
         write_lbrn([sp], base + '.lbrn2')
         parts_map_png(sh, sp, os.path.join(mdir, f'sheet_{sh.letter}.png'))
+        PO.bridge_map_png(sh, sp, os.path.join(bdir, f'sheet_{sh.letter}.png'))
+        if mode == 'print':
+            prints.append({'sheet': sh.letter, **PF.write_all(sh, sp, base)})
         if sh.tile == 'full':
             batch.append((sp, 1))
         else:
@@ -97,6 +110,11 @@ def build(kit, outdir, run_checks=True, check_spacing=1.0, log=print):
             write_dxf(tb, os.path.join(cdir, f'{kit.slug}_sheet_{sh.letter}_{sh.color}_x{n}_full.dxf'))
             write_lbrn([tb], os.path.join(cdir, f'{kit.slug}_sheet_{sh.letter}_{sh.color}_x{n}_full.lbrn2'))
             batch.append((tb, n))
+    pop = PO.check_popout(sheets, sps)
+    log(f"  {pop['name']}: {'PASS' if pop['pass'] else 'FAIL'} - {pop['summary']}")
+    if run_checks:
+        report['checks'].append(pop)
+    report['popout'] = pop
     # laser jobs: two full sheets per job on the bed
     jobs = []
     fulls = [b for b in batch]
@@ -138,8 +156,20 @@ def build(kit, outdir, run_checks=True, check_spacing=1.0, log=print):
         'cut_minutes_per_kit': round((laser_s + swap_s) / 60, 1),
         'wood_cost_usd': round(mat_cost, 2),
         'mechanism_parts': sorted({p.code for p in kit.parts if p.mechanism}),
+        'color_mode': mode,
         'build_seconds': round(time.time() - t0, 1),
     })
+    if mode == 'print':
+        fr = [p['front'] for p in prints if p.get('front')]
+        bk = [p['back'] for p in prints if p.get('back')]
+        report['print'] = {
+            'sheets': prints, 'printed_sheet_sides': len(fr) + len(bk),
+            'print_minutes': round(sum(x['minutes'] for x in fr + bk), 1),
+            'ink_usd': round(sum(x['ink_usd'] for x in fr + bk), 2),
+            'two_sided_parts': sorted({p.code for p in kit.parts if p.__dict__.get('print_back')}),
+            'colored_parts': sum(1 for p in kit.parts if p.color != 'natural')}
+        log(f"  print: {len(fr)} front + {len(bk)} back sides, about {report['print']['print_minutes']} min printing, "
+            f"ink ${report['print']['ink_usd']}")
     if run_checks:
         report['all_checks_pass'] = all(r['pass'] for r in report['checks']) and not probs
     json.dump(report, open(os.path.join(outdir, f'{kit.slug}_report.json'), 'w'), indent=1, default=str)

@@ -35,3 +35,17 @@ Labels: **Verified** = backed by a source in `research/sources.md`. **Estimate**
 - D021: Blaster look = starship (wings, canopy, thruster, tail fin) in natural, Haze Blue and orange. No real-gun details (no magazine shape, no rails, no stock). Reason: the spec, Etsy's weapons policy (S15) and 15 CFR 1150.3(d)-style bright colors.
 - D022: Blaster blaze orange: the nose box is orange around its full circumference for 32 mm, and an orange plug plus cap close the muzzle end flush. Reason: covers both 15 CFR 1150.3(a) (plug, recess at most 6 mm) and (b) (marking at least 6 mm deep around the circumference).
 - D023: Blaster ships with a display stand, swinging target and a safety plaque ("AIM AT TARGETS / NEVER AT FACES"). Reason: it is shelf decor first; the plaque repeats the safety rule every time someone picks it up.
+
+## Pop-out and color (added after Lucas's question about popping parts out and ROKR-style color)
+- D024: New fifth design check, the pop-out check (`engine/hartwood/popout.py`). Bridges go only where the part is at least 4 mm wide, on straight runs, and never on an edge that slides into another part. Sliding edges are found from the 3D model: tab sides, peg sides, half-lap slots, a plug in a box. A bridge may sit on an edge that only butts against another part (a peg end, a rib edge on a wall), with a note. Holes are cut first with no bridges, and no part may sit inside another part's hole. Reason: parts must press out with a thumb and the leftover nub must never make a joint tight.
+- D025: Bridge width 0.5 mm (was 0.6), LightBurn's default tab size. The coupon now tests 0.3, 0.4, 0.5 and 0.6 mm. Reason: easier pop-out; to be confirmed on real wood.
+- D026: Nesting never puts a part inside another part's hole. Reason: the hole is cut first and its waste can drop through the bed, taking the small part with it. 8 parts had landed in holes (blaster and floral); fixed.
+- D027: New rule in the minimum feature check: every part must be one piece. It found real bugs:
+  - the blaster's front pallet tip was cut off from the trigger (the mechanism could not have worked);
+  - the dragon's wing and foot tabs were 0.2 mm short of their parts;
+  - two flower stems had a loose head peg;
+  - the floral wall leaves were two pieces sharing one part.
+
+  All are fixed; the floral kit now has 158 parts.
+- D028: Color files are built both ways. The default (every booklet and app code matches it) is pre-colored sheets, so you can launch with no extra machine. A complete UV-print version of every kit is in `kits/<kit>/print_mode/`: natural sheets, print files with a 0.6 mm bleed, a white underlayer, back-side files, and LightBurn Print and Cut targets. **Recommendation: buy a desktop UV printer (about $1,700) and switch with `COLOR_MODE = 'print'`.** At real sheet prices it saves $3 to $14 of material per kit and lifts the flower kit from a 1% to a 21% margin at $49.99. It pays back in about 12 weeks (Estimate). Without a printer, price Blossom Waltz at $59.99. See `research/color_printing.md` and `supply/unit_economics.csv`.
+- D029: Sheet prices updated from research (S21): natural $0.92 and colored about $4.50 a sheet (was $1.60 and $3.10). Reason: real 48 to 50 packs of natural sheets are cheaper, and colored sheets cost more than assumed.
