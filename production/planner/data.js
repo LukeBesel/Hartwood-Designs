@@ -196,7 +196,7 @@ window.HW_DATA = {
     "sheet_natural": 4.0,
     "sheet_color": 2.0,
     "sandpaper": 1,
-    "dowel": 84.7,
+    "dowel": 73.7,
     "bag": 2,
     "box": 1,
     "booklet": 1,
@@ -326,7 +326,7 @@ window.HW_DATA = {
     "movement": 1,
     "wax": 1,
     "sandpaper": 1,
-    "dowel": 60.5,
+    "dowel": 55.0,
     "bag": 2,
     "box": 1,
     "booklet": 1,
@@ -452,7 +452,7 @@ window.HW_DATA = {
    "cost": 0.000437636761487965,
    "lead_days": 5,
    "pack": 22850,
-   "reorder_at": 2591,
+   "reorder_at": 2440,
    "order_qty": 22850,
    "suppliers": [
     {
@@ -614,9 +614,9 @@ window.HW_DATA = {
    ]
   },
   "sticker": {
-   "name": "Brand label on the box lid (4 x 4 in)",
-   "unit": "label",
-   "cost": 0.25,
+   "name": "Box labels: lid label (4 x 4 in) + info and batch label (4 x 2 in)",
+   "unit": "set",
+   "cost": 0.35,
    "lead_days": 7,
    "pack": 250,
    "reorder_at": 34,
@@ -624,12 +624,12 @@ window.HW_DATA = {
    "suppliers": [
     {
      "name": "Any online sticker printer (quote TODO_LUCAS)",
-     "price": "about $0.25",
+     "price": "about $0.35 a set",
      "status": "Estimate"
     },
     {
-     "name": "In-house: label printer + color labels",
-     "price": "about $0.20",
+     "name": "In-house: color inkjet + matte label sheets",
+     "price": "about $0.25 a set",
      "status": "Estimate"
     }
    ]

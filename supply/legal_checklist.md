@@ -35,6 +35,10 @@ I am not a lawyer. These are the rules the research turned up, from secondary so
 ## 5. California Prop 65 (wood dust)
 - [ ] Wood dust has been on the Prop 65 list since 2010. **Businesses with fewer than 10 employees are exempt** by law. Retail partners sometimes require a warning by contract, so check before you sign wholesale deals. *(S22, OEHHA presentation)*
 
+## 5b. Box labels
+- [ ] **Label every box** with what it is, the net contents (count of parts and extras), and your business name and place of business (Fair Packaging and Labeling Act, FTC). The info label in `brand/packaging/` has all three; fill in your city. *(S24)*
+- [ ] **No unqualified "Made in USA".** The FTC rule (16 CFR 323) needs all or virtually all parts made in the US. The labels say "Designed and laser cut in Minnesota with imported materials." Check where your plywood, bands and music movements are made before changing that line. *(S24)*
+
 ## 6. Insurance
 - [ ] **Product liability plus general liability.** The average small-business product liability policy costs about $1,192 a year (AdvisorSmith). Toys are priced higher, and $1 million or $2 million limits are typical. Tell the insurer it is a 14+ hobby kit. Many marketplaces ask for proof of coverage at some sales level. *(S22)*
 - [ ] **Home insurance:** tell your home insurer about the laser in the garage. Many policies exclude business equipment, or fires caused by it.

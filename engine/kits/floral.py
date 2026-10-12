@@ -243,8 +243,10 @@ def build():
     s_tt = nxt('Fit the drive dowel and the turntable', tip='Wax the dowel where it turns in the lid.',
                icons=['wax', 'press'], test='Wind the movement. The turntable should spin smoothly.')
     dowel = Rod('drive dowel', (0, cy0 + 2 * T, 0), (0, VASE_Y, 0), step=s_tt, insert=DOWN, mechanism=True,
-                note='3/16 in birch dowel cut to length')
+                note=f'3/16 in birch dowel, {VASE_Y - (cy0 + 2 * T):.0f} mm')
     k.add(dowel)
+    k.extras.pop('3/16 in birch dowel, 55 mm', None)          # the extras list follows the modeled length
+    k.extras[f'3/16 in birch dowel, {dowel.length:.0f} mm'] = 1
     hub_y = TOP_Y + T + 1.0
     hpegs = []
     for i, sx in enumerate((1, -1)):

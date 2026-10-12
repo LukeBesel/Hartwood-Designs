@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12.0in" height="29.5in" viewBox="0 0 864.0 2124.0">
+<rect x="0" y="0" width="864.0" height="2124.0" fill="none" stroke="#e0007a" stroke-width="1"/>
+<line x1="0" y1="885.6" x2="864.0" y2="885.6" stroke="#e0007a" stroke-width="1" stroke-dasharray="6 4"/>
+<line x1="0" y1="1040.4" x2="864.0" y2="1040.4" stroke="#e0007a" stroke-width="1" stroke-dasharray="6 4"/>
+<line x1="0" y1="1926.0" x2="864.0" y2="1926.0" stroke="#e0007a" stroke-width="1" stroke-dasharray="6 4"/>
+<line x1="0" y1="2080.7999999999997" x2="864.0" y2="2080.7999999999997" stroke="#e0007a" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="432.0" y="446.8" font-family="Arial" font-size="12" fill="#e0007a" text-anchor="middle">TOP of box (front of pack)</text>
+<text x="432.0" y="967.0" font-family="Arial" font-size="12" fill="#e0007a" text-anchor="middle">front edge</text>
+<text x="432.0" y="1487.2" font-family="Arial" font-size="12" fill="#e0007a" text-anchor="middle">BOTTOM of box (back of pack)</text>
+<text x="432.0" y="2007.4" font-family="Arial" font-size="12" fill="#e0007a" text-anchor="middle">back edge (upside down)</text>
+<text x="432.0" y="2106.4" font-family="Arial" font-size="12" fill="#e0007a" text-anchor="middle">glue flap</text>
+<text x="6" y="14" font-family="Arial" font-size="9" fill="#e0007a">Sleeve dieline, trim size 12.0 x 29.50 in. Solid = cut, dashed = fold. Panel sizes are Estimates for a 12 x 12 x 2 in mailer: measure a real box first.</text></svg>

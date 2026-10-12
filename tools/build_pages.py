@@ -223,7 +223,7 @@ def kit_page(k):
     <p class="lead">{E(k["tagline"])}</p>
     <p class="price big">${k["price"]:.2f}</p>
     <button class="btn btn-primary btn-wide" data-add-to-cart="{kit}" data-name="{E(k["name"])}" data-price="{k["price"]}">Add to cart</button>
-    <p class="small muted">Ships flat in a 12.5 x 12.5 in box. <span class="todo">{STORE_NOTE}</span></p>
+    <p class="small muted">Ships flat in a 12 x 12 x 2 in box. <span class="todo">{STORE_NOTE}</span></p>
     <ul class="feature-list">{feats}</ul>
     {safety}
   </div>

@@ -313,4 +313,11 @@ Full notes with the exact facts per source: [`raw/search_log.md`](raw/search_log
 - [https://www.eufymake.com/ca/product-parameter](https://www.eufymake.com/ca/product-parameter) - checked 2026-10-11 - eufyMake UV Printer E1 size 590 x 250 x 407 mm (W x D x H), 20 kg.
 - [https://dentonrc.com/online_features/press_releases/omtech-launches-polar-2-expanding-desktop-laser-capabilities-for-small-businesses-and-makers/article_614b5c25-8f1a-53c1-b860-170fb683589b.html](https://dentonrc.com/online_features/press_releases/omtech-launches-polar-2-expanding-desktop-laser-capabilities-for-small-businesses-and-makers/article_614b5c25-8f1a-53c1-b860-170fb683589b.html) - checked 2026-10-11 - OMTech Polar 2: 28 x 14 in work area, 16MP camera, autofocus, air assist, exhaust, LightBurn; external size of the 70W not found in any result (TODO_LUCAS: meas
 
-Total distinct source URLs: 237
+## S24 Packaging labels (checked 2026-10-12)
+
+- [https://www.ftc.gov/enforcement/statutes/fair-packaging-and-labeling-act](https://www.ftc.gov/enforcement/statutes/fair-packaging-and-labeling-act) - checked 2026-10-11 - Fair Packaging and Labeling Act: each consumer commodity package must state the identity of the product, the name and place of business of the manufacturer, pac
+- [https://www.nist.gov/pml/owm/packaging-and-labeling-requirements-faqs](https://www.nist.gov/pml/owm/packaging-and-labeling-requirements-faqs) - checked 2026-10-11 - Fair Packaging and Labeling Act: each consumer commodity package must state the identity of the product, the name and place of business of the manufacturer, pac
+- [https://www.canr.msu.edu/news/ftc-s-new-made-in-the-usa-rule](https://www.canr.msu.edu/news/ftc-s-new-made-in-the-usa-rule) - checked 2026-10-11 - FTC Made in USA Labeling Rule (16 CFR 323, from 2021-08-13): an unqualified "Made in USA" claim needs final assembly in the US, all significant processing in th
+- [https://mcguirewoods.com/client-resources/alerts/2022/8/ftc-brings-fourth-enforcement-action-under-made-in-usa-labeling-rule](https://mcguirewoods.com/client-resources/alerts/2022/8/ftc-brings-fourth-enforcement-action-under-made-in-usa-labeling-rule) - checked 2026-10-11 - FTC Made in USA Labeling Rule (16 CFR 323, from 2021-08-13): an unqualified "Made in USA" claim needs final assembly in the US, all significant processing in th
+
+Total distinct source URLs: 241

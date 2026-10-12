@@ -256,21 +256,21 @@
    ]
   },
   "sticker": {
-   "name": "Brand label on the box lid (4 x 4 in)",
-   "unit": "label",
-   "cost": 0.25,
+   "name": "Box labels: lid label (4 x 4 in) + info and batch label (4 x 2 in)",
+   "unit": "set",
+   "cost": 0.35,
    "status": "Estimate",
    "lead_days": 7,
    "pack": 250,
    "suppliers": [
     [
      "Any online sticker printer (quote TODO_LUCAS)",
-     "about $0.25",
+     "about $0.35 a set",
      "Estimate"
     ],
     [
-     "In-house: label printer + color labels",
-     "about $0.20",
+     "In-house: color inkjet + matte label sheets",
+     "about $0.25 a set",
      "Estimate"
     ]
    ]
@@ -324,12 +324,12 @@
  "summary": {
   "blaster": {
    "name": "Star Slinger",
-   "materials": 12.866257768052517,
+   "materials": 12.966257768052516,
    "ship": 9.3,
    "labor": 7.866666666666667,
    "labor_min": 23.6,
    "weight_lb": 1.918002,
-   "materials_print": 9.496257768052518,
+   "materials_print": 9.596257768052517,
    "labor_print": 9.333333333333334,
    "wood_sheets": 6.34,
    "wood_print": 2.7600000000000002,
@@ -338,12 +338,12 @@
   },
   "dragon": {
    "name": "Emberwing",
-   "materials": 18.59826783369803,
+   "materials": 18.693453829321662,
    "ship": 11.3,
    "labor": 10.133333333333333,
    "labor_min": 30.4,
    "weight_lb": 3.0643940000000005,
-   "materials_print": 10.788267833698033,
+   "materials_print": 10.883453829321663,
    "labor_print": 11.299999999999999,
    "wood_sheets": 12.68,
    "wood_print": 4.6000000000000005,
@@ -352,12 +352,12 @@
   },
   "floral": {
    "name": "Blossom Waltz",
-   "materials": 27.44767702407002,
+   "materials": 27.545270021881837,
    "ship": 11.3,
    "labor": 8.9,
    "labor_min": 26.7,
    "weight_lb": 3.0643940000000005,
-   "materials_print": 13.33767702407002,
+   "materials_print": 13.435270021881836,
    "labor_print": 13.166666666666666,
    "wood_sheets": 18.46,
    "wood_print": 3.68,
@@ -366,7 +366,7 @@
   }
  },
  "startup_totals": {
-  "required": 7518.26,
+  "required": 7525.58,
   "recommended": 1759.0,
   "optional": 1149.99
  }

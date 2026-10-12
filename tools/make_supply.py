@@ -78,9 +78,9 @@ ITEMS = {
                 'lead_days': 7, 'pack': 100, 'suppliers': [
                     ('4OVER4 booklets, 100 run (page count to confirm)', '$3.61 each', 'Verified (listing)'),
                     ('In-house color laser printer + long-reach stapler', 'about $1.50 each (Estimate)', 'Estimate')]},
-    'sticker': {'name': 'Brand label on the box lid (4 x 4 in)', 'unit': 'label', 'cost': 0.25, 'status': 'Estimate', 'lead_days': 7,
-                'pack': 250, 'suppliers': [('Any online sticker printer (quote TODO_LUCAS)', 'about $0.25', 'Estimate'),
-                                           ('In-house: label printer + color labels', 'about $0.20', 'Estimate')]},
+    'sticker': {'name': 'Box labels: lid label (4 x 4 in) + info and batch label (4 x 2 in)', 'unit': 'set', 'cost': 0.35, 'status': 'Estimate', 'lead_days': 7,
+                'pack': 250, 'suppliers': [('Any online sticker printer (quote TODO_LUCAS)', 'about $0.35 a set', 'Estimate'),
+                                           ('In-house: color inkjet + matte label sheets', 'about $0.25 a set', 'Estimate')]},
     'targets': {'name': 'Paper target (printed in-house)', 'unit': 'sheet', 'cost': 0.04, 'status': 'Estimate', 'lead_days': 1,
                 'pack': 500, 'suppliers': [('Copy paper + home printer', '$0.04', 'Estimate'), ('Office store copies', '$0.10', 'Estimate')]},
     'filler': {'name': 'Kraft paper filler and tape', 'unit': 'kit', 'cost': 0.12, 'status': 'Estimate', 'lead_days': 2, 'pack': 300,
@@ -122,7 +122,7 @@ def kit_bom(kit):
     if dowel_mm:
         rows.append(('dowel', dowel_mm * 1.1, f'{dowel_mm:.0f} mm of dowel (+10% saw waste)'))
     rows += [('bag', 2, 'extras + spare small parts'), ('box', 1, 'shipping box'), ('booklet', 1, 'instructions'),
-             ('sticker', 1, 'lid label'), ('filler', 1, 'filler and tape')]
+             ('sticker', 1, 'lid label + info label'), ('filler', 1, 'filler and tape')]
     return rep, steps, rows
 
 

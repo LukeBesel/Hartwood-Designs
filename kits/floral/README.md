@@ -17,7 +17,7 @@ Wind the key and the bouquet starts to dance. Blossom Waltz is a pastel garden i
 | Laser time per kit | 19.0 min cutting + 1.7 min sheet swaps = **20.7 min** (Estimate, planning speeds) |
 | Wood cost per kit | **$18.46** (Estimate, sheet prices in `engine/hartwood/config.py`) |
 | Target price | $49.99 |
-| Extras in the box | 18-note wind-up music movement with rotating shaft x1; 3/16 in birch dowel, 55 mm x1; wax stick x1; sandpaper 240 grit x1 |
+| Extras in the box | 18-note wind-up music movement with rotating shaft x1; wax stick x1; sandpaper 240 grit x1; 3/16 in birch dowel, 50 mm x1 |
 
 ## Design checks
 

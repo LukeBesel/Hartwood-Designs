@@ -15,4 +15,11 @@ $PY engine/kit_summary.py
 $PY engine/concepts.py
 $PY tools/build_site.py
 $PY tools/build_pages.py
+$PY tools/make_supply.py                              # BOM, suppliers, reorder points, economics
+$PY tools/make_planner_data.py                        # data for the workshop planner
+$PY tools/make_capacity.py
+$PY tools/make_quality.py
+$PY tools/make_layout.py
+$PY tools/make_sops.py                                # six SOPs as HTML + PDF
+$PY brand/make_packaging.py                           # labels, sleeve, mockups
 echo "done: open website/ with  node tools/serve.js  and check START_HERE.html"

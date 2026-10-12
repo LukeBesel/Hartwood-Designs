@@ -17,7 +17,7 @@ High on a broken tower, Emberwing keeps watch over a chest of gold. Her wings ar
 | Laser time per kit | 22.2 min cutting + 2.2 min sheet swaps = **24.4 min** (Estimate, planning speeds) |
 | Wood cost per kit | **$12.68** (Estimate, sheet prices in `engine/hartwood/config.py`) |
 | Target price | $54.99 |
-| Extras in the box | 3/16 in birch dowel, 21 mm (jaw) x1; 3/16 in birch dowel, 56 mm (chest hinge) x1; sandpaper 240 grit x1 |
+| Extras in the box | 3/16 in birch dowel, 21 mm (jaw) x1; 3/16 in birch dowel, 46 mm (chest hinge) x1; sandpaper 240 grit x1 |
 
 ## Design checks
 

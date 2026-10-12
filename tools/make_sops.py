@@ -164,7 +164,7 @@ def sops(F):
                      (A.extras_bag(), 'Fill the extras bag.', 'Use the extras list below. Dowels come pre-cut in batches on the stop-block jig.', 'Count bands and dowels twice.'),
                      (A.pack_box(), 'Pack: sheets, extras bag, booklet on top.', 'Largest sheets at the bottom. Kraft filler in the gaps so nothing slides.', 'The lid closes flat without pressing on the sheets.'),
                      (A.weigh(), 'Weigh the packed box.', 'Write the first good box weight on the kit card. Later boxes should be within 5% (Estimate).', 'More or less: something is missing or extra. Recount.'),
-                     (A.box_label(), 'Label the box.', 'Lid label with the kit name. Batch code sticker on the side.', 'The batch code matches the planner.'),
+                     (A.box_label(), 'Label the box.', 'Lid label on top. Info label on the bottom: write the batch code in its box.', 'The batch code matches the planner.'),
                      (A.log_planner('Tracking'), 'Move the kit to Packed in the planner.', 'Packing takes the extras out of stock. Buy the shipping label in your shop app.', 'Inventory goes down. Reorder alerts show in red.'),
                  ]),
                  ('table', 'Extras list per kit (from `supply/bom_per_kit.csv`)',

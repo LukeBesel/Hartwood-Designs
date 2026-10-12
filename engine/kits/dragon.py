@@ -68,7 +68,7 @@ def build():
     k.difficulty = 4
     k.build_hours = '6 to 8 h'
     k.price = 54.99
-    k.extras = {'3/16 in birch dowel, 21 mm (jaw)': 1, '3/16 in birch dowel, 56 mm (chest hinge)': 1,
+    k.extras = {'3/16 in birch dowel, 21 mm (jaw)': 1, '3/16 in birch dowel, 46 mm (chest hinge)': 1,
                 'sandpaper 240 grit': 1}
     step = [0]
 
