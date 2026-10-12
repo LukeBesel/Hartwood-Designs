@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightBurnProject AppVersion="1.0.06" FormatVersion="0" MaterialHeight="3" MirrorX="False" MirrorY="False">
     <Thumbnail Source=""/>
-    <CutSetting type="Cut">
-        <index Value="2"/>
-        <name Value="Score"/>
-        <minPower Value="18"/>
-        <maxPower Value="18"/>
-        <minPower2 Value="18"/>
-        <maxPower2 Value="18"/>
-        <speed Value="300.0"/>
-        <priority Value="2"/>
-    </CutSetting>
     <CutSetting type="Scan">
         <index Value="1"/>
         <name Value="Engrave fill"/>
@@ -19,9 +9,19 @@
         <minPower2 Value="20"/>
         <maxPower2 Value="20"/>
         <speed Value="400.0"/>
-        <priority Value="1"/>
+        <priority Value="0"/>
         <interval Value="0.1"/>
         <overscanning Value="2.5"/>
+    </CutSetting>
+    <CutSetting type="Cut">
+        <index Value="2"/>
+        <name Value="Score"/>
+        <minPower Value="18"/>
+        <maxPower Value="18"/>
+        <minPower2 Value="18"/>
+        <maxPower2 Value="18"/>
+        <speed Value="300.0"/>
+        <priority Value="1"/>
     </CutSetting>
     <CutSetting type="Cut">
         <index Value="0"/>
@@ -31,7 +31,7 @@
         <minPower2 Value="65"/>
         <maxPower2 Value="65"/>
         <speed Value="30.0"/>
-        <priority Value="0"/>
+        <priority Value="2"/>
         <numPasses Value="1"/>
     </CutSetting>
     <CutSetting type="Cut">
@@ -45,6 +45,28 @@
         <priority Value="3"/>
         <doOutput Value="0"/>
     </CutSetting>
+    <CutSetting type="Cut">
+        <index Value="4"/>
+        <name Value="Sheet outline (no output)"/>
+        <minPower Value="0"/>
+        <maxPower Value="0"/>
+        <minPower2 Value="0"/>
+        <maxPower2 Value="0"/>
+        <speed Value="30.0"/>
+        <priority Value="4"/>
+        <doOutput Value="0"/>
+    </CutSetting>
+    <Shape Type="Path" CutIndex="4">
+        <XForm>1 0 0 1 0 0</XForm>
+        <V vx="0.000" vy="0.000"/>
+        <V vx="300.000" vy="0.000"/>
+        <V vx="300.000" vy="300.000"/>
+        <V vx="0.000" vy="300.000"/>
+        <P T="L" p0="0" p1="1"/>
+        <P T="L" p0="1" p1="2"/>
+        <P T="L" p0="2" p1="3"/>
+        <P T="L" p0="3" p1="0"/>
+    </Shape>
     <Shape Type="Path" CutIndex="1">
         <XForm>1 0 0 1 0 0</XForm>
         <V vx="28.642" vy="7.521"/>

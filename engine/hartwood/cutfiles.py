@@ -298,24 +298,29 @@ def write_dxf(sp, path):
 
 
 def write_lbrn(sps, path, offsets=None):
-    """LightBurn project (FormatVersion 0 style). Layer C00 = cut, C01 = fill, C02 = score.
+    """LightBurn project (FormatVersion 0 style). Layer C00 = cut, C01 = fill, C02 = score, C04 = sheet outline (no output).
+    Run order: fill, score, cut.
     Unverified: open it in LightBurn once; if it fails, import the SVG instead (TODO_LUCAS)."""
     offsets = offsets or [(0.0, 0.0)] * len(sps)
     L = ['<?xml version="1.0" encoding="UTF-8"?>',
          '<LightBurnProject AppVersion="1.0.06" FormatVersion="0" MaterialHeight="3" MirrorX="False" MirrorY="False">',
          '    <Thumbnail Source=""/>']
 
-    def cs(idx, name, typ, speed, power, extra=''):
+    # priority = run order in LightBurn's layer list (0 runs first): engrave, then score, then cut.
+    # Cutting last keeps every part in place while it is engraved.
+    def cs(idx, name, typ, speed, power, prio, extra=''):
         return (f'    <CutSetting type="{typ}">\n        <index Value="{idx}"/>\n        <name Value="{name}"/>\n'
                 f'        <minPower Value="{power}"/>\n        <maxPower Value="{power}"/>\n'
                 f'        <minPower2 Value="{power}"/>\n        <maxPower2 Value="{power}"/>\n'
-                f'        <speed Value="{speed}"/>\n        <priority Value="{idx}"/>\n{extra}    </CutSetting>')
-    L.append(cs(2, 'Score', 'Cut', C.SCORE_SPEED, C.SCORE_POWER))
-    L.append(cs(1, 'Engrave fill', 'Scan', C.FILL_SPEED, C.FILL_POWER,
+                f'        <speed Value="{speed}"/>\n        <priority Value="{prio}"/>\n{extra}    </CutSetting>')
+    L.append(cs(1, 'Engrave fill', 'Scan', C.FILL_SPEED, C.FILL_POWER, 0,
                 f'        <interval Value="{C.FILL_INTERVAL}"/>\n        <overscanning Value="{C.FILL_OVERSCAN}"/>\n'))
-    L.append(cs(0, 'Cut 3mm basswood', 'Cut', C.CUT_SPEED, C.CUT_POWER, '        <numPasses Value="1"/>\n'))
+    L.append(cs(2, 'Score', 'Cut', C.SCORE_SPEED, C.SCORE_POWER, 1))
+    L.append(cs(0, 'Cut 3mm basswood', 'Cut', C.CUT_SPEED, C.CUT_POWER, 2, '        <numPasses Value="1"/>\n'))
     if any(sp.targets for sp in sps):
-        L.append(cs(3, 'Print and Cut targets (no output)', 'Cut', C.CUT_SPEED, 0, '        <doOutput Value="0"/>\n'))
+        L.append(cs(3, 'Print and Cut targets (no output)', 'Cut', C.CUT_SPEED, 0, 3, '        <doOutput Value="0"/>\n'))
+    # sheet outlines on their own layer that never fires: line them up with the real sheets in the camera view
+    L.append(cs(4, 'Sheet outline (no output)', 'Cut', C.CUT_SPEED, 0, 4, '        <doOutput Value="0"/>\n'))
 
     def shape(coords, closed, idx, ox, oy):
         s = [f'    <Shape Type="Path" CutIndex="{idx}">', '        <XForm>1 0 0 1 0 0</XForm>']
@@ -330,6 +335,7 @@ def write_lbrn(sps, path, offsets=None):
         s.append('    </Shape>')
         return '\n'.join(s)
     for sp, (ox, oy) in zip(sps, offsets):
+        L.append(shape(np.array([(0, 0), (C.SHEET_W, 0), (C.SHEET_W, C.SHEET_H), (0, C.SHEET_H), (0, 0)]), True, 4, ox, oy))
         for f in sp.fills:
             L.append(shape(np.array(f.exterior.coords), True, 1, ox, oy))
             for r in f.interiors:
