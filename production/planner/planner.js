@@ -174,6 +174,7 @@
   }
 
   // ---------------------------------------------------------------- schedule
+  $('#printSched').addEventListener('click', () => { $('#printDate').textContent = 'for ' + today(); window.print(); });
   function renderSchedule() {
     const st = S.settings; const [h, m] = st.shift_start.split(':').map(Number);
     const shiftMin = st.shift_hours * 60;
@@ -188,7 +189,8 @@
     runs.forEach(r => { if (t + r.min > shiftMin) { day++; t = 0; days.push([]); } days[day].push({ ...r, start: t }); t += r.min; });
     const fmt = mins => { const tt = h * 60 + m + mins; return `${String(Math.floor(tt / 60) % 24).padStart(2, '0')}:${String(Math.round(tt % 60)).padStart(2, '0')}`; };
     $('#timeline').innerHTML = runs.length ? days.map((d, i) => `<div class="day card"><h2>Day ${i + 1}</h2><div class="timeline">${d.map(r =>
-      `<div class="slot"><span>${fmt(r.start)} to ${fmt(r.start + r.min)}</span><div class="bar"><div style="left:${100 * r.start / shiftMin}%;width:${Math.max(2, 100 * r.min / shiftMin)}%">${esc(r.label)}</div></div></div>`).join('')}</div></div>`).join('') : '';
+      `<div class="slot"><span>${fmt(r.start)} to ${fmt(r.start + r.min)}</span><div><div class="jobname"><span class="tick" aria-hidden="true"></span>${esc(r.label)}
+        <small>${Math.round(r.min)} min</small></div><div class="bar"><div style="left:${100 * r.start / shiftMin}%;width:${Math.max(1, 100 * r.min / shiftMin)}%"></div></div></div></div>`).join('')}</div></div>`).join('') : '';
   }
 
   // ---------------------------------------------------------------- tracking

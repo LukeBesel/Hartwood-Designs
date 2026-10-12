@@ -27,7 +27,7 @@ Search the project for `TODO_LUCAS` to find every placeholder in files.
 
 ## Production (added 2026-10-12)
 - [ ] Measure the garage and the laser (the Polar 2's outside size was not published) before building the 6 x 2.5 ft laser bench and 8 x 2.7 ft packing bench. Plan: `production/layout/workshop_layout.png`.
-- [ ] Print the six SOPs (`production/sops/*.pdf`) and hang each at its station. Read SOP-6 before the first cut and practice it once.
+- [ ] Print the seven SOPs (`production/sops/*.pdf`) and hang each at its station. Read SOP-6 before the first cut and practice it once.
 - [ ] Fill in the call card in SOP-6: workshop address for 911, nearest urgent care, OMTech support number.
 - [ ] Check the SOP steps against the OMTech manual (lid sensor, emergency stop, water alarm, lens orientation, rail oiling). No source confirmed these for the Polar 2.
 - [ ] Decide on free spare parts (recommended, D034). The site already says "we will mail one free".

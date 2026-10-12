@@ -34,8 +34,21 @@ const path = require('path');
   await page.selectOption('#paretoWin', '28');
   const bars = await page.$$eval('#pareto .pbar', b => b.length);
   check('4-week Pareto has 2 bars', bars === 2, String(bars));
-  check('no page errors', errors.length === 0, errors.join(' | '));
   if (shot) await page.screenshot({ path: shot, fullPage: true });
+  // print view of the schedule: only the schedule shows
+  await page.click('[data-tab="queue"]');
+  page.once('dialog', d => d.accept());
+  await page.click('#startBatch');
+  await page.click('[data-tab="orders"]');
+  await page.emulateMedia({ media: 'print' });
+  const vis = await page.evaluate(() => ({ sched: getComputedStyle(document.querySelector('#schedule')).display,
+    top: getComputedStyle(document.querySelector('.top')).display, orders: getComputedStyle(document.querySelector('#orders')).display,
+    slots: document.querySelectorAll('#timeline .slot').length }));
+  check('print view shows only the schedule', vis.sched !== 'none' && vis.top === 'none' && vis.orders === 'none', JSON.stringify(vis));
+  check('schedule has laser runs', vis.slots > 0, JSON.stringify(vis));
+  if (shot) await page.screenshot({ path: shot.replace('.png', '_print.png'), fullPage: true });
+  await page.emulateMedia({ media: 'screen' });
+  check('no page errors', errors.length === 0, errors.join(' | '));
   await page.evaluate(() => { localStorage.clear(); });
   await browser.close();
   let fail = 0;

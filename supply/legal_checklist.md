@@ -47,7 +47,7 @@ I am not a lawyer. These are the rules the research turned up, from secondary so
 - [ ] **Never leave the laser running unattended.** Keep a **CO2 extinguisher** (Amerex 322, about $218) and a fire blanket at the machine. On a flare: stop the job, keep the lid closed, smother. *(S22, Carnegie Mellon and Stanford EHS)*
 - [ ] **Exhaust to the outside** through the built-in fan and a window vent. Run it before and during every job. Basswood plywood glue gives off fumes.
 - [ ] Keep the CO2 water loop above 10 C (50 F). Freezing cracks the tube.
-- [ ] Follow the six SOPs in `production/sops/`.
+- [ ] Follow the seven SOPs in `production/sops/`.
 
 ## 8. Selling online
 - [ ] **Policies on the website:** shipping, returns, privacy and terms. Placeholders are in `website/terms/` and `website/privacy/`. If you add analytics or email marketing, update the privacy page.

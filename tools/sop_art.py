@@ -422,6 +422,49 @@ def box_label():
     return svg(*out)
 
 
+# ---------------------------------------------------------------- SOP-7 shipping
+
+def match_order():
+    out = [R(26, 30, 84, 80, WHITE, WAL, SW, 4), R(26, 30, 84, 16, LAG, WAL, SW, 4), T(68, 42, 'Order 1042', 9, 800, WHITE)]
+    for i in range(4):
+        out.append(R(34, 54 + i * 12, 60, 5, LIGHT, 'none', 0, 2))
+    out.append(T(68, 104, 'Emberwing x1', 9, 700, WAL))
+    out.append(R(132, 50, 90, 60, WHITE, WAL, SW, 3) + R(150, 62, 54, 30, LAGL, LAG, 1.5, 3) + T(177, 81, 'Emberwing', 9, 800, LAGD))
+    out.append(P('M112,70 L130,70', 'none', GREEN, 3) + ok(121, 30, 10))
+    return svg(*out)
+
+
+def label_printer():
+    out = [R(40, 60, 110, 50, '#d9d2c5', WAL, SW, 8), R(54, 52, 82, 12, WAL, WAL, 0, 3),
+           P('M60,52 L60,14 L130,14 L130,52', WHITE, WAL, SW), ''.join(R(68 + (i * 7) % 50, 20 + i * 4, 30 - (i % 3) * 6, 2, WAL, 'none', 0, 0) for i in range(6)),
+           R(70, 36, 30, 10, 'none', WAL, 1, 0), Cc(130, 86, 5, LAG, WAL, 1),
+           R(170, 40, 50, 70, WHITE, WAL, SW, 6), T(195, 62, 'scale', 10, 700, WAL2), R(178, 70, 34, 14, '#2d3a33', WAL, 1, 2),
+           T(195, 81, '2.1 lb', 9, 800, '#7CFFB2')]
+    return svg(*out)
+
+
+def bottom_labels():
+    out = [R(30, 20, 180, 104, WHITE, WAL, SW, 3), T(120, 14, 'bottom of the box', 10, 700, WAL2),
+           R(44, 34, 64, 86, WHITE, WAL, 1.8, 2), ''.join(R(52, 44 + i * 9, 46 - (i % 2) * 14, 4, WAL, 'none', 0, 1) for i in range(5)),
+           ''.join(R(54 + i * 4, 98, 2 + i % 2, 14, WAL, 'none', 0, 0) for i in range(10)),
+           R(136, 92, 62, 26, LAGL, LAG, 1.5, 2), T(167, 109, 'info label', 8, 700, LAGD),
+           T(76, 132, 'shipping label', 9, 700, WAL2)]
+    return svg(*out)
+
+
+def tape_box():
+    out = [R(40, 60, 160, 50, WHITE, WAL, SW, 3), R(40, 78, 160, 12, '#c9a46e', WAL2, 1, 0, 'fill-opacity=".8"'),
+           Cc(196, 42, 22, '#d9d2c5', WAL, SW), Cc(196, 42, 9, WHITE, WAL, 1.5), P('M178,56 L150,80', 'none', '#c9a46e', 10)]
+    return svg(*out)
+
+
+def pickup():
+    out = [R(24, 50, 110, 56, WHITE, WAL, SW, 4), R(134, 66, 60, 40, WHITE, WAL, SW, 4), R(150, 72, 30, 16, '#cfe3e6', WAL, 1.5, 2),
+           Cc(56, 108, 11, WAL, WAL, 1) + Cc(56, 108, 4, '#d9d2c5', 'none', 0) + Cc(166, 108, 11, WAL, WAL, 1) + Cc(166, 108, 4, '#d9d2c5', 'none', 0),
+           R(36, 62, 60, 22, LAGL, LAG, 1.5, 3), T(66, 77, 'pickup', 10, 800, LAGD), arrow(200, 40, 226, 40, LAG, 4)]
+    return svg(*out)
+
+
 # ---------------------------------------------------------------- SOP-5 weekly maintenance
 
 def honeycomb():

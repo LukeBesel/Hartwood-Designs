@@ -170,6 +170,22 @@ def sops(F):
                  ('table', 'Extras list per kit (from `supply/bom_per_kit.csv`)',
                   '<table class="xt"><thead><tr><th>Kit</th><th>Sheets</th><th>Extras bag</th></tr></thead><tbody>' + extras_rows + '</tbody></table>'),
              ]),
+        dict(n=7, slug='shipping', title='Shipping', color='lagoon',
+             when='Every packed kit, once a day', time='About 2 min per kit (Estimate)', who='Packer',
+             need=['Planner tablet', 'Shop app (Shopify or Etsy)', 'Shipping scale', '4 x 6 in label printer', 'Packing tape'],
+             blocks=[
+                 ('steps', [
+                     (A.svg(A.tablet(64, 28, 112, 84, 6, 'Tracking')), 'Open the Packed column in the planner.', 'Ship the oldest orders first.', 'Every packed kit has an order.'),
+                     (A.match_order(), 'Match the box to the order.', 'Kit name on the order = kit name on the lid label.', 'Gift order? No price slip in the box.'),
+                     (A.tape_box(), 'Close and tape the box.', 'One strip across the opening edge.', 'Sheets do not slide when you tilt it.'),
+                     (A.label_printer(), 'Weigh it and buy the label.', 'In the shop app, USPS Ground Advantage. Round the weight up.', 'Address matches the order.'),
+                     (A.bottom_labels(), 'Stick the label on the bottom.', 'Not over the info label. The lid stays clean, because many kits are gifts.', 'Barcode flat, no wrinkles.'),
+                     (A.log_planner('Tracking'), 'Mark it Shipped in the planner.', 'The shop app emails the tracking number to the customer.', 'Packed column is empty.'),
+                     (A.pickup(), 'Hand over to USPS.', 'Book a free USPS Package Pickup on usps.com (check that it takes Ground Advantage), or drop off at the post office.', 'Keep the scan receipt until delivered.'),
+                     ('box', 'stop', 'Hold the box if', ['The order changed or was cancelled.', 'The address looks incomplete (no apartment number, no ZIP).',
+                                                         'The box is crushed or a corner is open: repack it.']),
+                 ]),
+             ]),
         dict(n=5, slug='weekly_maintenance', title='Weekly maintenance and calibration', color='lagoon',
              when='Every week (Friday after the last job), after a tube change, and after moving the laser', time='About 45 min (Estimate)', who='Owner',
              need=['Lens tissue and lens cleaner', 'Brush and vacuum', 'Distilled water', 'Fit coupon file', 'A scrap sheet', 'The log at the end of this SOP'],
@@ -273,6 +289,10 @@ code { font-size: .92em; background: var(--birch); padding: 0 3px; border-radius
 """
 
 
+def ordered(all_sops):
+    return sorted(all_sops, key=lambda s: s['n'])
+
+
 def render_sop(s):
     cls = ' red' if s['color'] == 'red' else ''
     h = [f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">',
@@ -321,7 +341,7 @@ def index_html(all_sops):
 .card {{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:10px; text-decoration:none; color:var(--walnut); display:flex; flex-direction:column; gap:4px; }}
 .card img {{ width:100%; border-radius:8px; border:1px solid var(--line); }}
 .card span {{ font-size:.9rem; color:var(--walnut-2); }} .card .dl {{ font-size:.8rem; }}
-</style></head><body><div class="sheet"><header class="sop"><div class="num">SOP<b>6</b></div><h1>Workshop SOPs</h1>
+</style></head><body><div class="sheet"><header class="sop"><div class="num">SOP<b>{len(all_sops)}</b></div><h1>Workshop SOPs</h1>
 <div class="meta"><span>Print each PDF and hang it at its station. On the tablet, open the HTML.</span></div></header>
 <p>Station map: <a href="../layout/workshop_layout.svg">workshop layout</a>. Quality loop: <a href="../quality_loop.md">quality_loop.md</a>.</p>
 <div class="cards">{cards}</div></div></body></html>"""
@@ -331,7 +351,7 @@ def main():
     prepare_images()
     os.makedirs(REVIEW, exist_ok=True)
     F = kit_facts()
-    all_sops = sops(F)
+    all_sops = ordered(sops(F))
     for s in all_sops:
         base = f'SOP-{s["n"]}_{s["slug"]}'
         html = os.path.join(OUT, base + '.html')
