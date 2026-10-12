@@ -169,7 +169,7 @@ def home():
     <div class="qa-grid">
       <div><h3>Do I need glue or tools?</h3><p>No. Parts press together. A wax stick and sandpaper are in the box for moving parts and tight spots.</p></div>
       <div><h3>Who are the kits for?</h3><p>Ages 14 and up. Many adults build them as a relaxing evening project or as a gift.</p></div>
-      <div><h3>What if I lose a part?</h3><p>Small parts have a spare on the sheet. For anything else, send us the part code and we will mail one.</p></div>
+      <div><h3>What if I lose a part?</h3><p>Many small parts have a spare on the sheet. For anything else, send us the part code and we will mail one free.</p></div>
     </div>
     <p><a href="/faq/">All questions</a></p>
   </div>
@@ -276,7 +276,7 @@ FAQ = [
     ('How long does a kit take?', 'About 4 to 8 hours, depending on the kit. Most people build over two or three evenings.'),
     ('What age are the kits for?', 'Ages 14 and up. The parts are small and some joints need a firm, careful press.'),
     ('A part is too tight. What do I do?', 'Rub the tab two or three times on the sandpaper, then try again. Never force a part: thin parts can snap.'),
-    ('A part broke or is missing.', 'Small parts have a spare on the sheet (the code ends in s). For anything else, send us the part code from the parts map and we will mail a new one.'),
+    ('A part broke or is missing.', 'Many small parts have a spare on the sheet (the code ends in s). For anything else, send us the part code from the parts map and we will mail a new one free.'),
     ('How do the 3D instructions work?', 'Scan the QR code on any booklet page, or open the Build in 3D page. Each step shows the new parts in orange sliding into place. Turn the model with a finger and tap a part to see its code.'),
     ('Do the 3D instructions need internet?', 'Only the first time. After that the app and the kits you opened work offline on that device.'),
     ('Is the Star Slinger safe?', 'It shoots standard #64 rubber bands. Wear glasses, aim only at the target, never at faces, people or pets. Its blaze orange nose, plug and cap mark it as a toy and must stay on.'),

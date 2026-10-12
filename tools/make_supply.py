@@ -96,7 +96,8 @@ def kit_bom(kit):
     steps = json.load(open(os.path.join(ROOT, 'kits', kit, f'{kit}_steps.json')))
     rows = []
     nat = sum(s['fraction'] for s in rep['sheets'] if s['color'] == 'natural')
-    rows.append(('sheet_natural', nat, f"{len([s for s in rep['sheets'] if s['color'] == 'natural'])} full sheets"))
+    nat_desc = ', '.join(f"{s['tile']} sheet {s['sheet']}" for s in rep['sheets'] if s['color'] == 'natural')
+    rows.append(('sheet_natural', nat, f"natural: {nat_desc}"))
     for s in rep['sheets']:
         if s['color'] != 'natural':
             rows.append(('sheet_color', s['fraction'], f"{s['color']}, {s['tile']} sheet (sheet {s['sheet']})"))

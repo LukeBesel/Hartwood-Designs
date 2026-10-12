@@ -242,14 +242,17 @@
       [d.date, D.kits[d.kit].name, d.code, D.defects.find(x => x.id === d.cat).label, d.count, d.note].map(v => `"${String(v).replace(/"/g, '""')}"`).join(',')));
     download('hartwood_quality_log.csv', lines.join('\n'), 'text/csv');
   });
+  $('#paretoWin').addEventListener('change', () => renderQuality());
   function renderQuality() {
-    const tot = {}; S.defects.forEach(d => { tot[d.cat] = (tot[d.cat] || 0) + d.count; });
+    const days = +$('#paretoWin').value, from = days ? new Date(Date.now() - days * 864e5).toISOString().slice(0, 10) : '';
+    const win = S.defects.filter(d => d.date >= from);
+    const tot = {}; win.forEach(d => { tot[d.cat] = (tot[d.cat] || 0) + d.count; });
     const rows = D.defects.map(d => ({ ...d, n: tot[d.id] || 0 })).filter(d => d.n > 0).sort((a, b) => b.n - a.n);
     const all = rows.reduce((a, r) => a + r.n, 0);
-    $('#paretoRange').textContent = S.defects.length ? `(${S.defects[0].date} to ${S.defects[S.defects.length - 1].date}, ${all} problems)` : '';
-    if (!rows.length) { $('#pareto').innerHTML = '<p class="muted">No problems logged yet.</p>'; $('#fixFirst').textContent = ''; }
+    $('#paretoRange').textContent = win.length ? `(${win[0].date} to ${win[win.length - 1].date}, ${all} problems)` : '';
+    if (!rows.length) { $('#pareto').innerHTML = `<p class="muted">${S.defects.length ? 'No problems in this period.' : 'No problems logged yet.'}</p>`; $('#fixFirst').textContent = ''; }
     else {
-      const W = 760, H = 300, pad = { l: 40, r: 10, t: 22, b: 70 }, bw = (W - pad.l - pad.r) / rows.length, max = rows[0].n;
+      const W = 760, H = 300, pad = { l: 40, r: 10, t: 22, b: 70 }, bw = Math.min(110, (W - pad.l - pad.r) / rows.length), max = rows[0].n;
       let cum = 0;
       const bars = rows.map((r, i) => {
         cum += r.n; const x = pad.l + i * bw + 6, h = (H - pad.t - pad.b) * r.n / max, y = H - pad.b - h;
