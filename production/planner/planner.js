@@ -12,11 +12,12 @@
   // ---------------------------------------------------------------- state
   let mem = null;
   function blank() {
-    return { orders: [], units: [], batches: [], stock: {}, defects: [], settings: { ...D.settings } };
+    return { orders: [], units: [], batches: [], stock: {}, defects: [], changes: [], settings: { ...D.settings } };
   }
   function load() {
     try { mem = JSON.parse(localStorage.getItem(KEY)) || blank(); } catch { mem = mem || blank(); }
     mem.settings = { ...D.settings, ...(mem.settings || {}) };
+    mem.changes = mem.changes || [];
     return mem;
   }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(mem)); } catch { toast('Could not save on this device: export a backup.'); } }
@@ -245,9 +246,12 @@
     download('hartwood_quality_log.csv', lines.join('\n'), 'text/csv');
   });
   $('#paretoWin').addEventListener('change', () => renderQuality());
-  function renderQuality() {
+  function windowDefects() {          // problems inside the Pareto's time window
     const days = +$('#paretoWin').value, from = days ? new Date(Date.now() - days * 864e5).toISOString().slice(0, 10) : '';
-    const win = S.defects.filter(d => d.date >= from);
+    return S.defects.filter(d => d.date >= from);
+  }
+  function renderQuality() {
+    const win = windowDefects();
     const tot = {}; win.forEach(d => { tot[d.cat] = (tot[d.cat] || 0) + d.count; });
     const rows = D.defects.map(d => ({ ...d, n: tot[d.id] || 0 })).filter(d => d.n > 0).sort((a, b) => b.n - a.n);
     const all = rows.reduce((a, r) => a + r.n, 0);
@@ -281,6 +285,45 @@
     document.querySelectorAll('[data-dd]').forEach(b => b.addEventListener('click', () => { S.defects.splice(+b.dataset.dd, 1); save(); render(); }));
   }
 
+  // ---------------------------------------------------------------- design-change list (fed by the Pareto)
+  const CH_STATES = ['Open', 'Testing', 'Done', 'Undone'];
+  $('#changeForm').addEventListener('submit', e => {
+    e.preventDefault(); const f = new FormData(e.target);
+    if (!String(f.get('what')).trim()) { toast('Write what you will change'); return; }
+    S.changes.push({ id: uid(), date: today(), kit: f.get('kit'), cat: f.get('cat'), code: String(f.get('code')).toUpperCase(), what: f.get('what'),
+      expect: f.get('expect'), status: 'Open', closed: '' });
+    save(); renderChanges(); toast('Change added'); e.target.reset(); fillChangeForm();
+  });
+  $('#fromTop').addEventListener('click', () => {
+    const win = windowDefects(), tot = {}; win.forEach(d => { tot[d.cat] = (tot[d.cat] || 0) + d.count; });
+    const top = Object.entries(tot).sort((a, b) => b[1] - a[1])[0];
+    if (!top) { toast('No problems in this period'); return; }
+    const kits = {}; win.filter(d => d.cat === top[0]).forEach(d => { kits[d.kit] = (kits[d.kit] || 0) + d.count; });
+    const codes = {}; win.filter(d => d.cat === top[0] && d.code).forEach(d => { codes[d.code] = (codes[d.code] || 0) + d.count; });
+    const f = $('#changeForm');
+    f.cat.value = top[0];
+    f.kit.value = Object.entries(kits).sort((a, b) => b[1] - a[1])[0][0];
+    f.code.value = (Object.entries(codes).sort((a, b) => b[1] - a[1])[0] || [''])[0];
+    f.what.focus();
+  });
+  function fillChangeForm() {
+    $('#changeKit').innerHTML = Object.entries(D.kits).map(([k, v]) => `<option value="${k}">${esc(v.name)}</option>`).join('');
+    $('#changeCat').innerHTML = D.defects.map(d => `<option value="${d.id}">${esc(d.label)}</option>`).join('');
+  }
+  function renderChanges() {
+    $('#changeTable tbody').innerHTML = S.changes.slice().reverse().map(c => `<tr><td>${esc(c.date)}</td><td>${esc(D.kits[c.kit].name)}</td>
+      <td>${esc(D.defects.find(x => x.id === c.cat).label)}</td><td>${esc(c.code)}</td><td>${esc(c.what)}<br><small class="muted">${esc(c.expect)}</small></td>
+      <td><button class="btn small" data-ch="${c.id}">${esc(c.status)}${c.closed ? ' ' + esc(c.closed) : ''}</button></td></tr>`).join('')
+      || '<tr><td colspan="6" class="muted">No changes yet. Press "Add the top bar" after the Friday review.</td></tr>';
+    document.querySelectorAll('[data-ch]').forEach(b => b.addEventListener('click', () => {
+      const c = S.changes.find(x => x.id === b.dataset.ch);
+      c.status = CH_STATES[(CH_STATES.indexOf(c.status) + 1) % CH_STATES.length];
+      c.closed = c.status === 'Done' || c.status === 'Undone' ? today() : '';
+      save(); renderChanges();
+    }));
+  }
+  fillChangeForm();
+
   // ---------------------------------------------------------------- settings + backup
   const sf = $('#settingsForm');
   sf.shift_start.value = S.settings.shift_start; sf.shift_hours.value = S.settings.shift_hours; sf.efficiency.value = S.settings.efficiency;
@@ -298,7 +341,7 @@
   });
   $('#resetAll').addEventListener('click', () => { if (confirm('Clear all orders, stock and logs on this tablet?')) { Object.assign(S, blank()); save(); render(); } });
 
-  function render() { renderOrders(); renderQueue(); renderSchedule(); renderBoard(); renderStock(); renderQuality(); }
+  function render() { renderOrders(); renderQueue(); renderSchedule(); renderBoard(); renderStock(); renderQuality(); renderChanges(); }
   render();
   window.HW_PLANNER = { state: S, addOrder, save, render };    // for tests
 })();

@@ -8,7 +8,7 @@ const fs = require('fs');
   const out = process.argv[3] || 'review/site';
   fs.mkdirSync(out, { recursive: true });
   const pages = [['home', '/'], ['kit_blaster', '/kits/star-slinger/'], ['kit_dragon', '/kits/emberwing/'], ['kit_floral', '/kits/blossom-waltz/'],
-    ['faq', '/faq/'], ['contact', '/contact/'], ['checkout', '/checkout/'], ['about', '/about/'], ['safety', '/safety/'], ['build', '/build/']];
+    ['faq', '/faq/'], ['contact', '/contact/'], ['checkout', '/checkout/'], ['about', '/about/'], ['safety', '/safety/'], ['terms', '/terms/'], ['privacy', '/privacy/'], ['not_found', '/no-such-page/'], ['build', '/build/']];
   const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
   const problems = [];
   for (const [mode, vw, vh, dpr] of [['desktop', 1280, 860, 1], ['phone', 390, 844, 2]]) {
@@ -16,7 +16,7 @@ const fs = require('fs');
     for (const [name, url] of pages) {
       const page = await ctx.newPage();
       page.on('pageerror', e => problems.push(`${mode} ${name}: ${e}`));
-      page.on('console', m => { if (m.type() === 'error') problems.push(`${mode} ${name}: ${m.text()}`); });
+      page.on('console', m => { if (m.type() === 'error' && !(name === 'not_found' && /404/.test(m.text()))) problems.push(`${mode} ${name}: ${m.text()}`); });
       await page.goto(base + url, { waitUntil: 'load' });
       await page.waitForTimeout(name === 'build' ? 2500 : 700);
       const sw = await page.evaluate(() => document.documentElement.scrollWidth);

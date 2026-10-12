@@ -50,13 +50,13 @@ The top 3 (mechanism, tight fit, breakage) are 69% of complaints, and they share
 
 ## 4. Fix the top bar, one change at a time
 
-1. Write the change in `production/quality/change_log.md`: date, problem type, what you change, and what you expect.
+1. In the planner's Quality tab, press **Add the top bar**. It fills in the problem, the kit and the part code that show up most. Write what you change and what you expect. (Or use `production/quality/change_log.md` on paper.)
 2. Change **one** thing. If you change two, you will not know which one worked.
 3. If the fix is a setting or a design change, make it in the engine and rebuild. Never edit a cut file by hand: the next rebuild would undo it.
 
 ## 5. Check it worked
 
-Look at the same bar for the next 2 to 4 weeks. If it shrank, keep the change. If not, undo it and try the next likely cause from the table.
+Look at the same bar for the next 2 to 4 weeks. Tap the change's status: **Done** if the bar shrank, **Undone** if it did not (then try the next likely cause from the table).
 
 ## 6. Lock it in
 

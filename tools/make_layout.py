@@ -50,10 +50,10 @@ STATIONS = [
     (2, 2.9, 0.3, 2.4, 1.9, '#fff', ['', 'UV printer'], 'UV printer table (only with printed color). eufyMake E1 is 590 x 250 mm (Verified).'),
     (3, 6.0, 0.3, 6.0, 2.6, MAPLE, ['Laser bench'], 'Laser bench, 6 x 2.5 ft. OMTech Polar 2 with LightBurn computer at the right end.'),
     (4, 13.3, 0.4, 1.4, 1.4, '#e9e4dc', ['Scrap', 'bin'], 'Metal scrap bin with lid. Empty it outside at the end of each day (SOP-1).'),
-    (5, 6.0, 9.0, 8.0, 2.7, MAPLE, ['Pop-out check and kitting bench'], 'Pop-out check and kitting bench, 8 x 2.7 ft, with a lamp. It faces the laser, so you pack while you watch the cut.'),
+    (5, 6.0, 9.0, 8.0, 2.7, MAPLE, ['QC check and kitting bench'], 'Quality check (pop-out) and kitting bench, 8 x 2.7 ft, with a lamp. It faces the laser, so you pack while you watch the cut.'),
     (6, 14.4, 10.2, 3.0, 1.5, BIRCH, ['Extras bins'], 'Extras bins: bands, dowels (with the saw jig), wax, sandpaper, movements, small bags.'),
     (7, 2.4, 10.0, 3.2, 1.7, BIRCH, ['Boxes and', 'booklets'], 'Mailer boxes, booklets, labels and filler. Next to the left end of the kitting bench.'),
-    (8, 17.9, 6.6, 1.8, 5.1, BIRCH, ['Packed', 'kits'], 'Packed kits shelf, by the garage door for pickup and drop-off.'),
+    (8, 17.9, 6.6, 1.8, 5.1, BIRCH, ['Finished', 'kits and', 'shipping'], 'Finished kits and shipping: scale and label printer on the shelf, by the garage door for USPS pickup.'),
 ]
 
 

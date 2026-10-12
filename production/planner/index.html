@@ -85,6 +85,19 @@
     <div class="card"><div class="row-head"><h2>Pareto: problems by type <span class="muted" id="paretoRange"></span></h2>
       <label class="muted">Show <select id="paretoWin"><option value="28" selected>Last 4 weeks</option><option value="91">Last 13 weeks</option><option value="0">All time</option></select></label></div>
       <div id="pareto" class="pareto"></div><p id="fixFirst" class="fix-first"></p></div>
+    <div class="card"><div class="row-head"><h2>Design-change list</h2><div class="actions"><button class="btn" id="fromTop" type="button">Add the top bar</button></div></div>
+      <p class="hint">One change at a time. Tap the status to move it on: Open, Testing, Done (or Undone if the bar did not shrink).</p>
+      <form id="changeForm" class="form-row">
+        <label>Kit<select name="kit" id="changeKit"></select></label>
+        <label>Problem<select name="cat" id="changeCat"></select></label>
+        <label>Part code<input name="code" maxlength="8" placeholder="e.g. B12"></label>
+        <label class="grow">Change<input name="what" placeholder="e.g. raise FIT spin by 0.05, rebuild"></label>
+        <label class="grow">Expected result<input name="expect" placeholder="e.g. wheel turns freely"></label>
+        <button class="btn primary" type="submit">Add change</button>
+      </form>
+      <div class="table-wrap" style="margin-top:10px"><table id="changeTable"><thead><tr><th>Date</th><th>Kit</th><th>Problem</th><th>Part</th><th>Change</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <h2>Problem log</h2>
     <div class="table-wrap"><table id="defectTable"><thead><tr><th>Date</th><th>Kit</th><th>Part</th><th>Problem</th><th>Count</th><th>Note</th><th></th></tr></thead><tbody></tbody></table></div>
   </section>
 

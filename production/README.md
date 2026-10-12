@@ -1,6 +1,6 @@
 # Production system
 
-Everything needed to run the workshop: how many kits it can make, a planner for the tablet, six picture SOPs, the shop layout, and the quality loop.
+Everything needed to run the workshop: how many kits it can make, a planner for the tablet, seven picture SOPs, the shop layout, and the quality loop.
 
 | What | Open | Made by |
 |---|---|---|
@@ -30,7 +30,7 @@ Open `production/planner/index.html` on the tablet (Chrome or Safari). Add it to
 | Schedule | Lays the batch's laser jobs on a timeline for your shift (start time and hours in Settings). **Print the schedule** gives a paper list with a tick box per laser run. |
 | Tracking | A board per kit: Waiting, Cut, Checked, Packed, Shipped. Tap to move a kit on. Packing takes extras out of stock. |
 | Inventory | On-hand stock, reorder points from `supply/reorder_points.csv`, two suppliers per item. A red badge counts items to reorder. |
-| Quality | Log problems by kit, part code and type. A Pareto chart for the last 4 weeks shows what to fix first. |
+| Quality | Log problems by kit, part code and type. A Pareto chart for the last 4 weeks shows what to fix first. **Add the top bar** starts a design-change entry for it, and you tap its status from Open to Testing to Done (or Undone). |
 
 Tests: `node tools/test_planner.js`.
 

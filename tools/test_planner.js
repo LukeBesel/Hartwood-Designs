@@ -34,6 +34,16 @@ const path = require('path');
   await page.selectOption('#paretoWin', '28');
   const bars = await page.$$eval('#pareto .pbar', b => b.length);
   check('4-week Pareto has 2 bars', bars === 2, String(bars));
+  await page.click('#fromTop');
+  const pre = await page.evaluate(() => ({ cat: document.querySelector('#changeForm').cat.value, code: document.querySelector('#changeForm').code.value }));
+  check('change list pre-fills from the 4-week top bar', pre.cat === 'tight' && pre.code === 'C12', JSON.stringify(pre));
+  await page.fill('#changeForm [name=what]', 'Cut the coupon, set KERF, rebuild');
+  await page.click('#changeForm button[type=submit]');
+  await page.click('#changeTable [data-ch]');
+  const st = await page.textContent('#changeTable [data-ch]');
+  check('change status moves Open -> Testing', /Testing/.test(st), st);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(300);                       // let the toast clear and the sticky header settle
   if (shot) await page.screenshot({ path: shot, fullPage: true });
   // print view of the schedule: only the schedule shows
   await page.click('[data-tab="queue"]');

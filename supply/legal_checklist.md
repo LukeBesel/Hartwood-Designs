@@ -30,6 +30,7 @@ I am not a lawyer. These are the rules the research turned up, from secondary so
 
   *(S22, Giffords Law Center summary, Spectrum News)*
 - [ ] **Marketplace rules.** Etsy bans realistic replicas even with orange tips but may allow bright, clearly toy-like designs. Amazon restricts toy guns without the required markings. List the blaster on your own site first, then test Etsy with the spaceship styling. *(S15)*
+- [ ] **Shopify.** Its Acceptable Use Policy bans selling firearms, parts, accessories and ammunition against the law, plus 3D-printed guns. No source found says anything about toy or rubber band blasters. Read shopify.com/legal/aup yourself before you list the Star Slinger, and keep the listing clearly a toy (spaceship, orange tip, 14+). *(S24)*
 - [ ] **Safety warnings** on the box and in the booklet: wear eye protection, never aim at people or animals, #64 bands only. Already in the files.
 
 ## 5. California Prop 65 (wood dust)
