@@ -17,6 +17,7 @@ E = html.escape
 FEATURES = {
     'blaster': ['A clockwork star wheel holds up to 7 rubber bands', 'One band flies per trigger pull',
                 'Blaze orange nose, plug and cap, so it always reads as a toy',
+                'Lifts off its launch stand to play, drops back in for display',
                 'Launch stand with a swinging target, a band rack and a safety plaque',
                 'Test steps built into the instructions, so the mechanism works the first time'],
     'dragon': ['The jaw opens on a hidden wooden pin', 'A treasure chest with a lid that opens',
@@ -193,8 +194,8 @@ def home():
 
 def kit_page(k):
     kit = k['kit']
-    views = [('three_quarter', 'Three-quarter view'), ('front', 'Front view'), ('side', 'Side view'), ('back', 'Back view'),
-             ('top', 'Top view')]
+    views = [('three_quarter', 'Three-quarter view'), ('lifted', 'Lifted off its stand'), ('front', 'Front view'), ('side', 'Side view'),
+             ('back', 'Back view'), ('top', 'Top view')]
     rdir = os.path.join(SITE, 'assets', 'kits', kit, 'renders')
     avail = [v for v in views if os.path.exists(os.path.join(rdir, v[0] + '.webp'))]
     closeups = sorted(f[:-5] for f in os.listdir(rdir) if f.startswith('closeup') and f.endswith('.webp') and not f.endswith('_sm.webp'))

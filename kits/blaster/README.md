@@ -2,7 +2,7 @@
 
 _A starship that slings rubber bands. Seven shots, one at a time._
 
-The Star Slinger is a little starfighter with a big secret: a clockwork star wheel in its engine. Load up to seven rubber bands, aim at a paper target, and each pull of the trigger lets exactly one band fly. Its blaze orange nose is built into the ship, so it always looks like what it is: a toy. Build the mechanism, test it at each step, then show it off on its launch stand.
+The Star Slinger is a little starfighter with a big secret: a clockwork star wheel in its engine. Load up to seven rubber bands, aim at a paper target, and each pull of the trigger lets exactly one band fly. Its blaze orange nose is built into the ship, so it always looks like what it is: a toy. Build the mechanism, test it at each step, then show it off on its launch stand. Lift it off to play, drop it back in to display.
 
 ![Star Slinger](renders/three_quarter.jpg)
 
@@ -41,7 +41,7 @@ See [mechanism_test_plan.md](mechanism_test_plan.md).
 | A | natural | full | 78 | 8 | 61.7% | 6.4 |
 | B | natural | full | 9 | 47 | 40.6% | 3.6 |
 | C | orange | half | 38 | 2 | 36.6% | 3.6 |
-| D | teal | half | 28 | 0 | 42.1% | 2.8 |
+| D | teal | half | 28 | 0 | 43.7% | 2.9 |
 
 Half and quarter tiles are cut 2 or 4 at a time on one 12 x 12 sheet (files ending `_x2_full` or `_x4_full`).
 
@@ -60,6 +60,7 @@ Half and quarter tiles are cut 2 or 4 at a time on one 12 x 12 sheet (files endi
 ![front](renders/front.jpg)
 ![back](renders/back.jpg)
 ![top](renders/top.jpg)
+![lifted](renders/lifted.jpg)
 ![closeup_nose](renders/closeup_nose.jpg)
 ![closeup_stand](renders/closeup_stand.jpg)
 ![closeup_wheel](renders/closeup_wheel.jpg)

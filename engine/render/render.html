@@ -46,6 +46,9 @@ window.renderJob = async (job) => {
       else if (mode === 'part') H.setLook(it, only.has(it.code) && (!job.single || it === k.items.find(i => only.has(i.code))) ? 'color' : 'hidden');
       else if (mode === 'upto') H.setLook(it, it.step <= n ? 'color' : 'hidden');
     });
+    // hero only: lift a group of parts (e.g. the ship off its stand), offsets in mm in the model frame
+    const lift = job.lift ? new Set(job.lift.members) : null;
+    k.items.forEach(it => { it.node.position.copy(it.final); if (lift && lift.has(it.ex.name)) it.node.position.y += job.lift.dy; });
   }
   k.scene.updateMatrixWorld(true);
   const box = H.visibleBox(k.items);

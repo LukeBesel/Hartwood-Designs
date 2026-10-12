@@ -2,7 +2,7 @@
  "kit": "blaster",
  "name": "Star Slinger",
  "tagline": "A starship that slings rubber bands. Seven shots, one at a time.",
- "story": "The Star Slinger is a little starfighter with a big secret: a clockwork star wheel in its engine. Load up to seven rubber bands, aim at a paper target, and each pull of the trigger lets exactly one band fly. Its blaze orange nose is built into the ship, so it always looks like what it is: a toy. Build the mechanism, test it at each step, then show it off on its launch stand.",
+ "story": "The Star Slinger is a little starfighter with a big secret: a clockwork star wheel in its engine. Load up to seven rubber bands, aim at a paper target, and each pull of the trigger lets exactly one band fly. Its blaze orange nose is built into the ship, so it always looks like what it is: a toy. Build the mechanism, test it at each step, then show it off on its launch stand. Lift it off to play, drop it back in to display.",
  "difficulty": 4,
  "build_hours": "5 to 6 h",
  "price": 49.99,
@@ -415,17 +415,17 @@
      "color": "orange"
     },
     {
-     "code": "D8",
-     "qty": 1,
-     "sheet": "D",
-     "name": "cockpit_side_r",
-     "color": "teal"
-    },
-    {
-     "code": "D9",
+     "code": "D2",
      "qty": 1,
      "sheet": "D",
      "name": "intake_r",
+     "color": "teal"
+    },
+    {
+     "code": "D11",
+     "qty": 1,
+     "sheet": "D",
+     "name": "cockpit_side_r",
      "color": "teal"
     },
     {
@@ -500,28 +500,28 @@
      "color": "orange"
     },
     {
-     "code": "D4",
-     "qty": 1,
-     "sheet": "D",
-     "name": "intake_l",
-     "color": "teal"
-    },
-    {
-     "code": "D7",
+     "code": "D6",
      "qty": 1,
      "sheet": "D",
      "name": "panel_l0",
      "color": "teal"
     },
     {
-     "code": "D11",
+     "code": "D10",
+     "qty": 1,
+     "sheet": "D",
+     "name": "intake_l",
+     "color": "teal"
+    },
+    {
+     "code": "D12",
      "qty": 1,
      "sheet": "D",
      "name": "engine_panel_l",
      "color": "teal"
     },
     {
-     "code": "D12",
+     "code": "D13",
      "qty": 1,
      "sheet": "D",
      "name": "cockpit_side_l",
@@ -598,7 +598,7 @@
      "color": "natural"
     },
     {
-     "code": "D3",
+     "code": "D9",
      "qty": 2,
      "sheet": "D",
      "name": "canopy0",
@@ -816,24 +816,24 @@
      "color": "orange"
     },
     {
-     "code": "D1",
+     "code": "D3",
      "qty": 1,
      "sheet": "D",
-     "name": "thruster4",
+     "name": "thruster0",
      "color": "teal"
     },
     {
-     "code": "D5",
+     "code": "D4",
      "qty": 1,
      "sheet": "D",
      "name": "thruster2",
      "color": "teal"
     },
     {
-     "code": "D10",
+     "code": "D8",
      "qty": 1,
      "sheet": "D",
-     "name": "thruster0",
+     "name": "thruster4",
      "color": "teal"
     }
    ],
@@ -907,7 +907,7 @@
      "color": "orange"
     },
     {
-     "code": "D13",
+     "code": "D14",
      "qty": 1,
      "sheet": "D",
      "name": "belly_fin",
@@ -991,21 +991,21 @@
      "color": "orange"
     },
     {
-     "code": "D2",
+     "code": "D1",
      "qty": 1,
      "sheet": "D",
      "name": "stand_upright",
      "color": "teal"
     },
     {
-     "code": "D6",
+     "code": "D5",
      "qty": 2,
      "sheet": "D",
      "name": "target_side0",
      "color": "teal"
     },
     {
-     "code": "D14",
+     "code": "D7",
      "qty": 1,
      "sheet": "D",
      "name": "target_ring1",
@@ -1037,12 +1037,12 @@
   },
   {
    "n": 17,
-   "title": "Put the ship on its launch stand",
-   "tip": "Grip between the two boots, barrel on the upright.",
+   "title": "Drop the ship onto its launch stand",
+   "tip": "Grip between the two boots, barrel in the cradle. No tabs: it lifts straight off.",
    "icons": [
     "careful"
    ],
-   "test": "",
+   "test": "Lift the ship straight up, then set it back. It should drop in by itself and not wobble.",
    "view": null,
    "parts": [],
    "hardware": [],
@@ -1806,24 +1806,33 @@
   },
   {
    "code": "D1",
-   "name": "thruster4",
+   "name": "stand_upright",
    "sheet": "D",
    "color": "teal",
    "qty": 1,
-   "step": 13,
+   "step": 16,
    "mechanism": false
   },
   {
    "code": "D10",
-   "name": "thruster0",
+   "name": "intake_l",
    "sheet": "D",
    "color": "teal",
    "qty": 1,
-   "step": 13,
+   "step": 8,
    "mechanism": false
   },
   {
    "code": "D11",
+   "name": "cockpit_side_r",
+   "sheet": "D",
+   "color": "teal",
+   "qty": 1,
+   "step": 7,
+   "mechanism": false
+  },
+  {
+   "code": "D12",
    "name": "engine_panel_l",
    "sheet": "D",
    "color": "teal",
@@ -1832,7 +1841,7 @@
    "mechanism": false
   },
   {
-   "code": "D12",
+   "code": "D13",
    "name": "cockpit_side_l",
    "sheet": "D",
    "color": "teal",
@@ -1841,21 +1850,12 @@
    "mechanism": false
   },
   {
-   "code": "D13",
+   "code": "D14",
    "name": "belly_fin",
    "sheet": "D",
    "color": "teal",
    "qty": 1,
    "step": 15,
-   "mechanism": false
-  },
-  {
-   "code": "D14",
-   "name": "target_ring1",
-   "sheet": "D",
-   "color": "teal",
-   "qty": 1,
-   "step": 16,
    "mechanism": false
   },
   {
@@ -1905,11 +1905,11 @@
   },
   {
    "code": "D2",
-   "name": "stand_upright",
+   "name": "intake_r",
    "sheet": "D",
    "color": "teal",
    "qty": 1,
-   "step": 16,
+   "step": 7,
    "mechanism": false
   },
   {
@@ -1959,24 +1959,15 @@
   },
   {
    "code": "D3",
-   "name": "canopy0",
+   "name": "thruster0",
    "sheet": "D",
    "color": "teal",
-   "qty": 2,
-   "step": 10,
+   "qty": 1,
+   "step": 13,
    "mechanism": false
   },
   {
    "code": "D4",
-   "name": "intake_l",
-   "sheet": "D",
-   "color": "teal",
-   "qty": 1,
-   "step": 8,
-   "mechanism": false
-  },
-  {
-   "code": "D5",
    "name": "thruster2",
    "sheet": "D",
    "color": "teal",
@@ -1985,7 +1976,7 @@
    "mechanism": false
   },
   {
-   "code": "D6",
+   "code": "D5",
    "name": "target_side0",
    "sheet": "D",
    "color": "teal",
@@ -1994,7 +1985,7 @@
    "mechanism": false
   },
   {
-   "code": "D7",
+   "code": "D6",
    "name": "panel_l0",
    "sheet": "D",
    "color": "teal",
@@ -2003,21 +1994,30 @@
    "mechanism": false
   },
   {
-   "code": "D8",
-   "name": "cockpit_side_r",
+   "code": "D7",
+   "name": "target_ring1",
    "sheet": "D",
    "color": "teal",
    "qty": 1,
-   "step": 7,
+   "step": 16,
+   "mechanism": false
+  },
+  {
+   "code": "D8",
+   "name": "thruster4",
+   "sheet": "D",
+   "color": "teal",
+   "qty": 1,
+   "step": 13,
    "mechanism": false
   },
   {
    "code": "D9",
-   "name": "intake_r",
+   "name": "canopy0",
    "sheet": "D",
    "color": "teal",
-   "qty": 1,
-   "step": 7,
+   "qty": 2,
+   "step": 10,
    "mechanism": false
   }
  ]

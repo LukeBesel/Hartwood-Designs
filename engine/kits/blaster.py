@@ -112,7 +112,7 @@ def build():
     k.story = ('The Star Slinger is a little starfighter with a big secret: a clockwork star wheel in its engine. '
                'Load up to seven rubber bands, aim at a paper target, and each pull of the trigger lets exactly '
                'one band fly. Its blaze orange nose is built into the ship, so it always looks like what it is: '
-               'a toy. Build the mechanism, test it at each step, then show it off on its launch stand.')
+               'a toy. Build the mechanism, test it at each step, then show it off on its launch stand. Lift it off to play, drop it back in to display.')
     k.difficulty = 4
     k.build_hours = '5 to 6 h'
     k.price = 49.99
@@ -601,8 +601,8 @@ def build():
     s_stand = nxt('Build the launch stand and the target', tip='The target hangs on its dowel and swings when hit.',
                   icons=['press'], test='Tap the target plate. It should swing back and settle again.')
     stand = _stand(k, s_stand)
-    s_mount = nxt('Put the ship on its launch stand', tip='Grip between the two boots, barrel on the upright.',
-                  icons=['careful'])
+    s_mount = nxt('Drop the ship onto its launch stand', tip='Grip between the two boots, barrel in the cradle. No tabs: it lifts straight off.',
+                  icons=['careful'], test='Lift the ship straight up, then set it back. It should drop in by itself and not wobble.')
 
     for p in list(walls.values()) + ribs + wheel + wpegs + anchor + apegs + hooks + [hpeg] + skins + \
             canopy + [cpeg] + wings + [fin] + side_fins + [fpeg] + thrusters + belly + stand:
@@ -617,7 +617,8 @@ def build():
 
 
 def _stand(k, step):
-    """Launch stand: the ship stands on its grip between two boots, the barrel rests on an upright.
+    """Launch stand: the ship stands on its grip between two boots, the barrel drops into a U cradle. Nothing locks it,
+    so the ship lifts straight off to play and drops back in for display.
     A swinging target and a band rack plug into the same base."""
     parts = []
     DOWN = (0, -1, 0)
@@ -635,7 +636,12 @@ def _stand(k, step):
         tab_joint(base, b, [rect(-96, -120, -86, -120 - T), rect(-80, -120, -70, -120 - T)])
         b.code_on_part = False
         parts.append(b)
-    up = Part('stand_upright', opening(Polygon([(-24, -120), (24, -120), (12, -8.0), (-12, -8.0)]).buffer(0), 1.3),
+    # front cradle: a U the barrel drops into. The prongs stand 0.6 mm clear of the hull skins (outer face at 13.8 mm),
+    # so the ship lifts straight off to play and drops back in for display.
+    gap_z, prong, top = 13.8 + 0.6, 4.0, 0.0
+    cradle = Polygon([(-24, -120), (24, -120), (gap_z + prong, -14.0), (gap_z + prong, top), (gap_z, top), (gap_z, -8.0),
+                      (-gap_z, -8.0), (-gap_z, top), (-gap_z - prong, top), (-gap_z - prong, -14.0)])
+    up = Part('stand_upright', opening(cradle.buffer(0), 1.3),
               color='teal', mat=frame((116.0, 0, 0), Z, Y), step=step, insert=DOWN, explode=30)
     tab_joint(base, up, [rect(-12, -120, 12, -120 - T)])
     up.code_on_part = False

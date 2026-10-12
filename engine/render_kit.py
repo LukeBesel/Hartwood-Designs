@@ -27,6 +27,7 @@ VIEWS = {
         'closeup_wheel': dict(view=[0.35, 0.55, 1.0], target=[-55, 12, 10], zoom=3.2, square=True),
         'closeup_nose': dict(view=[1.0, 0.45, 0.75], target=[148, 10, 0], zoom=3.6, square=True),
         'closeup_stand': dict(view=[0.35, 0.3, 1.0], target=[80, -88, 0], zoom=2.4, square=True),
+        'lifted': dict(view=[0.7, 0.3, 1.2], lift=('ship', 70.0)),
     },
     'dragon': {
         'three_quarter': dict(view=[0.75, 0.35, 1.2]),
@@ -77,6 +78,10 @@ def heroes(kit):
              'view': v['view'], 'width': w, 'height': h, 'margin': 1.0 if 'target' not in v else 1.06, 'shadow': 0.22}
         if 'target' in v:
             j['target'] = v['target']; j['zoom'] = v['zoom']
+        if 'lift' in v:
+            steps = json.load(open(os.path.join(ROOT, 'kits', kit, f'{kit}_steps.json')))
+            members = [m_ for st in steps['steps'] for mo in st['mounts'] if mo['name'] == v['lift'][0] for m_ in mo['members']]
+            j['lift'] = {'members': members, 'dy': v['lift'][1]}
         jobs.append(j)
     run_jobs(jobs)
     for name in VIEWS[kit]:

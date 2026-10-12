@@ -1693,7 +1693,7 @@
     {
      "sheet": "D",
      "part": "stand_upright",
-     "code": "D2",
+     "code": "D1",
      "bridges": 3,
      "bridge_mm": 1.5
     },
@@ -1735,7 +1735,7 @@
     {
      "sheet": "D",
      "part": "engine_panel_l",
-     "code": "D11",
+     "code": "D12",
      "bridges": 3,
      "bridge_mm": 1.5
     },
@@ -1749,14 +1749,14 @@
     {
      "sheet": "D",
      "part": "target_side0",
-     "code": "D6",
+     "code": "D5",
      "bridges": 3,
      "bridge_mm": 1.5
     },
     {
      "sheet": "D",
      "part": "target_side1",
-     "code": "D6",
+     "code": "D5",
      "bridges": 3,
      "bridge_mm": 1.5
     },
@@ -1777,7 +1777,7 @@
     {
      "sheet": "D",
      "part": "belly_fin",
-     "code": "D13",
+     "code": "D14",
      "bridges": 2,
      "bridge_mm": 1.0
     },
@@ -1798,21 +1798,21 @@
     {
      "sheet": "D",
      "part": "cockpit_side_l",
-     "code": "D12",
+     "code": "D13",
      "bridges": 2,
      "bridge_mm": 1.0
     },
     {
      "sheet": "D",
      "part": "cockpit_side_r",
-     "code": "D8",
+     "code": "D11",
      "bridges": 2,
      "bridge_mm": 1.0
     },
     {
      "sheet": "D",
      "part": "target_ring1",
-     "code": "D14",
+     "code": "D7",
      "bridges": 2,
      "bridge_mm": 1.0
     },
@@ -1826,14 +1826,14 @@
     {
      "sheet": "D",
      "part": "canopy0",
-     "code": "D3",
+     "code": "D9",
      "bridges": 2,
      "bridge_mm": 1.0
     },
     {
      "sheet": "D",
      "part": "canopy2",
-     "code": "D3",
+     "code": "D9",
      "bridges": 2,
      "bridge_mm": 1.0
     },
@@ -1847,42 +1847,42 @@
     {
      "sheet": "D",
      "part": "panel_l0",
-     "code": "D7",
+     "code": "D6",
      "bridges": 2,
      "bridge_mm": 1.0
     },
     {
      "sheet": "D",
      "part": "thruster0",
-     "code": "D10",
+     "code": "D3",
      "bridges": 2,
      "bridge_mm": 1.0
     },
     {
      "sheet": "D",
      "part": "thruster2",
-     "code": "D5",
-     "bridges": 2,
-     "bridge_mm": 1.0
-    },
-    {
-     "sheet": "D",
-     "part": "intake_l",
      "code": "D4",
      "bridges": 2,
      "bridge_mm": 1.0
     },
     {
      "sheet": "D",
+     "part": "intake_l",
+     "code": "D10",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
      "part": "intake_r",
-     "code": "D9",
+     "code": "D2",
      "bridges": 2,
      "bridge_mm": 1.0
     },
     {
      "sheet": "D",
      "part": "thruster4",
-     "code": "D1",
+     "code": "D8",
      "bridges": 2,
      "bridge_mm": 1.0
     }
@@ -3320,7 +3320,7 @@
    {
     "sheet": "D",
     "part": "stand_upright",
-    "code": "D2",
+    "code": "D1",
     "bridges": 3,
     "bridge_mm": 1.5
    },
@@ -3362,7 +3362,7 @@
    {
     "sheet": "D",
     "part": "engine_panel_l",
-    "code": "D11",
+    "code": "D12",
     "bridges": 3,
     "bridge_mm": 1.5
    },
@@ -3376,14 +3376,14 @@
    {
     "sheet": "D",
     "part": "target_side0",
-    "code": "D6",
+    "code": "D5",
     "bridges": 3,
     "bridge_mm": 1.5
    },
    {
     "sheet": "D",
     "part": "target_side1",
-    "code": "D6",
+    "code": "D5",
     "bridges": 3,
     "bridge_mm": 1.5
    },
@@ -3404,7 +3404,7 @@
    {
     "sheet": "D",
     "part": "belly_fin",
-    "code": "D13",
+    "code": "D14",
     "bridges": 2,
     "bridge_mm": 1.0
    },
@@ -3425,21 +3425,21 @@
    {
     "sheet": "D",
     "part": "cockpit_side_l",
-    "code": "D12",
+    "code": "D13",
     "bridges": 2,
     "bridge_mm": 1.0
    },
    {
     "sheet": "D",
     "part": "cockpit_side_r",
-    "code": "D8",
+    "code": "D11",
     "bridges": 2,
     "bridge_mm": 1.0
    },
    {
     "sheet": "D",
     "part": "target_ring1",
-    "code": "D14",
+    "code": "D7",
     "bridges": 2,
     "bridge_mm": 1.0
    },
@@ -3453,14 +3453,14 @@
    {
     "sheet": "D",
     "part": "canopy0",
-    "code": "D3",
+    "code": "D9",
     "bridges": 2,
     "bridge_mm": 1.0
    },
    {
     "sheet": "D",
     "part": "canopy2",
-    "code": "D3",
+    "code": "D9",
     "bridges": 2,
     "bridge_mm": 1.0
    },
@@ -3474,42 +3474,42 @@
    {
     "sheet": "D",
     "part": "panel_l0",
-    "code": "D7",
+    "code": "D6",
     "bridges": 2,
     "bridge_mm": 1.0
    },
    {
     "sheet": "D",
     "part": "thruster0",
-    "code": "D10",
+    "code": "D3",
     "bridges": 2,
     "bridge_mm": 1.0
    },
    {
     "sheet": "D",
     "part": "thruster2",
-    "code": "D5",
-    "bridges": 2,
-    "bridge_mm": 1.0
-   },
-   {
-    "sheet": "D",
-    "part": "intake_l",
     "code": "D4",
     "bridges": 2,
     "bridge_mm": 1.0
    },
    {
     "sheet": "D",
+    "part": "intake_l",
+    "code": "D10",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
     "part": "intake_r",
-    "code": "D9",
+    "code": "D2",
     "bridges": 2,
     "bridge_mm": 1.0
    },
    {
     "sheet": "D",
     "part": "thruster4",
-    "code": "D1",
+    "code": "D8",
     "bridges": 2,
     "bridge_mm": 1.0
    }
@@ -3617,18 +3617,18 @@
    "fraction": 0.5,
    "parts": 28,
    "spares": 0,
-   "used_pct": 42.1,
+   "used_pct": 43.7,
    "bridges": 66,
-   "cut_mm": 3854.0,
+   "cut_mm": 3896.5,
    "score_mm": 466.5,
-   "fill_area_mm2": 250.3,
+   "fill_area_mm2": 250.4,
    "pierces": 145,
-   "cut_s": 133.5,
+   "cut_s": 134.9,
    "score_s": 3.8,
-   "fill_s": 23.4,
-   "travel_s": 9.8,
-   "total_s": 170.5,
-   "total_min": 2.84
+   "fill_s": 22.5,
+   "travel_s": 10.3,
+   "total_s": 171.5,
+   "total_min": 2.86
   }
  ],
  "jobs": [
@@ -3650,7 +3650,7 @@
     "C_x2",
     "D_x2"
    ],
-   "laser_min": 13.3,
+   "laser_min": 13.34,
    "kits_per_sheet": [
     2,
     2
@@ -3679,6 +3679,6 @@
   "D19"
  ],
  "color_mode": "sheets",
- "build_seconds": 28.0,
+ "build_seconds": 22.2,
  "all_checks_pass": true
 }

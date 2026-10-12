@@ -25,7 +25,7 @@ window.HW_DATA = {
       "C_x2",
       "D_x2"
      ],
-     "laser_min": 13.3,
+     "laser_min": 13.34,
      "kits_per_run": 2,
      "file": "kits/blaster/cutfiles/blaster_job2_C_x2-D_x2_bed.lbrn2"
     }
@@ -76,9 +76,9 @@ window.HW_DATA = {
     "filler": 1
    },
    "print_mode": {
-    "print_min": 13.2,
+    "print_min": 13.5,
     "sides": 2,
-    "laser_min": 18.0,
+    "laser_min": 17.8,
     "sheets": 3
    },
    "aliases": [
