@@ -227,8 +227,52 @@ def main():
     rows_s, tot = startup(batch_rows)
     json.dump({'items': ITEMS, 'weekly_plan': WEEKLY_PLAN, 'summary': summary, 'startup_totals': tot},
               open(os.path.join(OUT, 'supply_data.json'), 'w'), indent=1, default=str)
+    update_readme(summary, econ, tot)
     print('supply files written to', OUT, 'startup totals', tot)
     return summary, econ, rp
+
+
+def update_readme(summary, econ, tot):
+    """Rewrite the cost, profit and budget numbers in supply/README.md from the data, so the text never goes stale."""
+    path = os.path.join(OUT, 'README.md')
+    text = open(path).read()
+    cost = ['## Cost per kit (materials and packaging, before shipping)', '', '| Kit | Pre-colored sheets | UV-printed color | Biggest items |',
+            '|---|---|---|---|']
+    for kit in KITS:
+        _, _, rows = kit_bom(kit)
+        by = {}
+        for i, q, _ in rows:
+            short = {'booklet': 'booklet', 'box': 'box', 'movement': 'music movement', 'sticker': 'labels', 'dowel': 'dowels',
+                     'band_64': 'rubber bands', 'band_16': 'rubber bands'}
+            name = 'wood' if i.startswith('sheet') else short.get(i, ITEMS[i]['name'].split(' (')[0].split(',')[0].lower())
+            by[name] = by.get(name, 0) + ITEMS[i]['cost'] * q
+        top = ', '.join(f'{n} {money(v)}' for n, v in sorted(by.items(), key=lambda kv: -kv[1])[:3])
+        sm = summary[kit]
+        cost.append(f"| {sm['name']} | {money(sm['materials'])} | {money(sm.get('materials_print', sm['materials']))} | {top} |")
+    prof = ['## Profit per kit on your own site (free shipping, labor $20/h)', '', '| Kit | Price | Pre-colored sheets | UV-printed color |',
+            '|---|---|---|---|']
+    own = [r for r in econ if r[2].startswith('own site')]
+    for kit in KITS:
+        name = summary[kit]['name']
+        for price in PRICES[kit]:
+            cells = []
+            for mode in ('pre-colored sheets', 'UV-printed color'):
+                r = next((r for r in own if r[0] == name and r[1] == mode and r[3] == price), None)
+                cells.append(f"{'-' if r[9] < 0 else ''}{money(abs(r[9]))} ({r[10]})" if r else '-')
+            prof.append(f'| {name} | {money(price)} | {cells[0]} | {cells[1]} |')
+    budget = ['## Startup budget', '',
+              f"- Required: **${tot['required']:,.0f}**: laser, safety, tools, LLC, first-year insurance, and starter materials for 25 of each kit.",
+              f"- Recommended: **${tot['recommended']:,.0f}**: UV printer and ink (see `research/color_printing.md`).",
+              f"- Optional: **${tot['optional']:,.0f}**: fume extractor (only if you cannot vent outside), booklet printer."]
+
+    def swap(text, start, end, new):
+        a = text.index(start)
+        b = text.index(end, a)
+        return text[:a] + '\n'.join(new) + '\n\n' + text[b:]
+    text = swap(text, '## Cost per kit', '## Profit per kit', cost)
+    text = swap(text, '## Profit per kit', 'Etsy costs about', prof)
+    text = swap(text, '## Startup budget', 'Box size check', budget)
+    open(path, 'w').write(text)
 
 
 SERIES = ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#008300']   # validated categorical order

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hartwood Designs: start here</title>
+<link rel="icon" href="website/favicon.svg" type="image/svg+xml">
+<style>
+@font-face { font-family: Fraunces; src: url(brand/fonts/Fraunces-700.ttf); font-weight: 700; }
+@font-face { font-family: Inter; src: url(brand/fonts/Inter-400.ttf); font-weight: 400; }
+@font-face { font-family: Inter; src: url(brand/fonts/Inter-600.ttf); font-weight: 600; }
+@font-face { font-family: Inter; src: url(brand/fonts/Inter-700.ttf); font-weight: 700; }
+@font-face { font-family: Inter; src: url(brand/fonts/Inter-800.ttf); font-weight: 800; }
+
+:root { --walnut:#3A2A1F; --walnut-2:#5C4636; --oak:#B9895B; --maple:#EBD5B0; --birch:#F6EEE1; --paper:#FCF8F1; --line:#E6D9C4;
+  --lagoon:#0F8B7F; --lagoon-dark:#0B6158; --lagoon-light:#D7EFEB; --blaze:#FF6A13; --ok:#1d7a3a; --ok-bg:#e3f3e7; --bad:#b3261e; --white:#fff; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--walnut); font: 16px/1.5 Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; }
+a { color: var(--lagoon-dark); }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+header.hero { background: var(--walnut); color: #fff; padding: 22px 0 26px; }
+header.hero .wrap { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between; }
+header.hero img { height: 54px; }
+header.hero h1 { font: 700 clamp(1.6rem, 3.5vw, 2.3rem)/1.15 Fraunces, Georgia, serif; margin: 6px 0 4px; }
+header.hero p { margin: 0; color: #f1e6d6; max-width: 720px; }
+h2 { font: 700 1.55rem/1.2 Fraunces, Georgia, serif; margin: 34px 0 12px; }
+h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.lead { color: var(--walnut-2); margin-top: -4px; }
+.todo-first { background: #fff; border: 2px solid var(--blaze); border-radius: 18px; padding: 16px 18px; margin-top: 18px; }
+.todo-first h2 { margin-top: 0; }
+ol.todo, ul.todo { list-style: none; padding: 0; margin: 6px 0 10px; counter-reset: n; }
+ol.todo li { counter-increment: n; }
+.todo li label { display: grid; grid-template-columns: 26px 1fr; gap: 8px; padding: 7px 0; border-top: 1px dashed var(--line); cursor: pointer; align-items: start; }
+ol.todo li label::before { content: counter(n); grid-column: 1; grid-row: 1; width: 24px; height: 24px; border-radius: 50%; background: var(--blaze); color: #fff;
+  font-weight: 800; font-size: .85rem; display: grid; place-items: center; }
+ol.todo li input { position: absolute; opacity: 0; }
+ul.todo li input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--lagoon); }
+.todo li input:checked + span { text-decoration: line-through; color: #8c8579; }
+ol.todo li input:checked ~ span::after { content: "  (done)"; color: var(--ok); font-weight: 700; text-decoration: none; }
+.secs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr)); gap: 10px; align-items: start; }
+details.sec { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 2px 14px 8px; font-size: .93rem; }
+details.sec .tw { font-size: .86rem; }
+details.sec summary { cursor: pointer; font-weight: 800; padding: 10px 0; min-height: 44px; display: flex; align-items: center; justify-content: space-between; }
+details.sec summary span { font-weight: 600; color: var(--walnut-2); font-size: .9rem; }
+.tw { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--birch); font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: var(--walnut-2); }
+code { background: var(--birch); padding: 1px 5px; border-radius: 5px; font-size: .88em; overflow-wrap: anywhere; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+.tile { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+.tile b { display: block; font: 800 1.6rem/1.1 Inter; color: var(--walnut); }
+.tile span { font-size: .85rem; color: var(--walnut-2); }
+.tile.good b { color: var(--ok); }
+.score { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.score td { vertical-align: middle; }
+.score img { width: 110px; height: 82px; object-fit: cover; border-radius: 10px; display: block; background: var(--birch); }
+.kname { font: 700 1.15rem Fraunces, Georgia, serif; }
+.muted { color: var(--walnut-2); font-size: .85rem; font-weight: 400; }
+.kc { min-width: 170px; }
+.chips { display: flex; flex-wrap: wrap; gap: 3px; max-width: 150px; }
+.chip { width: 18px; height: 18px; border-radius: 4px; border: 1px solid rgba(58,42,31,.35); font-size: .6rem; display: grid; place-items: center; font-weight: 700; }
+.chip.half { width: 13px; } .chip.quarter { width: 9px; }
+.pass { display: inline-block; background: var(--ok-bg); color: var(--ok); border-radius: 999px; padding: 2px 9px; font-weight: 700; font-size: .85rem; white-space: nowrap; }
+.fail { background: #fde7e5; color: var(--bad); }
+.num { font-weight: 800; white-space: nowrap; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+.card .pic { aspect-ratio: 16 / 10; background: var(--birch); overflow: hidden; }
+.card .pic img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.card .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card ul { margin: 0; padding-left: 18px; font-size: .93rem; }
+.card li { margin: 3px 0; }
+.note { background: var(--lagoon-light); border-radius: 12px; padding: 10px 14px; font-size: .93rem; }
+footer { margin: 40px 0 0; padding: 20px 0 30px; color: var(--walnut-2); font-size: .85rem; border-top: 1px solid var(--line); }
+@media (max-width: 760px) { .score .hide-sm { display: none; } .score img { width: 72px; height: 56px; } }
+</style></head>
+<body>
+<header class="hero"><div class="wrap">
+  <div><img src="brand/logo_on_dark.svg" alt="Hartwood Designs"><h1>Start here</h1>
+  <p>Three wooden model kits, designed in code and cut on one desktop laser, plus the instructions, website, workshop system and supply plan. Open anything below.</p></div>
+</div></header>
+<main class="wrap">
+<section class="todo-first">
+  <h2>Your to-do list</h2>
+  <p class="lead">Things only you can do. I was not allowed to buy anything, create accounts, publish, contact anyone, or set your policies, so each of those is here. Search the project for <code>TODO_LUCAS</code> to find every placeholder in the files. Tick items as you go: the ticks are saved in this browser.</p>
+  <h3>The first 5 things (in this order)</h3><ol class="todo">
+<li><label><input type="checkbox" data-k="ChoosethecolormethodPrecoloredsheetslaunchwithnoextramachine"><span><b>Choose the color method.</b> Pre-colored sheets (launch with no extra machine) or a UV printer (about $1,700 more, the ROKR look, better margins). See D028 and <code>research/color_printing.md</code>. It changes the shopping list and the Blossom Waltz price ($59.99 without a printer).</span></label></li>
+<li><label><input type="checkbox" data-k="Ordersamplesbeforeanythingbigonenatural12x12x18inbasswoodpac"><span><b>Order samples before anything big:</b> one natural 12 x 12 x 1/8 in basswood pack, one mixed color pack (check Pink, Haze Blue, Yellow, White look pastel, and Sunset Orange against blaze orange), #64 and #16 bands, 3/16 in birch dowels, and one 18-note wind-up movement. Measure the movement and put its size in <code>MOV</code> in <code>engine/kits/floral.py</code>.</span></label></li>
+<li><label><input type="checkbox" data-k="BuyandsetupthelaserConfirmtheOMTechPolar270Wpricetubewarrant"><span><b>Buy and set up the laser.</b> Confirm the OMTech Polar 2 70W price, tube warranty and spare tube price with OMTech, then buy direct from omtech.com (D009). Keep the garage above 10 °C (50 °F) and vent the exhaust outside. Read SOP-6 before the first cut.</span></label></li>
+<li><label><input type="checkbox" data-k="CalibrateCutthefitcouponkitscouponandaspeedladderPutyourkerf"><span><b>Calibrate.</b> Cut the fit coupon (<code>kits/coupon/</code>) and a speed ladder. Put your kerf, bridge width (pick from the 0.3 to 0.6 mm tags) and real speeds into <code>engine/hartwood/config.py</code>, then run <code>bash tools/rebuild_all.sh</code>. Open one <code>.lbrn2</code> file in LightBurn: the LightBurn files are written by my own code and are untested. If one will not open, import the SVG instead.</span></label></li>
+<li><label><input type="checkbox" data-k="Build3ofeachkitRuntheblastermechanismtestplankitsblastermech"><span><b>Build 3 of each kit.</b> Run the blaster mechanism test plan (<code>kits/blaster/mechanism_test_plan.md</code>), press every sheet out, and log every problem in the planner&#x27;s Quality tab. Fix the top bar before you sell.</span></label></li>
+</ol>
+<p>Start the business setup (section &quot;Legal and money&quot;) at the same time: it takes weeks.</p>
+  <p class="muted"><a href="#scoreboard">Jump to the scoreboard</a> or <a href="#kits">the kits</a>.</p>
+  <div class="secs"><details class="sec" open><summary>Purchases (I did not buy anything) <span>5 items</span></summary><ul class="todo">
+<li><label><input type="checkbox" data-k="Startuplistsupplystartup_shopping_listcsvRequiredabout7526re"><span>Startup list: <code>supply/startup_shopping_list.csv</code>. Required about $7,526, recommended (UV printer) $1,759, optional $1,150. All Estimates or prices seen on 2026-10-12.</span></label></li>
+<li><label><input type="checkbox" data-k="SpareCO2tubeinyear1pricetoconfirmwithOMTech"><span>Spare CO2 tube in year 1 (price to confirm with OMTech).</span></label></li>
+<li><label><input type="checkbox" data-k="CO2extinguisherAmerex322orsimilarfireblanketsmokealarmfirsta"><span>CO2 extinguisher (Amerex 322 or similar), fire blanket, smoke alarm, first aid kit.</span></label></li>
+<li><label><input type="checkbox" data-k="Shippingscale4x6inlabelprinter12x12x2inmailersUlineS5817orsi"><span>Shipping scale, 4 x 6 in label printer, 12 x 12 x 2 in mailers (Uline S-5817 or similar).</span></label></li>
+<li><label><input type="checkbox" data-k="MeasurearealmailerandasheetpackThemaileronlyfitsifyoursheets"><span>Measure a real mailer and a sheet pack. The mailer only fits if your sheets measure 12 in or less. Otherwise trim sheets on the laser or order a 12.5 in custom box.</span></label></li>
+</ul></details><details class="sec" open><summary>Accounts to create (I did not create any) <span>5 items</span></summary><ul class="todo">
+<li><label><input type="checkbox" data-k="StoreShopifyBuyButtonStripePaymentLinksoneperkitorEtsyPastet"><span><b>Store:</b> Shopify (Buy Button), Stripe Payment Links (one per kit) or Etsy. Paste the links where <code>STORE_NOTE</code> is in <code>tools/build_pages.py</code> and on <code>website/checkout/</code>, then run <code>tools/build_pages.py</code>. No custom payment code is needed.</span></label></li>
+<li><label><input type="checkbox" data-k="DomainandhostingforthestaticsiteforexampleCloudflarePagesorN"><span><b>Domain and hosting</b> for the static site (for example Cloudflare Pages or Netlify; <code>website/_redirects</code> is ready for both).</span></label></li>
+<li><label><input type="checkbox" data-k="ContactformFormspreeorNetlifyFormsandemaillistMailchimporBut"><span><b>Contact form</b> (Formspree or Netlify Forms) and <b>email list</b> (Mailchimp or Buttondown): placeholders on the contact and home pages.</span></label></li>
+<li><label><input type="checkbox" data-k="ShippingUSPSratesthroughyourshopappcheckwhetherfreeUSPSPacka"><span><b>Shipping:</b> USPS rates through your shop app; check whether free USPS Package Pickup takes Ground Advantage on its own (S24).</span></label></li>
+<li><label><input type="checkbox" data-k="GS1USbarcodeonlyifashoporAmazonasksforoneretailsleeve"><span><b>GS1 US barcode</b>, only if a shop or Amazon asks for one (retail sleeve).</span></label></li>
+</ul></details><details class="sec" open><summary>Publishing (I did not publish anything) <span>4 items</span></summary><ul class="todo">
+<li><label><input type="checkbox" data-k="SetSITE_URLinenginehartwoodconfigpytoyourdomainthenrunbashto"><span>Set <code>SITE_URL</code> in <code>engine/hartwood/config.py</code> to your domain, then run <code>bash tools/rebuild_all.sh</code>. Every QR code (booklets, lid labels, sleeves) points to it.</span></label></li>
+<li><label><input type="checkbox" data-k="DeploythewebsitefolderasastaticsiteTestbuildkitstep1onyourph"><span>Deploy the <code>website/</code> folder as a static site. Test <code>/build/&lt;kit&gt;/step/1</code> on your phone, then turn on airplane mode and reload: it should still work.</span></label></li>
+<li><label><input type="checkbox" data-k="PrintthebookletskitskitbookletpdfataprintshoporstartwiththeP"><span>Print the booklets (<code>kits/&lt;kit&gt;/booklet/*.pdf</code>) at a print shop, or start with the PDF and the 3D app.</span></label></li>
+<li><label><input type="checkbox" data-k="Printthelabelsbrandpackaging_labelpdfThesleevesareoptionalph"><span>Print the labels (<code>brand/packaging/*_label.pdf</code>). The sleeves are optional (phase 2).</span></label></li>
+</ul></details><details class="sec" open><summary>People to contact (I did not contact anyone) <span>6 items</span></summary><ul class="todo">
+<li><label><input type="checkbox" data-k="OMTechpricewarrantysparetubethePolar2soutsidesizenotpublishe"><span><b>OMTech:</b> price, warranty, spare tube, the Polar 2&#x27;s outside size (not published anywhere I could find), and whether it has a lid sensor, an emergency stop and a water flow alarm. Check SOP-1, SOP-5 and SOP-6 against the manual.</span></label></li>
+<li><label><input type="checkbox" data-k="Materialsuppliersbulkquotesfornaturalandcolored12x12sheetssu"><span><b>Material suppliers:</b> bulk quotes for natural and colored 12 x 12 sheets (<code>supply/suppliers.csv</code>), and a wind-up movement supplier (name the tune; use a public-domain one).</span></label></li>
+<li><label><input type="checkbox" data-k="UVprintermakersifyouchoseprintingaskforatestprinton3mmbasswo"><span><b>UV printer makers</b> (if you chose printing): ask for a test print on 3 mm basswood and time a full sheet.</span></label></li>
+<li><label><input type="checkbox" data-k="Stickerprinterandbookletprinterquoteslabelsare035asetandbook"><span><b>Sticker printer and booklet printer:</b> quotes (labels are $0.35 a set and booklets $3.61 in the costs, both Estimates).</span></label></li>
+<li><label><input type="checkbox" data-k="Insuranceagentproductliabilityplusgeneralliabilitytellyourho"><span><b>Insurance agent:</b> product liability plus general liability; tell your home insurer about the laser.</span></label></li>
+<li><label><input type="checkbox" data-k="AMinnesotasmallbusinessattorneyonemeetingtheblasterandCalifo"><span><b>A Minnesota small-business attorney</b> (one meeting): the blaster and California or New York imitation-firearm rules, the origin wording on the labels, and your terms and returns page.</span></label></li>
+</ul></details><details class="sec" open><summary>Placeholders in the files <span>11 items</span></summary><div class="tw"><table><thead><tr><th>Placeholder</th><th>Where it is</th><th>What to put</th></tr></thead><tbody>
+<tr><td>Your domain</td><td><code>engine/hartwood/config.py</code> (<code>SITE_URL</code>)</td><td>e.g. <a href="https://hartwooddesigns.com,">https://hartwooddesigns.com,</a> then rebuild</td></tr>
+<tr><td>Store links</td><td><code>tools/build_pages.py</code> (<code>STORE_NOTE</code>), <code>website/checkout/</code></td><td>Buy Button code or payment links</td></tr>
+<tr><td>Legal company name</td><td>Website footer (<code>tools/build_pages.py</code>)</td><td>e.g. Hartwood Designs LLC</td></tr>
+<tr><td>Support email</td><td>Contact page, booklets (<code>engine/booklet.py</code>)</td><td>a shop email address</td></tr>
+<tr><td>Your city</td><td>Box labels and sleeves (<code>brand/make_packaging.py</code>)</td><td>city name; a PO box works</td></tr>
+<tr><td>About page story and photo</td><td><code>tools/build_pages.py</code></td><td>your story, a workshop photo</td></tr>
+<tr><td>Terms, shipping, returns, privacy</td><td><code>website/terms/</code>, <code>website/privacy/</code>, FAQ</td><td>your policies (have them checked)</td></tr>
+<tr><td>Music box tune</td><td>FAQ in <code>tools/build_pages.py</code></td><td>the movement&#x27;s tune</td></tr>
+<tr><td>SOP-6 call card</td><td><code>production/sops/SOP-6_fire_and_emergency.pdf</code> (print, then write on it)</td><td>workshop address, urgent care, OMTech support</td></tr>
+<tr><td>UPC barcode</td><td>Retail sleeve (<code>brand/make_packaging.py</code>)</td><td>only if needed</td></tr>
+<tr><td>Sticker printer quote</td><td><code>supply/suppliers.csv</code> (via <code>tools/make_supply.py</code>)</td><td>price per label set</td></tr>
+</tbody></table></div></details><details class="sec" open><summary>Legal and money <span>9 items</span></summary><p>Details and sources: <code>supply/legal_checklist.md</code>.</p>
+<ul class="todo">
+<li><label><input type="checkbox" data-k="FormaMinnesotaLLC155onlinegetanEINopenabusinessbankaccount"><span>Form a Minnesota LLC ($155 online), get an EIN, open a business bank account.</span></label></li>
+<li><label><input type="checkbox" data-k="RegisterforaMinnesotasalestaxpermit"><span>Register for a Minnesota sales tax permit.</span></label></li>
+<li><label><input type="checkbox" data-k="RunafullUSPTOtrademarksearchforHartwoodinclass28toysbeforepr"><span>Run a full USPTO trademark search for &quot;Hartwood&quot; in class 28 (toys) before printing boxes.</span></label></li>
+<li><label><input type="checkbox" data-k="Checkcityzoningforahomebusinesswithalaser"><span>Check city zoning for a home business with a laser.</span></label></li>
+<li><label><input type="checkbox" data-k="Productliabilityinsuranceabout1192ayearaverageforsmallbusine"><span>Product liability insurance (about $1,192 a year average for small businesses, toys cost more).</span></label></li>
+<li><label><input type="checkbox" data-k="Keepeverykit14ontheboxsiteandbookletandinyourmarketing"><span>Keep every kit 14+ on the box, site and booklet, and in your marketing.</span></label></li>
+<li><label><input type="checkbox" data-k="BlasterchecktheorangeagainstFEDSTD595color12199asktheattorne"><span>Blaster: check the orange against FED-STD-595 color 12199; ask the attorney about California and New York rules; read Etsy&#x27;s and Shopify&#x27;s policies before listing it (S15, S24).</span></label></li>
+<li><label><input type="checkbox" data-k="LabelsnounqualifiedMadeinUSAS24"><span>Labels: no unqualified &quot;Made in USA&quot; (S24).</span></label></li>
+<li><label><input type="checkbox" data-k="DecideonfreesparepartsrecommendedD034Thesitealreadysayswewil"><span>Decide on free spare parts (recommended, D034). The site already says &quot;we will mail one free&quot;.</span></label></li>
+</ul></details><details class="sec" open><summary>Check my research (spot-checks) <span>3 items</span></summary><ul class="todo">
+<li><label><input type="checkbox" data-k="Thisbuildmachinecouldnotopenwebpageseveryfactcamefromwebsear"><span>This build machine could not open web pages: every fact came from web search summaries (see <code>research/sources.md</code>). Spot-check 10 ROKR prices in <code>research/data/rokr_products.csv</code> (the Amazon column is mostly blank) and the laser and material prices before you buy.</span></label></li>
+<li><label><input type="checkbox" data-k="Read20AmazonandRedditreviewsfortheROKRM416andMagicPianoandad"><span>Read 20 Amazon and Reddit reviews for the ROKR M416 and Magic Piano and add rows to <code>research/data/review_mentions.csv</code> (those sites were blocked).</span></label></li>
+<li><label><input type="checkbox" data-k="Toletafuturesessionopenpagesdirectlywidentheenvironmentsnetw"><span>To let a future session open pages directly, widen the environment&#x27;s network access (cloud environment menu &gt; Edit &gt; Network access): <a href="https://code.claude.com/docs/en/cloud-environments#network-access">https://code.claude.com/docs/en/cloud-environments#network-access</a></span></label></li>
+</ul></details><details class="sec" open><summary>Workshop <span>4 items</span></summary><ul class="todo">
+<li><label><input type="checkbox" data-k="Measurethegarageandthelaserbeforebuildingthe6x25ftlaserbench"><span>Measure the garage and the laser before building the 6 x 2.5 ft laser bench and the 8 x 2.7 ft packing bench (<code>production/layout/workshop_layout.png</code>).</span></label></li>
+<li><label><input type="checkbox" data-k="PrintthesevenSOPsproductionsopspdfandhangeachatitsstationPra"><span>Print the seven SOPs (<code>production/sops/*.pdf</code>) and hang each at its station. Practice SOP-6 once.</span></label></li>
+<li><label><input type="checkbox" data-k="Keepthegarageabove10C50FallyearordrainthewaterloopFreezingcr"><span>Keep the garage above 10 °C (50 °F) all year, or drain the water loop. Freezing cracks glass tubes.</span></label></li>
+<li><label><input type="checkbox" data-k="AfterthefirstmonthreplacemyEstimatetimesintoolsmake_capacity"><span>After the first month, replace my Estimate times in <code>tools/make_capacity.py</code> (3 min check per job, 6 min packing, 2 min shipping, 85% efficiency) with your own and rerun it.</span></label></li>
+</ul></details><details class="sec" open><summary>Pop-out and printed color <span>2 items</span></summary><ul class="todo">
+<li><label><input type="checkbox" data-k="Lookatthebridgemapsinkitskitpopoutgreengoodbridgeorangenoteb"><span>Look at the bridge maps in <code>kits/&lt;kit&gt;/popout/</code> (green = good bridge, orange = note, blue = sliding edge kept clear). Press out one full sheet per kit and note any part that was hard to free.</span></label></li>
+<li><label><input type="checkbox" data-k="Ifyouprintmaketwoidenticalcornerjigsprinterbedandlaserbedand"><span>If you print: make two identical corner jigs (printer bed and laser bed) and try LightBurn Print and Cut once with the targets in the cut files.</span></label></li>
+</ul></details></div>
+</section>
+
+<h2 id="scoreboard">Scoreboard</h2>
+<div class="tiles"><div class="tile"><b>3 kits</b><span>463 pieces in all</span></div><div class="tile good"><b>15 of 15</b><span>design checks pass (5 per kit)</span></div><div class="tile good"><b>7 of 7</b><span>deliberate breaks caught by the checks</span></div><div class="tile good"><b>13 of 13</b><span>3D app tests pass</span></div><div class="tile good"><b>8 of 8</b><span>planner tests pass</span></div><div class="tile"><b>245</b><span>sources in research/sources.md</span></div><div class="tile"><b>38</b><span>decisions in DECISIONS.md</span></div><div class="tile"><b>$3,699.99</b><span>OMTech Polar 2 70W laser (Verified)</span></div><div class="tile"><b>$7,526</b><span>startup budget, required (mixed)</span></div><div class="tile"><b>99 a week</b><span>kits on one shift; launch plan is 17 (Estimate)</span></div></div>
+<p></p>
+<div class="score tw"><table><thead><tr><th>Kit</th><th></th><th>Pieces</th><th>Sheets</th><th class="hide-sm">Laser min per kit</th><th>Cost per kit</th><th>Price</th><th>Profit per kit, own site</th><th>Checks</th></tr></thead><tbody>
+<tr><td><a href="kits/blaster/README.md"><img src="kits/blaster/renders/three_quarter.jpg" alt="Star Slinger"></a></td>
+<td class="kc"><div class="kname">Star Slinger</div><div class="muted">17 steps, 22-page booklet, 5 to 6 h</div></td>
+<td class="num">153</td>
+<td><div class="chips"><span class="chip full" title="Sheet A: natural, full" style="background:#E9D3AE">A</span><span class="chip full" title="Sheet B: natural, full" style="background:#E9D3AE">B</span><span class="chip half" title="Sheet C: orange, half" style="background:#F28C3A">C</span><span class="chip half" title="Sheet D: teal, half" style="background:#4FA8A0">D</span></div><div class="muted">4 sheets (3.0 full)</div></td>
+<td class="num hide-sm">17.6<div class="muted">UV: +13 min printing</div></td>
+<td class="num">$12.97<div class="muted">wood $6.34</div><div class="muted">UV: $9.60</div></td>
+<td class="num">$49.99</td>
+<td class="num">$18.11 (36%)<div class="muted">UV: $20.01 (40%)</div></td>
+<td><span class="pass">5 of 5</span>
+<div class="muted">Collision, Nothing-floats, Assembly path, Minimum feature, Pop-out</div></td></tr>
+<tr><td><a href="kits/dragon/README.md"><img src="kits/dragon/renders/three_quarter.jpg" alt="Emberwing"></a></td>
+<td class="kc"><div class="kname">Emberwing</div><div class="muted">21 steps, 28-page booklet, 6 to 8 h</div></td>
+<td class="num">152</td>
+<td><div class="chips"><span class="chip full" title="Sheet A: natural, full" style="background:#E9D3AE">A</span><span class="chip full" title="Sheet B: natural, full" style="background:#E9D3AE">B</span><span class="chip full" title="Sheet C: natural, full" style="background:#E9D3AE">C</span><span class="chip full" title="Sheet D: red, full" style="background:#C8473A">D</span><span class="chip full" title="Sheet E: natural, full" style="background:#E9D3AE">E</span><span class="chip quarter" title="Sheet F: gold, quarter" style="background:#D9A93B">F</span><span class="chip half" title="Sheet G: purple, half" style="background:#9C7BC4">G</span><span class="chip quarter" title="Sheet H: green, quarter" style="background:#6DAE6B">H</span></div><div class="muted">8 sheets (6.0 full)</div></td>
+<td class="num hide-sm">24.4<div class="muted">UV: +15 min printing</div></td>
+<td class="num">$18.69<div class="muted">wood $12.68</div><div class="muted">UV: $10.88</div></td>
+<td class="num">$54.99</td>
+<td class="num">$12.97 (24%)<div class="muted">UV: $19.61 (36%)</div></td>
+<td><span class="pass">5 of 5</span>
+<div class="muted">Collision, Nothing-floats, Assembly path, Minimum feature, Pop-out</div></td></tr>
+<tr><td><a href="kits/floral/README.md"><img src="kits/floral/renders/three_quarter.jpg" alt="Blossom Waltz"></a></td>
+<td class="kc"><div class="kname">Blossom Waltz</div><div class="muted">25 steps, 32-page booklet, 4 to 5 h</div></td>
+<td class="num">158</td>
+<td><div class="chips"><span class="chip half" title="Sheet A: natural, half" style="background:#E9D3AE">A</span><span class="chip full" title="Sheet B: white, full" style="background:#F7F5EF">B</span><span class="chip half" title="Sheet C: white, half" style="background:#F7F5EF">C</span><span class="chip full" title="Sheet D: pink, full" style="background:#F2A7BD">D</span><span class="chip half" title="Sheet E: green, half" style="background:#6DAE6B">E</span><span class="chip quarter" title="Sheet F: yellow, quarter" style="background:#F2D35E">F</span><span class="chip half" title="Sheet G: teal, half" style="background:#4FA8A0">G</span><span class="chip quarter" title="Sheet H: purple, quarter" style="background:#9C7BC4">H</span></div><div class="muted">8 sheets (4.5 full)</div></td>
+<td class="num hide-sm">20.7<div class="muted">UV: +43 min printing</div></td>
+<td class="num">$27.55<div class="muted">wood $18.46</div><div class="muted">UV: $13.44</div></td>
+<td class="num">$49.99</td>
+<td class="num">$0.50 (1%)<div class="muted">UV: $10.34 (21%)</div></td>
+<td><span class="pass">5 of 5</span>
+<div class="muted">Collision, Nothing-floats, Assembly path, Minimum feature, Pop-out</div></td></tr>
+</tbody></table></div>
+<p class="muted">Profit after free shipping, Shopify fees and your labor at $20/h. Cost and profit are Estimates built from Verified prices (see <a href="supply/README.md">supply/README.md</a>). Laser minutes are Estimates from planning speeds until you cut the speed ladder. UV = the UV-printed color version. Hover a sheet chip for its color; narrow chips are half and quarter tiles that serve 2 or 4 kits.</p>
+
+<h2 id="kits">The kits</h2>
+<div class="cards"><div class="card"><div class="pic"><img src="kits/blaster/renders/front.jpg" alt=""></div><div class="body"><h3>Star Slinger</h3><ul><li><a href="kits/blaster/README.md">Kit README (story, sheets, parts)</a></li><li><a href="kits/blaster/renders/">Hero renders and close-ups</a></li><li><a href="kits/blaster/parts/">Part images, one per code</a></li><li><a href="kits/blaster/cutfiles/">Cut files (SVG, DXF, LightBurn)</a></li><li><a href="kits/blaster/booklet/blaster_instructions.pdf">Booklet PDF</a> (22 pages)</li><li><a href="kits/blaster/booklet/blaster_instructions.docx">Booklet Word</a></li><li><a href="kits/blaster/parts_map/">Parts maps</a></li><li><a href="kits/blaster/popout/">Bridge maps (pop-out)</a></li><li><a href="kits/blaster/print_mode/">UV-print version</a></li><li><a href="kits/blaster/blaster.glb">3D model (GLB)</a></li><li><a href="kits/blaster/mechanism_test_plan.md">Mechanism test plan</a></li></ul></div></div><div class="card"><div class="pic"><img src="kits/dragon/renders/front.jpg" alt=""></div><div class="body"><h3>Emberwing</h3><ul><li><a href="kits/dragon/README.md">Kit README (story, sheets, parts)</a></li><li><a href="kits/dragon/renders/">Hero renders and close-ups</a></li><li><a href="kits/dragon/parts/">Part images, one per code</a></li><li><a href="kits/dragon/cutfiles/">Cut files (SVG, DXF, LightBurn)</a></li><li><a href="kits/dragon/booklet/dragon_instructions.pdf">Booklet PDF</a> (28 pages)</li><li><a href="kits/dragon/booklet/dragon_instructions.docx">Booklet Word</a></li><li><a href="kits/dragon/parts_map/">Parts maps</a></li><li><a href="kits/dragon/popout/">Bridge maps (pop-out)</a></li><li><a href="kits/dragon/print_mode/">UV-print version</a></li><li><a href="kits/dragon/dragon.glb">3D model (GLB)</a></li></ul></div></div><div class="card"><div class="pic"><img src="kits/floral/renders/front.jpg" alt=""></div><div class="body"><h3>Blossom Waltz</h3><ul><li><a href="kits/floral/README.md">Kit README (story, sheets, parts)</a></li><li><a href="kits/floral/renders/">Hero renders and close-ups</a></li><li><a href="kits/floral/parts/">Part images, one per code</a></li><li><a href="kits/floral/cutfiles/">Cut files (SVG, DXF, LightBurn)</a></li><li><a href="kits/floral/booklet/floral_instructions.pdf">Booklet PDF</a> (32 pages)</li><li><a href="kits/floral/booklet/floral_instructions.docx">Booklet Word</a></li><li><a href="kits/floral/parts_map/">Parts maps</a></li><li><a href="kits/floral/popout/">Bridge maps (pop-out)</a></li><li><a href="kits/floral/print_mode/">UV-print version</a></li><li><a href="kits/floral/floral.glb">3D model (GLB)</a></li></ul></div></div></div>
+
+<h2>Everything else</h2>
+<div class="note">The website and the 3D app use web routes, so they need a small server: in this folder run <code>node tools/serve.js</code> and open
+<a href="http://localhost:8080/">localhost:8080</a>. Everything else opens straight from this page.</div>
+<p></p>
+<div class="cards"><div class="card"><div class="pic"><img src="review/research_dashboard_desktop.png" alt=""></div><div class="body"><h3>Research dashboard</h3><ul><li><a href="research/dashboard/index.html">Open the dashboard</a></li><li><a href="research/rokr_deep_dive.md">ROKR deep dive</a></li><li><a href="research/design_language.md">Design language</a></li><li><a href="research/review_mining.md">Review mining</a></li><li><a href="research/competitors.md">Competitors</a></li><li><a href="research/lasers.md">Laser comparison</a></li><li><a href="research/materials.md">Materials</a></li><li><a href="research/color_printing.md">Color printing</a></li><li><a href="research/sources.md">All sources</a></li></ul></div></div><div class="card"><div class="pic"><img src="review/concepts/dragon_concepts.png" alt=""></div><div class="body"><h3>Concepts (3 per kit, scored)</h3><ul><li><a href="review/concepts/CONCEPTS.md">Scores and reasons</a></li><li><a href="review/concepts/">Concept boards</a></li></ul></div></div><div class="card"><div class="pic"><img src="review/app/phone_step4.png" alt=""></div><div class="body"><h3>3D instruction app</h3><p class=muted>Routes like /build/dragon/step/7, saved progress, works offline. It needs a web server, so run the local one first.</p><ul><li><a href="tools/serve.js">Start the local server: node tools/serve.js</a></li><li><a href="http://localhost:8080/build/">Then open localhost:8080/build/</a></li><li><a href="website/build/">App code</a></li><li><a href="review/app/">App screenshots</a></li></ul></div></div><div class="card"><div class="pic"><img src="review/site/home_desktop.png" alt=""></div><div class="body"><h3>Website</h3><ul><li><a href="http://localhost:8080/">Open localhost:8080 (after node tools/serve.js)</a></li><li><a href="website/">Site files</a></li><li><a href="review/site/">Screenshots, desktop and phone</a></li><li><a href="website/checkout/index.html">Checkout placeholder</a></li></ul></div></div><div class="card"><div class="pic"><img src="brand/packaging/mockup_lineup.png" alt=""></div><div class="body"><h3>Brand and packaging</h3><ul><li><a href="brand/logo.svg">Logo (SVG)</a></li><li><a href="brand/brand.json">Colors and fonts</a></li><li><a href="brand/packaging/README.md">Packaging and labels</a></li><li><a href="brand/packaging/">Lid labels (print PDFs)</a></li></ul></div></div><div class="card"><div class="pic"><img src="review/production/planner_quality.png" alt=""></div><div class="body"><h3>Production planner (tablet)</h3><ul><li><a href="production/planner/index.html">Open the planner</a></li><li><a href="production/README.md">How to use it</a></li><li><a href="production/planner/sample_orders.csv">Sample orders CSV</a></li></ul></div></div><div class="card"><div class="pic"><img src="review/production/sops/SOP-3_p1.png" alt=""></div><div class="body"><h3>Visual SOPs</h3><ul><li><a href="production/sops/index.html">All seven SOPs</a></li><li><a href="production/sops/SOP-1_startup_shutdown.pdf">SOP-1 Start-up</a></li><li><a href="production/sops/SOP-2_load_and_cut.pdf">SOP-2 Load and cut</a></li><li><a href="production/sops/SOP-3_unload_and_popout.pdf">SOP-3 Pop-out check</a></li><li><a href="production/sops/SOP-4_kitting_and_packing.pdf">SOP-4 Kitting</a></li><li><a href="production/sops/SOP-5_weekly_maintenance.pdf">SOP-5 Maintenance</a></li><li><a href="production/sops/SOP-6_fire_and_emergency.pdf">SOP-6 Fire</a></li><li><a href="production/sops/SOP-7_shipping.pdf">SOP-7 Shipping</a></li></ul></div></div><div class="card"><div class="pic"><img src="production/capacity_bottleneck.png" alt=""></div><div class="body"><h3>Capacity, layout, quality</h3><ul><li><a href="production/capacity.md">Capacity model</a></li><li><a href="production/layout/workshop_layout.png">Workshop layout</a></li><li><a href="production/quality_loop.md">Quality loop</a></li><li><a href="production/quality/pareto_start.png">Starting Pareto</a></li></ul></div></div><div class="card"><div class="pic"><img src="supply/unit_economics_prices.png" alt=""></div><div class="body"><h3>Supply and money</h3><ul><li><a href="supply/README.md">Supply overview</a></li><li><a href="supply/bom_per_kit.csv">BOM per kit</a></li><li><a href="supply/bom_batches.csv">BOM for 25 and 100</a></li><li><a href="supply/suppliers.csv">Suppliers (2+ per item)</a></li><li><a href="supply/startup_shopping_list.csv">Startup shopping list</a></li><li><a href="supply/reorder_points.csv">Reorder points</a></li><li><a href="supply/unit_economics.csv">Unit economics</a></li><li><a href="supply/legal_checklist.md">Legal checklist</a></li></ul></div></div><div class="card"><div class="pic"><img src="review/coupon_svg.png" alt=""></div><div class="body"><h3>Kit engine</h3><ul><li><a href="engine/">Engine code</a></li><li><a href="engine/hartwood/config.py">Config (kerf, fits, speeds)</a></li><li><a href="kits/coupon/">Fit-test coupon</a></li><li><a href="review/check_proofs.md">Proof that every check works</a></li><li><a href="tools/rebuild_all.sh">Rebuild everything: bash tools/rebuild_all.sh</a></li></ul></div></div><div class="card"><div class="body"><h3>Records</h3><ul><li><a href="SUMMARY.md">SUMMARY.md: what is built, verified, guessed</a></li><li><a href="DECISIONS.md">DECISIONS.md</a></li><li><a href="TODO_LUCAS.md">TODO_LUCAS.md</a></li><li><a href="review/">Review images</a></li></ul></div></div></div>
+</main>
+<footer><div class="wrap">Made by <code>tools/make_start_here.py</code> from the kit reports, the supply data and the test results on 2026-10-12.
+Every number is Verified (source in research/sources.md) or an Estimate.</div></footer>
+<script>
+document.querySelectorAll('input[data-k]').forEach(cb => {
+  const k = 'hw-start-' + cb.dataset.k;
+  try { cb.checked = localStorage.getItem(k) === '1'; } catch (e) {}
+  cb.addEventListener('change', () => { try { localStorage.setItem(k, cb.checked ? '1' : '0'); } catch (e) {} });
+});
+</script>
+</body></html>
