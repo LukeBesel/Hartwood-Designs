@@ -23,7 +23,7 @@ Cost is materials and packaging with pre-colored sheets. Profit is after free sh
 7. **Production** (`production/`): a capacity model with takt time and where the bottleneck moves, a tablet planner (orders, cut queue, printable schedule, tracking board, inventory with reorder alerts, quality log with Pareto and a design-change list; 8 of 8 tests pass), seven one-page picture SOPs, a to-scale garage layout and the quality loop.
 8. **Supply** (`supply/`): BOM per kit and for 25 and 100 kits, 2 or more suppliers per item, a startup shopping list (about $7,526 required), reorder points, unit economics at 3 prices with charts, and a legal must-do checklist with sources.
 9. **Records:** `DECISIONS.md` (42 decisions with reasons), `TODO_LUCAS.md`, and review images for every visual in `review/`.
-10. **Blaster test and preview** (`guides/`): an order list for 3 Star Slingers with a direct link for every material, tool and safety item (`BLASTER_TEST.md`, about $165 of materials), and a step-by-step LightBurn cutting guide (`HOW_TO_CUT.md`). The ship now lifts off its stand. A private claude.ai preview shows the website, 3D app, planner, SOPs and guides (`tools/build_preview.py`; 10 of 10 pages load without errors).
+10. **Blaster test and preview** (`guides/`): an order list for 3 Star Slingers with a direct link for every material, tool and safety item (`BLASTER_TEST.md`, about $165 of materials), and a step-by-step LightBurn cutting guide (`HOW_TO_CUT.md`). The ship now lifts off its stand. A private claude.ai preview shows the website, 3D app, planner, SOPs and guides (`tools/build_preview.py`; the test checks 417 links, 10 pages and 5 taps, served like the real host).
 
 ## What is verified
 
@@ -63,5 +63,5 @@ bash tools/rebuild_all.sh             # kits, checks, cut files, renders, bookle
 .venv/bin/python tools/make_start_here.py   # refresh START_HERE.html and run all tests
 node tools/serve.js                   # then open http://localhost:8080 for the website and 3D app
 .venv/bin/python tools/build_preview.py OUT   # private preview copy (hash routes, CDN three.js, glTF JSON)
-node tools/test_preview.js http://localhost:PORT OUT   # check every preview page loads
+node tools/test_preview.js OUT         # serve it like the host, check every link, page and main tap
 ```

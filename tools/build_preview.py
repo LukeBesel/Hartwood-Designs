@@ -62,16 +62,23 @@ def site_url(u, slug_prefix=''):
     return path + ('#' + frag if frag else '')
 
 
-def rewrite_html(text, depth):
-    base = '../' * depth or './'
+def rewrite_html(text, rel):
+    """rel = the page's path from the site root, e.g. 'faq/index.html'."""
+    base = '../' * rel.count('/') or './'
     text = re.sub(r'<script type="importmap">.*?</script>',
                   f'<script type="importmap">{{"imports":{{"three":"{THREE}/build/three.module.min.js","three/addons/":"{THREE}/examples/jsm/"}}}}</script>',
                   text, flags=re.S)
     text = re.sub(r'<link rel="manifest"[^>]*>', '', text)
-    text = text.replace('<head>', f'<head>\n<base href="{base}">\n{FONTS}', 1)
+    if '<head>' in text:
+        text = text.replace('<head>', f'<head>\n<base href="{base}">\n{FONTS}', 1)
+    else:                                   # the short redirect pages for old kit addresses have no <head>
+        text = re.sub(r'(<meta charset="utf-8">)', rf'\1<base href="{base}">', text, count=1)
+    text = re.sub(r'(content="\d+;\s*url=)(/[^"]*)"', lambda m: m.group(1) + site_url(m.group(2)) + '"', text)
     text = re.sub(r'((?:href|src|data-[a-z-]+)=")(/[^"]*)"', lambda m: m.group(1) + site_url(m.group(2)) + '"', text)
     # absolute paths inside inline scripts
     text = re.sub(r"(['\"`])/(assets|js|css|build|kits)/", r'\1\2/', text)
+    # With <base> at the site root, a bare "#main" would point at the site folder, not this page.
+    text = text.replace('href="#', f'href="{rel}#')
     return text
 
 
@@ -83,6 +90,8 @@ def rewrite_js(text, rel_path):
     text = re.sub(r'const usePath = [^;]+;', 'const usePath = false;   // preview: hash routes only', text)
     text = re.sub(r"(['\"`])/(assets|build|kits)/", r'\1\2/', text)
     text = text.replace('href="/#kits"', 'href="index.html#kits"')
+    # Links the app builds from hash routes need the page name too, because of <base> (see rewrite_html).
+    text = text.replace('href="${routeUrl(', 'href="build/index.html${routeUrl(')
     return text
 
 
@@ -128,7 +137,7 @@ def build_site(out):
             if f.endswith('.glb'):
                 glb_to_gltf_json(src, tgt[:-4] + '.gltf.json')
             elif f.endswith('.html'):
-                open(tgt, 'w').write(rewrite_html(open(src).read(), rel.count('/')).replace('kit.glb', 'kit.gltf.json'))
+                open(tgt, 'w').write(rewrite_html(open(src).read(), rel).replace('kit.glb', 'kit.gltf.json'))
             elif f.endswith('.js'):
                 open(tgt, 'w').write(rewrite_js(open(src).read(), rel).replace("'kit.glb'", "'kit.gltf.json'"))
             elif f.endswith('.css'):
