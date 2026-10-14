@@ -1,0 +1,130 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Hartwood renderer</title>
+<script type="importmap">{"imports":{"three":"/website/vendor/three/three.module.min.js","three/addons/":"/website/vendor/three/addons/"}}</script>
+<style>html,body{margin:0;background:transparent}canvas{display:block}</style></head>
+<body><canvas id="c"></canvas>
+<script type="module">
+import * as H from '/website/js/hw3d.js';
+const THREE = H.THREE;
+const canvas = document.getElementById('c');
+let renderer = null, kit = null, kitUrl = null;
+
+async function ensureKit(url) {
+  if (kitUrl === url) return kit;
+  kit = await H.loadKit(url); kitUrl = url; return kit;
+}
+
+const stepsCache = {};
+async function ensureSteps(url) {
+  if (!stepsCache[url]) stepsCache[url] = await (await fetch(url)).json();
+  return stepsCache[url];
+}
+
+window.renderJob = async (job) => {
+  const W = job.width || 1600, Hh = job.height || 1200;
+  canvas.width = W; canvas.height = Hh;
+  if (!renderer) renderer = H.makeRenderer(canvas, { alpha: true, preserve: true });
+  renderer.setPixelRatio(1); renderer.setSize(W, Hh, false);
+  const k = await ensureKit(job.glb);
+  const scene = new THREE.Scene();
+  scene.add(k.scene);
+  const res = new THREE.Vector2(W, Hh);
+  const mode = job.mode || 'hero';
+  const n = job.step || 0;
+  const only = job.codes ? new Set(job.codes) : null;
+  const arrows = new THREE.Group(); scene.add(arrows);
+  let newItems = [], ctx = null;
+  if (mode === 'step') {
+    const steps = await ensureSteps(job.steps);
+    ctx = H.stepContext(k, steps, n);
+    H.applyStep(k, ctx, 0, { res, outlinePx: job.outline_px || 3.5, colorBuilt: !!job.color_built });
+    newItems = ctx.newItems.concat(ctx.mountItems);
+  } else {
+    k.items.forEach(it => {
+      H.setOutline(it, false); H.setExplode(it, 0);
+      if (mode === 'hero') H.setLook(it, 'color');
+      else if (mode === 'part') H.setLook(it, only.has(it.code) && (!job.single || it === k.items.find(i => only.has(i.code))) ? 'color' : 'hidden');
+      else if (mode === 'upto') H.setLook(it, it.step <= n ? 'color' : 'hidden');
+    });
+    // hero only: lift a group of parts (e.g. the ship off its stand), offsets in mm in the model frame
+    const lift = job.lift ? new Set(job.lift.members) : null;
+    k.items.forEach(it => { it.node.position.copy(it.final); if (lift && lift.has(it.ex.name)) it.node.position.y += job.lift.dy; });
+  }
+  k.scene.updateMatrixWorld(true);
+  const box = H.visibleBox(k.items);
+  let explodedBox = null;
+  if (mode === 'step' && job.explode_new) {
+    H.applyStep(k, ctx, job.explode_new, { res, outlinePx: job.outline_px || 3.5, colorBuilt: !!job.color_built });
+    k.scene.updateMatrixWorld(true);
+    explodedBox = new THREE.Box3();
+    newItems.forEach(it => explodedBox.expandByObject(it.node));
+    if (job.arrows !== false) {
+      const bsz = box.getSize(new THREE.Vector3()).length();
+      const groups = {};
+      ctx.newItems.forEach(it => { const key = it.code + '|' + it.insert.toArray().map(v => v.toFixed(2)).join(','); (groups[key] = groups[key] || []).push(it); });
+      const list = Object.values(groups).map(g => ({ items: g, dir: g[0].insert.clone(), dist: g[0].explode }));
+      ctx.mounts.forEach(m => {
+        const its = ctx.mountItems.filter(it => ctx.mountOf.get(it) === m && it.node.visible);
+        if (its.length) list.push({ items: its, dir: new THREE.Vector3(...m.insert).normalize(), dist: m.explode });
+      });
+      list.forEach(g => {
+        const c1 = new THREE.Vector3(); g.items.forEach(it => c1.add(H.worldCenter(it))); c1.multiplyScalar(1 / g.items.length);
+        const d = g.dir.clone().multiplyScalar(g.dist * job.explode_new * 0.001 * 0.85);
+        arrows.add(H.arrow(c1.clone(), c1.clone().add(d), 0x2b1d12, Math.max(0.0006, bsz * 0.0022)));
+      });
+    }
+  }
+  k.scene.updateMatrixWorld(true);
+  let fitBox;
+  if (mode === 'step' && job.focus !== false) fitBox = H.stepFitBox(k, ctx, explodedBox);
+  else { const box2 = H.visibleBox(k.items); fitBox = job.fit_exploded ? box2 : box.union(box2); }
+  const aspect = W / Hh;
+  const cam = job.ortho ? new THREE.OrthographicCamera() : new THREE.PerspectiveCamera(job.fov || 30, aspect);
+  let view = job.view || [1, 0.8, 1.2], upHint = null;
+  if (view === 'auto' && ctx) view = H.autoView(ctx, job.base_view || [0.75, 0.45, 1.0]);
+  if (view === 'face') {
+    // look at the laser face of the first listed part, tilted a little so its thickness shows
+    const it = k.items.find(i => only && only.has(i.code));
+    const q = new THREE.Quaternion(); it.node.getWorldQuaternion(q);
+    const nrm = new THREE.Vector3(0, 0, 1).applyQuaternion(q).normalize();
+    const side = Math.abs(nrm.y) > 0.9 ? new THREE.Vector3(0, 0, 1) : new THREE.Vector3(0, 1, 0);
+    const right = new THREE.Vector3().crossVectors(side, nrm).normalize();
+    const v = nrm.clone().addScaledVector(side, 0.32).addScaledVector(right, 0.22);
+    view = [v.x, v.y, v.z];
+    const a = THREE.MathUtils.degToRad(it.ex.sheet_angle || 0);   // show the part as it lies on its sheet
+    upHint = new THREE.Vector3(Math.sin(a), Math.cos(a), 0).applyQuaternion(q);
+  }
+  H.frameCamera(cam, fitBox, view, { margin: job.margin || 1.1, aspect, upHint });
+  if (job.zoom && cam.isPerspectiveCamera) { const c = fitBox.getCenter(new THREE.Vector3()); cam.position.lerp(c, 1 - 1 / job.zoom); }
+  if (job.zoom && cam.isOrthographicCamera) { cam.zoom = job.zoom; cam.updateProjectionMatrix(); }
+  if (job.target) { const t = new THREE.Vector3(...job.target).multiplyScalar(0.001); const off = cam.position.clone().sub(fitBox.getCenter(new THREE.Vector3())); cam.position.copy(t).add(off); cam.lookAt(t); }
+  H.addLights(scene, fitBox);
+  if (mode === 'part') {
+    // headlight: the shown face is always lit, whatever its orientation in the model
+    const hl = new THREE.DirectionalLight(0xffffff, 1.6);
+    hl.position.copy(cam.position).add(cam.up.clone().multiplyScalar(fitBox.getSize(new THREE.Vector3()).length()));
+    hl.target.position.copy(fitBox.getCenter(new THREE.Vector3()));
+    scene.add(hl); scene.add(hl.target);
+  }
+  if (job.ground !== false && mode !== 'part') H.addGround(scene, H.visibleBox(k.items), job.shadow || 0.25);
+  renderer.setClearColor(0x000000, 0);
+  if (job.background) { renderer.setClearColor(new THREE.Color(job.background), 1); }
+  renderer.render(scene, cam);
+  const png = canvas.toDataURL('image/png');
+  // labels: screen positions of new parts (or listed parts), grouped by code
+  const labels = [];
+  const lab = mode === 'step' ? ctx.newItems : (mode === 'part' ? k.items.filter(i => only.has(i.code)) : []);
+  const seen = {};
+  lab.forEach(it => {
+    if (!it.node.visible) return;
+    const p = H.worldCenter(it).project(cam);
+    const x = (p.x + 1) / 2 * W, y = (1 - p.y) / 2 * Hh;
+    seen[it.code] = seen[it.code] || { code: it.code, kind: it.ex.kind || 'part', name: it.ex.name, qty: 0, pts: [] };
+    seen[it.code].qty++; seen[it.code].pts.push([Math.round(x), Math.round(y)]);
+  });
+  Object.values(seen).forEach(s => labels.push(s));
+  scene.remove(k.scene);
+  return { png, labels, view };
+};
+window.ready = true;
+</script></body></html>

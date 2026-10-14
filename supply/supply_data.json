@@ -1,0 +1,373 @@
+{
+ "items": {
+  "sheet_natural": {
+   "name": "Natural basswood plywood 12 x 12 x 1/8 in",
+   "unit": "sheet",
+   "cost": 0.92,
+   "status": "Verified",
+   "lead_days": 4,
+   "pack": 48,
+   "suppliers": [
+    [
+     "ESRICH 48-pack (WoodArtSupply)",
+     "$42.48 per 48 = $0.89",
+     "Verified"
+    ],
+    [
+     "MITINU 50-pack (WoodArtSupply), poplar core: test first",
+     "$45.99 per 50 = $0.92",
+     "Verified"
+    ],
+    [
+     "Creality Falcon 10-pack",
+     "$16.99 per 10 = $1.70",
+     "Verified"
+    ],
+    [
+     "LotFancy 12-pack (Walmart)",
+     "$19.99 per 12 = $1.67",
+     "Verified"
+    ]
+   ]
+  },
+  "sheet_color": {
+   "name": "Pre-painted basswood plywood 12 x 12 x 1/8 in (one color)",
+   "unit": "sheet",
+   "cost": 4.5,
+   "status": "Estimate",
+   "lead_days": 5,
+   "pack": 10,
+   "suppliers": [
+    [
+     "Craft Closet Maker Boards Colors (double-sided, 17 colors)",
+     "$59.99 per 9 = $6.67",
+     "Verified"
+    ],
+    [
+     "TwoTrees 3 mm colored basswood 300 x 300, 10-pack",
+     "EUR 34.95 per 10 = about $3.80",
+     "Verified (EU price)"
+    ],
+    [
+     "Creatorally pre-painted 12 x 12 (Amazon)",
+     "price not shown in search: TODO_LUCAS",
+     "Estimate"
+    ]
+   ]
+  },
+  "band_64": {
+   "name": "#64 rubber band (3.5 x 1/4 in), blaster ammo",
+   "unit": "band",
+   "cost": 0.032,
+   "status": "Verified",
+   "lead_days": 2,
+   "pack": 380,
+   "suppliers": [
+    [
+     "Staples Economy #64, 380 per pack",
+     "$11.99 = $0.032",
+     "Verified"
+    ],
+    [
+     "Alliance Sterling #64, 1 lb about 425 (Quill)",
+     "$16.79 = $0.040",
+     "Verified"
+    ]
+   ]
+  },
+  "band_16": {
+   "name": "#16 rubber band (2.5 x 1/16 in), trigger return",
+   "unit": "band",
+   "cost": 0.0041,
+   "status": "Verified",
+   "lead_days": 2,
+   "pack": 2300,
+   "suppliers": [
+    [
+     "Alliance Sterling #16, 1 lb about 2,300 (Staples)",
+     "$9.49 = $0.0041",
+     "Verified"
+    ],
+    [
+     "Same item at Walmart (sale)",
+     "$6.90 = $0.0030",
+     "Verified"
+    ]
+   ]
+  },
+  "dowel": {
+   "name": "3/16 in birch dowel, 36 in (cut to length)",
+   "unit": "mm",
+   "cost": 0.000437636761487965,
+   "status": "Verified",
+   "lead_days": 5,
+   "pack": 22850,
+   "suppliers": [
+    [
+     "Lee Valley birch 3/16 x 36 in",
+     "$0.40 each",
+     "Verified"
+    ],
+    [
+     "Madison Mill poplar 3/16 x 36 in, 25-pack (Walmart)",
+     "$38.01 = $1.52 each",
+     "Verified"
+    ],
+    [
+     "Valley Wide Coop poplar 3/16 x 36 in (multiples of 25)",
+     "$1.49 each",
+     "Verified"
+    ]
+   ]
+  },
+  "movement": {
+   "name": "18-note wind-up music movement with turning shaft",
+   "unit": "each",
+   "cost": 3.0,
+   "status": "Estimate",
+   "lead_days": 30,
+   "pack": 100,
+   "suppliers": [
+    [
+     "B2B supplier via Alibaba (order samples first, check shaft and size)",
+     "$1.77 to $2.12 for a battery model; wind-up quote TODO_LUCAS",
+     "Verified (listing)"
+    ],
+    [
+     "eBay 18-note wind-up movement (retail, for prototypes)",
+     "$6.99",
+     "Verified"
+    ],
+    [
+     "National Artcraft 18-note (Walmart)",
+     "$9.85 to $12.89",
+     "Verified"
+    ]
+   ]
+  },
+  "wax": {
+   "name": "Wax stick (paraffin, cut from a 1 lb block)",
+   "unit": "stick",
+   "cost": 0.08,
+   "status": "Estimate",
+   "lead_days": 3,
+   "pack": 200,
+   "suppliers": [
+    [
+     "Alexes paraffin 1 lb (about 200 sticks)",
+     "$15.99",
+     "Verified"
+    ],
+    [
+     "Blended Waxes paraffin 1 lb (eBay)",
+     "from $15.58",
+     "Verified"
+    ]
+   ]
+  },
+  "sandpaper": {
+   "name": "Sandpaper 240 grit, 1/8 of a 9 x 11 sheet",
+   "unit": "piece",
+   "cost": 0.0392,
+   "status": "Verified",
+   "lead_days": 4,
+   "pack": 800,
+   "suppliers": [
+    [
+     "AA Abrasives 9 x 11 240 A/O, 100 sheets",
+     "$31.36",
+     "Verified"
+    ],
+    [
+     "eBay 240 grit 9 x 11, 50 sheets",
+     "$33.27",
+     "Verified"
+    ]
+   ]
+  },
+  "bag": {
+   "name": "Zip bag 3 x 4 in (extras)",
+   "unit": "bag",
+   "cost": 0.016,
+   "status": "Verified",
+   "lead_days": 3,
+   "pack": 1000,
+   "suppliers": [
+    [
+     "UOFFICE 3 x 4 in 2 mil, 1,000 (Walmart)",
+     "$15.67",
+     "Verified"
+    ],
+    [
+     "American Retail Supply 3 x 4 in 4 mil, 1,000",
+     "$27.68",
+     "Verified"
+    ],
+    [
+     "Uline S-1292 3 x 4 in 2 mil",
+     "price: check uline.com",
+     "Estimate"
+    ]
+   ]
+  },
+  "box": {
+   "name": "White mailer box 12 x 12 x 2 in (sheets must measure 12 in or less)",
+   "unit": "box",
+   "cost": 1.83,
+   "status": "Verified",
+   "lead_days": 2,
+   "pack": 100,
+   "suppliers": [
+    [
+     "Uline S-5817 (50: $1.99, 100: $1.83, 500: $1.51, 1,000: $1.47)",
+     "$1.83 at 100",
+     "Verified"
+    ],
+    [
+     "Interplas CP-121202P, bundle of 50",
+     "$88.35 = $1.77",
+     "Verified"
+    ],
+    [
+     "Global Industrial WBB40305, 50",
+     "$113.00 = $2.26",
+     "Verified"
+    ]
+   ]
+  },
+  "booklet": {
+   "name": "Printed color booklet (22 to 32 pages)",
+   "unit": "booklet",
+   "cost": 3.61,
+   "status": "Estimate",
+   "lead_days": 7,
+   "pack": 100,
+   "suppliers": [
+    [
+     "4OVER4 booklets, 100 run (page count to confirm)",
+     "$3.61 each",
+     "Verified (listing)"
+    ],
+    [
+     "In-house color laser printer + long-reach stapler",
+     "about $1.50 each (Estimate)",
+     "Estimate"
+    ]
+   ]
+  },
+  "sticker": {
+   "name": "Box labels: lid label (4 x 4 in) + info and batch label (4 x 2 in)",
+   "unit": "set",
+   "cost": 0.35,
+   "status": "Estimate",
+   "lead_days": 7,
+   "pack": 250,
+   "suppliers": [
+    [
+     "Any online sticker printer (quote TODO_LUCAS)",
+     "about $0.35 a set",
+     "Estimate"
+    ],
+    [
+     "In-house: color inkjet + matte label sheets",
+     "about $0.25 a set",
+     "Estimate"
+    ]
+   ]
+  },
+  "targets": {
+   "name": "Paper target (printed in-house)",
+   "unit": "sheet",
+   "cost": 0.04,
+   "status": "Estimate",
+   "lead_days": 1,
+   "pack": 500,
+   "suppliers": [
+    [
+     "Copy paper + home printer",
+     "$0.04",
+     "Estimate"
+    ],
+    [
+     "Office store copies",
+     "$0.10",
+     "Estimate"
+    ]
+   ]
+  },
+  "filler": {
+   "name": "Kraft paper filler and tape",
+   "unit": "kit",
+   "cost": 0.12,
+   "status": "Estimate",
+   "lead_days": 2,
+   "pack": 300,
+   "suppliers": [
+    [
+     "Uline kraft roll",
+     "about $0.08 per box",
+     "Estimate"
+    ],
+    [
+     "Any packing tape",
+     "about $0.04 per box",
+     "Estimate"
+    ]
+   ]
+  }
+ },
+ "weekly_plan": {
+  "blaster": 6,
+  "dragon": 5,
+  "floral": 6
+ },
+ "summary": {
+  "blaster": {
+   "name": "Star Slinger",
+   "materials": 12.966257768052516,
+   "ship": 9.3,
+   "labor": 7.866666666666667,
+   "labor_min": 23.6,
+   "weight_lb": 1.918002,
+   "materials_print": 9.596257768052517,
+   "labor_print": 9.266666666666666,
+   "wood_sheets": 6.34,
+   "wood_print": 2.7600000000000002,
+   "ink": 0.21,
+   "print_min": 13.5
+  },
+  "dragon": {
+   "name": "Emberwing",
+   "materials": 18.693453829321662,
+   "ship": 11.3,
+   "labor": 10.133333333333333,
+   "labor_min": 30.4,
+   "weight_lb": 3.0643940000000005,
+   "materials_print": 10.883453829321663,
+   "labor_print": 11.299999999999999,
+   "wood_sheets": 12.68,
+   "wood_print": 4.6000000000000005,
+   "ink": 0.27,
+   "print_min": 14.6
+  },
+  "floral": {
+   "name": "Blossom Waltz",
+   "materials": 27.545270021881837,
+   "ship": 11.3,
+   "labor": 8.9,
+   "labor_min": 26.7,
+   "weight_lb": 3.0643940000000005,
+   "materials_print": 13.435270021881836,
+   "labor_print": 13.166666666666666,
+   "wood_sheets": 18.46,
+   "wood_print": 3.68,
+   "ink": 0.67,
+   "print_min": 42.9
+  }
+ },
+ "startup_totals": {
+  "required": 7525.58,
+  "recommended": 1759.0,
+  "optional": 1149.99
+ }
+}

@@ -1,0 +1,3684 @@
+{
+ "kit": "blaster",
+ "name": "Star Slinger",
+ "checks": [
+  {
+   "name": "Collision check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "summary": "zero overlaps"
+  },
+  {
+   "name": "Nothing-floats check",
+   "pass": true,
+   "count": 0,
+   "details": {
+    "floating": [],
+    "components": 1,
+    "component_sizes": [
+     157
+    ],
+    "small_components": []
+   },
+   "summary": "every part touches another; model is one piece"
+  },
+  {
+   "name": "Assembly path check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "summary": "every part slides into place without hitting a placed part"
+  },
+  {
+   "name": "Minimum feature check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "fragile": [
+    {
+     "part": "nose_cap_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_r_peg2",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_r_peg3",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_front_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_front_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_nose_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_nose_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "engine_panel_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "engine_panel_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "cockpit_side_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "stripe_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "stripe_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "intake_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_l_peg2",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_rear_l_peg3",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_front_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_front_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_nose_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "skin_nose_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "engine_panel_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "engine_panel_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "cockpit_side_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "stripe_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "stripe_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "intake_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "panel_r0_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "panel_r1_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "panel_l0_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "panel_l1_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "reactor_r0_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "reactor_r1_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "reactor_l0_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "reactor_l1_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "grip_r_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "grip_r_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "grip_l_peg0",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "grip_l_peg1",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "wing_stripe_r_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "wing_stripe_l_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "target_ring0_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    },
+    {
+     "part": "safety_peg",
+     "why": "tiny (24 mm2)",
+     "spares": 1
+    }
+   ],
+   "summary": "every part is one piece; no feature thinner than 2.5 mm"
+  },
+  {
+   "name": "Pop-out check",
+   "pass": true,
+   "count": 0,
+   "details": [],
+   "warnings": [
+    {
+     "sheet": "A",
+     "part": "rib_deck",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      88.38,
+      256.88
+     ]
+    },
+    {
+     "sheet": "A",
+     "part": "rib_deck",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      173.98,
+      256.88
+     ]
+    },
+    {
+     "sheet": "A",
+     "part": "rib_deck",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      95.62,
+      247.12
+     ]
+    },
+    {
+     "sheet": "A",
+     "part": "rib_keel",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      67.98,
+      160.88
+     ]
+    },
+    {
+     "sheet": "A",
+     "part": "rib_grip_back",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      45.34,
+      271.88
+     ]
+    },
+    {
+     "sheet": "A",
+     "part": "engine_panel_l_peg1",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      215.88,
+      202.93
+     ]
+    },
+    {
+     "sheet": "A",
+     "part": "engine_panel_r_peg1",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      11.88,
+      216.93
+     ]
+    },
+    {
+     "sheet": "A",
+     "part": "reactor_l0_peg0",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      57.08,
+      240.88
+     ]
+    },
+    {
+     "sheet": "A",
+     "part": "reactor_r0_peg0",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      267.88,
+      247.93
+     ]
+    },
+    {
+     "sheet": "B",
+     "part": "engine_panel_l_peg1",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      107.88,
+      8.93
+     ]
+    },
+    {
+     "sheet": "B",
+     "part": "engine_panel_r_peg1",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      169.88,
+      8.93
+     ]
+    },
+    {
+     "sheet": "B",
+     "part": "reactor_l0_peg0",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      98.88,
+      30.93
+     ]
+    },
+    {
+     "sheet": "B",
+     "part": "reactor_r0_peg0",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      11.88,
+      32.92
+     ]
+    },
+    {
+     "sheet": "C",
+     "part": "nose_bottom",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      110.12,
+      122.82
+     ]
+    },
+    {
+     "sheet": "C",
+     "part": "nose_top",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      241.12,
+      108.17
+     ]
+    },
+    {
+     "sheet": "C",
+     "part": "nose_top",
+     "why": "bridge on an edge that butts against another part",
+     "at": [
+      250.88,
+      119.73
+     ]
+    }
+   ],
+   "parts": [
+    {
+     "sheet": "A",
+     "part": "stand_base",
+     "code": "A20",
+     "bridges": 4,
+     "bridge_mm": 2.0
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_l",
+     "code": "A19",
+     "bridges": 4,
+     "bridge_mm": 2.0
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_r",
+     "code": "A6",
+     "bridges": 4,
+     "bridge_mm": 2.0
+    },
+    {
+     "sheet": "A",
+     "part": "rib_deck",
+     "code": "A9",
+     "bridges": 4,
+     "bridge_mm": 2.0
+    },
+    {
+     "sheet": "A",
+     "part": "wall_l_front",
+     "code": "A15",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "A",
+     "part": "wall_r_front",
+     "code": "A15",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "A",
+     "part": "rib_keel",
+     "code": "A18",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_front_l",
+     "code": "A10",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_front_r",
+     "code": "A17",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "A",
+     "part": "grip_l",
+     "code": "A13",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "A",
+     "part": "rib_grip_back",
+     "code": "A3",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "A",
+     "part": "trigger0",
+     "code": "A7",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "A",
+     "part": "rib_guard_front",
+     "code": "A4",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "rib_guard",
+     "code": "A21",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "rib_tail_top",
+     "code": "A5",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "pod_l_side0",
+     "code": "A16",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "pod_r_side1",
+     "code": "A14",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "rib_grip_front",
+     "code": "A11",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "panel_l1",
+     "code": "A25",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "panel_r1",
+     "code": "A23",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "thruster_peg",
+     "code": "A8",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "rib_grip_bottom",
+     "code": "A12",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "thruster5",
+     "code": "A22",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "rib_tail_end",
+     "code": "A24",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "belly_fin_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "canopy_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "pod_l_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "pod_r_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "tail_fin_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "target_dot_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "trigger_peg0",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "trigger_peg1",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "wheel_peg0",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "wheel_peg1",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "cockpit_side_l_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "cockpit_side_r_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "engine_panel_l_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "engine_panel_l_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "engine_panel_r_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "engine_panel_r_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "grip_l_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "grip_l_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "grip_r_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "grip_r_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "intake_l_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "intake_r_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "panel_l0_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "panel_l1_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "panel_r0_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "panel_r1_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "reactor_l0_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "reactor_l1_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "reactor_r0_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "reactor_r1_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "safety_peg",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_front_l_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_front_l_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_front_r_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_front_r_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_nose_l_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_nose_l_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_nose_r_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_nose_r_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_l_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_l_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_l_peg2",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_l_peg3",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_r_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_r_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_r_peg2",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "skin_rear_r_peg3",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "stripe_l_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "stripe_l_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "stripe_r_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "stripe_r_peg1",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "target_ring0_peg",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "wing_stripe_l_peg",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "wing_stripe_r_peg",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "thruster_peg",
+     "code": "A8",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "A",
+     "part": "belly_fin_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "canopy_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "pod_l_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "pod_r_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "tail_fin_peg",
+     "code": "A2",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "cockpit_side_l_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "A",
+     "part": "cockpit_side_r_peg0",
+     "code": "A1",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "wall_l_rear",
+     "code": "B6",
+     "bridges": 4,
+     "bridge_mm": 2.0
+    },
+    {
+     "sheet": "B",
+     "part": "wall_r_rear",
+     "code": "B6",
+     "bridges": 4,
+     "bridge_mm": 2.0
+    },
+    {
+     "sheet": "B",
+     "part": "grip_r",
+     "code": "B7",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "B",
+     "part": "wing_l",
+     "code": "B5",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "B",
+     "part": "wing_r",
+     "code": "B4",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "B",
+     "part": "trigger2",
+     "code": "B2",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "B",
+     "part": "target_plate",
+     "code": "B3",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "B",
+     "part": "wheel0",
+     "code": "B1",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "B",
+     "part": "wheel2",
+     "code": "B1",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "B",
+     "part": "target_dot_peg",
+     "code": "B9",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "trigger_peg0",
+     "code": "B9",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "trigger_peg1",
+     "code": "B9",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "wheel_peg0",
+     "code": "B9",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "wheel_peg1",
+     "code": "B9",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "engine_panel_l_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "engine_panel_l_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "engine_panel_r_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "engine_panel_r_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "grip_l_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "grip_l_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "grip_r_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "grip_r_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "intake_l_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "intake_r_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "panel_l0_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "panel_l1_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "panel_r0_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "panel_r1_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "reactor_l0_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "reactor_l1_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "reactor_r0_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "reactor_r1_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "safety_peg",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_front_l_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_front_l_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_front_r_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_front_r_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_nose_l_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_nose_l_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_nose_r_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_nose_r_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_rear_l_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_rear_l_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_rear_l_peg2",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_rear_l_peg3",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_rear_r_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_rear_r_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_rear_r_peg2",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "skin_rear_r_peg3",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "stripe_l_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "stripe_l_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "stripe_r_peg0",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "stripe_r_peg1",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "target_ring0_peg",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "wing_stripe_l_peg",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "B",
+     "part": "wing_stripe_r_peg",
+     "code": "B8",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "C",
+     "part": "band_rack",
+     "code": "C26",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "C",
+     "part": "safety_plaque",
+     "code": "C35",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "C",
+     "part": "trigger1",
+     "code": "C21",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "C",
+     "part": "target_ring0",
+     "code": "C30",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "C",
+     "part": "reactor_r1",
+     "code": "C32",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "reactor_l1",
+     "code": "C33",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "skin_nose_l",
+     "code": "C34",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "skin_nose_r",
+     "code": "C19",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "stripe_l",
+     "code": "C31",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "C",
+     "part": "stripe_r",
+     "code": "C22",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "C",
+     "part": "wing_stripe_r",
+     "code": "C20",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "wing_stripe_l",
+     "code": "C25",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "nose_cap",
+     "code": "C24",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "wall_l_nose",
+     "code": "C12",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "wall_r_nose",
+     "code": "C12",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "wing_fin_r",
+     "code": "C17",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "C",
+     "part": "wing_fin_l",
+     "code": "C18",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "C",
+     "part": "missile_l",
+     "code": "C2",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "missile_r",
+     "code": "C1",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "tail_fin_l",
+     "code": "C13",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "tail_fin_r",
+     "code": "C14",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "pod_l_side1",
+     "code": "C23",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "pod_r_side0",
+     "code": "C4",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "thruster1",
+     "code": "C16",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "thruster3",
+     "code": "C15",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "belly_fin_l",
+     "code": "C9",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "belly_fin_r",
+     "code": "C11",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "target_ear0",
+     "code": "C3",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "target_ear1",
+     "code": "C3",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "nose_hook1",
+     "code": "C6",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "nose_bottom",
+     "code": "C5",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "nose_hook0",
+     "code": "C8",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "nose_hook2",
+     "code": "C8",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "nose_top",
+     "code": "C10",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "nose_plug",
+     "code": "C7",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "target_ring2",
+     "code": "C29",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "C",
+     "part": "nose_hook_peg",
+     "code": "C27",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "C",
+     "part": "nose_cap_peg",
+     "code": "C28",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "C",
+     "part": "nose_hook_peg",
+     "code": "C27",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "C",
+     "part": "nose_cap_peg",
+     "code": "C28",
+     "bridges": 1,
+     "bridge_mm": 0.5
+    },
+    {
+     "sheet": "D",
+     "part": "stand_upright",
+     "code": "D1",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "safety_back",
+     "code": "D24",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "wheel1",
+     "code": "D19",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "reactor_l0",
+     "code": "D20",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "reactor_r0",
+     "code": "D21",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "engine_panel_r",
+     "code": "D22",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "engine_panel_l",
+     "code": "D12",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "tail_fin",
+     "code": "D17",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "target_side0",
+     "code": "D5",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "target_side1",
+     "code": "D5",
+     "bridges": 3,
+     "bridge_mm": 1.5
+    },
+    {
+     "sheet": "D",
+     "part": "pod_l",
+     "code": "D15",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "pod_r",
+     "code": "D15",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "belly_fin",
+     "code": "D14",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "stand_boot_l",
+     "code": "D16",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "stand_boot_r",
+     "code": "D16",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "cockpit_side_l",
+     "code": "D13",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "cockpit_side_r",
+     "code": "D11",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "target_ring1",
+     "code": "D7",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "canopy1",
+     "code": "D23",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "canopy0",
+     "code": "D9",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "canopy2",
+     "code": "D9",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "panel_r0",
+     "code": "D18",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "panel_l0",
+     "code": "D6",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "thruster0",
+     "code": "D3",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "thruster2",
+     "code": "D4",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "intake_l",
+     "code": "D10",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "intake_r",
+     "code": "D2",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    },
+    {
+     "sheet": "D",
+     "part": "thruster4",
+     "code": "D8",
+     "bridges": 2,
+     "bridge_mm": 1.0
+    }
+   ],
+   "summary": "210 parts held by 353 bridges of 0.5 mm, none on a mating edge or a weak spot, holes cut first, nothing nested in a hole (16 bridges with a note, see warnings)"
+  }
+ ],
+ "nest_problems": [],
+ "popout": {
+  "name": "Pop-out check",
+  "pass": true,
+  "count": 0,
+  "details": [],
+  "warnings": [
+   {
+    "sheet": "A",
+    "part": "rib_deck",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     88.38,
+     256.88
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "rib_deck",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     173.98,
+     256.88
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "rib_deck",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     95.62,
+     247.12
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "rib_keel",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     67.98,
+     160.88
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "rib_grip_back",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     45.34,
+     271.88
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "engine_panel_l_peg1",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     215.88,
+     202.93
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "engine_panel_r_peg1",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     11.88,
+     216.93
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "reactor_l0_peg0",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     57.08,
+     240.88
+    ]
+   },
+   {
+    "sheet": "A",
+    "part": "reactor_r0_peg0",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     267.88,
+     247.93
+    ]
+   },
+   {
+    "sheet": "B",
+    "part": "engine_panel_l_peg1",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     107.88,
+     8.93
+    ]
+   },
+   {
+    "sheet": "B",
+    "part": "engine_panel_r_peg1",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     169.88,
+     8.93
+    ]
+   },
+   {
+    "sheet": "B",
+    "part": "reactor_l0_peg0",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     98.88,
+     30.93
+    ]
+   },
+   {
+    "sheet": "B",
+    "part": "reactor_r0_peg0",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     11.88,
+     32.92
+    ]
+   },
+   {
+    "sheet": "C",
+    "part": "nose_bottom",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     110.12,
+     122.82
+    ]
+   },
+   {
+    "sheet": "C",
+    "part": "nose_top",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     241.12,
+     108.17
+    ]
+   },
+   {
+    "sheet": "C",
+    "part": "nose_top",
+    "why": "bridge on an edge that butts against another part",
+    "at": [
+     250.88,
+     119.73
+    ]
+   }
+  ],
+  "parts": [
+   {
+    "sheet": "A",
+    "part": "stand_base",
+    "code": "A20",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_l",
+    "code": "A19",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_r",
+    "code": "A6",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "A",
+    "part": "rib_deck",
+    "code": "A9",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "A",
+    "part": "wall_l_front",
+    "code": "A15",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "wall_r_front",
+    "code": "A15",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "rib_keel",
+    "code": "A18",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_front_l",
+    "code": "A10",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_front_r",
+    "code": "A17",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "grip_l",
+    "code": "A13",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "rib_grip_back",
+    "code": "A3",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "trigger0",
+    "code": "A7",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "A",
+    "part": "rib_guard_front",
+    "code": "A4",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "rib_guard",
+    "code": "A21",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "rib_tail_top",
+    "code": "A5",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "pod_l_side0",
+    "code": "A16",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "pod_r_side1",
+    "code": "A14",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "rib_grip_front",
+    "code": "A11",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "panel_l1",
+    "code": "A25",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "panel_r1",
+    "code": "A23",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "thruster_peg",
+    "code": "A8",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "rib_grip_bottom",
+    "code": "A12",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "thruster5",
+    "code": "A22",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "rib_tail_end",
+    "code": "A24",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "belly_fin_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "canopy_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "pod_l_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "pod_r_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "tail_fin_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "target_dot_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "trigger_peg0",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "trigger_peg1",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "wheel_peg0",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "wheel_peg1",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "cockpit_side_l_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "cockpit_side_r_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "engine_panel_l_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "engine_panel_l_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "engine_panel_r_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "engine_panel_r_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "grip_l_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "grip_l_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "grip_r_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "grip_r_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "intake_l_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "intake_r_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "panel_l0_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "panel_l1_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "panel_r0_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "panel_r1_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "reactor_l0_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "reactor_l1_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "reactor_r0_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "reactor_r1_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "safety_peg",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_front_l_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_front_l_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_front_r_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_front_r_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_nose_l_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_nose_l_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_nose_r_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_nose_r_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_l_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_l_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_l_peg2",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_l_peg3",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_r_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_r_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_r_peg2",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "skin_rear_r_peg3",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "stripe_l_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "stripe_l_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "stripe_r_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "stripe_r_peg1",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "target_ring0_peg",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "wing_stripe_l_peg",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "wing_stripe_r_peg",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "thruster_peg",
+    "code": "A8",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "A",
+    "part": "belly_fin_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "canopy_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "pod_l_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "pod_r_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "tail_fin_peg",
+    "code": "A2",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "cockpit_side_l_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "A",
+    "part": "cockpit_side_r_peg0",
+    "code": "A1",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wall_l_rear",
+    "code": "B6",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "B",
+    "part": "wall_r_rear",
+    "code": "B6",
+    "bridges": 4,
+    "bridge_mm": 2.0
+   },
+   {
+    "sheet": "B",
+    "part": "grip_r",
+    "code": "B7",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "wing_l",
+    "code": "B5",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "wing_r",
+    "code": "B4",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "trigger2",
+    "code": "B2",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "target_plate",
+    "code": "B3",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "wheel0",
+    "code": "B1",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "wheel2",
+    "code": "B1",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "B",
+    "part": "target_dot_peg",
+    "code": "B9",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "trigger_peg0",
+    "code": "B9",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "trigger_peg1",
+    "code": "B9",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wheel_peg0",
+    "code": "B9",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wheel_peg1",
+    "code": "B9",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "engine_panel_l_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "engine_panel_l_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "engine_panel_r_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "engine_panel_r_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "grip_l_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "grip_l_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "grip_r_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "grip_r_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "intake_l_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "intake_r_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "panel_l0_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "panel_l1_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "panel_r0_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "panel_r1_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "reactor_l0_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "reactor_l1_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "reactor_r0_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "reactor_r1_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "safety_peg",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_front_l_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_front_l_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_front_r_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_front_r_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_nose_l_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_nose_l_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_nose_r_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_nose_r_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_rear_l_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_rear_l_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_rear_l_peg2",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_rear_l_peg3",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_rear_r_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_rear_r_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_rear_r_peg2",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "skin_rear_r_peg3",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "stripe_l_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "stripe_l_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "stripe_r_peg0",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "stripe_r_peg1",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "target_ring0_peg",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wing_stripe_l_peg",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "B",
+    "part": "wing_stripe_r_peg",
+    "code": "B8",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "C",
+    "part": "band_rack",
+    "code": "C26",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "safety_plaque",
+    "code": "C35",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "trigger1",
+    "code": "C21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "target_ring0",
+    "code": "C30",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "reactor_r1",
+    "code": "C32",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "reactor_l1",
+    "code": "C33",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "skin_nose_l",
+    "code": "C34",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "skin_nose_r",
+    "code": "C19",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "stripe_l",
+    "code": "C31",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "stripe_r",
+    "code": "C22",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "wing_stripe_r",
+    "code": "C20",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "wing_stripe_l",
+    "code": "C25",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "nose_cap",
+    "code": "C24",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "wall_l_nose",
+    "code": "C12",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "wall_r_nose",
+    "code": "C12",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "wing_fin_r",
+    "code": "C17",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "wing_fin_l",
+    "code": "C18",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "C",
+    "part": "missile_l",
+    "code": "C2",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "missile_r",
+    "code": "C1",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "tail_fin_l",
+    "code": "C13",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "tail_fin_r",
+    "code": "C14",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "pod_l_side1",
+    "code": "C23",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "pod_r_side0",
+    "code": "C4",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "thruster1",
+    "code": "C16",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "thruster3",
+    "code": "C15",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "belly_fin_l",
+    "code": "C9",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "belly_fin_r",
+    "code": "C11",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "target_ear0",
+    "code": "C3",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "target_ear1",
+    "code": "C3",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "nose_hook1",
+    "code": "C6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "nose_bottom",
+    "code": "C5",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "nose_hook0",
+    "code": "C8",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "nose_hook2",
+    "code": "C8",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "nose_top",
+    "code": "C10",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "nose_plug",
+    "code": "C7",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "target_ring2",
+    "code": "C29",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "C",
+    "part": "nose_hook_peg",
+    "code": "C27",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "C",
+    "part": "nose_cap_peg",
+    "code": "C28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "C",
+    "part": "nose_hook_peg",
+    "code": "C27",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "C",
+    "part": "nose_cap_peg",
+    "code": "C28",
+    "bridges": 1,
+    "bridge_mm": 0.5
+   },
+   {
+    "sheet": "D",
+    "part": "stand_upright",
+    "code": "D1",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "safety_back",
+    "code": "D24",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "wheel1",
+    "code": "D19",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "reactor_l0",
+    "code": "D20",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "reactor_r0",
+    "code": "D21",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "engine_panel_r",
+    "code": "D22",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "engine_panel_l",
+    "code": "D12",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "tail_fin",
+    "code": "D17",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "target_side0",
+    "code": "D5",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "target_side1",
+    "code": "D5",
+    "bridges": 3,
+    "bridge_mm": 1.5
+   },
+   {
+    "sheet": "D",
+    "part": "pod_l",
+    "code": "D15",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "pod_r",
+    "code": "D15",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "belly_fin",
+    "code": "D14",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "stand_boot_l",
+    "code": "D16",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "stand_boot_r",
+    "code": "D16",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "cockpit_side_l",
+    "code": "D13",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "cockpit_side_r",
+    "code": "D11",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "target_ring1",
+    "code": "D7",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "canopy1",
+    "code": "D23",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "canopy0",
+    "code": "D9",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "canopy2",
+    "code": "D9",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "panel_r0",
+    "code": "D18",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "panel_l0",
+    "code": "D6",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "thruster0",
+    "code": "D3",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "thruster2",
+    "code": "D4",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "intake_l",
+    "code": "D10",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "intake_r",
+    "code": "D2",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   },
+   {
+    "sheet": "D",
+    "part": "thruster4",
+    "code": "D8",
+    "bridges": 2,
+    "bridge_mm": 1.0
+   }
+  ],
+  "summary": "210 parts held by 353 bridges of 0.5 mm, none on a mating edge or a weak spot, holes cut first, nothing nested in a hole (16 bridges with a note, see warnings)"
+ },
+ "pieces": 153,
+ "unique_codes": 91,
+ "hardware": [
+  {
+   "name": "target hinge dowel",
+   "kind": "rod",
+   "note": "3/16 in dowel, 63 mm"
+  },
+  {
+   "name": "wheel axle",
+   "kind": "rod",
+   "note": "3/16 in dowel, 15.6 mm"
+  },
+  {
+   "name": "trigger pivot",
+   "kind": "rod",
+   "note": "3/16 in dowel, 15.6 mm"
+  },
+  {
+   "name": "return band post",
+   "kind": "rod",
+   "note": "3/16 in dowel, 15.6 mm; the #16 band runs from here to the hook on the trigger"
+  }
+ ],
+ "extras": {
+  "#64 rubber bands (3.5 x 1/4 in), ammo": 12,
+  "#16 rubber band, trigger return": 2,
+  "3/16 in birch dowel, 15.6 mm": 3,
+  "wax stick": 1,
+  "sandpaper 240 grit": 1,
+  "paper targets (printed)": 3,
+  "3/16 in birch dowel, 63 mm (target hinge)": 1
+ },
+ "sheets": [
+  {
+   "sheet": "A",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 78,
+   "spares": 8,
+   "used_pct": 61.7,
+   "bridges": 127,
+   "cut_mm": 7597.2,
+   "score_mm": 2190.7,
+   "fill_area_mm2": 1004.2,
+   "pierces": 244,
+   "cut_s": 263.5,
+   "score_s": 9.2,
+   "fill_s": 92.0,
+   "travel_s": 19.3,
+   "total_s": 384.0,
+   "total_min": 6.4
+  },
+  {
+   "sheet": "B",
+   "color": "natural",
+   "tile": "full",
+   "fraction": 1.0,
+   "parts": 9,
+   "spares": 47,
+   "used_pct": 40.6,
+   "bridges": 76,
+   "cut_mm": 4679.5,
+   "score_mm": 1024.9,
+   "fill_area_mm2": 505.6,
+   "pierces": 144,
+   "cut_s": 161.8,
+   "score_s": 4.8,
+   "fill_s": 37.3,
+   "travel_s": 13.5,
+   "total_s": 217.4,
+   "total_min": 3.62
+  },
+  {
+   "sheet": "C",
+   "color": "orange",
+   "tile": "half",
+   "fraction": 0.5,
+   "parts": 38,
+   "spares": 2,
+   "used_pct": 36.6,
+   "bridges": 84,
+   "cut_mm": 4349.5,
+   "score_mm": 0,
+   "fill_area_mm2": 664.4,
+   "pierces": 123,
+   "cut_s": 151.1,
+   "score_s": 0.0,
+   "fill_s": 58.2,
+   "travel_s": 7.7,
+   "total_s": 217.0,
+   "total_min": 3.62
+  },
+  {
+   "sheet": "D",
+   "color": "teal",
+   "tile": "half",
+   "fraction": 0.5,
+   "parts": 28,
+   "spares": 0,
+   "used_pct": 43.7,
+   "bridges": 66,
+   "cut_mm": 3896.5,
+   "score_mm": 466.5,
+   "fill_area_mm2": 250.4,
+   "pierces": 145,
+   "cut_s": 134.9,
+   "score_s": 3.8,
+   "fill_s": 22.5,
+   "travel_s": 10.3,
+   "total_s": 171.5,
+   "total_min": 2.86
+  }
+ ],
+ "jobs": [
+  {
+   "job": "blaster_job1_A-B",
+   "sheets": [
+    "A",
+    "B"
+   ],
+   "laser_min": 10.02,
+   "kits_per_sheet": [
+    1,
+    1
+   ]
+  },
+  {
+   "job": "blaster_job2_C_x2-D_x2",
+   "sheets": [
+    "C_x2",
+    "D_x2"
+   ],
+   "laser_min": 13.34,
+   "kits_per_sheet": [
+    2,
+    2
+   ]
+  }
+ ],
+ "n_sheets": 4,
+ "sheet_equivalents": 3.0,
+ "sheets_by_color": {
+  "natural": 2,
+  "orange": 1,
+  "teal": 1
+ },
+ "laser_minutes": 16.5,
+ "swap_minutes": 1.1,
+ "cut_minutes_per_kit": 17.6,
+ "wood_cost_usd": 6.34,
+ "mechanism_parts": [
+  "A2",
+  "A7",
+  "B1",
+  "B2",
+  "B3",
+  "C21",
+  "C3",
+  "D19"
+ ],
+ "color_mode": "sheets",
+ "build_seconds": 22.1,
+ "all_checks_pass": true
+}

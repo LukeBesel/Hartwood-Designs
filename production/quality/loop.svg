@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<defs><marker id="h" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#0F8B7F"/></marker></defs>
+<rect width="900" height="520" fill="#FCF8F1"/>
+<circle cx="450.0" cy="266.0" r="185" fill="none" stroke="#D7EFEB" stroke-width="18"/>
+<text x="450.0" y="260.0" font-family="Fraunces, Georgia, serif" font-size="26" font-weight="700" fill="#3A2A1F" text-anchor="middle">Quality loop</text>
+<text x="450.0" y="286.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#5C4636" text-anchor="middle">15 minutes every Friday</text>
+<path d="M494.0,86.3 A185,185 0 0,1 583.6,138.1" fill="none" stroke="#0F8B7F" stroke-width="4" marker-end="url(#h)"/>
+<path d="M627.6,214.2 A185,185 0 0,1 627.6,317.8" fill="none" stroke="#0F8B7F" stroke-width="4" marker-end="url(#h)"/>
+<path d="M583.6,393.9 A185,185 0 0,1 494.0,445.7" fill="none" stroke="#0F8B7F" stroke-width="4" marker-end="url(#h)"/>
+<path d="M406.0,445.7 A185,185 0 0,1 316.4,393.9" fill="none" stroke="#0F8B7F" stroke-width="4" marker-end="url(#h)"/>
+<path d="M272.4,317.8 A185,185 0 0,1 272.4,214.2" fill="none" stroke="#0F8B7F" stroke-width="4" marker-end="url(#h)"/>
+<path d="M316.4,138.1 A185,185 0 0,1 406.0,86.3" fill="none" stroke="#0F8B7F" stroke-width="4" marker-end="url(#h)"/>
+<rect x="345.0" y="46.0" width="210" height="70" rx="14" fill="#fff" stroke="#3A2A1F" stroke-width="2"/>
+<text x="450.0" y="69.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0B6158" text-anchor="middle">1  Find</text>
+<text x="450.0" y="89.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">checks at every station</text>
+<text x="450.0" y="105.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">and customer messages</text>
+<rect x="505.2" y="138.5" width="210" height="70" rx="14" fill="#fff" stroke="#3A2A1F" stroke-width="2"/>
+<text x="610.2" y="161.5" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0B6158" text-anchor="middle">2  Log</text>
+<text x="610.2" y="181.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">Quality tab: kit, part</text>
+<text x="610.2" y="197.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">code, problem, count</text>
+<rect x="505.2" y="323.5" width="210" height="70" rx="14" fill="#fff" stroke="#3A2A1F" stroke-width="2"/>
+<text x="610.2" y="346.5" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0B6158" text-anchor="middle">3  Pareto</text>
+<text x="610.2" y="366.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">every Friday, last</text>
+<text x="610.2" y="382.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">4 weeks</text>
+<rect x="345.0" y="416.0" width="210" height="70" rx="14" fill="#fff" stroke="#3A2A1F" stroke-width="2"/>
+<text x="450.0" y="439.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0B6158" text-anchor="middle">4  Fix the top bar</text>
+<text x="450.0" y="459.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">one change at a time,</text>
+<text x="450.0" y="475.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">written in the change log</text>
+<rect x="184.8" y="323.5" width="210" height="70" rx="14" fill="#fff" stroke="#3A2A1F" stroke-width="2"/>
+<text x="289.8" y="346.5" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0B6158" text-anchor="middle">5  Check</text>
+<text x="289.8" y="366.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">did the bar shrink</text>
+<text x="289.8" y="382.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">the next weeks?</text>
+<rect x="184.8" y="138.5" width="210" height="70" rx="14" fill="#fff" stroke="#3A2A1F" stroke-width="2"/>
+<text x="289.8" y="161.5" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0B6158" text-anchor="middle">6  Lock it in</text>
+<text x="289.8" y="181.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">engine setting, SOP or</text>
+<text x="289.8" y="197.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5C4636" text-anchor="middle">booklet step updated</text>
+</svg>

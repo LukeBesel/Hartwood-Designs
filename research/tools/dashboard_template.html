@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hartwood Market Research</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f8f3ea; --surface-1: #fffdf8; --ink: #2b1d12; --ink-2: #5d4a3a; --muted: #8b7b6b;
+  --grid: #ece4d6; --axis: #cbbca8; --ring: rgba(43,29,18,0.10);
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --accent: #0f9c97;
+  --seq0: #f1ede6; --seq1: #cde2fb; --seq2: #9ec5f4; --seq3: #6da7ec; --seq4: #3987e5; --seq5: #256abf; --seq6: #184f95;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #14110e; --surface-1: #1c1916; --ink: #f2ebe1; --ink-2: #cbbfae; --muted: #9a8c7c;
+    --grid: #2d2924; --axis: #463f37; --ring: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --accent: #29b8b2;
+    --seq0: #24211d; --seq1: #104281; --seq2: #184f95; --seq3: #1c5cab; --seq4: #256abf; --seq5: #3987e5; --seq6: #6da7ec;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #14110e; --surface-1: #1c1916; --ink: #f2ebe1; --ink-2: #cbbfae; --muted: #9a8c7c;
+  --grid: #2d2924; --axis: #463f37; --ring: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --accent: #29b8b2;
+  --seq0: #24211d; --seq1: #104281; --seq2: #184f95; --seq3: #1c5cab; --seq4: #256abf; --seq5: #3987e5; --seq6: #6da7ec;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { padding: 28px 16px 8px; max-width: 1180px; margin: 0 auto; }
+h1 { font-size: 26px; margin: 0 0 4px; }
+.sub { color: var(--ink-2); margin: 0; }
+main { max-width: 1180px; margin: 0 auto; padding: 8px 16px 48px; display: grid; gap: 16px; grid-template-columns: repeat(12, 1fr); }
+.card { background: var(--surface-1); border: 1px solid var(--ring); border-radius: 14px; padding: 16px; grid-column: span 12; min-width: 0; }
+.half { grid-column: span 6; }
+@media (max-width: 860px) { .half { grid-column: span 12; } }
+.card h2 { font-size: 17px; margin: 0 0 2px; }
+.card .note { color: var(--ink-2); font-size: 13px; margin: 0 0 10px; }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; grid-column: span 12; }
+@media (max-width: 700px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+.tile { background: var(--surface-1); border: 1px solid var(--ring); border-radius: 14px; padding: 14px 16px; }
+.tile .v { font-size: 28px; font-weight: 650; }
+.tile .l { color: var(--ink-2); font-size: 13px; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+.axis text, .lbl { fill: var(--muted); font-size: 11px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--ink-2); margin: 4px 0 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.controls { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--ink-2); margin-bottom: 6px; flex-wrap: wrap; }
+select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--axis); background: var(--surface-1); color: var(--ink); min-height: 36px; }
+#tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--surface-1); padding: 8px 10px; border-radius: 8px; font-size: 12px; opacity: 0; transition: opacity .1s; max-width: 260px; z-index: 9; }
+details { margin-top: 8px; font-size: 13px; }
+summary { cursor: pointer; color: var(--ink-2); min-height: 32px; display: flex; align-items: center; }
+table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--grid); }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.tablewrap { overflow-x: auto; }
+.takeaway { border-left: 4px solid var(--accent); padding: 6px 12px; margin: 10px 0 0; color: var(--ink); font-size: 14px; }
+footer { max-width: 1180px; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: 12px; }
+a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Hartwood market research</h1>
+  <p class="sub">ROKR and 7 competitors. Data checked 2026-10-11 from web search summaries (see research/sources.md). Hover any mark for details.</p>
+</header>
+<main>
+  <div class="tiles" id="tiles"></div>
+
+  <section class="card">
+    <h2>Price vs piece count, all brands</h2>
+    <p class="note">Each dot is one kit with both a USD price and a piece count. Stars are Hartwood targets.</p>
+    <div class="controls"><label for="hl">Highlight brand</label><select id="hl"></select></div>
+    <div class="legend" id="sc-legend"></div>
+    <div class="tablewrap"><svg id="scatter" viewBox="0 0 1100 440" role="img" aria-label="Scatter of price versus piece count" style="min-width:680px"></svg></div>
+    <p class="takeaway">Most ROKR kits sit on a line of about $0.10 to $0.20 per piece. Ugears charges more per piece. Our targets sit in the busy $45 to $55 band, priced for gifts.</p>
+    <details><summary>Show table</summary><div class="tablewrap"><table id="sc-table"></table></div></details>
+  </section>
+
+  <section class="card half">
+    <h2>Price per piece by category</h2>
+    <p class="note">Median USD per piece; n = kits with both numbers.</p>
+    <svg id="ppp" viewBox="0 0 520 330" role="img" aria-label="Bar chart of price per piece by category"></svg>
+    <details><summary>Show table</summary><div class="tablewrap"><table id="ppp-table"></table></div></details>
+  </section>
+
+  <section class="card half">
+    <h2>Top complaints (Pareto)</h2>
+    <p class="note">Share of 52 complaint mentions from 31 review sources, 27 kits. Line = cumulative share.</p>
+    <div class="legend"><span><i class="sw" style="background:var(--s1);border-radius:2px"></i>Share of complaints</span><span><i class="sw" style="background:var(--ink-2)"></i>Cumulative share</span></div>
+    <svg id="pareto" viewBox="0 0 520 330" role="img" aria-label="Pareto chart of complaints"></svg>
+    <p class="takeaway">Three causes make up 69% of complaints: mechanisms that jam, tight fits and breakage. All three trace back to joint fit.</p>
+    <details><summary>Show table</summary><div class="tablewrap"><table id="pareto-table"></table></div></details>
+  </section>
+
+  <section class="card">
+    <h2>Category mix per brand</h2>
+    <p class="note">Number of kits found per category. Darker = more kits. This is our sample, not the full catalog.</p>
+    <div class="tablewrap"><svg id="mix" viewBox="0 0 1100 330" role="img" aria-label="Heatmap of category mix per brand" style="min-width:720px"></svg></div>
+  </section>
+
+  <section class="card">
+    <h2>White space: themes by price band</h2>
+    <p class="note">Count of kits found in each theme and price band (all brands). Empty cells with a ring are where Hartwood aims.</p>
+    <div class="tablewrap"><svg id="white" viewBox="0 0 1100 520" role="img" aria-label="Heatmap of themes by price band" style="min-width:720px"></svg></div>
+    <p class="takeaway">Nobody in the sample sells an original toy-look blaster, a mid-priced colorful dragon, or a pastel flower music box at $45 to $60. Every blaster found copies a real gun, and Etsy bans realistic replicas.</p>
+  </section>
+</main>
+<footer>Sources: research/sources.md. Product rows: research/data/*.csv. Built by research/tools/build_dashboard.py.</footer>
+<div id="tip" role="tooltip"></div>
+<script>
+const D = /*DATA*/null;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const NS = 'http://www.w3.org/2000/svg';
+const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const tip = document.getElementById('tip');
+function showTip(ev, html) { tip.innerHTML = html; tip.style.opacity = 1; const x = Math.min(ev.clientX + 14, innerWidth - 270); tip.style.left = x + 'px'; tip.style.top = (ev.clientY + 14) + 'px'; }
+function hideTip() { tip.style.opacity = 0; }
+const money = v => '$' + v.toFixed(2);
+
+// tiles
+const rokrPPP = D.brand_ppp['ROKR'];
+document.getElementById('tiles').innerHTML = [
+  [D.counts.products, 'kits tracked (all brands)'],
+  [D.counts.rokr, 'ROKR / Robotime kits'],
+  [D.counts.mentions, 'review mentions coded'],
+  ['$' + rokrPPP.toFixed(2), 'ROKR median price per piece'],
+].map(([v, l]) => `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div></div>`).join('');
+
+// ---------- scatter
+const brandColor = b => b === 'ROKR' ? 'var(--s1)' : b === 'Ugears' ? 'var(--s2)' : 'var(--s3)';
+const brands = [...new Set(D.scatter.map(d => d.brand))];
+const hlSel = document.getElementById('hl');
+hlSel.innerHTML = '<option value="">All brands</option>' + brands.map(b => `<option>${b}</option>`).join('');
+document.getElementById('sc-legend').innerHTML =
+  `<span><i class="sw" style="background:var(--s1)"></i>ROKR</span><span><i class="sw" style="background:var(--s2)"></i>Ugears</span><span><i class="sw" style="background:var(--s3)"></i>Other brands (${brands.filter(b => b !== 'ROKR' && b !== 'Ugears').join(', ')})</span><span>&#9733; Hartwood target</span>`;
+function drawScatter() {
+  const svg = document.getElementById('scatter'); svg.innerHTML = '';
+  const W = 1100, H = 440, m = { l: 56, r: 20, t: 10, b: 44 };
+  const xMax = 1300, yMax = 240;
+  const X = v => m.l + (v / xMax) * (W - m.l - m.r), Y = v => H - m.b - (v / yMax) * (H - m.t - m.b);
+  const g = el('g', { class: 'axis' }, svg);
+  for (let v = 0; v <= yMax; v += 40) { el('line', { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: css('--grid') }, g); el('text', { x: m.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }, g).textContent = '$' + v; }
+  for (let v = 0; v <= xMax; v += 200) { el('text', { x: X(v), y: H - m.b + 18, 'text-anchor': 'middle' }, g).textContent = v; }
+  el('line', { x1: m.l, x2: W - m.r, y1: Y(0), y2: Y(0), stroke: css('--axis') }, g);
+  el('text', { x: (W + m.l) / 2, y: H - 6, 'text-anchor': 'middle' }, g).textContent = 'Pieces';
+  // reference lines $0.10 and $0.20 per piece
+  [[0.10, '$0.10 per piece'], [0.20, '$0.20 per piece']].forEach(([r, t]) => {
+    const x2 = Math.min(xMax, yMax / r);
+    el('line', { x1: X(0), y1: Y(0), x2: X(x2), y2: Y(x2 * r), stroke: css('--axis'), 'stroke-width': 1 }, svg);
+    el('text', { x: X(x2) - 4, y: Y(x2 * r) - 6, 'text-anchor': 'end', class: 'lbl' }, svg).textContent = t;
+  });
+  const hl = hlSel.value;
+  D.scatter.forEach(d => {
+    const on = !hl || d.brand === hl;
+    const c = el('circle', { cx: X(d.pieces), cy: Y(d.price), r: on && hl ? 7 : 5.5, fill: on ? brandColor(d.brand) : css('--axis'), stroke: css('--surface-1'), 'stroke-width': 2, opacity: on ? 1 : 0.5 }, svg);
+    const hit = el('circle', { cx: X(d.pieces), cy: Y(d.price), r: 12, fill: 'transparent' }, svg);
+    hit.addEventListener('mousemove', ev => showTip(ev, `<b>${d.brand}</b> ${d.name}<br>${d.pieces} pieces, ${money(d.price)}<br>${money(d.price / d.pieces)} per piece`));
+    hit.addEventListener('mouseleave', hideTip);
+    if (on && hl) el('text', { x: X(d.pieces) + 9, y: Y(d.price) + 4, class: 'lbl', style: 'fill:var(--ink-2)' }, svg).textContent = d.name;
+  });
+  D.targets.forEach(t => {
+    const s = el('text', { x: X(t.pieces), y: Y(t.price) + 7, 'text-anchor': 'middle', style: 'font-size:20px;fill:var(--ink)' }, svg); s.textContent = '★';
+    s.addEventListener('mousemove', ev => showTip(ev, `<b>${t.name}</b><br>${t.pieces} pieces, ${money(t.price)}`)); s.addEventListener('mouseleave', hideTip);
+  });
+  el('text', { x: X(240) + 14, y: Y(54.99) - 8, class: 'lbl', style: 'fill:var(--ink)' }, svg).textContent = 'Hartwood targets';
+}
+hlSel.addEventListener('change', drawScatter);
+drawScatter();
+document.getElementById('sc-table').innerHTML = '<tr><th>Brand</th><th>Kit</th><th class=n>Pieces</th><th class=n>Price</th><th class=n>$/piece</th></tr>' +
+  D.scatter.slice().sort((a, b) => a.price / a.pieces - b.price / b.pieces).map(d => `<tr><td>${d.brand}</td><td>${d.name}</td><td class=n>${d.pieces}</td><td class=n>${money(d.price)}</td><td class=n>${money(d.price / d.pieces)}</td></tr>`).join('');
+
+// ---------- price per piece
+(function () {
+  const svg = document.getElementById('ppp'); const rows = D.ppp;
+  const W = 520, m = { l: 120, r: 70, t: 4 }, bh = 22, gap = 10;
+  const max = Math.max(...rows.map(r => r.median)) * 1.05;
+  rows.forEach((r, i) => {
+    const y = m.t + i * (bh + gap), w = (r.median / max) * (W - m.l - m.r);
+    el('text', { x: m.l - 8, y: y + bh / 2 + 4, 'text-anchor': 'end', class: 'lbl', style: 'fill:var(--ink-2);font-size:12px' }, svg).textContent = r.group;
+    el('rect', { x: m.l, y, width: Math.max(w, 2), height: bh, rx: 4, fill: 'var(--s1)' }, svg);
+    el('text', { x: m.l + w + 6, y: y + bh / 2 + 4, class: 'lbl', style: 'fill:var(--ink)' }, svg).textContent = `$${r.median.toFixed(2)} (n=${r.n})`;
+    const hit = el('rect', { x: 0, y, width: W, height: bh, fill: 'transparent' }, svg);
+    hit.addEventListener('mousemove', ev => showTip(ev, `<b>${r.group}</b><br>median ${money(r.median)} per piece<br>range ${money(r.min)} to ${money(r.max)}, n=${r.n}`)); hit.addEventListener('mouseleave', hideTip);
+  });
+  svg.setAttribute('viewBox', `0 0 520 ${m.t + rows.length * (bh + gap)}`);
+  document.getElementById('ppp-table').innerHTML = '<tr><th>Category</th><th class=n>Median</th><th class=n>Min</th><th class=n>Max</th><th class=n>n</th></tr>' + rows.map(r => `<tr><td>${r.group}</td><td class=n>${money(r.median)}</td><td class=n>${money(r.min)}</td><td class=n>${money(r.max)}</td><td class=n>${r.n}</td></tr>`).join('');
+})();
+
+// ---------- pareto (single % axis)
+(function () {
+  const svg = document.getElementById('pareto'); const rows = D.pareto;
+  const W = 520, H = 330, m = { l: 40, r: 10, t: 10, b: 96 };
+  const bw = (W - m.l - m.r) / rows.length;
+  const Y = v => H - m.b - (v / 100) * (H - m.t - m.b);
+  for (let v = 0; v <= 100; v += 25) { el('line', { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: css('--grid') }, svg); el('text', { x: m.l - 6, y: Y(v) + 4, 'text-anchor': 'end', class: 'lbl' }, svg).textContent = v + '%'; }
+  const pts = [];
+  rows.forEach((r, i) => {
+    const x = m.l + i * bw + 3, w = bw - 6;
+    el('rect', { x, y: Y(r.share), width: w, height: Y(0) - Y(r.share), rx: 4, fill: 'var(--s1)' }, svg);
+    const t = el('text', { x: x + w / 2, y: H - m.b + 12, 'text-anchor': 'end', class: 'lbl', transform: `rotate(-35 ${x + w / 2} ${H - m.b + 12})`, style: 'fill:var(--ink-2)' }, svg); t.textContent = r.theme;
+    pts.push([x + w / 2, Y(r.cum)]);
+    const hit = el('rect', { x: m.l + i * bw, y: m.t, width: bw, height: H - m.b - m.t, fill: 'transparent' }, svg);
+    hit.addEventListener('mousemove', ev => showTip(ev, `<b>${r.theme}</b><br>${r.count} mentions (${r.share}%)<br>cumulative ${r.cum}%`)); hit.addEventListener('mouseleave', hideTip);
+  });
+  el('line', { x1: m.l, x2: W - m.r, y1: Y(0), y2: Y(0), stroke: css('--axis') }, svg);
+  el('polyline', { points: pts.map(p => p.join(',')).join(' '), fill: 'none', stroke: 'var(--ink-2)', 'stroke-width': 2 }, svg);
+  pts.forEach(p => el('circle', { cx: p[0], cy: p[1], r: 4, fill: 'var(--ink-2)', stroke: css('--surface-1'), 'stroke-width': 2 }, svg));
+  el('text', { x: pts[2][0] + 8, y: pts[2][1] + 14, class: 'lbl', style: 'fill:var(--ink)' }, svg).textContent = rows[2].cum + '% by top 3';
+  document.getElementById('pareto-table').innerHTML = '<tr><th>Complaint</th><th class=n>Mentions</th><th class=n>Share</th><th class=n>Cumulative</th></tr>' + rows.map(r => `<tr><td>${r.theme}</td><td class=n>${r.count}</td><td class=n>${r.share}%</td><td class=n>${r.cum}%</td></tr>`).join('');
+})();
+
+// ---------- heatmap helper
+function heat(svgId, rowsLabels, colLabels, matrix, opts) {
+  const svg = document.getElementById(svgId); svg.innerHTML = '';
+  const W = 1100, m = { l: opts.left, t: 46, r: 10 }, ch = opts.cellH || 30;
+  const cw = (W - m.l - m.r) / colLabels.length;
+  const max = Math.max(1, ...matrix.flat());
+  const steps = ['--seq0', '--seq1', '--seq2', '--seq3', '--seq4', '--seq5', '--seq6'];
+  const fillFor = v => v === 0 ? css('--seq0') : css(steps[Math.min(6, 1 + Math.floor((v / max) * 5.99))]);
+  colLabels.forEach((c, j) => { const t = el('text', { x: m.l + j * cw + cw / 2, y: m.t - 10, 'text-anchor': 'middle', class: 'lbl', style: 'fill:var(--ink-2);font-size:12px' }, svg); t.textContent = c; });
+  rowsLabels.forEach((r, i) => {
+    el('text', { x: m.l - 10, y: m.t + i * ch + ch / 2 + 4, 'text-anchor': 'end', class: 'lbl', style: 'fill:var(--ink-2);font-size:12px' }, svg).textContent = r;
+    colLabels.forEach((c, j) => {
+      const v = matrix[i][j];
+      const x = m.l + j * cw + 1, y = m.t + i * ch + 1;
+      el('rect', { x, y, width: cw - 2, height: ch - 2, rx: 4, fill: fillFor(v) }, svg);
+      if (v) { const dark = v / max > 0.45; el('text', { x: x + cw / 2 - 1, y: y + ch / 2 + 4, 'text-anchor': 'middle', style: `font-size:12px;fill:${dark ? '#ffffff' : css('--ink')}` }, svg).textContent = v; }
+      const hit = el('rect', { x, y, width: cw - 2, height: ch - 2, fill: 'transparent' }, svg);
+      hit.addEventListener('mousemove', ev => showTip(ev, `<b>${r}</b><br>${c}: ${v} kit${v === 1 ? '' : 's'}`)); hit.addEventListener('mouseleave', hideTip);
+    });
+  });
+  if (opts.after) opts.after(svg, { m, cw, ch });
+  svg.setAttribute('viewBox', `0 0 ${W} ${m.t + rowsLabels.length * ch + 10}`);
+}
+heat('mix', D.mix.rows.map(r => `${r.brand} (${r.total})`), D.mix.groups, D.mix.rows.map(r => r.counts), { left: 190 });
+heat('white', D.white.themes, D.white.bands, D.white.grid, {
+  left: 290, cellH: 34, after: (svg, g) => {
+    D.white.targets.forEach(t => {
+      const i = D.white.themes.indexOf(t.theme), j = t.band;
+      const x = g.m.l + j * g.cw + 1, y = g.m.t + i * g.ch + 1;
+      el('rect', { x: x + 2, y: y + 2, width: g.cw - 6, height: g.ch - 6, rx: 4, fill: 'none', stroke: 'var(--accent)', 'stroke-width': 3 }, svg);
+      el('text', { x: x + g.cw / 2, y: y + g.ch / 2 + 4, 'text-anchor': 'middle', style: 'font-size:12px;font-weight:600;fill:var(--accent)' }, svg).textContent = '★ ' + t.label;
+    });
+  }
+});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => location.reload());
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+ "kit": "proofbox",
+ "name": "Proof Box",
+ "nest_problems": [],
+ "pieces": 25,
+ "unique_codes": 11,
+ "hardware": [
+  {
+   "name": "axle",
+   "kind": "rod",
+   "note": ""
+  }
+ ],
+ "extras": {},
+ "sheets": [
+  {
+   "sheet": "A",
+   "color": "natural",
+   "parts": 25,
+   "spares": 0,
+   "used_pct": 21.1,
+   "bridges": 53,
+   "cut_mm": 2579.5,
+   "score_mm": 0,
+   "fill_area_mm2": 338.6,
+   "pierces": 82,
+   "cut_s": 90.1,
+   "score_s": 0.0,
+   "fill_s": 28.4,
+   "travel_s": 6.3,
+   "total_s": 124.7,
+   "total_min": 2.08
+  }
+ ],
+ "jobs": [
+  {
+   "job": "proofbox_job1_A",
+   "sheets": [
+    "A"
+   ],
+   "laser_min": 2.08
+  }
+ ],
+ "n_sheets": 1,
+ "sheets_by_color": {
+  "natural": 1
+ },
+ "laser_minutes": 2.1,
+ "swap_minutes": 0.8,
+ "cut_minutes_per_kit": 2.8,
+ "wood_cost_usd": 1.6,
+ "mechanism_parts": [
+  "A5"
+ ],
+ "build_seconds": 1.2
+}

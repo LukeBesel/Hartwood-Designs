@@ -1,0 +1,41 @@
+/* Hartwood Designs: shared tokens and base styles (site + 3D build app) */
+@font-face { font-family: 'Fraunces'; src: url('/fonts/Fraunces-700.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Fraunces'; src: url('/fonts/Fraunces-800.woff2') format('woff2'); font-weight: 800; font-display: swap; }
+@font-face { font-family: 'Fraunces'; src: url('/fonts/Fraunces-600.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fonts/Inter-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fonts/Inter-500.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fonts/Inter-600.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fonts/Inter-700.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+
+:root {
+  --walnut: #3A2A1F; --walnut-2: #5C4636; --oak: #B9895B; --maple: #EBD5B0; --birch: #F6EEE1; --paper: #FCF8F1;
+  --lagoon: #0F8B7F; --lagoon-dark: #0B6158; --lagoon-light: #D7EFEB; --blaze: #FF6A13;
+  --line: #E6D9C4; --white: #FFFFFF;
+  --display: 'Fraunces', Georgia, serif; --body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --r-s: 8px; --r-m: 14px; --r-l: 22px;
+  --shadow: 0 1px 2px rgba(58, 42, 31, .08), 0 8px 24px rgba(58, 42, 31, .10);
+  --gutter: 16px; --max: 1160px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--body); font-size: 16px; line-height: 1.55; color: var(--walnut); background: var(--paper); }
+img { max-width: 100%; display: block; }
+a { color: var(--lagoon-dark); }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.12; margin: 0 0 .4em; letter-spacing: -.01em; }
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 800; }
+h2 { font-size: clamp(1.5rem, 3.4vw, 2.3rem); }
+h3 { font-size: 1.25rem; }
+p { margin: 0 0 1em; }
+:focus-visible { outline: 3px solid var(--lagoon); outline-offset: 2px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5em; min-height: 44px; padding: .65em 1.2em;
+  border-radius: 999px; border: 2px solid transparent; font: 600 1rem/1 var(--body); text-decoration: none; cursor: pointer;
+  background: var(--white); color: var(--walnut); border-color: var(--line); transition: transform .12s, background .12s; }
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-primary { background: var(--lagoon); color: var(--white); border-color: var(--lagoon); }
+.btn-primary:hover { background: var(--lagoon-dark); border-color: var(--lagoon-dark); }
+.btn-ghost { background: transparent; }
+.btn[disabled] { opacity: .45; cursor: default; transform: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.todo { background: #FFF3C4; color: #6B4E00; border: 1px dashed #C9A227; border-radius: 6px; padding: .1em .4em; font-size: .9em; }

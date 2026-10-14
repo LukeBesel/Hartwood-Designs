@@ -1,0 +1,105 @@
+[
+ {
+  "kit": "blaster",
+  "url": "star-slinger",
+  "name": "Star Slinger",
+  "tagline": "A starship that slings rubber bands. Seven shots, one at a time.",
+  "story": "The Star Slinger is a little starfighter with a big secret: a clockwork star wheel in its engine. Load up to seven rubber bands, aim at a paper target, and each pull of the trigger lets exactly one band fly. Its blaze orange nose is built into the ship, so it always looks like what it is: a toy. Build the mechanism, test it at each step, then show it off on its launch stand. Lift it off to play, drop it back in to display.",
+  "price": 49.99,
+  "pieces": 153,
+  "steps": 17,
+  "hours": "5 to 6 h",
+  "difficulty": 4,
+  "age": "14+",
+  "mechanism": true,
+  "extras": {
+   "#64 rubber bands (3.5 x 1/4 in), ammo": 12,
+   "#16 rubber band, trigger return": 2,
+   "3/16 in birch dowel, 15.6 mm": 3,
+   "wax stick": 1,
+   "sandpaper 240 grit": 1,
+   "paper targets (printed)": 3,
+   "3/16 in birch dowel, 63 mm (target hinge)": 1
+  },
+  "size_mm": [
+   311,
+   181,
+   143
+  ],
+  "sheets": [
+   "Natural basswood",
+   "Natural basswood",
+   "Sunset Orange (blaze tip)",
+   "Haze Blue"
+  ]
+ },
+ {
+  "kit": "dragon",
+  "url": "emberwing",
+  "name": "Emberwing",
+  "tagline": "A dragon guarding its tower. The jaw opens. So does the treasure chest.",
+  "story": "High on a broken tower, Emberwing keeps watch over a chest of gold. Her wings are spread, her claws lock onto the stone, and her jaw opens in a silent roar. Every slice of her body is a 3 mm layer, stacked on hidden keys, with scales drawn by the laser. Lift the lid of the chest to check the gold is still there.",
+  "price": 54.99,
+  "pieces": 152,
+  "steps": 21,
+  "hours": "6 to 8 h",
+  "difficulty": 4,
+  "age": "14+",
+  "mechanism": true,
+  "extras": {
+   "3/16 in birch dowel, 21 mm (jaw)": 1,
+   "3/16 in birch dowel, 46 mm (chest hinge)": 1,
+   "sandpaper 240 grit": 1
+  },
+  "size_mm": [
+   264,
+   267,
+   228
+  ],
+  "sheets": [
+   "Natural basswood",
+   "Natural basswood",
+   "Natural basswood",
+   "Red",
+   "Natural basswood",
+   "Gold",
+   "Purple",
+   "Green"
+  ]
+ },
+ {
+  "kit": "floral",
+  "url": "blossom-waltz",
+  "name": "Blossom Waltz",
+  "tagline": "A flower music box that turns while it plays.",
+  "story": "Wind the key and the bouquet starts to dance. Blossom Waltz is a pastel garden in a box: eight layered flowers in a striped vase turn slowly on a little stage while a real wind-up movement plays. Every petal is cut from colored wood, with veins drawn by the laser. Build it in an evening, give it to someone, and watch them wind it again and again.",
+  "price": 49.99,
+  "pieces": 158,
+  "steps": 25,
+  "hours": "4 to 5 h",
+  "difficulty": 3,
+  "age": "14+",
+  "mechanism": true,
+  "extras": {
+   "18-note wind-up music movement with rotating shaft": 1,
+   "wax stick": 1,
+   "sandpaper 240 grit": 1,
+   "3/16 in birch dowel, 50 mm": 1
+  },
+  "size_mm": [
+   152,
+   269,
+   143
+  ],
+  "sheets": [
+   "Natural basswood",
+   "White",
+   "White",
+   "Pink",
+   "Green",
+   "Yellow",
+   "Haze Blue",
+   "Purple"
+  ]
+ }
+]

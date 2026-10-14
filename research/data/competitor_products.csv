@@ -1,0 +1,46 @@
+id,brand,product,category,pieces,price_usd,notes,source_ids
+C01,Ugears,Millennium Falcon,Licensed vehicle,1235,229.99,,S14
+C02,Ugears,Gringotts Bank Marble Run,Marble run,1000,219.99,,S14
+C03,Ugears,UGT-24 Endurance Racer,Vehicle,970,172.99,,S14
+C04,Ugears,V8 Engine,Mechanical,776,103.99,,S14
+C05,Ugears,Mechanical Celesta,Music instrument,573,109.99,,S14
+C06,Ugears,Serenity's Dream,Mechanical,365,68.99,,S14
+C07,Ugears,Mechanical Aquarium,Mechanical,325,68.99,,S14
+C08,Ugears,Mechanical Flower,Flower,101,55.99,Woodcraft $47.99; 2 to 3 h,S14
+C09,Ugears,Hurdy-Gurdy,Music instrument,292,103.99,4 to 5 h,S14
+C10,Ugears,Wood Dragon,Creature,141,24.99,Easy; spring drawer,S14
+C11,Ugears,Windstorm Dragon,Creature,,61.99,Rubber band motor moves wings and legs,S14
+C12,Ugears,Treasure Box,Puzzle box,,68.99,4.39 of 5 from 33 reviews,S14;S13
+C13,Ugears,V-Express Steam Train,Vehicle,,103.99,,S14
+C14,Wood Trick,Chug-Chug Train,Vehicle,198,39.95,Walmart,S14
+C15,Wood Trick,Mars Rover,Vehicle,,44.95,Walmart,S14
+C16,Wood Trick,Mechanical Mustang,Vehicle,,79.95,Electric series,S14
+C17,Wood Trick,Kinetic Clock Modern,Clock,,112.95,Electric series,S14
+C18,Wood Trick,Ocean Yacht,Vehicle,565,,,S14
+C19,Wood Trick,Monster Truck,Vehicle,556,,UK GBP52.99,S14
+C20,Wood Trick,Pickup SUV,Vehicle,706,,,S14
+C21,Wood Trick,Atlantic Express Train,Vehicle,636,,UK GBP69.99,S14
+C22,Wood Trick,Geared Safe,Puzzle box,259,,,S14
+C23,Wood Trick,Hot Rod,Vehicle,280,,UK GBP39.99,S14
+C24,Wood Trick,Dragon Castle,Creature,,149.95,eBay listing,S14
+C25,Wooden City,Vintage Wall Clock,Clock,378,,Plus 43 spare parts,S14
+C26,Wooden City,Kinetic Wall Art,Kinetic art,162,,Plus 23 spare parts,S14
+C27,Wooden City,Tractor,Vehicle,148,,,S14
+C28,EWA,Ginger Kitten,Creature,236,49.99,,S14
+C29,EWA,5-Vehicle Model Set,Vehicle,364,49.46,,S14
+C30,EWA,Lord of the Seas,Vehicle,438,89.90,,S14
+C31,EWA,Trike,Vehicle,281,38.66,,S14
+C32,EWA,Locomotion #1,Vehicle,325,,,S14
+C33,EWA,Spider,Creature,293,,,S14
+C34,EWA,Kinetic Globe,Mechanical,205,,,S14
+C35,Mr. Playwood,Mechanical Globe S,Mechanical,125,61.99,Etsy listing about 800 days old,S14
+C36,Piececool,Pirate ship (metal),Metal model,307,,Price range $10 to $160 across line,S14
+C37,Piececool,Tank (metal),Metal model,233,,,S14
+C38,Metal Earth,The Child (Premium),Metal model,,27.99,2 sheets; Moderate,S14
+C39,Metal Earth,P-38 Lightning (Premium),Metal model,,21.50,2 sheets; Challenging,S14
+C40,Metal Earth,Statue of Liberty (Premium),Metal model,,37.95,Walmart,S14
+C41,KCO Gear,The Dragon,Creature,320,74.00,Sale from $92.50; paper wings,S14
+C42,Dragon-vibe,3D Wooden Dragon,Creature,145,29.00,Static,S14
+C43,Woodbests,3D Dragon,Creature,238,,Battery flapping wings,S14
+C44,wooden-town.com,AK-style rubber band gun,Rubber band gun,,99.00,Sale price,S14
+C45,wooden-town.com,Toy revolver,Rubber band gun,,69.00,Sale price,S14

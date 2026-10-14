@@ -1,0 +1,250 @@
+{
+ "kit": "proofbox",
+ "name": "Proof Box",
+ "tagline": "",
+ "story": "",
+ "difficulty": 3,
+ "build_hours": "",
+ "price": 0.0,
+ "piece_count": 25,
+ "unique_codes": 11,
+ "sheets": [
+  {
+   "letter": "A",
+   "color": "natural",
+   "label": "Natural basswood",
+   "parts": 25,
+   "spares": 0
+  }
+ ],
+ "extras": {},
+ "steps": [
+  {
+   "n": 1,
+   "title": "Step 1",
+   "tip": "",
+   "icons": [],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A7",
+     "qty": 1,
+     "sheet": "A",
+     "name": "floor",
+     "color": "natural"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 2,
+   "title": "Step 2",
+   "tip": "",
+   "icons": [],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A6",
+     "qty": 2,
+     "sheet": "A",
+     "name": "wall0",
+     "color": "natural"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 3,
+   "title": "Step 3",
+   "tip": "",
+   "icons": [],
+   "test": "",
+   "view": null,
+   "parts": [
+    {
+     "code": "A1",
+     "qty": 1,
+     "sheet": "A",
+     "name": "slice2",
+     "color": "natural"
+    },
+    {
+     "code": "A2",
+     "qty": 14,
+     "sheet": "A",
+     "name": "spacer0",
+     "color": "natural"
+    },
+    {
+     "code": "A3",
+     "qty": 1,
+     "sheet": "A",
+     "name": "lap_b",
+     "color": "natural"
+    },
+    {
+     "code": "A4",
+     "qty": 1,
+     "sheet": "A",
+     "name": "slice3",
+     "color": "natural"
+    },
+    {
+     "code": "A5",
+     "qty": 1,
+     "sheet": "A",
+     "name": "wheel",
+     "color": "natural"
+    },
+    {
+     "code": "A8",
+     "qty": 1,
+     "sheet": "A",
+     "name": "key",
+     "color": "natural"
+    },
+    {
+     "code": "A9",
+     "qty": 1,
+     "sheet": "A",
+     "name": "slice0",
+     "color": "natural"
+    },
+    {
+     "code": "A10",
+     "qty": 1,
+     "sheet": "A",
+     "name": "slice1",
+     "color": "natural"
+    },
+    {
+     "code": "A11",
+     "qty": 1,
+     "sheet": "A",
+     "name": "lap_a",
+     "color": "natural"
+    }
+   ],
+   "hardware": []
+  },
+  {
+   "n": 4,
+   "title": "Step 4",
+   "tip": "",
+   "icons": [],
+   "test": "",
+   "view": null,
+   "parts": [],
+   "hardware": [
+    {
+     "name": "axle",
+     "kind": "rod",
+     "note": ""
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "code": "A1",
+   "name": "slice2",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A10",
+   "name": "slice1",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A11",
+   "name": "lap_a",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A2",
+   "name": "spacer0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 14,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A3",
+   "name": "lap_b",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A4",
+   "name": "slice3",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A5",
+   "name": "wheel",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 3,
+   "mechanism": true
+  },
+  {
+   "code": "A6",
+   "name": "wall0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 2,
+   "step": 2,
+   "mechanism": false
+  },
+  {
+   "code": "A7",
+   "name": "floor",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 1,
+   "mechanism": false
+  },
+  {
+   "code": "A8",
+   "name": "key",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 3,
+   "mechanism": false
+  },
+  {
+   "code": "A9",
+   "name": "slice0",
+   "sheet": "A",
+   "color": "natural",
+   "qty": 1,
+   "step": 3,
+   "mechanism": false
+  }
+ ]
+}
